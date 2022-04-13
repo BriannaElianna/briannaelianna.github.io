@@ -893,9 +893,9 @@ function CheckForSpecialEvents(slay, great, good, bad, flop) {
         slayers = true;
     else if (slay.length + great.length == currentCast.length && !slayersCheck && randomNumber(0, 100) >= 70 && !conjoinedCheck)
         slayers = true;
-    if (flop.length + bad.length >= 5 && currentCast.length >= 9 && !bottom6WayLipsyncCheck && randomNumber(0, 100) >= 70 && !conjoinedCheck)
+    if (flop.length + bad.length >= 5 && currentCast.length >= 9 && !bottom6WayLipsyncCheck && randomNumber(0, 70) >= 70 && !conjoinedCheck)
         bottom6WayLipsync = true;
-    if (flop.length + bad.length >= 7 && great.length + slay.length + good.length > 0 && !s14LaLaPaRUZaCheck && randomNumber(0, 100) >= 70 && !conjoinedCheck)
+    if (flop.length + bad.length + good.length >= 7 && great.length + slay.length > 2 && !s14LaLaPaRUZaCheck && randomNumber(0, 70) >= 70 && !conjoinedCheck)
         s14LaLaPaRUZa = true;
 }
 function createRunwayDesc(slay, great, good, bad) {
@@ -3554,16 +3554,6 @@ function judging() {
         }
         slayers = false;
         judgingSlayersScreen();
-    }
-    else if (currentCast.length >= 8 && currentCast.length < 10 && s14LaLaPaRUZa && (top3 || top4) && !s14LaLaPaRUZaCheck) {
-        //add all the queens to the top and 0 queens to the bottom
-        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        topQueens.push(currentCast[0]);
-        for (let i = 1; i < currentCast.length ; i++) {
-            bottomQueens.push(currentCast[i]);
-        }
-        s14LaLaPaRUZa = false;
-        judgingS14LaLaPaRUZaScreen();
     }
     else if (currentCast.length > 13) {
         //add 4 queens to the top and 4 queens to the bottom
