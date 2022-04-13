@@ -3152,6 +3152,9 @@ function startSimulation(challenge = "") {
         else if (select3.options[select3.selectedIndex].value == "smackdown")
             smackdown = true;
             slayersCheck = true;
+		else if (select3.options[select3.selectedIndex].value == "s14lalaparuza")
+            s14LaLaPaRUZa = true;
+            s14LaLaPaRUZaCheck = true;
         if (document.getElementById("disableDouble").checked == true)
             noDouble = true;
         if (document.getElementById("chocolateBar").checked == true)
