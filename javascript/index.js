@@ -3094,8 +3094,6 @@ function startSimulation(challenge = "") {
     }
     if (currentCast.length == 0)
         window.alert("Your cast is empty!");
-    else if (duplicateQueens(currentCast))
-        window.alert("Please, only use one of each queen on your cast!");
     else {
         let select = document.getElementById("format");
         let select2 = document.getElementById("premiere-format");
