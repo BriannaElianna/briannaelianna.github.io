@@ -2872,11 +2872,7 @@ function generateSpace() {
     totalCastSize = castSize;
     let castSelection = document.querySelector("p#castSelection");
     castSelection.innerHTML = '';
-    if (totalCastSize < 0)
-        window.alert("Please, use at least 3 queens on your cast!");
-    else if (totalCastSize > 1000)
-        window.alert("Please, use less than 20 queens in your cast!");
-    else
+    if (totalCastSize > 0)
         for (let i = 0; i < castSize; i++) {
             let select = document.createElement("select");
             select.setAttribute("class", "queenList");
