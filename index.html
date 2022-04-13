@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="css/style.light.css">
+    <link rel="icon" href="image/favicon.ico">
+    <title>Drag Race Simulator</title>
+</head>
+<body>
+    <h1 id="MainTitle">Drag Race Simulator!</h1>
+    
+    <div id="MainBlock">
+        <p><big>This is you chance to simulate a drag race season with all your favorite contestants!</big></p>
+        <div>
+            <p>How many queens do you want on your cast?</p>
+            <input type="number" min="3" max="20" id="castSize">
+            <button onclick="generateSpace()">Select</button>
+        </div>
+        <p id="castSelection"></p>
+
+        <div>
+            <p>Choose your premiere format: </p>
+            <select id="premiere-format">
+                <option>Normal premiere</option>
+                <option value="s6-premiere">Double Premiere</option>
+                <option value="s9-premiere">Normal Premiere (No Elimination)</option>
+                <option value="s12-premiere">Double Premiere (No Elimination)</option>
+                <option value="porkchop">Porkchop Premiere</option>
+                <option value="uk3-premiere">UK3 Premiere</option>
+                <option value="s14-premiere">Double Premiere (Talent Show)</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Choose your returning format: </p>
+            <select id="returning">
+                <option>None</option>
+                <option value="random">Random queen returns</option>
+                <option value="votes">Remaining queens vote</option>
+                <option value="conjoined-queens">Conjoined Queens Makeover</option>
+                <option value="queensofcomedy">Queens of Comedy</option>
+                <option value="kittygirlgroup">Kitty Girl Group</option>
+                <option value="smackdown">Lip-Sync Smackdown</option>
+                <option value="lalaparuza">LaLaPaRuZa</option>
+            </select>
+        </div>
+            
+        <div>
+            <p>Choose your finale format: </p>
+            <select id="format">
+                <option value="top3">Top 3 Format</option>
+                <option value="top4">Lip-Sync For The Crown</option>
+                <option value="canS2">Lip Sync for the Finale</option>
+                <option value="team">Teams Format</option>
+                <option value="all-stars">Lip-Sync For Your Legacy</option>
+                <option value="jury-allstars">Jury All Stars</option>
+                <option value="international-allstars">UK vs The World</option>
+                <option value="lipsync-assassin">Lip-Sync Assassin Format</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Chocolate Bar Twist: </p>
+            <input type="checkbox" id="chocolateBar"> Random
+            <input type="checkbox" id="chocolateBarChoosable"> Choosable
+        </div>
+        <div><button onclick="startSimulation()">Simulate now!</button></div>
+    
+        <input type="checkbox" id="disableDouble">Disable double shantays and sashays
+        <input type="checkbox" id="onlyCustomQueens"> Show Only Custom Queens
+        <hr>
+
+        <big>More options!</big>
+
+        <div>
+            <b><p>
+                <big><a href="predef.html" id="inblock">Predefined casts</a></big>
+            </p></b>
+            <b><p>
+                <big><a href="custom.html" id="inblock">Custom</a></big>
+            </p></b>
+            <b><p>
+                <big><a href="https://forms.gle/yM4fWVpARyArTKKi8" id="inblock" target=_blank>Suggest songs for the simulator</a></big>
+            </p></b>
+            <b><p>
+                <big><a href="https://discord.gg/cKaA8hvcAr" target=_blank>Discord Server</a></big>
+            </p></b>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; font-weight: bold;">
+        <p><small>This simulator was created by <a href="https://edssb.github.io/rupauls-drag-race-simulator/index.html" target=_blank>edssb/JustALittleKiller</a></small> and I'm just updating it <a href="https://github.com/MyRainboww/Drag-Race-Simulator#readme" target=_blank>(My GitHub Page)</a>.</p>
+    </div>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+    kofiWidgetOverlay.draw('rupaulssimulator', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Tip edssb',
+        'floating-chat.donateButton.background-color': '#5bc0de',
+        'floating-chat.donateButton.text-color': '#323842'
+    });
+    </script>
+</body>
+
+<script src="javascript/index.js"></script>
+
+</html>
