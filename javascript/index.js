@@ -2872,9 +2872,9 @@ function generateSpace() {
     totalCastSize = castSize;
     let castSelection = document.querySelector("p#castSelection");
     castSelection.innerHTML = '';
-    if (totalCastSize < 3)
+    if (totalCastSize < 0)
         window.alert("Please, use at least 3 queens on your cast!");
-    else if (totalCastSize > 20)
+    else if (totalCastSize > 1000)
         window.alert("Please, use less than 20 queens in your cast!");
     else
         for (let i = 0; i < castSize; i++) {
@@ -2986,6 +2986,9 @@ function predefCast(cast, format, premiere = '', returning = '') {
         queensOfComedy = true;
     else if (returning == "kittygirlgroup")
         kittyGirlGroup = true;
+	else if (returning == "s14lalaparuza")
+        s14LaLaPaRUZa = true;
+		s14LaLaPaRUZaCheck = true;
     if (document.getElementById("disableDouble").checked == true)
         noDouble = true;
     if (document.getElementById("chocolateBar").checked == true)
@@ -3175,21 +3178,6 @@ function startSimulation(challenge = "") {
             window.alert("The team format needs an even amout of queens!");
             currentCast = [];
             team = false;
-        }
-        else if ((s6Premiere || s12Premiere || porkchopPremiere || s14Premiere) && currentCast.length < 10) {
-            window.alert("Double Premiere formats needs at least 10 queens!");
-            s6Premiere = false;
-            s12Premiere = false;
-            s14Premiere = false;
-            porkchopPremiere = false;
-            top4 = false;
-            top3 = false;
-            canFinale = false;
-            lipsync_assassin = false;
-            all_stars = false;
-            allstars3Finale = false;
-            ukvstwFinale = false;
-            currentCast = [];
         }
         else if (uk3Premiere && currentCast.length < 6) {
             window.alert("Uk3 Premiere needs at least 6 queens!");
