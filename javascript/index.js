@@ -5961,10 +5961,8 @@ let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina");
 let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 200, "Michelle");
-let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 200, "Rupaul");
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
-let allstars_7 = [michelle, pangina, rupaul, brooklyn];
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
@@ -5986,7 +5984,7 @@ let allQueens = [
     ginger, jaidynn, jasmine, kandy, katya, kennedy, max, fame, kasha, pearl, sashab, tempest, trixie, violet,
     acid, bob, chichi, cynthia, dax, derrick, kim, laila, naomi, naysha, robbie, thorgy,
     aja, alexism, charlie, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina,
-    aquaria, asia, blair, dusty, kalorie, kameron, mayhem, miz, monet, monique, vanessa, vixen, yuhua,
+    aquaria, asia, blair, dusty, kalorie, kameron, mayhem, michelle, miz, monet, monique, vanessa, vixen, yuhua,
     akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, yvie,
     aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, widow,
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
