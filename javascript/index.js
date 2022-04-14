@@ -5827,7 +5827,7 @@ let kitty = new Queen("Kitty Scott-Claus", 12, 11, 7, 8, 9, 9, 7, "Kitty");
 let krystal = new Queen("Krystal Versace", 8, 8, 11, 12, 8, 14, 12, "Krystal");
 let river = new Queen("River Medway", 8, 6, 5, 9, 5, 7, 6, "River");
 let scarlett = new Queen("Scarlett Harlett", 7, 7, 8, 8, 6, 8, 7, "ScarlettH");
-let vanity = new Queen("Vanity Milan", 8, 7, 11, 5, 8, 8, 12, "Vanity");
+let vanity = new Queen("Vanity Milan", 8, 7, 11, 5, 8, 8, 200000000000000000000, "Vanity");
 let victoriaS = new Queen("Victoria Scone", 8, 10, 8, 7, 9, 9, 8, "VictoriaS");
 let uk_season3 = [anubis, charity, choriza, elektraF, ella, kitty, krystal, river, scarlett, vanity, victoriaS, veronica];
 //CAN SEASON 1 
@@ -5957,9 +5957,13 @@ let ivana = new Queen("Ivana Vamp", 6, 5, 6, 6, 6, 6, 5, "Ivana");
 let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "Riche");
 let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "Luquisha");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
-//SPECIAL 
+//JUDGES 
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina");
+let rupaul = new Queen("Rupaul", 12, 13, 3, 4, 3, 15, 3, "Rupaul");
+let michelle = new Queen("Michelle Visage", 12, 10, 13, 8, 10, 10, 13, "Michelle");
+//UK4
 let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa");
+
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 //all possible queens:
 let allCustomQueens = [];
@@ -6000,7 +6004,7 @@ let allQueens = [
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha,
-    pangina, peppa
+    pangina, peppa, rupaul, michelle.
 ].concat(allCustomQueens).sort((a, b) => a.getName().toLowerCase().localeCompare(b.getName().toLowerCase()));
 let allQueensCopy = [];
 let allQueensCopy2 = [];
