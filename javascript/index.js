@@ -771,7 +771,7 @@ function createChallenge(challenges, miniChallengeScreen) {
         currentCast[i].episodesOn++;
     }
     //first design challenge for normal seasons
-    if (currentCast.length == totalCastSize && top3 && episodeCount == 1 && s6Premiere == false && s9-premiere == true || currentCast.length == totalCastSize && top4 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && team || sweatshop || currentCast == firstCast && s6Premiere || currentCast == secondCast && s6Premiere)
+    if (currentCast.length == totalCastSize && top3 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && top4 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && team || sweatshop || currentCast == firstCast && s6Premiere || currentCast == secondCast && s6Premiere)
         miniChallengeScreen.createButton("Proceed", "designChallenge()");
     //girl group challenge for s12 or porkchop premiere
     else if (premiereCounter <= 2 && (s12Premiere || porkchopPremiere))
