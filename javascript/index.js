@@ -5964,6 +5964,7 @@ let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 200, "Michelle"
 let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 200, "Rupaull");
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
+let judgess = [brooke, rupaul, michelle, pangina];
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
