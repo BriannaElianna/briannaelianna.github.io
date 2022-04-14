@@ -5961,6 +5961,7 @@ let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina");
 let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 200, "Michelle");
+let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 200, "Rupaull");
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
 //all possible queens:
@@ -6001,7 +6002,7 @@ let allQueens = [
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
-    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha,
+    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul,
     pangina, peppa
 ].concat(allCustomQueens).sort((a, b) => a.getName().toLowerCase().localeCompare(b.getName().toLowerCase()));
 let allQueensCopy = [];
