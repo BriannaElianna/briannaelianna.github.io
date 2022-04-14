@@ -895,7 +895,7 @@ function CheckForSpecialEvents(slay, great, good, bad, flop) {
         slayers = true;
     if (flop.length + bad.length >= 5 && currentCast.length >= 9 && !bottom6WayLipsyncCheck && randomNumber(0, 70) >= 70 && !conjoinedCheck)
         bottom6WayLipsync = true;
-    if (flop.length + bad.length + good.length >= 7 && great.length + slay.length > 2 && !s14LaLaPaRUZaCheck && randomNumber(0, 70) >= 70 && !conjoinedCheck)
+    if (flop.length + bad.length + good.length + great.length + slay.length >= 0)
         s14LaLaPaRUZa = true;
 }
 function createRunwayDesc(slay, great, good, bad) {
