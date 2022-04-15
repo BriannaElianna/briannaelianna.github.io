@@ -880,6 +880,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
 let floppers = false;
 let floppersCheck = false;
 let slayers = false;
+let as7 = false;
 let slayersCheck = false;
 let bottom6WayLipsync = false;
 let bottom6WayLipsyncCheck = false;
@@ -890,6 +891,8 @@ function CheckForSpecialEvents(slay, great, good, bad, flop) {
     if (slay.length === 0 && great.length === 0 && currentCast.length >= 8 && !floppersCheck && randomNumber(0, 100) >= 80 && !conjoinedCheck)
         floppers = true;
     if (slay.length == currentCast.length && !slayersCheck && !conjoinedCheck)
+        slayers = true;
+	else if (as7)
         slayers = true;
     else if (slay.length + great.length == currentCast.length && !slayersCheck && randomNumber(0, 100) >= 70 && !conjoinedCheck)
         slayers = true;
@@ -2942,7 +2945,11 @@ function predefCast(cast, format, finale, premiere = '', returning = '', twist =
     }
     else if (format == "all-stars")
         all_stars = true;
-	else if (twist == "sweatshop")
+	else if (format == "allstars7")
+        slayers = true;
+		slayersCheck = true;
+		as7 = true;
+	if (twist == "sweatshop")
         sweatshop = true;
 	else if (twist == "chaos")
         chaos = true;
@@ -3091,7 +3098,11 @@ function startSimulation(challenge = "") {
             top3 = true;
         else if (select5.options[select5.selectedIndex].value == "all-stars")
             all_stars = true;
-        else if (select5.options[select5.selectedIndex].value == "team")
+		else if (select5.options[select5.selectedIndex].value == "allstars7")
+            slayers = true;
+			slayersCheck = true;
+			as7 = true;
+        if (select5.options[select5.selectedIndex].value == "team")
             team = true;
         else if (select5.options[select5.selectedIndex].value == "lipsync-assassin") {
             lipsync_assassin = true;
@@ -3512,6 +3523,15 @@ function judging() {
         judgingFloppersScreen();
     }
     else if (currentCast.length >= 6 && slayers && (top3 || top4) && !slayersCheck) {
+        //add all the queens to the top and 0 queens to the bottom
+        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        for (let i = 0; i < currentCast.length ; i++) {
+            topQueens.push(currentCast[i]);
+        }
+        slayers = false;
+        judgingSlayersScreen();
+    }
+	else if (as7) {
         //add all the queens to the top and 0 queens to the bottom
         currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
         for (let i = 0; i < currentCast.length ; i++) {
@@ -6111,7 +6131,7 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
     pangina];
-let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessa, kita, carmenf, blu, symone, sonique];
+let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique];
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
