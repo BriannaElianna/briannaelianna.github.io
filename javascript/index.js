@@ -3048,8 +3048,6 @@ function startSimulation(challenge = "") {
     }
     if (currentCast.length == 0)
         window.alert("You can't have a season without queens lmao..");
-	else if (duplicateQueens(currentCast) && noLimits)
-        window.alert("Please, only use one of each queen on your cast!");
     else {
         let select = document.getElementById("finale");
         let select2 = document.getElementById("premiere-format");
