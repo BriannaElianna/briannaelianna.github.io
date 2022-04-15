@@ -2957,7 +2957,7 @@ function predefCast(cast, format, finale, premiere = '', returning = '', twist =
 	else if (twist == "hell")
         hellCheck = true;
 		hell = true;
-	else if (twist == "lalam")
+	if (twist == "lalam")
 		lalap = true;
 		s14LaLaPaRUZa = true;
 		s14LaLaPaRUZaCheck = true;
