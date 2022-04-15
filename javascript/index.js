@@ -3570,8 +3570,11 @@ function judging() {
 	else if (lalahell == true) {
         //add all the queens to the top and 0 queens to the bottom
         currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < 7; i++) {
-            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
+        for (let i = 0; i < 2; i++) {
+            topQueens.push(currentCast[i]);
+        }
+        for (let i = 0; i < 2; i++) {
+            bottomQueens.push(currentCast[i]);
         }
         s14LaLaPaRUZa = false;
         judgingS14LaLaPaRUZaScreen();
