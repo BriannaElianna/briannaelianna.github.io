@@ -892,7 +892,7 @@ function CheckForSpecialEvents(slay, great, good, bad, flop) {
         floppers = true;
     if (slay.length == currentCast.length && !slayersCheck && !conjoinedCheck)
         slayers = true;
-	else if (as7 == true)
+	else if (as7)
         slayers = true;
     else if (slay.length + great.length == currentCast.length && !slayersCheck && randomNumber(0, 100) >= 70 && !conjoinedCheck)
         slayers = true;
@@ -3549,15 +3549,15 @@ function judging() {
         slayers = false;
         judgingSlayersScreen();
     }
-	else if (as7 == true) {
-        //add all the queens to the top and 0 queens to the bottom
-        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < currentCast.length ; i++) {
-            topQueens.push(currentCast[i]);
-        }
-        slayers = false;
-        judgingSlayersScreen();
-    }
+	//else if (as7) {
+      //  //add all the queens to the top and 0 queens to the bottom
+       // currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+      //  for (let i = 0; i < currentCast.length ; i++) {
+       //     topQueens.push(currentCast[i]);
+       // }
+       // slayers = false;
+       // judgingSlayersScreen();
+    //}
 	else if (lalap == true) {
         //add all the queens to the top and 0 queens to the bottom
         currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
