@@ -2881,8 +2881,9 @@ function generateSpace() {
 	if (totalCastSize < 3 && noLimits == false)
         window.alert("The simulator will not start without 3+ queens!");
     else
-		if (totalCastSize > 20 && noLimits == false)
+		if (totalCastSize > 20 && noLimits == false) {
 			window.alert("Warning: Using more than 20 queens often breaks the simulator! Don't get mad at me if it breaks mid season.");
+		}
         for (let i = 0; i < castSize; i++) {
             let select = document.createElement("select");
             select.setAttribute("class", "queenList");
