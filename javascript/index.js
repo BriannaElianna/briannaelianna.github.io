@@ -3099,7 +3099,7 @@ function startSimulation(challenge = "") {
 		else if (select4.options[select4.selectedIndex].value == "hell")
             hell = true;
 			hellCheck = true;
-		else if (select4.options[select4.selectedIndex].value == "lalam")
+		if (select4.options[select4.selectedIndex].value == "lalam")
 			lalap = true;
 			s14LaLaPaRUZa = true;
 			s14LaLaPaRUZaCheck = true;
