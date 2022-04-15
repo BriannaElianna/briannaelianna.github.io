@@ -1898,34 +1898,36 @@ function finaleFinale() {
         currentCast[1].addToTrackRecord("WINNER");
         eliminatedCast.unshift(currentCast[1]);
         currentCast.splice(1, 1);
-	if (randomNumber(0, 100) > 0) {
-        screen.createImage(currentCast[0].image, "yellow");
-        screen.createBigText(currentCast[0].getName() + "!!");
-        screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
-        currentCast[0].addToTrackRecord("ELIMINATED");
-        currentCast[1].addToTrackRecord("ELIMINATED");
-        eliminatedCast.unshift(currentCast[1]);
-        currentCast.splice(1, 1);
-        if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
-            currentCast[1].addToTrackRecord("RUNNER UP");
-            eliminatedCast.unshift(currentCast[1]);
-            currentCast.splice(1, 1);
-        }
-	}
     }else{
-        screen.createImage(currentCast[0].image, "yellow");
-        screen.createBigText(currentCast[0].getName() + "!!");
-        screen.createBold("Now prance, my queen!");
-        currentCast[0].addToTrackRecord("WINNER");
-        currentCast[1].addToTrackRecord("RUNNER UP");
-        eliminatedCast.unshift(currentCast[1]);
-        currentCast.splice(1, 1);
-        if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
-            currentCast[1].addToTrackRecord("RUNNER UP");
-            eliminatedCast.unshift(currentCast[1]);
-            currentCast.splice(1, 1);
-        }
-    }
+		if (flop == true) {
+			screen.createImage(currentCast[0].image, "yellow");
+			screen.createBigText(currentCast[0].getName() + "!!");
+			screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
+			currentCast[0].addToTrackRecord("ELIMINATED");
+			currentCast[1].addToTrackRecord("ELIMINATED");
+			eliminatedCast.unshift(currentCast[1]);
+			currentCast.splice(1, 1);
+			if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
+				currentCast[1].addToTrackRecord("RUNNER UP");
+				eliminatedCast.unshift(currentCast[1]);
+				currentCast.splice(1, 1);
+			}
+		}
+		else if (flop == false) {
+			screen.createImage(currentCast[0].image, "yellow");
+			screen.createBigText(currentCast[0].getName() + "!!");
+			screen.createBold("Now prance, my queen!");
+			currentCast[0].addToTrackRecord("WINNER");
+			currentCast[1].addToTrackRecord("RUNNER UP");
+			eliminatedCast.unshift(currentCast[1]);
+			currentCast.splice(1, 1);
+			if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
+				currentCast[1].addToTrackRecord("RUNNER UP");
+				eliminatedCast.unshift(currentCast[1]);
+				currentCast.splice(1, 1);
+			}
+		}
+	}
     isThisA3Way = false;
     top2finaleAS = false;
     episodeChallenges.push("Finale");
