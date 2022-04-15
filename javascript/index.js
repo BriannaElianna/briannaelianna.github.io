@@ -75,7 +75,7 @@ function miniChallenge() {
     miniChallengeScreen.clean();
     miniChallengeScreen.createHeader("Mini-challenge!");
     miniChallengeScreen.createParagraph("", "Description");
-    document.body.style.backgroundImage = "url('image/werkroom.webp')";
+    document.body.style.llmqgroundImage = "url('image/werkroom.webp')";
     let challenge = new MiniChallenge();
     challenge.generateDescription();
     challenge.rankPerformances();
@@ -2931,6 +2931,13 @@ function predefCast(cast, format, premiere = '', returning = '') {
     }
     else if (format == "all-stars")
         all_stars = true;
+	else if (twist == "sweatshop")
+        sweatshop = true;
+	else if (twist == "chaos")
+        chaos = true;
+	else if (twist == "hell")
+        s14LaLaPaRUZa = true;
+		s14LaLaPaRUZaCheck = true;
     else if (format == "jury-allstars"){ 
         all_stars = true;
         allstars3Finale = true;
