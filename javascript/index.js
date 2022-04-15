@@ -2934,7 +2934,7 @@ let allstars3Finale = false;
 let ukvstwFinale = false;
 let lipsync_assassin = false;
 let team = false;
-function predefCast(cast, format, finale, premiere = '', returning = '', twist = '') {
+function predefCast(cast, format, finale, premiere = '', returning = '') {
     currentCast = cast;
     totalCastSize = cast.length;
     if (format == "top3")
@@ -2947,25 +2947,6 @@ function predefCast(cast, format, finale, premiere = '', returning = '', twist =
     }
     else if (format == "all-stars")
         all_stars = true;
-	else if (format == "allstars7")
-        slayers = true;
-		slayersCheck = true;
-		allstarss7 = true;
-	if (twist == "sweatshop")
-        sweatshop = true;
-	else if (twist == "chaos")
-        chaos = true;
-	else if (twist == "hell")
-        hellCheck = true;
-		hell = true;
-	if (twist == "lalam")
-		lalap = true;
-		s14LaLaPaRUZa = true;
-		s14LaLaPaRUZaCheck = true;
-	if (twist == "lalahell")
-		lalahell = true;
-		s14LaLaPaRUZa = true;
-		s14LaLaPaRUZaCheck = true;
     if (format == "jury-allstars"){ 
         all_stars = true;
         allstars3Finale = true;
