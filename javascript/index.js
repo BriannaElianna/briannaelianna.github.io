@@ -3587,16 +3587,28 @@ function judging() {
         judgingS14LaLaPaRUZaScreen();
     }
 	else if (lalahell == true) {
-        //add 3 queens to the top and 6 queens to the bottom
-        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < 3; i++) {
-            topQueens.push(currentCast[i]);
-        }
-        for (let i = 0; i < 6; i++) {
-            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
-        }
-        bottom6WayLipsync = false;
-        judging6WayScreen();
+		if (lalahell == true && currentCast.length > 7) {
+			 //add 3 queens to the top and 6 queens to the bottom
+			currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+			for (let i = 0; i < 3; i++) {
+				topQueens.push(currentCast[i]);
+			}
+			for (let i = 0; i < 6; i++) {
+				bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
+			}
+			bottom6WayLipsync = false;
+			judging6WayScreen();
+		}
+		else if (lalahell == true && currentCast.length < 7) {
+			lalahell = false;
+			bottom6WayLipsync = false;
+			currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+			for (let i = 0; i < 4; i++) {
+				topQueens.push(currentCast[i]);
+				bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
+			}
+			judgingScreen();
+		}
     }
     else if (currentCast.length > 13) {
         //add 4 queens to the top and 4 queens to the bottom
