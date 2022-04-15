@@ -5885,9 +5885,10 @@ let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 4, "Rupaull");
 let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd");
 let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 1, "Priscillaa");
 let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme");
+let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA");
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
-let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla];
+let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla, supremme, arta];
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
@@ -5926,7 +5927,7 @@ let allQueens = [
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
-    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla,
+    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
     pangina, peppa
 ].concat(allCustomQueens).sort((a, b) => a.getName().toLowerCase().localeCompare(b.getName().toLowerCase()));
 let allQueensCopy = [];
