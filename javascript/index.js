@@ -6182,6 +6182,28 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
     pangina];
 let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra];
+let lipsyncers = [tayce,
+abby,
+yvie,
+naomi,
+darienne,
+laganja,
+rajah,
+trinityk,
+akashia,
+jujubee,
+phiphi, 
+jasmineK,
+jorgeous,
+lemon,
+kameron,
+brooke,
+heidi,
+tatianna,
+coco,
+vanity,
+peppa,
+alyssa]
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
