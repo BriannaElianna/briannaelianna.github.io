@@ -1378,6 +1378,7 @@ let s9Premiere = false;
 let sweatshop = false;
 let chaos = false;
 let hell = false;
+let flop = false;
 let lalap = false;
 let lalahell = false;
 let hellCheck = false;
@@ -1498,6 +1499,7 @@ function reSimulate() {
     s14LaLaPaRUZa = false;
     s14LaLaPaRUZaCheck = false;
 	hell = false;
+	flop = false;
 	hellCheck = false;
     assasintable = [];
     assasinlipstick = [];
@@ -3090,6 +3092,8 @@ function startSimulation(challenge = "") {
 		else if (select4.options[select4.selectedIndex].value == "hell")
             hell = true;
 			hellCheck = true;
+		if (select4.options[select4.selectedIndex].value == "flop")
+            flop = true;
 		if (select4.options[select4.selectedIndex].value == "none")
             hell = false;
 			hellCheck = false;
@@ -3555,6 +3559,15 @@ function judging() {
         }
         slayers = false;
         judgingSlayersScreen();
+    }
+	if (flop == true) {
+        //add all the queens to the top and 0 queens to the bottom
+		currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        for (let i = 0; i < 3; i++) {
+            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
+        }
+        floppers = false;
+        judgingFloppersScreen();
     }
 	//else if (allstarss7 == true) {
         //add all the queens to the top and 0 queens to the bottom
