@@ -2876,9 +2876,9 @@ function generateSpace() {
     totalCastSize = castSize;
     let castSelection = document.querySelector("p#castSelection");
     castSelection.innerHTML = '';
-	if (totalCastSize < 3 && noLimits)
+	if (totalCastSize < 3 && noLimits == false)
         window.alert("Please, use at least 3 queens on your cast!");
-    else if (totalCastSize > 20 && noLimits)
+    else if (totalCastSize > 20 && noLimits == false)
         window.alert("Please, use less than 20 queens in your cast!");
     else
         for (let i = 0; i < castSize; i++) {
@@ -3125,12 +3125,14 @@ function startSimulation(challenge = "") {
         if (document.getElementById("chocolateBar").checked == true)
             chocolateBarTwist = true;
 		if (document.getElementById("noLimits").checked == true)
-            noLimits = true;
+            if (noLimits == false) {
+				noLimits = true
+			}
         else if (document.getElementById("chocolateBarChoosable").checked == true){
                 chocolateBarTwist = true;
                 chocolateBarTwistChoosable = true;
         }
-		if (currentCast.length == 3 && top4 && noLimits || currentCast.length == 3 && all_stars && noLimits) {
+		if (currentCast.length == 3 && top4 && noLimits == false || currentCast.length == 3 && all_stars && noLimits == false) {
             window.alert("Lip-Sync For The Crown and All Star formats needs at least 4 queens!");
             top4 = false;
             all_stars = false;
@@ -3138,12 +3140,12 @@ function startSimulation(challenge = "") {
             ukvstwFinale = false;
             currentCast = [];
         }
-        else if (team == true && noLimits && currentCast.length % 2 !== 0) {
+        else if (team == true && noLimits == false && currentCast.length % 2 !== 0) {
             window.alert("The team format needs an even amout of queens!");
             currentCast = [];
             team = false;
         }
-        else if ((s6Premiere || s12Premiere || porkchopPremiere || s14Premiere) && noLimits && currentCast.length < 10) {
+        else if ((s6Premiere || s12Premiere || porkchopPremiere || s14Premiere) && noLimits == false && currentCast.length < 10) {
             window.alert("Double Premiere formats needs at least 10 queens!");
             s6Premiere = false;
             s12Premiere = false;
@@ -3158,7 +3160,7 @@ function startSimulation(challenge = "") {
             ukvstwFinale = false;
             currentCast = [];
         }
-        else if (uk3Premiere && noLimits && currentCast.length < 6) {
+        else if (uk3Premiere && noLimits == false && currentCast.length < 6) {
             window.alert("Uk3 Premiere needs at least 6 queens!");
             uk3Premiere = false;
             top4 = false;
@@ -3177,7 +3179,7 @@ function startSimulation(challenge = "") {
             lalaparuza = false;
             currentCast = [];
         }
-        else if (s9Premiere && noLimits && currentCast.length < 6) {
+        else if (s9Premiere && noLimits == false && currentCast.length < 6) {
             window.alert("Normal Premiere (No Elimination) needs at least 6 queens!");
             uk3Premiere = false;
             top4 = false;
@@ -3196,7 +3198,7 @@ function startSimulation(challenge = "") {
             lalaparuza = false;
             currentCast = [];
         }
-        else if ((queensOfComedy || conjoinedQueens || kittyGirlGroup) && noLimits && currentCast.length < 10) {
+        else if ((queensOfComedy || conjoinedQueens || kittyGirlGroup) && noLimits == false && currentCast.length < 10) {
             window.alert("Queens of comedy, Kitty Girl Group and Conjoined Queens return challenges need at least 10 queens!");
             uk3Premiere = false;
             s6Premiere = false;
@@ -3220,7 +3222,7 @@ function startSimulation(challenge = "") {
             lalaparuza = false;
             currentCast = [];
         }
-        else if (team && (smackdown && noLimits || voteReturn && noLimits || randomReturn && noLimits || chocolateBarTwist && noLimits || s9Premiere && noLimits || s6Premiere && noLimits || lalaparuza && noLimits || queensOfComedy && noLimits || kittyGirlGroup && noLimits || conjoinedQueens && noLimits || s12Premiere && noLimits || porkchopPremiere && noLimits || s14Premiere && noLimits || uk3Premiere && noLimits)) {
+        else if (team && (smackdown && noLimits == false || voteReturn && noLimits == false || randomReturn && noLimits == false || chocolateBarTwist && noLimits == false || s9Premiere && noLimits == false || s6Premiere && noLimits == false || lalaparuza && noLimits == false || queensOfComedy && noLimits == false || kittyGirlGroup && noLimits == false || conjoinedQueens && noLimits == false || s12Premiere && noLimits == false || porkchopPremiere && noLimits == false || s14Premiere && noLimits == false || uk3Premiere && noLimits == false)) {
             window.alert("The team format isn't supported with any special premiere or returning formats, sorry!");
             team = false;
             smackdown = false;
@@ -3239,7 +3241,7 @@ function startSimulation(challenge = "") {
             chocolateBarTwist = false;
             chocolateBarTwistChoosable = false;
         }
-        else if (smackdown && chocolateBarTwist && noLimits) {
+        else if (smackdown && chocolateBarTwist && noLimits == false) {
             window.alert("The Lipsync Smackdown format isn't supported with the golden chocolate bar twist, sorry!");
             s14Premiere = false;
             s12Premiere = false;
@@ -3266,7 +3268,7 @@ function startSimulation(challenge = "") {
             chocolateBarTwist = false;
             chocolateBarTwistChoosable = false;
         }
-        else if (smackdown && !noDouble && noLimits) {
+        else if (smackdown && !noDouble && noLimits == false) {
             window.alert("The Lipsync Smackdown format isn't supported with double shantays or sashays, sorry!");
             s14Premiere = false;
             s12Premiere = false;
@@ -5936,8 +5938,7 @@ let jaida = new Queen("Jaida Essence Hall", 4, 7, 10, 13, 8, 10, 12, "Jaida");
 let jan = new Queen("Jan", 8, 4, 12, 9, 5, 10, 9, "Jan");
 let nicky = new Queen("Nicky Doll", 4, 4, 5, 12, 3, 11, 5, "Nicky");
 let rock = new Queen("Rock M. Sakura", 6, 6, 6, 4, 8, 8, 7, "Rock");
-let widow = new Queen("Widow Von'Du", 11, 7, 13, 8, 11, 10, 15, "Widow");
-let us_season12 = [aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, widow];
+let us_season12 = [aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock];
 //ALL STARS 5
 let allstars_5 = [alexis, blair, derrick, india, jujubee, mariah, mayhem, miz, ongina, shea];
 //SEASON 13
@@ -6163,7 +6164,7 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     aja, alexism, charlie, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina,
     aquaria, asia, blair, dusty, kalorie, kameron, mayhem, michelle, miz, monet, monique, vanessa, vixen, yuhua,
     akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, yvie,
-    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, widow,
+    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
     alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
     baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar,
@@ -6204,7 +6205,7 @@ let allQueens = [
     aja, alexism, charlie, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina,
     aquaria, asia, blair, dusty, kalorie, kameron, mayhem, michelle, miz, monet, monique, vanessa, vixen, yuhua,
     akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, yvie,
-    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, widow,
+    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
     alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
     baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar,
