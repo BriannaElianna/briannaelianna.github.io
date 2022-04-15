@@ -955,14 +955,6 @@ function addQueen() {
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
     let image = document.getElementById("url").value.trim();
-    if ((acting || comedy || dance || design || improv || runway || lipsync) < 0 || (acting || comedy || dance || design || improv || runway || lipsync) > 15) {
-        window.alert("Queens' stats must be between 0 and 15!");
-        return;
-    }
-    if (name == "" || isNaN((acting || comedy || dance || design || improv || runway || lipsync))) {
-        window.alert("One of the boxes is empty!");
-        return;
-    }
     let extension = image.substring(image.lastIndexOf(".") + 1).toLowerCase();
     let noimagemaybe = false;
     if (extension == "png" || extension == "jpg" || extension == ""){
@@ -2992,79 +2984,6 @@ function predefCast(cast, format, premiere = '', returning = '') {
     else if (document.getElementById("chocolateBarChoosable").checked == true){
         chocolateBarTwist = true;
         chocolateBarTwistChoosable = true;
-    }
-    if (smackdown && chocolateBarTwist) {
-        window.alert("The Lipsync Smackdown format isn't supported with the golden chocolate bar twist, sorry!");
-        s14Premiere = false;
-        s12Premiere = false;
-        s9Premiere = false;
-        s6Premiere = false;
-        porkchopPremiere = false;
-        uk3Premiere = false;
-        top4 = false;
-        top3 = false;
-        canFinale = false;
-        lipsync_assassin = false;
-        smackdown = false;
-        all_stars = false;
-        allstars3Finale = false;
-        ukvstwFinale = false;
-        smackdown = false;
-        voteReturn = false;
-        conjoinedQueens = false;
-        queensOfComedy = false;
-        kittyGirlGroup = false;
-        randomReturn = false;
-        lalaparuza = false;
-        allQueens = [...allQueensCopy2];
-        chocolateBarTwist = false;
-        chocolateBarTwistChoosable = false;
-    }
-    else if (smackdown && !noDouble) {
-        window.alert("The Lipsync Smackdown format isn't supported with double shantays or sashays, sorry!");
-        s14Premiere = false;
-        s12Premiere = false;
-        s9Premiere = false;
-        s6Premiere = false;
-        porkchopPremiere = false;
-        uk3Premiere = false;
-        top4 = false;
-        top3 = false;
-        canFinale = false;
-        lipsync_assassin = false;
-        smackdown = false;
-        all_stars = false;
-        allstars3Finale = false;
-        ukvstwFinale = false;
-        smackdown = false;
-        voteReturn = false;
-        conjoinedQueens = false;
-        queensOfComedy = false;
-        kittyGirlGroup = false;
-        randomReturn = false;
-        lalaparuza = false;
-        allQueens = [...allQueensCopy2];
-        chocolateBarTwist = false;
-        chocolateBarTwistChoosable = false;
-    }
-    else if (team && chocolateBarTwist) {
-        window.alert("The team format isn't supported with the chocolate bar twist, sorry!");
-        team = false;
-        smackdown = false;
-        voteReturn = false;
-        randomReturn = false;
-        lalaparuza = false;
-        queensOfComedy = false;
-        conjoinedQueens = false;
-        kittyGirlGroup = false;
-        s6Premiere = false;
-        s9Premiere = false;
-        s12Premiere = false;
-        s14Premiere = false;
-        porkchopPremiere = false;
-        uk3Premiere = false;
-        chocolateBarTwist = false;
-        chocolateBarTwistChoosable = false;
     }
     else if (chocolateBarTwist) {
         if (chocolateBarTwistChoosable){
