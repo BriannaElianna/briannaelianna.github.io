@@ -880,7 +880,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
 let floppers = false;
 let floppersCheck = false;
 let slayers = false;
-let as7 = false;
+let allstarss7 = false;
 let slayersCheck = false;
 let bottom6WayLipsync = false;
 let bottom6WayLipsyncCheck = false;
@@ -892,7 +892,7 @@ function CheckForSpecialEvents(slay, great, good, bad, flop) {
         floppers = true;
     if (slay.length == currentCast.length && !slayersCheck && !conjoinedCheck)
         slayers = true;
-	else if (as7)
+	else if (allstarss7)
         slayers = true;
     else if (slay.length + great.length == currentCast.length && !slayersCheck && randomNumber(0, 100) >= 70 && !conjoinedCheck)
         slayers = true;
@@ -2950,7 +2950,7 @@ function predefCast(cast, format, finale, premiere = '', returning = '', twist =
 	else if (format == "allstars7")
         slayers = true;
 		slayersCheck = true;
-		as7 = true;
+		allstarss7 = true;
 	if (twist == "sweatshop")
         sweatshop = true;
 	else if (twist == "chaos")
@@ -3104,6 +3104,16 @@ function startSimulation(challenge = "") {
 		else if (select4.options[select4.selectedIndex].value == "hell")
             hell = true;
 			hellCheck = true;
+		if (select4.options[select4.selectedIndex].value == "none")
+            hell = false;
+			hellCheck = false;
+			sweatshop = false;
+			lalahell = false;
+			s14LaLaPaRUZa = false;
+			s14LaLaPaRUZaCheck = false;
+			lalap = false;
+			s14LaLaPaRUZa = false;
+			s14LaLaPaRUZaCheck = false;
 		if (select4.options[select4.selectedIndex].value == "lalam")
 			lalap = true;
 			s14LaLaPaRUZa = true;
@@ -3119,7 +3129,7 @@ function startSimulation(challenge = "") {
 		else if (select5.options[select5.selectedIndex].value == "allstars7")
             slayers = true;
 			slayersCheck = true;
-			as7 = true;
+			allstarss7 = true;
         if (select5.options[select5.selectedIndex].value == "team")
             team = true;
         else if (select5.options[select5.selectedIndex].value == "lipsync-assassin") {
@@ -3549,14 +3559,23 @@ function judging() {
         slayers = false;
         judgingSlayersScreen();
     }
-	//else if (as7) {
-      //  //add all the queens to the top and 0 queens to the bottom
-       // currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-      //  for (let i = 0; i < currentCast.length ; i++) {
-       //     topQueens.push(currentCast[i]);
-       // }
-       // slayers = false;
-       // judgingSlayersScreen();
+	else if (hell == true) {
+        //add all the queens to the top and 0 queens to the bottom
+        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        for (let i = 1; i < currentCast.length ; i++) {
+            topQueens.push(currentCast[i]);
+        }
+        slayers = false;
+        judgingSlayersScreen();
+    }
+	//else if (allstarss7 == true) {
+        //add all the queens to the top and 0 queens to the bottom
+        //currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        //for (let i = 1; i < currentCast.length ; i++) {
+            //topQueens.push(currentCast[i]);
+        //}
+        //slayers = false;
+        //judgingSlayersScreen();
     //}
 	else if (lalap == true) {
         //add all the queens to the top and 0 queens to the bottom
@@ -3568,16 +3587,16 @@ function judging() {
         judgingS14LaLaPaRUZaScreen();
     }
 	else if (lalahell == true) {
-        //add all the queens to the top and 0 queens to the bottom
+        //add 3 queens to the top and 6 queens to the bottom
         currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 3; i++) {
             topQueens.push(currentCast[i]);
         }
-        for (let i = 0; i < 2; i++) {
-            bottomQueens.push(currentCast[i]);
+        for (let i = 0; i < 6; i++) {
+            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
-        s14LaLaPaRUZa = false;
-        judgingS14LaLaPaRUZaScreen();
+        bottom6WayLipsync = false;
+        judging6WayScreen();
     }
     else if (currentCast.length > 13) {
         //add 4 queens to the top and 4 queens to the bottom
