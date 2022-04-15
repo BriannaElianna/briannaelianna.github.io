@@ -2924,7 +2924,7 @@ let allstars3Finale = false;
 let ukvstwFinale = false;
 let lipsync_assassin = false;
 let team = false;
-function predefCast(cast, format, premiere = '', returning = '', twist = '') {
+function predefCast(cast, format, finale, premiere = '', returning = '', twist = '') {
     currentCast = cast;
     totalCastSize = cast.length;
     if (format == "top3")
@@ -3329,17 +3329,6 @@ function judging() {
         }
         bottom6WayLipsync = false;
         judging6WayScreen();
-    }
-	else if (currentCast.length >= 1 && hell && !hellCheck) {
-        //add 3 queens to the top and 6 queens to the bottom
-        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < 3; i++) {
-            topQueens.push(currentCast[i]);
-        }
-        for (let i = 0; i < 6; i++) {
-            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
-        }
-        judginghellScreen();
     }
     else if (currentCast.length >= 8 && floppers && (top3 || top4) && !floppersCheck) {
         //add 0 queens to the top and 3 queens to the bottom

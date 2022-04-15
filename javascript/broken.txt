@@ -189,3 +189,17 @@ function lipsyncshell() {
     else
         screen.createButton("Proceed", "newEpisode()");
 }
+
+
+
+	else if (currentCast.length >= 1 && hell && !hellCheck) {
+        //add 3 queens to the top and 6 queens to the bottom
+        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        for (let i = 0; i < 3; i++) {
+            topQueens.push(currentCast[i]);
+        }
+        for (let i = 0; i < 6; i++) {
+            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
+        }
+        judginghellScreen();
+    }
