@@ -2933,11 +2933,6 @@ function predefCast(cast, format, premiere = '', returning = '') {
         all_stars = true;
 	else if (twist == "sweatshop")
         sweatshop = true;
-	else if (twist == "chaos")
-        chaos = true;
-	else if (twist == "hell")
-        s14LaLaPaRUZa = true;
-		s14LaLaPaRUZaCheck = true;
     else if (format == "jury-allstars"){ 
         all_stars = true;
         allstars3Finale = true;
