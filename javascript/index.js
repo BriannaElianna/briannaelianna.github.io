@@ -5876,13 +5876,15 @@ let ivana = new Queen("Ivana Vamp", 6, 5, 6, 6, 6, 6, 5, "Ivana");
 let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "Riche");
 let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "Luquisha");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
-//SPECIAL 
-let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina");
+//UK4
 let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa");
+//Judges
+let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "Michelle");
 let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 4, "Rupaull");
 let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd");
 let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 1, "Priscillaa");
+let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme");
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
 let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla];
