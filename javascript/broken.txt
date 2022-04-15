@@ -1,0 +1,191 @@
+function judginghellScreen() {
+    let screen = new Scene();
+    screen.clean();
+    screen.createHeader("Judging!");
+    screen.createBold("Based on tonight's performances...");
+    document.body.style.backgroundImage = "url('image/stage.webp')";
+    screen.createHorizontalLine();
+    topQueens[0].addToTrackRecord("WIN");
+    topQueens[0].favoritism += 5;
+    topQueens[0].ppe += 5;
+    screen.createImage(topQueens[0].image, "royalblue");
+    screen.createBold(topQueens[0].getName() + ", condragulations, you're the winner of today's challenge!");
+    screen.createHorizontalLine();
+    if (bottomQueens.length >= 0) {
+        for (let i = 0; i < bottomQueens.length; i++)
+            screen.createImage(bottomQueens[i].image, "tomato");
+        screen.createParagraph("", "bottom3");
+        let bottom3 = document.getElementById("bottom3");
+        for (let i = 0; i < bottomQueens.length; i++)
+            bottom3.innerHTML += bottomQueens[i].getName() + ", ";
+        bottom3.innerHTML += "I really expected more from you...";
+        screen.createBold("I'm sorry my dears, but you are all up for elimination. I need to see you all lipsync...");
+    }
+    screen.createButton("Proceed", "lipsyncshell()");
+    for (let i = 0; i < bottomQueens.length; i++) {
+        bottomQueens[i].addToTrackRecord("BTM");
+        bottomQueens[i].unfavoritism += 3;
+        bottomQueens[i].ppe += 1;
+    }
+    for (let i = 0; i < eliminatedCast.length; i++) {
+        eliminatedCast[i].addToTrackRecord("");
+    }
+}
+function lipsyncshell() {
+    hellCheck = true;
+        let screen = new Scene();
+    screen.clean();
+    screen.createHeader("Lipsync LaLaPaRUza Smackdown!!");
+    screen.createBold("If you win your lipsync, you will be safe from elimination... If you lose, you'll continue to face off until two queens remain... In the end, one of them will sashay away.");
+    document.body.style.backgroundImage = "url('image/lalaparuzasmackdown.webp')";
+    screen.createImage(topQueens[0].image);
+    screen.createBold(topQueens[0].getName() + ", you are the exception. You are safe from elimination tonight!!");
+    topQueens[0].addToTrackRecord(" SAFE");
+    let notpair = false;
+    if (bottomQueens.length % 2 != 0) {
+        notpair = true;
+        console.log(notpair);
+    }
+    screen.createBold("Now, let the Lipsync LaLaPaRUza Smackdown BEGIN!!");
+    let lipsyncorder = bottomQueens.slice();
+    shuffle(lipsyncorder);
+    screen.createHorizontalLine();
+    //Round 1
+    for (let i = 0; i < bottomQueens.length; i++) {
+        let queen1 = lipsyncorder[i];
+        let queen2 = lipsyncorder[i+1];
+        screen.createImage(queen1.image);
+        screen.createImage(queen2.image);
+        if (notpair && lipsyncorder[i+3] == undefined) {
+            let queen3 = lipsyncorder[lipsyncorder.length - 1];
+            screen.createImage(queen3.image);
+            screen.createBold(queen1.getName() + ", " + queen2.getName() + " and " + queen3.getName() + " will lipsync...");
+            screen.createBold("The time has come for you to lip-sync... for your life! Good luck, and don't fuck it up.");
+            lsSong();
+            screen.createBold("I've made my decision.");
+            var lipSync = [queen1, queen2, queen3];
+            for (var i_1 = 0; i_1 < lipSync.length; i_1++) {
+                lipSync[i_1].getASLipsync();
+            }
+            lipSync.sort(function (a, b) { return (b.lipsyncScore - a.lipsyncScore); });
+            screen.createImage(lipSync[0].image, "royalblue");
+            screen.createBold(lipSync[0].getName() + ", shantay you stay! ");
+            screen.createBold(lipSync[1].getName() + ", " + lipSync[2].getName() + ", you are still up for eliminaton!!");
+            lipSync[0].addToTrackRecord("SAFE<br><small>Round 1</small>");
+            lipsyncorder.splice(lipsyncorder.indexOf(lipSync[0]), 1);
+            i = bottomQueens.length;
+        } else {
+            screen.createBold(queen1.getName() + " and " + queen2.getName() + " will lipsync...");
+            screen.createBold("The time has come for you to lip-sync... for your life! Good luck, and don't fuck it up.");
+            lsSong();
+            screen.createBold("I've made my decision.");
+            var lipSync = [queen1, queen2];
+            for (var i_1 = 0; i_1 < lipSync.length; i_1++) {
+                lipSync[i_1].getASLipsync();
+            }
+            lipSync.sort(function (a, b) { return (b.lipsyncScore - a.lipsyncScore); });
+            screen.createImage(lipSync[0].image, "royalblue");
+            screen.createBold(lipSync[0].getName() + ", shantay you stay! ");
+            screen.createBold(lipSync[1].getName() + ", you are still up for eliminaton!! ");
+            lipSync[0].addToTrackRecord("SAFE<br><small>Round 1</small>");
+            lipsyncorder.splice(lipsyncorder.indexOf(lipSync[0]), 1);
+            if (lipsyncorder[i+1] == undefined) {
+                i = bottomQueens.length;
+            }
+        }
+    }
+    //Round 2
+    shuffle(lipsyncorder);
+    screen.createHorizontalLine();
+    screen.createBold("Next round..!");
+    for (let i = 0; i < bottomQueens.length; i++) {
+        let queen1 = lipsyncorder[i];
+        let queen2 = lipsyncorder[i+1];
+        screen.createImage(queen1.image);
+        screen.createImage(queen2.image);
+        screen.createBold(queen1.getName() + " and " + queen2.getName() + " will lipsync...");
+        screen.createBold("The time has come for you to lip-sync... for your life! Good luck, and don't fuck it up.");
+        lsSong();
+        screen.createBold("I've made my decision.");
+        var lipSync = [queen1, queen2];
+        for (var i_1 = 0; i_1 < lipSync.length; i_1++) {
+            lipSync[i_1].getASLipsync();
+        }
+        lipSync.sort(function (a, b) { return (b.lipsyncScore - a.lipsyncScore); });
+        screen.createImage(lipSync[0].image, "royalblue");
+        screen.createBold(lipSync[0].getName() + ", shantay you stay! ");
+        screen.createBold(lipSync[1].getName() + ", you are still up for eliminaton!! ");
+        lipSync[0].addToTrackRecord("SAFE<br><small>Round 2</small>");
+        lipsyncorder.splice(lipsyncorder.indexOf(lipSync[0]), 1);
+        if (lipsyncorder[i+1] == undefined) {
+            i = bottomQueens.length;
+        }
+    }
+    //Round 3
+    shuffle(lipsyncorder);
+    screen.createHorizontalLine();
+    screen.createBold("Final round..!");
+    for (let i = 0; i < bottomQueens.length; i++) {
+        let queen1 = lipsyncorder[i];
+        let queen2 = lipsyncorder[i+1];
+        screen.createImage(queen1.image);
+        screen.createImage(queen2.image);
+        screen.createBold(queen1.getName() + " and " + queen2.getName() + " will lipsync...");
+        screen.createBold("The time has come for you to lip-sync... for your life! Good luck, and don't fuck it up.");
+        lsSong();
+        screen.createBold("I've made my decision.");
+        var lipSync = [queen1, queen2];
+        for (var i_1 = 0; i_1 < lipSync.length; i_1++) {
+            lipSync[i_1].getASLipsync();
+        }
+        lipSync.sort(function (a, b) { return (b.lipsyncScore - a.lipsyncScore); });
+        if (lipSync[0].lipsyncScore >= lipSync[1].lipsyncScore && lipSync[0].lipsyncScore > 7 && lipSync[1].lipsyncScore > 7) {
+            screen.createImage(lipSync[0].image, "darkblue");
+            screen.createImage(lipSync[1].image, "darkblue");
+            screen.createBold("Shantay, you both stay baby!");
+            queen1.addToTrackRecord("SAFE<br><small>Round 3</small>");
+            queen2.addToTrackRecord("SAFE<br><small>Round 3</small>");
+            lipsyncorder.splice(lipsyncorder.indexOf(queen1), 1);
+            lipsyncorder.splice(lipsyncorder.indexOf(queen2), 1);
+        } else {
+            screen.createImage(lipSync[0].image, "royalblue");
+            screen.createBold(lipSync[0].getName() + ", shantay you stay! ");
+            lipSync[0].addToTrackRecord("SAFE<br><small>Round 3</small>");
+            lipsyncorder.splice(lipsyncorder.indexOf(lipSync[0]), 1);
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+                screen.createBold(lipSync[1].getName() + ", now your fate rests in the hands of the drag gods.");
+                screen.createBold("If you have the golden chocolate bar, you will be safe.");
+                if (chocolateBarCheck(lipSync[1]) == true) {
+                    screen.createImage("image/ChocolateBarWithTicket.webp", "gold");
+                    screen.createBold("You've got the GOLD BAR!!!! The gods have spoken!");
+                    screen.createBold(lipSync[1].getName() + "!! Condragtulations, you are safe to slay another day!");
+                    lipSync[1].addToTrackRecord("CHOC");
+                    chocolateBarTwistCheck = true;
+                } else {
+                    screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
+                    screen.createBold("It's chocolate.");
+                    screen.createBold(lipSync[1].getName() + ", sashay away...");
+                    lipSync[1].addToTrackRecord(" ELIM ");
+                    lipSync[1].unfavoritism += 2;
+                    eliminatedCast.unshift(lipSync[1]);
+                    currentCast.splice(currentCast.indexOf(lipSync[1]), 1);
+                }
+            } else {
+                screen.createBold(lipSync[1].getName() + ", sashay away. ");
+                lipSync[1].addToTrackRecord(" ELIM ");
+                lipSync[1].unfavoritism += 2;
+                eliminatedCast.unshift(lipSync[1]);
+                currentCast.splice(currentCast.indexOf(lipSync[1]), 1);
+            }
+        }
+        if (lipsyncorder[i+1] == undefined) {
+            i = bottomQueens.length;
+        }
+    }
+    episodeChallenges.push("LaLaPaRUZa Smackdown");
+    episodeCount++;
+    if (CheckForReturning() == true)
+        screen.createButton("Proceed", "returningQueenScreen()");
+    else
+        screen.createButton("Proceed", "newEpisode()");
+}
