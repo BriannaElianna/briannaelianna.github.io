@@ -3038,8 +3038,6 @@ function startSimulation(challenge = "") {
     }
     if (currentCast.length == 0)
         window.alert("You can't have a season without queens lmao..");
-	else if (currentCast.length => 20)
-        window.alert("Limits is on. No more queens than 20!");
 	else if (duplicateQueens(currentCast) && noLimits)
         window.alert("Please, only use one of each queen on your cast!");
     else {
