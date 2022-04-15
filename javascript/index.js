@@ -3080,6 +3080,9 @@ function startSimulation(challenge = "") {
             sweatshop = true;
 		else if (select4.options[select4.selectedIndex].value == "chaos")
             chaos = true;
+		else if (select4.options[select4.selectedIndex].value == "hell")
+            s14LaLaPaRUZa = true;
+			s14LaLaPaRUZaCheck = true;
         if (document.getElementById("disableDouble").checked == true)
             noDouble = true;
         if (document.getElementById("chocolateBar").checked == true)
