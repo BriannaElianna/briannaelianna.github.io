@@ -2966,6 +2966,8 @@ function predefCast(cast, format, finale, premiere = '', returning = '') {
         s6Premiere = true;
     else if (premiere == "s9-premiere")
         s9Premiere = true;
+	else if (premiere == "as7")
+        hell = true;
     else if (premiere == "s12-premiere")
         s12Premiere = true;
     else if (premiere == "s14-premiere")
