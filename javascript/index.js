@@ -1898,6 +1898,20 @@ function finaleFinale() {
         currentCast[1].addToTrackRecord("WINNER");
         eliminatedCast.unshift(currentCast[1]);
         currentCast.splice(1, 1);
+	if (randomNumber(0, 100) > 0) {
+        screen.createImage(currentCast[0].image, "yellow");
+        screen.createBigText(currentCast[0].getName() + "!!");
+        screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
+        currentCast[0].addToTrackRecord("ELIMINATED");
+        currentCast[1].addToTrackRecord("ELIMINATED");
+        eliminatedCast.unshift(currentCast[1]);
+        currentCast.splice(1, 1);
+        if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
+            currentCast[1].addToTrackRecord("RUNNER UP");
+            eliminatedCast.unshift(currentCast[1]);
+            currentCast.splice(1, 1);
+        }
+	}
     }else{
         screen.createImage(currentCast[0].image, "yellow");
         screen.createBigText(currentCast[0].getName() + "!!");
@@ -2179,25 +2193,25 @@ function contestantProgress() {
     trackRecords.appendChild(header);
     let th = document.createElement("th");
     th.innerHTML = "Queen";
-    th.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 170px;");
+    th.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 170px;");
     header.appendChild(th);
     let th_i = document.createElement("th");
     th_i.innerHTML = "Photo";
-    th_i.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 60px;");
+    th_i.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 60px;");
     header.appendChild(th_i);
     for (let i = 0; i < episodeChallenges.length; i++) {
         let th = document.createElement("th");
         th.innerHTML = episodeChallenges[i];
-        th.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 75px;");
+        th.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 75px;");
         header.appendChild(th);
     }
     let th_2 = document.createElement("th");
     th_2.innerHTML = "PPE";
-    th_2.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 35px;");
+    th_2.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 35px;");
     header.appendChild(th_2);
     let winner = document.createElement("tr");
     let name = document.createElement("td");
-    name.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px;");
+    name.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px;");
     if (onFinale) {
         let winnerQueen;
         if (!top4) {
@@ -2288,7 +2302,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FFD100;");
             }
             else if (placement.innerHTML == "") {
-                placement.setAttribute("style", "background-color: gray");
+                placement.setAttribute("style", "background-color: #badee8");
             }
             else if (placement.innerHTML == "WIN ") {
                 placement.setAttribute("style", "font-weight: bold; background-color: deepskyblue;");
@@ -2363,7 +2377,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "background-color: orange;");
             }
             else if (placement.innerHTML == "undefined") {
-                placement.setAttribute("style", "font-weight: bold; background-color: lightgray;");
+                placement.setAttribute("style", "font-weight: bold; background-color: light#badee8;");
                 placement.innerHTML = (winnerQueen.ppe / (winnerQueen.episodesOn)).toFixed(2);
             }
             winner.appendChild(placement);
@@ -2376,7 +2390,7 @@ function contestantProgress() {
             let name = document.createElement("td");
             name.setAttribute("style", "font-weight: bold;");
             name.innerHTML = currentCast[i].getName();
-            name.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px;");
+            name.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px;");
             contestant.appendChild(name);
             let photo = document.createElement("td");
             photo.setAttribute("style", "background: url("+ currentCast[i].image +"); background-size: 106px 106px; background-position: center;");
@@ -2451,7 +2465,7 @@ function contestantProgress() {
                     placement.setAttribute("style", "font-weight: bold; background-color: #FFD100;");
                 }
                 else if (placement.innerHTML == "") {
-                    placement.setAttribute("style", "background-color: gray");
+                    placement.setAttribute("style", "background-color: #badee8");
                 }
                 else if (placement.innerHTML == "WIN ") {
                     placement.setAttribute("style", "font-weight: bold; background-color: deepskyblue;");
@@ -2526,7 +2540,7 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: orange;");
                 }
                 else if (placement.innerHTML == "undefined") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: lightgray;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: light#badee8;");
                     placement.innerHTML = (currentCast[i].ppe / (currentCast[i].episodesOn)).toFixed(2);
                 }
                 contestant.appendChild(placement);
@@ -2539,7 +2553,7 @@ function contestantProgress() {
         let name = document.createElement("td");
         name.setAttribute("style", "font-weight: bold;");
         name.innerHTML = eliminatedCast[i].getName();
-        name.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px;");
+        name.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px;");
         contestant.appendChild(name);
         let photo = document.createElement("td");
         photo.setAttribute("style", "background: url("+ eliminatedCast[i].image +"); background-size: 106px 106px; background-position: center;");
@@ -2618,7 +2632,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FFD100;");
             }
             else if (placement.innerHTML == "") {
-                placement.setAttribute("style", "background-color: gray");
+                placement.setAttribute("style", "background-color: #badee8");
             }
             else if (placement.innerHTML == "WIN ") {
                 placement.setAttribute("style", "font-weight: bold; background-color: deepskyblue;");
@@ -2693,7 +2707,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "background-color: orange;");
             }
             else if (placement.innerHTML == "undefined") {
-                placement.setAttribute("style", "font-weight: bold; background-color: lightgray;");
+                placement.setAttribute("style", "font-weight: bold; background-color: light#badee8;");
                 placement.innerHTML = (eliminatedCast[i].ppe / (eliminatedCast[i].episodesOn)).toFixed(2);
             }
             contestant.appendChild(placement);
@@ -2717,7 +2731,7 @@ function contestantProgress() {
         let number = Math.round((fullCast.length / 2));
         for (let i = 0; i < number ; i++) {
             let thc = document.createElement("th");
-            thc.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px; padding: 0px;");
+            thc.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px; padding: 0px;");
             let img = document.createElement("img");
             img.setAttribute("style", `width: 75px; height: 75px; border-radius: 0px; border: 0px;`);
             img.src = fullCast[i].image;
@@ -2728,7 +2742,7 @@ function contestantProgress() {
         chocolateTable.appendChild(row1);
         for (let i = 0; i < number ; i++) {
             let tdc = document.createElement("td");
-            tdc.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px; padding: 0px;");
+            tdc.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px; padding: 0px;");
             let img = document.createElement("img");
             for (let o = 0; o < eliminatedCast.length; o++) {
                 if (fullCast[i].getName() == eliminatedCast[o].getName()) {
@@ -2760,7 +2774,7 @@ function contestantProgress() {
         chocolateTable.appendChild(row2);
         for (let i = number ; i < fullCast.length ; i++) {
             let tdc = document.createElement("td");
-            tdc.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px; padding: 0px;");
+            tdc.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px; padding: 0px;");
             let img = document.createElement("img");
             img.setAttribute("style", `width: 75px; height: 75px; border-radius: 0px; border: 0px;`);
             img.src = fullCast[i].image;
@@ -2771,7 +2785,7 @@ function contestantProgress() {
         chocolateTable.appendChild(row3);
         for (let i = number ; i < fullCast.length ; i++) {
             let tdc1 = document.createElement("td");
-            tdc1.setAttribute("style", "background-color: #f5ebf5; font-weight: bold; height: 50px; padding: 0px;");
+            tdc1.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px; padding: 0px;");
             let img1 = document.createElement("img");
             for (let o = 0; o < eliminatedCast.length; o++) {
                 if (fullCast[i].getName() == eliminatedCast[o].getName()) {
@@ -2815,19 +2829,19 @@ function contestantProgress() {
         lipassa.appendChild(headera);
         var tha = document.createElement("th");
         tha.innerHTML = "Winner";
-        tha.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 170px;");
+        tha.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 170px;");
         headera.appendChild(tha);
         var tha1 = document.createElement("th");
         tha1.innerHTML = "Lipstick";
-        tha1.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 170px;");
+        tha1.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 170px;");
         headera.appendChild(tha1);
         var tha2 = document.createElement("th");
         tha2.innerHTML = "Loser";
-        tha2.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 170px;");
+        tha2.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 170px;");
         headera.appendChild(tha2);
         var tha3 = document.createElement("th");
         tha3.innerHTML = "Lipstick";
-        tha3.setAttribute("style", "background-color: #e9dfe9; font-weight: bold; width: 170px;");
+        tha3.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 170px;");
         headera.appendChild(tha3);
         for (var i = 0; i < assasintable.length; i++) {
             var contestanta = document.createElement("tr");
@@ -2835,18 +2849,18 @@ function contestantProgress() {
             var namea1 = document.createElement("td");
             var lipstickk = document.createElement("td");
             var lipstickkk = document.createElement("td");
-            namea.setAttribute("style", "background-color: #f5ebf5; font-weight: bold;");
-            namea1.setAttribute("style", "background-color: #f5ebf5;");
-            lipstickk.setAttribute("style", "background-color: #f5ebf5; font-weight: bold;");
-            lipstickkk.setAttribute("style", "background-color: #f5ebf5;");
+            namea.setAttribute("style", "background-color: #badee8; font-weight: bold;");
+            namea1.setAttribute("style", "background-color: #badee8;");
+            lipstickk.setAttribute("style", "background-color: #badee8; font-weight: bold;");
+            lipstickkk.setAttribute("style", "background-color: #badee8;");
             namea.innerHTML = assasintable[i];
             lipstickk.innerHTML = assasinlipstick[i];
             namea1.innerHTML = assasintable[i+1];
             lipstickkk.innerHTML = assasinlipstick[i+1];
             i++;
             if (namea1.innerHTML == " "){
-                namea1.setAttribute("style", "background-color: gray;");
-                lipstickkk.setAttribute("style", "background-color: gray;");
+                namea1.setAttribute("style", "background-color: #badee8;");
+                lipstickkk.setAttribute("style", "background-color: #badee8;");
             }
             contestanta.appendChild(namea);
             contestanta.appendChild(lipstickk);
