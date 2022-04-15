@@ -1376,6 +1376,7 @@ let s9Premiere = false;
 let sweatshop = false;
 let chaos = false;
 let hell = false;
+let lalap = false;
 let hellCheck = false;
 let noLimits = false;
 function newEpisode() {
@@ -2956,6 +2957,10 @@ function predefCast(cast, format, finale, premiere = '', returning = '', twist =
 	else if (twist == "hell")
         hellCheck = true;
 		hell = true;
+	else if (twist == "lalam")
+		lalap = true;
+		s14LaLaPaRUZa = true;
+		s14LaLaPaRUZaCheck = true;
     if (format == "jury-allstars"){ 
         all_stars = true;
         allstars3Finale = true;
@@ -3094,6 +3099,10 @@ function startSimulation(challenge = "") {
 		else if (select4.options[select4.selectedIndex].value == "hell")
             hell = true;
 			hellCheck = true;
+		else if (select4.options[select4.selectedIndex].value == "lalam")
+			lalap = true;
+			s14LaLaPaRUZa = true;
+			s14LaLaPaRUZaCheck = true;
 		if (select5.options[select5.selectedIndex].value == "top3")
             top3 = true;
         else if (select5.options[select5.selectedIndex].value == "all-stars")
@@ -3539,6 +3548,15 @@ function judging() {
         }
         slayers = false;
         judgingSlayersScreen();
+    }
+	else if (lalap) {
+        //add all the queens to the top and 0 queens to the bottom
+        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        for (let i = 0; i < currentCast.length ; i++) {
+            topQueens.push(currentCast[i]);
+        }
+        s14LaLaPaRUZa = false;
+        judgingS14LaLaPaRUZaScreen();
     }
     else if (currentCast.length > 13) {
         //add 4 queens to the top and 4 queens to the bottom
