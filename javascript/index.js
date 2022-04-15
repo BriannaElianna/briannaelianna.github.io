@@ -1900,8 +1900,6 @@ function finaleFinale() {
         currentCast.splice(1, 1);
     }else{
 		if (flop == true || randomNumber(0, 100) >= 90 ) {
-			screen.createImage(currentCast[0].image, "yellow");
-			screen.createBigText(currentCast[0].getName() + "!!");
 			screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
 			currentCast[0].addToTrackRecord("ELIMINATED");
 			currentCast[1].addToTrackRecord("ELIMINATED");
