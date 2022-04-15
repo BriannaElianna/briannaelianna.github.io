@@ -6202,7 +6202,6 @@ heidi,
 tatianna,
 coco,
 vanity,
-peppa,
 alyssa]
 //all possible queens:
 let allCustomQueens = [];
