@@ -5888,7 +5888,7 @@ let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme
 let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA");
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
-let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla, supremme, arta];
+let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla, supremme, arta, nicky];
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
