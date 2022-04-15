@@ -1374,6 +1374,7 @@ let sweatshop = false;
 let chaos = false;
 let hell = false;
 let hellCheck = false;
+let noLimits = false;
 function newEpisode() {
     safeQueens = [];
     topQueens = [];
@@ -2870,7 +2871,11 @@ function generateSpace() {
     totalCastSize = castSize;
     let castSelection = document.querySelector("p#castSelection");
     castSelection.innerHTML = '';
-    if (totalCastSize > 0)
+	if (totalCastSize < 3 && noLimits)
+        window.alert("Please, use at least 3 queens on your cast!");
+    else if (totalCastSize > 20 && noLimits)
+        window.alert("Please, use less than 20 queens in your cast!");
+    else
         for (let i = 0; i < castSize; i++) {
             let select = document.createElement("select");
             select.setAttribute("class", "queenList");
@@ -3026,6 +3031,8 @@ function startSimulation(challenge = "") {
     }
     if (currentCast.length == 0)
         window.alert("You can't have a season without queens lmao..");
+	else if (duplicateQueens(currentCast) && noLimits)
+        window.alert("Please, only use one of each queen on your cast!");
     else {
         let select = document.getElementById("finale");
         let select2 = document.getElementById("premiere-format");
@@ -3097,9 +3104,174 @@ function startSimulation(challenge = "") {
             noDouble = true;
         if (document.getElementById("chocolateBar").checked == true)
             chocolateBarTwist = true;
+		if (document.getElementById("noLimits").checked == true)
+            noLimits = true;
         else if (document.getElementById("chocolateBarChoosable").checked == true){
                 chocolateBarTwist = true;
                 chocolateBarTwistChoosable = true;
+        }
+		if (currentCast.length == 3 && top4 && noLimits || currentCast.length == 3 && all_stars && noLimits) {
+            window.alert("Lip-Sync For The Crown and All Star formats needs at least 4 queens!");
+            top4 = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            currentCast = [];
+        }
+        else if (team == true && noLimits && currentCast.length % 2 !== 0) {
+            window.alert("The team format needs an even amout of queens!");
+            currentCast = [];
+            team = false;
+        }
+        else if ((s6Premiere || s12Premiere || porkchopPremiere || s14Premiere) && noLimits && currentCast.length < 10) {
+            window.alert("Double Premiere formats needs at least 10 queens!");
+            s6Premiere = false;
+            s12Premiere = false;
+            s14Premiere = false;
+            porkchopPremiere = false;
+            top4 = false;
+            top3 = false;
+            canFinale = false;
+            lipsync_assassin = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            currentCast = [];
+        }
+        else if (uk3Premiere && noLimits && currentCast.length < 6) {
+            window.alert("Uk3 Premiere needs at least 6 queens!");
+            uk3Premiere = false;
+            top4 = false;
+            top3 = false;
+            canFinale = false;
+            lipsync_assassin = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            smackdown = false;
+            voteReturn = false;
+            conjoinedQueens = false;
+            queensOfComedy = false;
+            kittyGirlGroup = false;
+            randomReturn = false;
+            lalaparuza = false;
+            currentCast = [];
+        }
+        else if (s9Premiere && noLimits && currentCast.length < 6) {
+            window.alert("Normal Premiere (No Elimination) needs at least 6 queens!");
+            uk3Premiere = false;
+            top4 = false;
+            top3 = false;
+            canFinale = false;
+            lipsync_assassin = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            smackdown = false;
+            voteReturn = false;
+            conjoinedQueens = false;
+            queensOfComedy = false;
+            kittyGirlGroup = false;
+            randomReturn = false;
+            lalaparuza = false;
+            currentCast = [];
+        }
+        else if ((queensOfComedy || conjoinedQueens || kittyGirlGroup) && noLimits && currentCast.length < 10) {
+            window.alert("Queens of comedy, Kitty Girl Group and Conjoined Queens return challenges need at least 10 queens!");
+            uk3Premiere = false;
+            s6Premiere = false;
+            s9Premiere = false;
+            s12Premiere = false;
+            s14Premiere = false;
+            porkchopPremiere = false;
+            top4 = false;
+            top3 = false;
+            canFinale = false;
+            lipsync_assassin = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            smackdown = false;
+            voteReturn = false;
+            conjoinedQueens = false;
+            queensOfComedy = false;
+            kittyGirlGroup = false;
+            randomReturn = false;
+            lalaparuza = false;
+            currentCast = [];
+        }
+        else if (team && (smackdown && noLimits || voteReturn && noLimits || randomReturn && noLimits || chocolateBarTwist && noLimits || s9Premiere && noLimits || s6Premiere && noLimits || lalaparuza && noLimits || queensOfComedy && noLimits || kittyGirlGroup && noLimits || conjoinedQueens && noLimits || s12Premiere && noLimits || porkchopPremiere && noLimits || s14Premiere && noLimits || uk3Premiere && noLimits)) {
+            window.alert("The team format isn't supported with any special premiere or returning formats, sorry!");
+            team = false;
+            smackdown = false;
+            voteReturn = false;
+            randomReturn = false;
+            lalaparuza = false;
+            queensOfComedy = false;
+            conjoinedQueens = false;
+            kittyGirlGroup = false;
+            s6Premiere = false;
+            s9Premiere = false;
+            s12Premiere = false;
+            s14Premiere = false;
+            porkchopPremiere = false;
+            uk3Premiere = false;
+            chocolateBarTwist = false;
+            chocolateBarTwistChoosable = false;
+        }
+        else if (smackdown && chocolateBarTwist && noLimits) {
+            window.alert("The Lipsync Smackdown format isn't supported with the golden chocolate bar twist, sorry!");
+            s14Premiere = false;
+            s12Premiere = false;
+            s9Premiere = false;
+            s6Premiere = false;
+            porkchopPremiere = false;
+            uk3Premiere = false;
+            top4 = false;
+            top3 = false;
+            canFinale = false;
+            lipsync_assassin = false;
+            smackdown = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            smackdown = false;
+            voteReturn = false;
+            conjoinedQueens = false;
+            queensOfComedy = false;
+            kittyGirlGroup = false;
+            randomReturn = false;
+            lalaparuza = false;
+            allQueens = [...allQueensCopy2];
+            chocolateBarTwist = false;
+            chocolateBarTwistChoosable = false;
+        }
+        else if (smackdown && !noDouble && noLimits) {
+            window.alert("The Lipsync Smackdown format isn't supported with double shantays or sashays, sorry!");
+            s14Premiere = false;
+            s12Premiere = false;
+            s9Premiere = false;
+            s6Premiere = false;
+            porkchopPremiere = false;
+            uk3Premiere = false;
+            top4 = false;
+            top3 = false;
+            canFinale = false;
+            lipsync_assassin = false;
+            smackdown = false;
+            all_stars = false;
+            allstars3Finale = false;
+            ukvstwFinale = false;
+            smackdown = false;
+            voteReturn = false;
+            conjoinedQueens = false;
+            queensOfComedy = false;
+            kittyGirlGroup = false;
+            randomReturn = false;
+            lalaparuza = false;
+            allQueens = [...allQueensCopy2];
+            chocolateBarTwist = false;
+            chocolateBarTwistChoosable = false;
         }
         else if (chocolateBarTwist) {
             if (chocolateBarTwistChoosable){
