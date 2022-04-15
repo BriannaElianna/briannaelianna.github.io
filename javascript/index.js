@@ -747,6 +747,8 @@ function runway() {
     createRunwayDesc(slay, great, good, bad);
     if (currentCast.length > 4)
         runwayScreen.createButton("Proceed", "judging()");
+	else if (currentCast.length > 20)
+        runwayScreen.createButton("Proceed", "judging()");
     else if (currentCast.length == 4 && porkchopPremiere && premiereCounter < 3)
         runwayScreen.createButton("Proceed", "judging()");
     else if (currentCast.length == 4 && (top3 || team))
