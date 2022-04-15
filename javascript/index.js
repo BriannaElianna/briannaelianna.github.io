@@ -2918,7 +2918,7 @@ let allstars3Finale = false;
 let ukvstwFinale = false;
 let lipsync_assassin = false;
 let team = false;
-function predefCast(cast, format, premiere = '', returning = '') {
+function predefCast(cast, format, premiere = '', returning = '', twist = '') {
     currentCast = cast;
     totalCastSize = cast.length;
     if (format == "top3")
@@ -2933,6 +2933,8 @@ function predefCast(cast, format, premiere = '', returning = '') {
         all_stars = true;
 	else if (twist == "sweatshop")
         sweatshop = true;
+	else if (twist == "chaos")
+        chaos = true;
     else if (format == "jury-allstars"){ 
         all_stars = true;
         allstars3Finale = true;
@@ -3019,6 +3021,7 @@ function startSimulation(challenge = "") {
         let select = document.getElementById("format");
         let select2 = document.getElementById("premiere-format");
         let select3 = document.getElementById("returning");
+		let select4 = document.getElementById("twist");
         if (select.options[select.selectedIndex].value == "top3")
             top3 = true;
         else if (select.options[select.selectedIndex].value == "top4")
@@ -3073,6 +3076,10 @@ function startSimulation(challenge = "") {
         else if (select3.options[select3.selectedIndex].value == "smackdown")
             smackdown = true;
             slayersCheck = true;
+		if (select4.options[select4.selectedIndex].value == "sweatshop")
+            sweatshop = true;
+		else if (select4.options[select4.selectedIndex].value == "chaos")
+            chaos = true;
         if (document.getElementById("disableDouble").checked == true)
             noDouble = true;
         if (document.getElementById("chocolateBar").checked == true)
