@@ -6110,7 +6110,8 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
-    pangina, peppa];
+    pangina];
+let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity];
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
