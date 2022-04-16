@@ -6184,6 +6184,15 @@ let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme
 let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA");
 //DRAGULA S1
 let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, "Pinche");
+let ursula = new Queen("Ursula Major", 6, 5, 2, 3, 7, 4, 4, "Ursula");
+let foxie = new Queen("Foxie Adjuia", 6, 5, 2, 3, 7, 4, 4, "Foxie");
+let xochi = new Queen("Xochi Mochi", 6, 5, 2, 3, 7, 4, 4, "Xochi");
+let loris = new Queen("Loris", 6, 5, 2, 3, 7, 4, 4, "Loris");
+let meatball = new Queen("Meatball", 6, 5, 2, 3, 7, 4, 4, "Meatball");
+let melissa = new Queen("Melissa Befierce", 6, 5, 2, 3, 7, 4, 4, "Melissa");
+let frankie = new Queen("Frankie Doom", 6, 5, 2, 3, 7, 4, 4, "Frankie");
+let vander = new Queen("Vander Von Odd", 6, 5, 2, 3, 7, 4, 4, "Vander");
+let dragula_1 = [pinche, franke, melissa, meatball, loris, xochi, frankie, vander, foxie];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
@@ -6210,7 +6219,7 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     ivyelise, juicy, keta, love, mlp, reggy, tabitha, countess, vanessaC, vivaldi,
     amadiva, annee, b, bunny, dearis, jaja, meannie, morrigan, natalia, petchra,
     angele, bandit, genie, kana, kandyz, katy, m, maya, mocha, gimhuay, silver, srimala, tormai, vanda,
-    anita, art, cocoj, elektra, etc, jojo, karen, kita, maxi,
+    anita, art, cocoj, elektra, etc, jojo, karen, kita, maxi, pinche, franke, melissa, meatball, loris, xochi, frankie, vander, foxie
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
