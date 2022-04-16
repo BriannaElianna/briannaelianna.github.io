@@ -1374,6 +1374,7 @@ let firstPremiere = false;
 let secondPremiere = false;
 let uk3Premiere = false;
 let s9Premiere = false;
+let dragula = false;
 //challenge seasons
 let sweatshop = false;
 let chaos = false;
@@ -1499,6 +1500,7 @@ function reSimulate() {
     s14LaLaPaRUZa = false;
     s14LaLaPaRUZaCheck = false;
 	hell = false;
+	dragula = false;
 	flop = false;
 	hellCheck = false;
     assasintable = [];
@@ -2956,6 +2958,8 @@ let team = false;
 function predefCast(cast, format, finale, premiere = '', returning = '') {
     currentCast = cast;
     totalCastSize = cast.length;
+	if (finale == "dragula")
+        dragula = true;
     if (format == "top3")
         top3 = true;
     else if (format == "top4")
@@ -3130,6 +3134,8 @@ function startSimulation(challenge = "") {
             top3 = true;
         else if (select5.options[select5.selectedIndex].value == "all-stars")
             all_stars = true;
+		else if (select5.options[select5.selectedIndex].value == "dragula")
+            dragula = true;
 		else if (select5.options[select5.selectedIndex].value == "allstars7")
             slayers = true;
 			slayersCheck = true;
@@ -4568,7 +4574,10 @@ function winAndBtm2() {
     for (let i = 0; i < bottomQueens.length; i++) {
         btm2.innerHTML += bottomQueens[i].getName() + ", ";
     }
-    btm2.innerHTML += "I'm sorry my dears but you are up for elimination.";
+	if (dragula == true)
+		btm2.innerHTML += "I'm sorry my dears but you are up for extermination.";
+	else if (dragula == false)
+		btm2.innerHTML += "I'm sorry my dears but you are up for elimination.";
     screen.createButton("Proceed", "lipSync()");
 }
 function teamWinAndBtm2() {
@@ -4920,19 +4929,242 @@ function lipSync() {
     let screen = new Scene();
     screen.clean();
     screen.createHeader("It's time...");
-    screen.createBold("For you to lip-sync... for your lives! Good luck, and don't fuck it up.");
-    lsSong();
+	if (dragula == true) {
+		screen.createBold("For the extermination challenge! Try not to fuck it up.");
+	}
+	else if (dragula == false) {
+		screen.createBold("For you to lip-sync... for your lives! Good luck, and don't fuck it up.");
+		lsSong();
+	}
     screen.createHorizontalLine();
     screen.createBold("I've made my decision.");
     let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
     let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
-    if (thirdqueen && currentCast.length > 5) {
+	if (dragula == true) {
+        if (score1 > 7 && score2 > 7 && randomNumber(0, 100) <= 50 && !doubleShantay && noDouble == false && currentCast.length > 5) {
+            if (randomNumber(0, 100) >= 95) {
+                screen.createImage(bottomQueens[0].image, "tomato");
+                screen.createBold(bottomQueens[0].getName() + ", congrats! you are safe.");
+                screen.createImage(bottomQueens[1].image, "red");
+                screen.createBold(bottomQueens[1].getName() + ", i'm sorry my dear but you are getting exterminated...");
+                screen.createImage(bottomQueens[1].image, "pink");
+                screen.createBold("WAIT!!, wait, " + bottomQueens[1].getName() + ", I'm not ready for you to go home... you are safe.");
+                bottomQueens[0].addToTrackRecord(" BTM2");
+                bottomQueens[0].unfavoritism += 3;
+                bottomQueens[0].ppe += 1;
+                bottomQueens[1].addToTrackRecord(" BTM2");
+                bottomQueens[1].unfavoritism += 3;
+                bottomQueens[1].ppe += 1;
+            } else {
+                screen.createImage(bottomQueens[0].image, "magenta");
+                screen.createImage(bottomQueens[1].image, "magenta");
+                screen.createBold("Congrats, you both stay!!");
+                bottomQueens[0].addToTrackRecord(" BTM2");
+                bottomQueens[0].unfavoritism += 3;
+                bottomQueens[0].ppe += 1;
+                bottomQueens[1].addToTrackRecord(" BTM2");
+                bottomQueens[1].unfavoritism += 3;
+                bottomQueens[1].ppe += 1;
+                doubleShantay = true;
+            }
+        }
+        else if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false) {
+            screen.createImage(bottomQueens[0].image, "darkred");
+            screen.createImage(bottomQueens[1].image, "darkred");
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+                screen.createBold("Neither one of you survived that extermeration..." + bottomQueens[0].getName() + ", " + bottomQueens[1].getName() + ", now your fates rests in the hands of the drag gods.");
+                screen.createBold("If one of you have the golden chocolate bar, that queen will be safe.");
+                if (chocolateBarCheck(bottomQueens[0], bottomQueens[1]) == 1) {
+                    screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
+                    screen.createBold("It's chocolate.");
+                    screen.createBold(bottomQueens[1].getName() + ", you are getting extermerated...");
+                    bottomQueens[1].addToTrackRecord("EXT");
+                    bottomQueens[1].unfavoritism += 5;
+                    eliminatedCast.unshift(bottomQueens[1]);
+                    currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
+                    screen.createImage("image/ChocolateBarWithTicket.webp", "gold");
+                    screen.createBold("You've got the GOLD BAR!!!! The gods have spoken!");
+                    screen.createBold(bottomQueens[0].getName() + "!! Condragtulations, you are safe to slay another day!");
+                    bottomQueens[0].addToTrackRecord("CHOC");
+                    bottomQueens[0].unfavoritism += 3;
+                    bottomQueens[0].ppe += 1;
+                    chocolateBarTwistCheck = true;
+                    
+                } else if (chocolateBarCheck(bottomQueens[0], bottomQueens[1]) == 2) {
+                    screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
+                    screen.createBold("It's chocolate.");
+                    screen.createBold(bottomQueens[0].getName() + ", you are getting extermerated...");
+                    bottomQueens[0].addToTrackRecord("EXT");
+                    bottomQueens[0].unfavoritism += 5;
+                    eliminatedCast.unshift(bottomQueens[0]);
+                    currentCast.splice(currentCast.indexOf(bottomQueens[0]), 1);
+                    screen.createImage("image/ChocolateBarWithTicket.webp", "gold");
+                    screen.createBold("You've got the GOLD BAR!!!! The gods have spoken!");
+                    screen.createBold(bottomQueens[1].getName() + "!! Condragtulations, you are safe to slay another day!");
+                    bottomQueens[1].addToTrackRecord("CHOC");
+                    bottomQueens[1].unfavoritism += 3;
+                    bottomQueens[1].ppe += 1;
+                    chocolateBarTwistCheck = true;
+                    
+                } else {
+                    screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
+                    screen.createBold("It's chocolate.");
+                    screen.createBold(bottomQueens[0].getName() + ", you are getting extermerated...");
+                    bottomQueens[0].addToTrackRecord("EXT");
+                    bottomQueens[0].unfavoritism += 5;
+                    eliminatedCast.unshift(bottomQueens[0]);
+                    currentCast.splice(currentCast.indexOf(bottomQueens[0]), 1);
+                    screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
+                    screen.createBold("It's chocolate.");
+                    screen.createBold(bottomQueens[1].getName() + ", you are getting extermerated...");
+                    bottomQueens[1].addToTrackRecord("EXT");
+                    bottomQueens[1].unfavoritism += 5;
+                    eliminatedCast.unshift(bottomQueens[1]);
+                    currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
+                    doubleSashay = true;
+                }
+            } else {
+                screen.createBold("I'm sorry but none of you surivied that extermation. You are both getting extermated.");
+                doubleSashay = true;
+                bottomQueens[0].addToTrackRecord("EXT");
+                bottomQueens[0].unfavoritism += 5;
+                eliminatedCast.unshift(bottomQueens[0]);
+                currentCast.splice(currentCast.indexOf(bottomQueens[0]), 1);
+                bottomQueens[1].addToTrackRecord("EXT");
+                bottomQueens[1].unfavoritism += 5;
+                eliminatedCast.unshift(bottomQueens[1]);
+                currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
+            }
+        }
+        else if (randomNumber(0, 1000) >= 998 && disqOrDept == false) {
+            let quitterQueen = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
+            screen.createImage(quitterQueen.image, "red");
+            screen.createBold(quitterQueen.getName() + ", shockingly has left the extermation round, they decided that they won't get extermated today.");
+            if (quitterQueen.getName() == bottomQueens[0].getName()) {
+                bottomQueens[0].addToTrackRecord("QUIT");
+                bottomQueens[0].unfavoritism += 5;
+                bottomQueens[0].QueenDisqOrDept = true;
+                bottomQueens[1].addToTrackRecord("BTM2");
+                bottomQueens[1].unfavoritism += 3;
+                bottomQueens[1].ppe += 1;
+            } else {
+                bottomQueens[0].addToTrackRecord("BTM2");
+                bottomQueens[0].unfavoritism += 3;
+                bottomQueens[0].ppe += 1;
+                bottomQueens[1].addToTrackRecord("QUIT");
+                bottomQueens[1].unfavoritism += 5;
+                bottomQueens[1].QueenDisqOrDept = true;
+            }
+            eliminatedCast.unshift(quitterQueen);
+            currentCast.splice(currentCast.indexOf(quitterQueen), 1);
+            disqOrDept = true;
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+                if (chocolateBarCheck(quitterQueen) == true) {
+                    chocolateBarTwistCheck = true;
+                }
+            }
+        }
+        else if (randomNumber(0, 1000) >= 999 && disqOrDept == false) {
+            let disqualifiedQueen = currentCast[randomNumber(0, currentCast.length - 1)];
+            screen.createImage(disqualifiedQueen.image, "red");
+            screen.createBold(disqualifiedQueen.getName() + ", it has come to my attention that you have broken the rules of this competition. You are going home.");
+            if (disqualifiedQueen.getName() == bottomQueens[0].getName()) {
+                bottomQueens[1].addToTrackRecord("BTM2");
+            } else if (disqualifiedQueen.getName() == bottomQueens[1].getName()) {
+                bottomQueens[0].addToTrackRecord("BTM2");
+            }else {
+                bottomQueens[0].addToTrackRecord(" BTM2");
+                bottomQueens[1].addToTrackRecord(" BTM2");
+                disqualifiedQueen.trackRecord.pop();
+            }
+            bottomQueens[0].unfavoritism += 3;
+            bottomQueens[0].ppe += 1;
+            bottomQueens[1].unfavoritism += 3;
+            bottomQueens[1].ppe += 1;
+            disqualifiedQueen.addToTrackRecord("DISQ");
+            disqualifiedQueen.QueenDisqOrDept = true;
+            eliminatedCast.unshift(disqualifiedQueen);
+            currentCast.splice(currentCast.indexOf(disqualifiedQueen), 1);
+            disqOrDept = true;
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+                if (chocolateBarCheck(disqualifiedQueen) == true) {
+                    chocolateBarTwistCheck = true;
+                }
+            }
+        }
+        else if (randomNumber(0, 1000) >= 999 && disqOrDept == false) {
+            let injuredQueen = currentCast[randomNumber(0, currentCast.length - 1)];
+            screen.createImage(injuredQueen.image, "red");
+            screen.createBold(injuredQueen.getName() + ", would you please step forward.");
+            screen.createBold("We've been in touch with the doctor. You need time to heal. I cannot allow you to continue in the competition.");
+            screen.createBold("I must ask you to go home.");
+            if (injuredQueen.getName() == bottomQueens[0].getName()) {
+                bottomQueens[1].addToTrackRecord("BTM2");
+            } else if (injuredQueen.getName() == bottomQueens[1].getName()) {
+                bottomQueens[0].addToTrackRecord("BTM2");
+            }else {
+                bottomQueens[0].addToTrackRecord(" BTM2");
+                bottomQueens[1].addToTrackRecord(" BTM2");
+                injuredQueen.trackRecord.pop();
+            }
+            bottomQueens[0].unfavoritism += 3;
+            bottomQueens[0].ppe += 1;
+            bottomQueens[1].unfavoritism += 3;
+            bottomQueens[1].ppe += 1;
+            injuredQueen.addToTrackRecord("DISQ");
+            injuredQueen.QueenDisqOrDept = true;
+            eliminatedCast.unshift(injuredQueen);
+            currentCast.splice(currentCast.indexOf(injuredQueen), 1);
+            disqOrDept = true;
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+                if (chocolateBarCheck(injuredQueen) == true) {
+                    chocolateBarTwistCheck = true;
+                }
+            }
+        } else {
+            screen.createImage(bottomQueens[0].image, "tomato");
+            screen.createBold(bottomQueens[0].getName() + ", you are safe.");
+            bottomQueens[0].addToTrackRecord("BTM2");
+            bottomQueens[0].unfavoritism += 3;
+            bottomQueens[0].ppe += 1;
+            screen.createImage(bottomQueens[1].image, "red");
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+                screen.createBold(bottomQueens[1].getName() + ", now your fate rests in the hands of the drag gods.");
+                screen.createBold("If you have the golden chocolate bar, you will be safe.");
+                if (chocolateBarCheck(bottomQueens[1]) == true) {
+                    screen.createImage("image/ChocolateBarWithTicket.webp", "gold");
+                    screen.createBold("You've got the GOLD BAR!!!! The gods have spoken!");
+                    screen.createBold(bottomQueens[1].getName() + "!! Condragtulations, you are safe to slay another day!");
+                    bottomQueens[1].addToTrackRecord("CHOC");
+                    bottomQueens[1].unfavoritism += 3;
+                    bottomQueens[1].ppe += 1;
+                    chocolateBarTwistCheck = true;
+                    
+                } else {
+                    screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
+                    screen.createBold("It's chocolate.");
+                    screen.createBold(bottomQueens[1].getName() + ", you are extermated...");
+                    bottomQueens[1].addToTrackRecord("EXT");
+                    bottomQueens[1].unfavoritism += 5;
+                    eliminatedCast.unshift(bottomQueens[1]);
+                    currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
+                    
+                }
+            } else {
+                screen.createBold(bottomQueens[1].getName() + ", you have been extermated...");
+                bottomQueens[1].addToTrackRecord("EXT");
+                bottomQueens[1].unfavoritism += 5;
+                eliminatedCast.unshift(bottomQueens[1]);
+                currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
+            }
+        }
+    } else if (thirdqueen && currentCast.length > 5) {
         thirdqueen = false;
         if (score1 > 7 && score2 > 7 && randomNumber(0, 100) <= 50 && noDouble == false && currentCast.length > 5) {
             screen.createImage(bottomQueens[0].image, "tomato");
-            screen.createBold(bottomQueens[0].getName() + ", shantay you stay.");
+            screen.createBold(bottomQueens[0].getName() + ", you get to stay.");
             screen.createImage(bottomQueens[1].image, "tomato");
-            screen.createBold(bottomQueens[1].getName() + ", shantay you stay.");
+            screen.createBold(bottomQueens[1].getName() + ", you get to stay.");
             bottomQueens[0].addToTrackRecord("BTM3");
             bottomQueens[0].unfavoritism += 3;
             bottomQueens[0].ppe += 1;
@@ -4953,15 +5185,15 @@ function lipSync() {
                 } else {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[2].getName() + ", sashay away...");
-                    bottomQueens[2].addToTrackRecord("ELIM");
+                    screen.createBold(bottomQueens[2].getName() + ", you are getting extermated...");
+                    bottomQueens[2].addToTrackRecord("EXT");
                     bottomQueens[2].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[2]);
                     currentCast.splice(currentCast.indexOf(bottomQueens[2]), 1);
                 }
             } else {
                 screen.createImage(bottomQueens[2].image, "red");
-                screen.createBold(bottomQueens[2].getName() + ", sashay away...");
+                screen.createBold(bottomQueens[2].getName() + ", im sorry but you are getting extermated...");
                 bottomQueens[2].addToTrackRecord("ELIM");
                 bottomQueens[2].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[2]);
@@ -4969,18 +5201,18 @@ function lipSync() {
             }
         } else {
             screen.createImage(bottomQueens[0].image, "tomato");
-            screen.createBold(bottomQueens[0].getName() + ", shantay you stay.");
+            screen.createBold(bottomQueens[0].getName() + ", you get to stay.");
             bottomQueens[0].addToTrackRecord("BTM3");
             bottomQueens[0].unfavoritism += 3;
             bottomQueens[0].ppe += 1;
             if (chocolateBarTwist  && !chocolateBarTwistCheck) {
-                screen.createBold("Neither one of you survived that lipsync..." + bottomQueens[1].getName() + ", " + bottomQueens[2].getName() + ", now your fates rests in the hands of the drag gods.");
+                screen.createBold("Neither one of you survived that extermation..." + bottomQueens[1].getName() + ", " + bottomQueens[2].getName() + ", now your fates rests in the hands of the drag gods.");
                 screen.createBold("If one of you have the golden chocolate bar, that queen will be safe.");
                 if (chocolateBarCheck(bottomQueens[1], bottomQueens[2]) == 1) {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[2].getName() + ", sashay away...");
-                    bottomQueens[2].addToTrackRecord("ELIM");
+                    screen.createBold(bottomQueens[2].getName() + ", you are getting extermated...");
+                    bottomQueens[2].addToTrackRecord("EXT");
                     bottomQueens[2].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[2]);
                     currentCast.splice(currentCast.indexOf(bottomQueens[2]), 1);
@@ -4994,8 +5226,8 @@ function lipSync() {
                 } else if (chocolateBarCheck(bottomQueens[1], bottomQueens[2]) == 2) {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[1].getName() + ", sashay away...");
-                    bottomQueens[1].addToTrackRecord("ELIM");
+                    screen.createBold(bottomQueens[1].getName() + ", you are getting extermated...");
+                    bottomQueens[1].addToTrackRecord("EXT");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
                     currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
@@ -5009,8 +5241,8 @@ function lipSync() {
                 } else {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[1].getName() + ", sashay away...");
-                    bottomQueens[1].addToTrackRecord("ELIM");
+                    screen.createBold(bottomQueens[1].getName() + ", you are getting extermated...");
+                    bottomQueens[1].addToTrackRecord("EXT");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
                     currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
@@ -5025,9 +5257,9 @@ function lipSync() {
                 }
             } else {
                 screen.createImage(bottomQueens[1].image, "red");
-                screen.createBold(bottomQueens[1].getName() + ", sashay away...");
+                screen.createBold(bottomQueens[1].getName() + ", you are getting extermated...");
                 screen.createImage(bottomQueens[2].image, "red");
-                screen.createBold(bottomQueens[2].getName() + ", sashay away...");
+                screen.createBold(bottomQueens[2].getName() + ", you are getting extermated...");
                 bottomQueens[1].addToTrackRecord("ELIM");
                 bottomQueens[1].unfavoritism += 5;
                 bottomQueens[2].addToTrackRecord("ELIM");
