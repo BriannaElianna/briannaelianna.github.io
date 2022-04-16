@@ -6182,6 +6182,9 @@ let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd");
 let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 1, "Priscillaa");
 let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme");
 let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA");
+//DRAGULA S1
+let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, "Pinche");
+//rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
 let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla, supremme, arta, nicky];
