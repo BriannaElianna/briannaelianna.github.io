@@ -2399,7 +2399,7 @@ function contestantProgress() {
                 let placement = document.createElement("td");
                 placement.innerHTML = currentCast[i].trackRecord[k];
                 if (placement.innerHTML == "WIN") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: white;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: #78a5ff;");
                 }
                 else if (placement.innerHTML == "TOP2") {
                     placement.setAttribute("style", "background-color: deepskyblue;");
