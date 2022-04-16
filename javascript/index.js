@@ -1899,7 +1899,7 @@ function finaleFinale() {
         eliminatedCast.unshift(currentCast[1]);
         currentCast.splice(1, 1);
     }else{
-		if (flop == true || randomNumber(0, 100) >= 90 ) {
+		if (flop == true || randomNumber(0, 100) >= 90) {
 			screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
 			currentCast[0].addToTrackRecord("ELIMINATED");
 			currentCast[1].addToTrackRecord("ELIMINATED");
@@ -2249,22 +2249,22 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #ff7c00; color: #000;");
             }
             else if (placement.innerHTML == "LOW") {
-                placement.setAttribute("style", "background-color: pink;");
+                placement.setAttribute("style", "background-color: #e096c6;");
             }
             else if (placement.innerHTML == "HIGH") {
                 placement.setAttribute("style", "background-color: lightblue;");
             }
             else if (placement.innerHTML == "HIGH TEAM") {
-                placement.setAttribute("style", "background-color: aquamarine;");
+                placement.setAttribute("style", "background-color: #bee8e2;");
             }
             else if (placement.innerHTML == "BTM2 ") {
                 placement.setAttribute("style", "background-color: #FA8072;");
             }
             else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM") {
-                placement.setAttribute("style", "background-color: tomato;");
+                placement.setAttribute("style", "background-color: #fc827c;");
             }
             else if (placement.innerHTML == " BTM2") {
-                placement.setAttribute("style", "background-color: hotpink;");
+                placement.setAttribute("style", "background-color: hot#e096c6;");
             }
             else if (placement.innerHTML == "CHOC") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #fcea7c;");
@@ -2276,21 +2276,21 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FC4545;");
             }
             else if (placement.innerHTML == " ELIM") {
-                placement.setAttribute("style", "font-weight: bold; background-color: deeppink;");
+                placement.setAttribute("style", "font-weight: bold; background-color: deep#e096c6;");
             }
             else if (placement.innerHTML == " ELIM ") {
                 placement.setAttribute("style", "font-weight: bold; background-color: darkred; color:white");
             }
             else if (placement.innerHTML == "WINNER") {
-                placement.setAttribute("style", "font-weight: bold; background-color: yellow;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #ebda86");
                 if (allstars3Finale)
                     placement.innerHTML += " <br><small> (" + winnerQueen.votes + " points) </small>";
             }
             else if (placement.innerHTML == "RUNNER UP") {
-                placement.setAttribute("style", "font-weight: bold; background-color: silver;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #b8b7b2");
             }
             else if (placement.innerHTML == "ELIMINATED") {
-                placement.setAttribute("style", "font-weight: bold; background-color: sienna;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #e68d60");
             }
             else if (placement.innerHTML == "LOST 1ST ROUND") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FF7C00;");
@@ -2414,22 +2414,22 @@ function contestantProgress() {
                     placement.setAttribute("style", "font-weight: bold; background-color: #ff7c00; color: #000;");
                 }
                 else if (placement.innerHTML == "LOW") {
-                    placement.setAttribute("style", "background-color: pink;");
+                    placement.setAttribute("style", "background-color: #e096c6;");
                 }
                 else if (placement.innerHTML == "HIGH") {
                     placement.setAttribute("style", "background-color: lightblue;");
                 }
                 else if (placement.innerHTML == "HIGH TEAM") {
-                    placement.setAttribute("style", "background-color: aquamarine;");
+                    placement.setAttribute("style", "background-color: #bee8e2;");
                 }
                 else if (placement.innerHTML == "BTM2 ") {
                     placement.setAttribute("style", "background-color: #FA8072;");
                 }
                 else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM") {
-                    placement.setAttribute("style", "background-color: tomato;");
+                    placement.setAttribute("style", "background-color: #fc827c;");
                 }
                 else if (placement.innerHTML == " BTM2") {
-                    placement.setAttribute("style", "background-color: hotpink;");
+                    placement.setAttribute("style", "background-color: hot#e096c6;");
                 }
                 else if (placement.innerHTML == "CHOC") {
                     placement.setAttribute("style", "font-weight: bold; background-color: #fcea7c;");
@@ -2441,19 +2441,19 @@ function contestantProgress() {
                     placement.setAttribute("style", "font-weight: bold; background-color: #FC4545;");
                 }
                 else if (placement.innerHTML == " ELIM") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: deeppink;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: deep#e096c6;");
                 }
                 else if (placement.innerHTML == " ELIM ") {
                     placement.setAttribute("style", "font-weight: bold; background-color: darkred; color:white");
                 }
                 else if (placement.innerHTML == "WINNER") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: yellow;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: #ebda86");
                 }
                 else if (placement.innerHTML == "RUNNER UP") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: silver;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: #b8b7b2");
                 }
                 else if (placement.innerHTML == "ELIMINATED") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: sienna;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: #e68d60");
                 }
                 else if (placement.innerHTML == "LOST 1ST ROUND") {
                     placement.setAttribute("style", "font-weight: bold; background-color: #FF7C00;");
@@ -2577,48 +2577,48 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #ff7c00; color: #000;");
             }
             else if (placement.innerHTML == "LOW") {
-                placement.setAttribute("style", "background-color: pink;");
+                placement.setAttribute("style", "background-color: #e096c6;");
             }
             else if (placement.innerHTML == "HIGH") {
                 placement.setAttribute("style", "background-color: lightblue;");
             }
             else if (placement.innerHTML == "HIGH TEAM") {
-                placement.setAttribute("style", "background-color: aquamarine;");
+                placement.setAttribute("style", "background-color: #bee8e2;");
             }
             else if (placement.innerHTML == "BTM2 ") {
                 placement.setAttribute("style", "background-color: #FA8072;");
             }
             else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM") {
-                placement.setAttribute("style", "background-color: tomato;");
+                placement.setAttribute("style", "background-color: #fc827c;");
             }
             else if (placement.innerHTML == " BTM2") {
-                placement.setAttribute("style", "background-color: hotpink;");
+                placement.setAttribute("style", "background-color: hot#e096c6;");
             }
             else if (placement.innerHTML == "CHOC") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #fcea7c;");
             }
             else if (placement.innerHTML == "ELIM") {
-                placement.setAttribute("style", "font-weight: bold; background-color: red;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #e66060;");
             }
             else if (placement.innerHTML == "ELIM ") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FC4545;");
             }
             else if (placement.innerHTML == " ELIM") {
-                placement.setAttribute("style", "font-weight: bold; background-color: deeppink;");
+                placement.setAttribute("style", "font-weight: bold; background-color: deep#e096c6;");
             }
             else if (placement.innerHTML == " ELIM ") {
-                placement.setAttribute("style", "font-weight: bold; background-color: darkred; color:white");
+                placement.setAttribute("style", "font-weight: bold; background-color: #e66060;");
             }
             else if (placement.innerHTML == "WINNER") {
-                placement.setAttribute("style", "font-weight: bold; background-color: yellow;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #ebda86;");
             }
             else if (placement.innerHTML == "RUNNER UP") {
-                placement.setAttribute("style", "font-weight: bold; background-color: silver;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #b8b7b2");
                 if (allstars3Finale)
                     placement.innerHTML += " <br><small> (" + eliminatedCast[i].votes + " points) </small>";
             }
             else if (placement.innerHTML == "ELIMINATED") {
-                placement.setAttribute("style", "font-weight: bold; background-color: sienna;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #e68d60;");
                 if (allstars3Finale)
                     placement.innerHTML += " <br><small> (" + eliminatedCast[i].votes + " points) </small>";
             }
@@ -2632,7 +2632,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FFD100;");
             }
             else if (placement.innerHTML == "") {
-                placement.setAttribute("style", "background-color: #badee8");
+                placement.setAttribute("style", "background-color: #badee8;");
             }
             else if (placement.innerHTML == "WIN ") {
                 placement.setAttribute("style", "font-weight: bold; background-color: deepskyblue;");
