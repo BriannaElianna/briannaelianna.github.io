@@ -6436,6 +6436,19 @@ let melissa = new Queen("Melissa Befierce", 6, 5, 2, 3, 7, 4, 4, "Melissa");
 let frankie = new Queen("Frankie Doom", 6, 5, 2, 3, 7, 4, 4, "Frankie");
 let vander = new Queen("Vander Von Odd", 6, 5, 2, 3, 7, 4, 4, "Vander");
 let dragula_1 = [pinche, frankie, melissa, meatball, loris, xochi, vander, foxie];
+//DRAGULA S3
+let violencia = new Queen("Violencia!", 6, 5, 2, 3, 7, 4, 4, "Violencia");
+let st = new Queen("St. Lucia", 6, 5, 2, 3, 7, 4, 4, "St");
+let yovska = new Queen("Yovska", 6, 5, 2, 3, 7, 4, 4, "Yovska");
+let maxig = new Queen("Maxi Glamour", 6, 5, 2, 3, 7, 4, 4, "MaxiD");
+let hollow = new Queen("Hollow Eve", 6, 5, 2, 3, 7, 4, 4, "Hollow");
+let maddelynn = new Queen("Maddelynn Hatter", 6, 5, 2, 3, 7, 4, 4, "Maddelynn");
+let evah = new Queen("Evah Destruction", 6, 5, 2, 3, 7, 4, 4, "Evah");
+let louisianna = new Queen("Louisianna Purchase", 6, 5, 2, 3, 7, 4, 4, "Louisianna");
+let priscillac = new Queen("Priscilla", 6, 5, 2, 3, 7, 4, 4, "PriscillaD");
+let dollya = new Queen("Dollya Black", 6, 5, 2, 3, 7, 4, 4, "Dollya");
+let landon = new Queen("Landon Cider", 6, 5, 2, 3, 7, 4, 4, "Landon");
+let dragula_3 = [violencia, st, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
