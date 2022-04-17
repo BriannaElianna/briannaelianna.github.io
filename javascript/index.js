@@ -6414,6 +6414,17 @@ let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd");
 let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 1, "Priscillaa");
 let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme");
 let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA");
+//DRAGULA S2
+let felony = new Queen("Felony Dodger", 6, 5, 2, 3, 7, 4, 4, "Felony");
+let monikkie = new Queen("Monikkie Shame", 6, 5, 2, 3, 7, 4, 4, "Monikkie");
+let kendra = new Queen("Kendra Onixxx", 6, 5, 2, 3, 7, 4, 4, "Kendra");
+let dahli = new Queen("Dahli", 6, 5, 2, 3, 7, 4, 4, "Dahli");
+let erika = new Queen("Erika Klash", 6, 5, 2, 3, 7, 4, 4, "Erika");
+let disasterina = new Queen("Disasterina", 6, 5, 2, 3, 7, 4, 4, "Disasterina");
+let victoriae = new Queen("Victoria Elizabeth Black", 6, 5, 2, 3, 7, 4, 4, "VictoriaD");
+let james = new Queen("James Majesty", 6, 5, 2, 3, 7, 4, 4, "James");
+let biqtch = new Queen("Biqtch Puddin", 6, 5, 2, 3, 7, 4, 4, "Biqtch");
+let dragula_2 = [felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch];
 //DRAGULA S1
 let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, "Pinche");
 let ursula = new Queen("Ursula Major", 6, 5, 2, 3, 7, 4, 4, "Ursula");
@@ -6456,7 +6467,7 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
-    pangina];
+    pangina, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch];
 let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra];
 let lipsyncers = [tayce,
 abby,
@@ -6513,12 +6524,12 @@ let allQueens = [
     ivyelise, juicy, keta, love, mlp, reggy, tabitha, countess, vanessaC, vivaldi,
     amadiva, annee, b, bunny, dearis, jaja, meannie, morrigan, natalia, petchra,
     angele, bandit, genie, kana, kandyz, katy, m, maya, mocha, gimhuay, silver, srimala, tormai, vanda,
-    anita, art, cocoj, elektra, etc, jojo, karen, kita, maxi,
+    anita, art, cocoj, elektra, etc, jojo, karen, kita, maxi, pinche, frankie, melissa, meatball, loris, xochi, vander, foxie,
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
-    pangina, peppa
+    pangina, peppa, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch
 ].concat(allCustomQueens).sort((a, b) => a.getName().toLowerCase().localeCompare(b.getName().toLowerCase()));
 let allQueensCopy = [];
 let allQueensCopy2 = [];
