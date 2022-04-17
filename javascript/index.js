@@ -6480,7 +6480,7 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
-    pangina, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch];
+    pangina, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch, violencia, st, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
 let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra];
 let lipsyncers = [tayce,
 abby,
@@ -6529,7 +6529,7 @@ let allQueens = [
     aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
     alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
-    baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar,
+    baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar, violencia, st, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon,
     awhora, asttina, bimini, cherry, ellie, ginny, joe, lawrence, sister, tayce, tia, veronica,
     anubis, charity, choriza, elektraF, ella, kitty, krystal, river, scarlett, vanity, victoriaS,
     anastarzia, boa, ilona, jimbo, juice, kiara, kyne, lemon, priyanka, rita, bobo, tynomi,
