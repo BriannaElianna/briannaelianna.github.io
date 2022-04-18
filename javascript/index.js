@@ -385,7 +385,7 @@ function improvChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new ImprovChallenge();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4)){
+    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false && lalam == false){
         isTeamChallenge = true;
         teamMaking();
         challenge.rankPerformances();
@@ -2241,6 +2241,9 @@ function contestantProgress() {
             else if (placement.innerHTML == "TOP2") {
                 placement.setAttribute("style", "background-color: deepskyblue;");
             }
+			else if (placement.innerHTML == "EXT") {
+                placement.setAttribute("style", "background-color: #de4e4e");
+            }
             else if (placement.innerHTML == "TOP 3<br><small>Win round 1</small>") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #ffd100; color: #000;");
             }
@@ -2262,7 +2265,7 @@ function contestantProgress() {
             else if (placement.innerHTML == "BTM2 ") {
                 placement.setAttribute("style", "background-color: #FA8072;");
             }
-            else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM") {
+            else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM" || placement.innerHTML == "EXT") {
                 placement.setAttribute("style", "background-color: #fc827c;");
             }
             else if (placement.innerHTML == " BTM2") {
@@ -2278,6 +2281,9 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FC4545;");
             }
             else if (placement.innerHTML == " ELIM") {
+                placement.setAttribute("style", "font-weight: bold; background-color: deep#e096c6;");
+            }
+			else if (placement.innerHTML == "EXT") {
                 placement.setAttribute("style", "font-weight: bold; background-color: deep#e096c6;");
             }
             else if (placement.innerHTML == " ELIM ") {
@@ -6457,7 +6463,7 @@ let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, "Merrie");
 let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, "Bitter");
 let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, "La");
 let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, "Sigourney");
-let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 3, 7, 4, 4, "Hoso");
+let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, "Hoso");
 let dragula_4 = [formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso, dahli, saint];
 //RESSURECTION
 let ressurection = [priscillac, loris, kendra, frankie, victoriae, dahli, saint];
