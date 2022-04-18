@@ -6455,13 +6455,12 @@ let astrud = new Queen("Astrud Aurelia", 6, 5, 2, 3, 7, 4, 4, "Astrud");
 let koco = new Queen("Koco Caine", 6, 5, 2, 3, 7, 4, 4, "Koco");
 let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, "Merrie");
 let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, "Bitter");
-let jadejolie = new Queen("Jade Jolie", 6, 5, 2, 3, 7, 4, 4, "Jade");
 let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, "La");
 let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, "Sigourney");
 let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 3, 7, 4, 4, "Hoso");
 let dragula_4 = [formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso, dahli, saint];
 //RESSURECTION
-let ressurection = [priscilla, loris, kendra, frankie, victoriae, dahli, saint];
+let ressurection = [priscillac, loris, kendra, frankie, victoriae, dahli, saint];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
@@ -6492,8 +6491,8 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
-    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
-    pangina, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch, violencia, st, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
+    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta, formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso,
+    pangina, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
 let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra];
 let lipsyncers = [tayce,
 abby,
@@ -6542,13 +6541,13 @@ let allQueens = [
     aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
     alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
-    baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar, violencia, st, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon,
+    baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon,
     awhora, asttina, bimini, cherry, ellie, ginny, joe, lawrence, sister, tayce, tia, veronica,
     anubis, charity, choriza, elektraF, ella, kitty, krystal, river, scarlett, vanity, victoriaS,
     anastarzia, boa, ilona, jimbo, juice, kiara, kyne, lemon, priyanka, rita, bobo, tynomi,
     chelsea, envy, janey, madamem, mama, megan, abby, patty, roem, sederginne,
     ivyelise, juicy, keta, love, mlp, reggy, tabitha, countess, vanessaC, vivaldi,
-    amadiva, annee, b, bunny, dearis, jaja, meannie, morrigan, natalia, petchra,
+    amadiva, annee, b, bunny, dearis, jaja, meannie, morrigan, natalia, petchra, formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso,
     angele, bandit, genie, kana, kandyz, katy, m, maya, mocha, gimhuay, silver, srimala, tormai, vanda,
     anita, art, cocoj, elektra, etc, jojo, karen, kita, maxi, pinche, frankie, melissa, meatball, loris, xochi, vander, foxie,
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
