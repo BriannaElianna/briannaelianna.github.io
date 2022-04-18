@@ -6473,11 +6473,10 @@ let acna = new Queen("Acna Attack", 6, 5, 2, 14, 7, 4, 4, "Acna");
 let betho = new Queen("Beth Oven", 6, 5, 2, 14, 7, 4, 4, "BethO");
 let mary = new Queen("Mary J. Wanna", 6, 5, 2, 14, 7, 4, 4, "Mary");
 let avenue = new Queen("Avenue", 6, 5, 2, 14, 7, 4, 4, "Avenue");
-let acna = new Queen("Acna Attack", 6, 5, 2, 14, 7, 4, 4, "Acna");
 let dahliam = new Queen("Dahlia Monroe", 6, 5, 2, 14, 7, 4, 4, "DahliaM");
 let didja = new Queen("Didja Lie", 6, 5, 2, 14, 7, 4, 4, "Didja");
 let ashleigh = new Queen("Ashleigh DeSleigh", 6, 5, 2, 14, 7, 4, 4, "Ashleigh");
-let custom1 = [lana, acna, betho, mary, avenue, acna, dahliam, didja, ashleigh];
+let custom1 = [lana, betho, mary, avenue, acna, dahliam, didja, ashleigh];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
