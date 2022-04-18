@@ -3625,7 +3625,7 @@ function judging() {
 		bottom6WayLipsync = false;
 		judging6WayScreen();
 	}
-	else if (lalahell == true && currentCast.length < 6 || lalahell == true && currentCast.length == 6) {
+	else if (lalahell == true && currentCast.length < 9 || lalahell == true && currentCast.length == 9) {
 		lalahell = false;
 		bottom6WayLipsync = false;
 		currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
