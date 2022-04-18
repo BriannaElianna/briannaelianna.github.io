@@ -6463,7 +6463,7 @@ let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, "Merrie");
 let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, "Bitter");
 let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, "La");
 let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, "Sigourney");
-let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, "Hoso");
+let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, "HoSo");
 let dragula_4 = [formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso, dahli, saint];
 //RESSURECTION
 let ressurection = [priscillac, loris, kendra, frankie, victoriae, dahli, saint];
