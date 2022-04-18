@@ -3613,7 +3613,7 @@ function judging() {
         s14LaLaPaRUZa = false;
         judgingS14LaLaPaRUZaScreen();
     }
-	else if (lalahell == true && currentCast.length > 6 ) {
+	else if (lalahell == true && currentCast.length > 8) {
 		//add 3 queens to the top and 6 queens to the bottom
 		currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
 		for (let i = 0; i < 3; i++) {
