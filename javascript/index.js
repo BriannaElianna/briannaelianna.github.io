@@ -5069,7 +5069,7 @@ function lipSync() {
                     doubleSashay = true;
                 }
             } else {
-                screen.createBold("I'm sorry but none of you surivied that extermation. You are both getting extermated.");
+                screen.createBold("I'm sorry but none of you surivied that extermation. You are both getting exterminated.");
                 doubleSashay = true;
                 bottomQueens[0].addToTrackRecord("EXT");
                 bottomQueens[0].unfavoritism += 5;
@@ -5084,7 +5084,7 @@ function lipSync() {
         else if (randomNumber(0, 1000) >= 998 && disqOrDept == false) {
             let quitterQueen = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
             screen.createImage(quitterQueen.image, "red");
-            screen.createBold(quitterQueen.getName() + ", shockingly has left the extermation round, they decided that they won't get extermated today.");
+            screen.createBold(quitterQueen.getName() + ", shockingly has left the extermation round, they decided that they won't get exterminated today.");
             if (quitterQueen.getName() == bottomQueens[0].getName()) {
                 bottomQueens[0].addToTrackRecord("QUIT");
                 bottomQueens[0].unfavoritism += 5;
@@ -5188,7 +5188,7 @@ function lipSync() {
                 } else {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[1].getName() + ", you are extermated...");
+                    screen.createBold(bottomQueens[1].getName() + ", you are exterminated...");
                     bottomQueens[1].addToTrackRecord("EXT");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
@@ -5196,7 +5196,7 @@ function lipSync() {
                     
                 }
             } else {
-                screen.createBold(bottomQueens[1].getName() + ", you have been extermated...");
+                screen.createBold(bottomQueens[1].getName() + ", you have been exterminated...");
                 bottomQueens[1].addToTrackRecord("EXT");
                 bottomQueens[1].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[1]);
@@ -5230,7 +5230,7 @@ function lipSync() {
                 } else {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[2].getName() + ", you are getting extermated...");
+                    screen.createBold(bottomQueens[2].getName() + ", you are getting exterminated...");
                     bottomQueens[2].addToTrackRecord("EXT");
                     bottomQueens[2].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[2]);
@@ -5238,7 +5238,7 @@ function lipSync() {
                 }
             } else {
                 screen.createImage(bottomQueens[2].image, "red");
-                screen.createBold(bottomQueens[2].getName() + ", im sorry but you are getting extermated...");
+                screen.createBold(bottomQueens[2].getName() + ", im sorry but you are getting exterminated...");
                 bottomQueens[2].addToTrackRecord("ELIM");
                 bottomQueens[2].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[2]);
@@ -5256,7 +5256,7 @@ function lipSync() {
                 if (chocolateBarCheck(bottomQueens[1], bottomQueens[2]) == 1) {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[2].getName() + ", you are getting extermated...");
+                    screen.createBold(bottomQueens[2].getName() + ", you are getting exterminated...");
                     bottomQueens[2].addToTrackRecord("EXT");
                     bottomQueens[2].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[2]);
@@ -5271,7 +5271,7 @@ function lipSync() {
                 } else if (chocolateBarCheck(bottomQueens[1], bottomQueens[2]) == 2) {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[1].getName() + ", you are getting extermated...");
+                    screen.createBold(bottomQueens[1].getName() + ", you are getting exterminated...");
                     bottomQueens[1].addToTrackRecord("EXT");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
@@ -5286,7 +5286,7 @@ function lipSync() {
                 } else {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
-                    screen.createBold(bottomQueens[1].getName() + ", you are getting extermated...");
+                    screen.createBold(bottomQueens[1].getName() + ", you are getting exterminated...");
                     bottomQueens[1].addToTrackRecord("EXT");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
@@ -5302,9 +5302,9 @@ function lipSync() {
                 }
             } else {
                 screen.createImage(bottomQueens[1].image, "red");
-                screen.createBold(bottomQueens[1].getName() + ", you are getting extermated...");
+                screen.createBold(bottomQueens[1].getName() + ", you are getting exterminated...");
                 screen.createImage(bottomQueens[2].image, "red");
-                screen.createBold(bottomQueens[2].getName() + ", you are getting extermated...");
+                screen.createBold(bottomQueens[2].getName() + ", you are getting exterminated...");
                 bottomQueens[1].addToTrackRecord("ELIM");
                 bottomQueens[1].unfavoritism += 5;
                 bottomQueens[2].addToTrackRecord("ELIM");
