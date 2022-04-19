@@ -8704,6 +8704,12 @@ let ext = [
     "eating alive spiders.",
     "getting shocked until one queen quits.",
     "drinking cow sperm",
+	"eating worms.",
+	"getting set on fire then having it washed off immediately after.",
+	"having to listen to Rupaul's entire discography.",
+	"putting your hand in a fryer.",
+	"listening to Mask by Dream.",
+	"the room slowly getting hotter and hotter until one queen backs out.",
 ];
 let exte = [...ext];
 function extermation() {
