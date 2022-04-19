@@ -736,6 +736,8 @@ function runway() {
     runwayScreen.createParagraph("The queens will bring it to the runway!");
     if (currentCast.length > 4)
         runwayScreen.createParagraph("The theme is: " + desc[randomNumber(0, 21)]);
+	else if (currentCast.length == 3 && top3 && dragula == true)
+        runwayScreen.createParagraph("The theme is... fiercest drag!");
     else if (currentCast.length == 3 && top3 || currentCast.length == 5 && top4 || currentCast.length == 4 && (all_stars || lipsync_assassin) || currentCast.length == 2 && team)
         runwayScreen.createParagraph("The theme is... best drag!");
     for (let i = 0; i < currentCast.length; i++)
@@ -1802,7 +1804,11 @@ function finale() {
     for (let i = 0; i < currentCast.length; i++)
         screen.createImage(currentCast[i].image);
     currentCast.sort((a, b) => (b.finaleScore - a.finaleScore));
-    screen.createParagraph("Our Top 3 will participate in a music video for RuPaul's newest single!");
+	if (dragula == true) {
+		screen.createParagraph("Our Top 3 will participate in a ball!");
+	}else{
+		screen.createParagraph("Our Top 3 will participate in a music video for RuPaul's newest single!");
+	}
     screen.createButton("Proceed", "runway()", "button2");
 }
 function finaleTeam() {
@@ -1826,8 +1832,22 @@ function finaleJudging() {
     let screen = new Scene();
     screen.clean();
     screen.createHeader("The final minutes...");
-    screen.createBold("Ladies, it's time to decide The Next Drag Superstar, and...");
-    if (randomNumber(0, 100) <= 90){
+	if (dragula == true) {
+		screen.createBold("Ladies, it's time to decide The Winner Of Dragula...");
+	}else{
+		screen.createBold("Ladies, it's time to decide The Next Drag Superstar, and...");
+	}
+	if (dragula == true){
+        screen.createImage(currentCast[2].image, "sienna");
+        screen.createBold(currentCast[2].getName() + ", I'm sorry my dear but it's not your time. I must ask you to leave the competiton...");
+        currentCast[2].addToTrackRecord("ELIMINATED");
+        eliminatedCast.unshift(currentCast[2]);
+        currentCast.splice(2, 1);
+        screen.createHorizontalLine();
+        screen.createImage(currentCast[0].image, "silver");
+        screen.createImage(currentCast[1].image, "silver");
+        screen.createBold(currentCast[0].getName() + " and " + currentCast[1].getName() + ", this is your last chance to prove yourself. It's time for the Final Floorshow!!");
+    }else if (randomNumber(0, 100) <= 90){
         screen.createImage(currentCast[2].image, "sienna");
         screen.createBold(currentCast[2].getName() + ", I'm sorry my dear but it's not your time. I must ask you to sashay away...");
         currentCast[2].addToTrackRecord("ELIMINATED");
@@ -1883,7 +1903,11 @@ function finaleFinale() {
     let screen = new Scene();
     screen.clean();
     screen.createHeader("The end.");
-    screen.createBold("Ladies, I've made my decision. The Next Drag Superstar is...");
+	if (dragula == true) {
+		screen.createBold("I've made my decision. The winner of Dragula is...");
+	}else{
+		screen.createBold("Ladies, I've made my decision. The Next Drag Superstar is...");
+	}
     chocolateBarTwistCheck = true;
     if (currentCast[0].finaleScore == currentCast[1].finaleScore && randomNumber(0, 100) >= 90) {
         screen.createBold("For the FIRST TIME in Drag Race herstory, you are both winners, baby");
@@ -1909,6 +1933,20 @@ function finaleFinale() {
 			currentCast.splice(1, 1);
 			if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
 				currentCast[1].addToTrackRecord("RUNNER UP");
+				eliminatedCast.unshift(currentCast[1]);
+				currentCast.splice(1, 1);
+			}
+		}
+		else if (dragula == true) {
+			screen.createImage(currentCast[0].image, "yellow");
+			screen.createBigText(currentCast[0].getName() + "!!");
+			screen.createBold("CONGRATS YOU ARE THE WINNER OF DRAGULA!");
+			currentCast[0].addToTrackRecord("WINNER");
+			currentCast[1].addToTrackRecord("ELIMINATED");
+			eliminatedCast.unshift(currentCast[1]);
+			currentCast.splice(1, 1);
+			if (!allstars3Finale && !ukvstwFinale && !top2finaleAS && (all_stars || lipsync_assassin) || isThisA3Way) {
+				currentCast[1].addToTrackRecord("ELIMINATED");
 				eliminatedCast.unshift(currentCast[1]);
 				currentCast.splice(1, 1);
 			}
@@ -4937,6 +4975,7 @@ function lipSync() {
     screen.createHeader("It's time...");
 	if (dragula == true) {
 		screen.createBold("For the extermination challenge! Try not to fuck it up.");
+		extermation();
 	}
 	else if (dragula == false) {
 		screen.createBold("For you to lip-sync... for your lives! Good luck, and don't fuck it up.");
@@ -8647,6 +8686,19 @@ let reasoningQueens = [
     "no tea, no shade no pink lemonade… they done fucked up drag.",
     "they had given up on the competition."
 ];
+
+let ext = [
+    "eating alive spiders.",
+    "getting shocked until one queen quits.",
+    "drinking cow sperm",
+];
+let exte = [...ext];
+function extermation() {
+    let screen = new Scene();
+    let song = randomNumber(0, exte.length - 1);
+    screen.createBold(`The extermation challenge is... ${exte[song]}!`);
+    lsSongs.splice(song, 1);
+}
 function chooseReasoning(winQueen, elimQueen) {
     let screen = new Scene();
     let reasoning = randomNumber(0, reasoningQueens.length - 1);
