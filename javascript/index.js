@@ -1906,7 +1906,7 @@ function finaleFinale() {
 	if (dragula == true) {
 		screen.createBold("I've made my decision. The winner of Dragula is...");
 	}else{
-		screen.createBold("Ladies, I've made my decision. The Next Drag Superstar is...");
+		screen.createBold("Ladies.. I've made my decision. The Next Drag Superstar is...");
 	}
     chocolateBarTwistCheck = true;
     if (currentCast[0].finaleScore == currentCast[1].finaleScore && randomNumber(0, 100) >= 90) {
