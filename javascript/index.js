@@ -1925,7 +1925,7 @@ function finaleFinale() {
         eliminatedCast.unshift(currentCast[1]);
         currentCast.splice(1, 1);
     }else{
-		if (flop == true || dragula == true && randomNumber(0, 100) >= 90 || randomNumber(0, 100) >= 90 ) {
+		if (flop == true || dragula == true && randomNumber(0, 100) >= 95 || randomNumber(0, 100) >= 90 ) {
 			screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
 			currentCast[0].addToTrackRecord("ELIMINATED");
 			currentCast[1].addToTrackRecord("ELIMINATED");
