@@ -6553,13 +6553,13 @@ let fire = new Queen("Fire Ma'aM", 10, 4, 11, 14, 2, 8, 4, "Fire");
 let custom2 = [harmony, didi, devyn, cindy, millerd, cherri, surut, coach, mother, trey, fire, dahliam, mary];
 //custom s3
 let mike = new Queen("Mike Dragzowski", 1, 1, 1, 1, 1, 1, 4, "Mike");
-let venusd = new Queen("Venus Galore", 11, 8, 12, 4, 5, 3, 4, "VenusD");
+let venusd = new Queen("Venus Galore", 11, 8, 12, 4, 5, 3, 4, "VenusG");
 let terry = new Queen("Terry The Tuck", 1, 1, 1, 1, 1, 1, 4, "Terry");
 let jani = new Queen("Jan II", 3, 2, 3, 11, 12, 7, 4, "JanI");
 let heidig = new Queen("Heidi Good", 12, 10, 12, 5, 3, 2, 4, "HeidiG");
 let betha = new Queen("Beth Amphetamine", 6, 5, 2, 14, 7, 4, 4, "BethA");
 let caira = new Queen("Caira Cosplay", 6, 14, 4, 3, 11, 9, 4, "Caira");
-let ayehsa = new Queen("Ayesha Apocalypse", 7, 7, 7, 11, 7, 7, 4, "Ayehsa");
+let ayehsa = new Queen("Ayesha Apocalypse", 7, 7, 7, 11, 7, 7, 4, "Ayesha");
 let bethl = new Queen("Beth Lahem", 1, 1, 1, 1, 1, 1, 4, "BethL");
 let custom3 = [mike, venusd, terry, jani, heidig, betha, caira, ayehsa, devyn, trey, bethl];
 //rest
