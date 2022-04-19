@@ -6546,8 +6546,8 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
-    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta, formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso,
-    pangina, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
+    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta, formelda, astrud, koco, merrie, bitter, la, sigourney, hoso,
+    pangina, felony, monikkie, kendra, erika, disasterina, victoriae, james, biqtch, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
 let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra];
 let lipsyncers = [tayce,
 abby,
@@ -6593,7 +6593,7 @@ let allQueens = [
     aja, alexism, charlie, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina,
     aquaria, asia, blair, dusty, kalorie, kameron, mayhem, michelle, miz, monet, monique, vanessa, vixen, yuhua,
     akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, yvie,
-    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
+    aiden, brita, crystal, gigi, heidi, jackie, jaida, jan, nicky, rock, 
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
     alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
     baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon,
