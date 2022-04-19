@@ -6527,7 +6527,7 @@ let surut = new Queen("Surut", 6, 14, 4, 3, 11, 9, 4, "Surut");
 let coach = new Queen("Coach Ella", 6, 5, 2, 14, 7, 4, 4, "Coach");
 let mother = new Queen("Mother Monster", 6, 5, 2, 14, 7, 4, 4, "Mother");
 let trey = new Queen("Trey Angle", 4, 10, 2, 11, 13, 2, 4, "Trey");
-let fire = new Queen("Fire Ma'aM", 10, 4, 11, 14, 2, 8, 4, "Ashleigh");
+let fire = new Queen("Fire Ma'aM", 10, 4, 11, 14, 2, 8, 4, "Fire");
 let custom2 = [harmony, didi, devyn, cindy, millerd, cherri, surut, coach, mother, trey, fire, dahliam, mary];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
