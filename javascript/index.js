@@ -3004,7 +3004,7 @@ function predefCast(cast, format, finale, premiere = '', returning = '') {
     totalCastSize = cast.length;
 	if (finale == "dragula")
         dragula = true;
-    if (format == "top3")
+    if (finale == "top3")
         top3 = true;
     else if (format == "top4")
         top4 = true;
@@ -6562,6 +6562,8 @@ let caira = new Queen("Caira Cosplay", 6, 14, 4, 3, 11, 9, 4, "Caira");
 let ayehsa = new Queen("Ayesha Apocalypse", 7, 7, 7, 11, 7, 7, 4, "Ayesha");
 let bethl = new Queen("Beth Lahem", 1, 1, 1, 1, 1, 1, 4, "BethL");
 let custom3 = [mike, venusd, terry, jani, heidig, betha, caira, ayehsa, devyn, trey, bethl];
+//custom as1
+let customas1 = [venusd, acna, mary, betha, ashleigh, caira, ayehsa, harmony, avenue, didi, mother, cherri, trey, heidig];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
