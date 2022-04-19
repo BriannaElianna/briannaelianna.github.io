@@ -1925,7 +1925,7 @@ function finaleFinale() {
         eliminatedCast.unshift(currentCast[1]);
         currentCast.splice(1, 1);
     }else{
-		if (flop == true || randomNumber(0, 100) >= 90) {
+		if (flop == true || dragula == true && randomNumber(0, 100) || randomNumber(0, 100) >= 90 ) {
 			screen.createBold("I'm sorry but none of you have the C.U.N.T it takes to win. Nobody is getting crowned this season..");
 			currentCast[0].addToTrackRecord("ELIMINATED");
 			currentCast[1].addToTrackRecord("ELIMINATED");
@@ -6510,12 +6510,25 @@ let ressurection = [priscillac, loris, kendra, frankie, victoriae, dahli, saint]
 let lana = new Queen("Lana Ja'Rae", 6, 5, 2, 14, 7, 4, 4, "Lana");
 let acna = new Queen("Acna Attack", 6, 5, 2, 14, 7, 4, 4, "Acna");
 let betho = new Queen("Beth Oven", 6, 5, 2, 14, 7, 4, 4, "BethO");
-let mary = new Queen("Mary J. Wanna", 6, 5, 2, 14, 7, 4, 4, "Mary");
+let mary = new Queen("Mary J. Wanna", 14, 7, 12, 6, 4, 10, 4, "Mary");
 let avenue = new Queen("Avenue", 6, 5, 2, 14, 7, 4, 4, "Avenue");
 let dahliam = new Queen("Dahlia Monroe", 6, 5, 2, 14, 7, 4, 4, "DahliaM");
 let didja = new Queen("Didja Lie", 6, 5, 2, 14, 7, 4, 4, "Didja");
 let ashleigh = new Queen("Ashleigh DeSleigh", 6, 5, 2, 14, 7, 4, 4, "Ashleigh");
 let custom1 = [lana, betho, mary, avenue, acna, dahliam, didja, ashleigh];
+//custom s2
+let harmony = new Queen("Harmony Falsetto", 6, 5, 2, 14, 7, 4, 4, "Harmony");
+let didi = new Queen("Didi Deathnote", 6, 5, 2, 14, 7, 4, 4, "Didi");
+let devyn = new Queen("Devyn Dynasty", 3, 3, 15, 10, 3, 12, 4, "Devyn");
+let cindy = new Queen("Cindy Wink", 11, 5, 13, 6, 4, 9, 4, "Cindy");
+let millerd = new Queen("Miller D’Lite", 6, 5, 2, 14, 7, 4, 4, "MillerD");
+let cherri = new Queen("Cherri Gravez", 6, 5, 2, 14, 7, 4, 4, "Cherri");
+let surut = new Queen("Surut", 6, 14, 4, 3, 11, 9, 4, "Surut");
+let coach = new Queen("Coach Ella", 6, 5, 2, 14, 7, 4, 4, "Coach");
+let mother = new Queen("Mother Monster", 6, 5, 2, 14, 7, 4, 4, "Mother");
+let trey = new Queen("Trey Angle", 4, 10, 2, 11, 13, 2, 4, "Trey");
+let fire = new Queen("Fire Ma'aM", 10, 4, 11, 14, 2, 8, 4, "Ashleigh");
+let custom2 = [harmony, didi, devyn, cindy, millerd, cherri, surut, coach, mother, trey, fire, dahliam, mary];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
@@ -6593,7 +6606,7 @@ let allQueens = [
     aja, alexism, charlie, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina,
     aquaria, asia, blair, dusty, kalorie, kameron, mayhem, michelle, miz, monet, monique, vanessa, vixen, yuhua,
     akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, yvie,
-    aiden, brita, crystal, gigi, heidi, jackie, jaida, jan, nicky, rock, 
+    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
     denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
     alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
     baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon,
