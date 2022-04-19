@@ -6561,7 +6561,7 @@ let betha = new Queen("Beth Amphetamine", 6, 5, 2, 14, 7, 4, 4, "BethA");
 let caira = new Queen("Caira Cosplay", 6, 14, 4, 3, 11, 9, 4, "Caira");
 let ayehsa = new Queen("Ayesha Apocalypse", 7, 7, 7, 11, 7, 7, 4, "Ayesha");
 let bethl = new Queen("Beth Lahem", 1, 1, 1, 1, 1, 1, 4, "BethL");
-let custom3 = [mike, venusd, terry, jani, heidig, betha, caira, ayehsa, devyn, trey, bethl];
+let custom3 = [jani, betha, caira, trey];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
