@@ -6564,6 +6564,18 @@ let bethl = new Queen("Beth Lahem", 1, 1, 1, 1, 1, 1, 4, "BethL");
 let custom3 = [mike, venusd, terry, jani, heidig, betha, caira, ayehsa, devyn, trey, bethl];
 //custom as1
 let customas1 = [venusd, acna, mary, betha, ashleigh, caira, ayehsa, harmony, avenue, didi, mother, cherri, trey, heidig];
+//custom s4
+let jenner = new Queen("Jenner Myles", 1, 1, 1, 1, 1, 1, 4, "Jenner");
+let gusha = new Queen("Gusha", 2, 5, 3, 12, 10, 15, 4, "Gusha");
+let evea = new Queen("Eve Angelica", 11, 3, 4, 13, 2, 15, 4, "EveA");
+let taba = new Queen("Taba Co", 15, 12, 13, 4, 3, 2, 4, "Taba");
+let amethyst = new Queen("Amethyst Rock Bottom", 13, 12, 4, 14, 2, 3, 4, "Amethyst");
+let fet = new Queen("Fet Anyal", 2, 4, 15, 13, 12, 3, 4, "Fet");
+let fairy = new Queen("Fairy Dust", 3, 4, 15, 12, 2, 13, 4, "Fairy");
+let yurin = new Queen("Yurin D. Nile", 4, 15, 10, 3, 2, 11, 4, "Yurin");
+let virgin = new Queen("Virgin Mary", 15, 13, 12, 4, 3, 2, 4, "Virgin");
+let honeym = new Queen("Honey Mustard", 11, 15, 4, 13, 2, 3, 4, "Honeyd");
+let custom4 = [jenner, gusha, evea, taba, amethyst, fet, fairy, yurin, virgin, honeym];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
