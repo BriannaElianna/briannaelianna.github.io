@@ -6574,7 +6574,7 @@ let fet = new Queen("Fet Anyal", 2, 4, 15, 13, 12, 3, 4, "Fet");
 let fairy = new Queen("Fairy Dust", 3, 4, 15, 12, 2, 13, 4, "Fairy");
 let yurin = new Queen("Yurin D. Nile", 4, 15, 10, 3, 2, 11, 4, "Yurin");
 let virgin = new Queen("Virgin Mary", 15, 13, 12, 4, 3, 2, 4, "Virgin");
-let honeym = new Queen("Honey Mustard", 11, 15, 4, 13, 2, 3, 4, "Honeyd");
+let honeym = new Queen("Honey Mustard", 11, 15, 4, 13, 2, 3, 4, "Honeym");
 let custom4 = [jenner, gusha, evea, taba, amethyst, fet, fairy, yurin, virgin, honeym];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
