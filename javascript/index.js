@@ -890,6 +890,7 @@ let bottom6WayLipsync = false;
 let bottom6WayLipsyncCheck = false;
 let s14LaLaPaRUZa = false;
 let s14LaLaPaRUZaCheck = false;
+let shantay = false;
 
 function CheckForSpecialEvents(slay, great, good, bad, flop) {
     if (slay.length === 0 && great.length === 0 && currentCast.length >= 8 && !floppersCheck && randomNumber(0, 100) >= 80 && !conjoinedCheck)
@@ -5016,7 +5017,7 @@ function lipSync() {
         else if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false) {
             screen.createImage(bottomQueens[0].image, "darkred");
             screen.createImage(bottomQueens[1].image, "darkred");
-            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+            if (chocolateBarTwist  && !chocolateBarTwistCheck || shantay == true) {
                 screen.createBold("Neither one of you survived that extermeration..." + bottomQueens[0].getName() + ", " + bottomQueens[1].getName() + ", now your fates rests in the hands of the drag gods.");
                 screen.createBold("If one of you have the golden chocolate bar, that queen will be safe.");
                 if (chocolateBarCheck(bottomQueens[0], bottomQueens[1]) == 1) {
@@ -5068,7 +5069,7 @@ function lipSync() {
                     currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
                     doubleSashay = true;
                 }
-            } else {
+            } else if (shantay == true) {
                 screen.createBold("I'm sorry but none of you surivied that extermation. You are both getting exterminated.");
                 doubleSashay = true;
                 bottomQueens[0].addToTrackRecord("EXT");
@@ -5250,7 +5251,7 @@ function lipSync() {
             bottomQueens[0].addToTrackRecord("BTM3");
             bottomQueens[0].unfavoritism += 3;
             bottomQueens[0].ppe += 1;
-            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+            if (chocolateBarTwist  && !chocolateBarTwistCheck || shantay == true) {
                 screen.createBold("Neither one of you survived that extermation..." + bottomQueens[1].getName() + ", " + bottomQueens[2].getName() + ", now your fates rests in the hands of the drag gods.");
                 screen.createBold("If one of you have the golden chocolate bar, that queen will be safe.");
                 if (chocolateBarCheck(bottomQueens[1], bottomQueens[2]) == 1) {
@@ -6576,6 +6577,13 @@ let yurin = new Queen("Yurin D. Nile", 4, 15, 10, 3, 2, 11, 4, "Yurin");
 let virgin = new Queen("Virgin Mary", 15, 13, 12, 4, 3, 2, 4, "Virgin");
 let honeym = new Queen("Honey Mustard", 11, 15, 4, 13, 2, 3, 4, "Honeym");
 let custom4 = [jenner, gusha, evea, taba, amethyst, fet, fairy, yurin, virgin, honeym];
+//custom s5
+let sapphire = new Queen("Sapphire Rock Bottom", 4, 12, 13, 14, 3, 2, 4, "Sapphire");
+let angel = new Queen("Angel Azul", 11, 2, 13, 12, 4, 3, 4, "Angel");
+let gem = new Queen("Gem", 2, 3, 12, 13, 4, 14, 4, "Gem");
+let zombira = new Queen("Zombira", 10, 12, 2, 3, 4, 14, 4, "Zombira");
+let canna = new Queen("Canna Biss", 1, 1, 4, 1, 2, 3, 4, "Canna");
+let custom5 = [canna, zombira, gem, angel, sapphire, taba, yurin, bethl, trey, dahliam];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
