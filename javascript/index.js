@@ -891,6 +891,9 @@ let bottom6WayLipsyncCheck = false;
 let s14LaLaPaRUZa = false;
 let s14LaLaPaRUZaCheck = false;
 let shantay = false;
+let sashay = false;
+let disq = false;
+let injured = false;
 
 function CheckForSpecialEvents(slay, great, good, bad, flop) {
     if (slay.length === 0 && great.length === 0 && currentCast.length >= 8 && !floppersCheck && randomNumber(0, 100) >= 80 && !conjoinedCheck)
@@ -1387,6 +1390,7 @@ let lalap = false;
 let lalahell = false;
 let hellCheck = false;
 let noLimits = false;
+let leaver = false;
 function newEpisode() {
     safeQueens = [];
     topQueens = [];
@@ -1577,14 +1581,14 @@ function finaleLipSyncs() {
         firstLS[i].getLipsync();
     }
     firstLS.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
-    if (firstLS[0].lipsyncScore == firstLS[1].lipsyncScore && firstLS[0].lipsyncScore > 6 && firstLS[1].lipsyncScore > 6) {
+    if (firstLS[0].lipsyncScore == firstLS[1].lipsyncScore && firstLS[0].lipsyncScore > 6 && firstLS[1].lipsyncScore > 6 || shantay == true) {
         screen.createImage(firstLS[0].image, "silver");
         screen.createImage(firstLS[1].image, "silver");
         screen.createBold(firstLS[0].getName() + ", " + firstLS[1].getName() + ", shantay you both stay.");
         finalLS.push(firstLS[0]);
         finalLS.push(firstLS[1]);
         isThisA3Way = true;
-    } else if (chocolateBarTwist  && !chocolateBarTwistCheck) {
+    } else if (chocolateBarTwist  && !chocolateBarTwistCheck && shantay == true) {
         screen.createImage(firstLS[0].image, "silver");
         screen.createBold(firstLS[0].getName() + ", shantay you stay.");
         screen.createBold(firstLS[1].getName() + ", now your fate rests in the hands of the drag gods.");
@@ -1624,7 +1628,7 @@ function finaleLipSyncs() {
         secondLS[i].getASLipsync();
     }
     secondLS.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
-    if (secondLS[0].lipsyncScore == secondLS[1].lipsyncScore && secondLS[0].lipsyncScore > 6 && secondLS[1].lipsyncScore > 6) {
+    if (secondLS[0].lipsyncScore == secondLS[1].lipsyncScore && secondLS[0].lipsyncScore > 6 && secondLS[1].lipsyncScore > 6 || shantay == true) {
         screen.createImage(secondLS[0].image, "silver");
         screen.createImage(secondLS[1].image, "silver");
         screen.createBold(secondLS[0].getName() + ", " + secondLS[1].getName() + ", shantay you both stay.");
@@ -3171,6 +3175,16 @@ function startSimulation(challenge = "") {
 			lalap = true;
 			s14LaLaPaRUZa = true;
 			s14LaLaPaRUZaCheck = true;
+		if (select4.options[select4.selectedIndex].value == "leave")
+			leaver = true;
+		if (select4.options[select4.selectedIndex].value == "shantay")
+			shantay = true;
+		if (select4.options[select4.selectedIndex].value == "sashay")
+			sashay = true;
+		if (select4.options[select4.selectedIndex].value == "disq")
+			disq = true;
+		if (select4.options[select4.selectedIndex].value == "injured")
+			injured = true;
 		if (select4.options[select4.selectedIndex].value == "lalahell")
 			lalahell = true;
 			s14LaLaPaRUZa = true;
@@ -4142,7 +4156,7 @@ function bottom6() {
         bottomQueens[i].unfavoritism += 3;
         bottomQueens[i].ppe += 1;
     }
-    if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false) {
+    if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false || sashay == true && currentCast.length > 4) {
         screen.createImage(bottomQueens[4].image, "darkred");
         screen.createImage(bottomQueens[5].image, "darkred");
         if (chocolateBarTwist  && !chocolateBarTwistCheck) {
@@ -4197,7 +4211,7 @@ function bottom6() {
                 currentCast.splice(currentCast.indexOf(bottomQueens[5]), 1);
                 
             }
-        } else {
+        } if (sashay == true) {
             screen.createBold("I'm sorry but none of you showed the fire it takes to stay. You must both... sashay away.");
             doubleSashay = true;
             bottomQueens[4].addToTrackRecord("ELIM");
@@ -4987,7 +5001,7 @@ function lipSync() {
     let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
     let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
 	if (dragula == true) {
-        if (score1 > 7 && score2 > 7 && randomNumber(0, 100) <= 50 && !doubleShantay && noDouble == false && currentCast.length > 5) {
+        if (score1 > 7 && score2 > 7 && randomNumber(0, 100) <= 50 && !doubleShantay && noDouble == false && currentCast.length > 5 || shantay == true) {
             if (randomNumber(0, 100) >= 95) {
                 screen.createImage(bottomQueens[0].image, "tomato");
                 screen.createBold(bottomQueens[0].getName() + ", congrats! you are safe.");
@@ -5014,10 +5028,10 @@ function lipSync() {
                 doubleShantay = true;
             }
         }
-        else if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false) {
+        else if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false || sashay == true && currentCast.length > 4) {
             screen.createImage(bottomQueens[0].image, "darkred");
             screen.createImage(bottomQueens[1].image, "darkred");
-            if (chocolateBarTwist  && !chocolateBarTwistCheck || shantay == true) {
+            if (chocolateBarTwist  && !chocolateBarTwistCheck) {
                 screen.createBold("Neither one of you survived that extermeration..." + bottomQueens[0].getName() + ", " + bottomQueens[1].getName() + ", now your fates rests in the hands of the drag gods.");
                 screen.createBold("If one of you have the golden chocolate bar, that queen will be safe.");
                 if (chocolateBarCheck(bottomQueens[0], bottomQueens[1]) == 1) {
@@ -5069,7 +5083,7 @@ function lipSync() {
                     currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
                     doubleSashay = true;
                 }
-            } else if (shantay == true) {
+            } else if (sashay == true) {
                 screen.createBold("I'm sorry but none of you surivied that extermation. You are both getting exterminated.");
                 doubleSashay = true;
                 bottomQueens[0].addToTrackRecord("EXT");
@@ -5082,7 +5096,7 @@ function lipSync() {
                 currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
             }
         }
-        else if (randomNumber(0, 1000) >= 998 && disqOrDept == false) {
+        else if (randomNumber(0, 1000) >= 998 && disqOrDept == false || leaver == true) {
             let quitterQueen = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
             screen.createImage(quitterQueen.image, "red");
             screen.createBold(quitterQueen.getName() + ", shockingly has left the extermation round, they decided that they won't get exterminated today.");
@@ -5317,7 +5331,7 @@ function lipSync() {
             }
         }
     } else {
-        if (score1 > 7 && score2 > 7 && randomNumber(0, 100) <= 50 && !doubleShantay && noDouble == false && currentCast.length > 5) {
+        if (score1 > 7 && score2 > 7 && randomNumber(0, 100) <= 50 && !doubleShantay && noDouble == false && currentCast.length > 5 || shantay == true) {
             if (randomNumber(0, 100) >= 95) {
                 screen.createImage(bottomQueens[0].image, "tomato");
                 screen.createBold(bottomQueens[0].getName() + ", shantay you stay.");
@@ -5344,7 +5358,7 @@ function lipSync() {
                 doubleShantay = true;
             }
         }
-        else if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false) {
+        else if (score1 < 4 && score2 < 4 && randomNumber(0, 100) <= 10 && !doubleSashay && currentCast.length > 5 && noDouble == false || sashay == true && currentCast.length > 4) {
             screen.createImage(bottomQueens[0].image, "darkred");
             screen.createImage(bottomQueens[1].image, "darkred");
             if (chocolateBarTwist  && !chocolateBarTwistCheck) {
@@ -5399,7 +5413,7 @@ function lipSync() {
                     currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
                     doubleSashay = true;
                 }
-            } else {
+            } if (sashay == true) {
                 screen.createBold("I'm sorry but none of you showed the fire it takes to stay. You must both... sashay away.");
                 doubleSashay = true;
                 bottomQueens[0].addToTrackRecord("ELIM");
@@ -5412,7 +5426,7 @@ function lipSync() {
                 currentCast.splice(currentCast.indexOf(bottomQueens[1]), 1);
             }
         }
-        else if (randomNumber(0, 1000) >= 998 && disqOrDept == false) {
+        else if (randomNumber(0, 1000) >= 998 && disqOrDept == false || leaver == true) {
             let quitterQueen = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
             screen.createImage(quitterQueen.image, "red");
             screen.createBold(quitterQueen.getName() + ", shockingly has left the runway, they decided that they won't lipsync.");
@@ -5440,7 +5454,7 @@ function lipSync() {
                 }
             }
         }
-        else if (randomNumber(0, 1000) >= 999 && disqOrDept == false) {
+        else if (randomNumber(0, 1000) >= 999 && disqOrDept == false || disq == true) {
             let disqualifiedQueen = currentCast[randomNumber(0, currentCast.length - 1)];
             screen.createImage(disqualifiedQueen.image, "red");
             screen.createBold(disqualifiedQueen.getName() + ", it has come to my attention that you have broken the rules of this competition. I must ask you to sashay away.");
@@ -5468,7 +5482,7 @@ function lipSync() {
                 }
             }
         }
-        else if (randomNumber(0, 1000) >= 999 && disqOrDept == false) {
+        else if (randomNumber(0, 1000) >= 999 && disqOrDept == false || injured == true) {
             let injuredQueen = currentCast[randomNumber(0, currentCast.length - 1)];
             screen.createImage(injuredQueen.image, "red");
             screen.createBold(injuredQueen.getName() + ", would you please step forward.");
@@ -6864,7 +6878,7 @@ function lipsyncSmackdown() {
             lipSync[i_1].getASLipsync();
         }
         lipSync.sort(function (a, b) { return (b.lipsyncScore - a.lipsyncScore); });
-        if (lipSync[0].lipsyncScore >= lipSync[1].lipsyncScore && lipSync[0].lipsyncScore > 7 && lipSync[1].lipsyncScore > 7 && smack.length <= 2) {
+        if (lipSync[0].lipsyncScore >= lipSync[1].lipsyncScore && lipSync[0].lipsyncScore > 7 && lipSync[1].lipsyncScore > 7 && smack.length <= 2 || shantay == true) {
             screen.createImage(lipSync[0].image, "darkblue");
             screen.createImage(lipSync[1].image, "darkblue");
             screen.createBold("Shantay, you both stay baby!");
@@ -7023,7 +7037,7 @@ function LaLaPaRUza(){
             }
             queen1.lipsyncScore -= 4;
             lipSync.sort(function (a, b) { return (b.lipsyncScore - a.lipsyncScore); });
-            if (lipSync[0].lipsyncScore == lipSync[1].lipsyncScore && lipSync[0].lipsyncScore > 6 && lipSync[1].lipsyncScore > 6) {
+            if (lipSync[0].lipsyncScore == lipSync[1].lipsyncScore && lipSync[0].lipsyncScore > 6 && lipSync[1].lipsyncScore > 6 || shantay == true) {
                 screen.createImage(queen1.image, "darkblue");
                 screen.createImage(queen2.image, "darkblue");
                 screen.createBold("Shantay, you both stay baby!");
