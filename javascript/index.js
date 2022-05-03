@@ -325,6 +325,7 @@ function designChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new DesignChallenge();
     challenge.generateDescription();
+	rundesc();
     challenge.rankPerformances();
     isDesignChallenge = true;
     queensPerformances();
@@ -8753,6 +8754,26 @@ let snatchToDo = [
 	"Jennifer Lopez",
 	"Kelly Hyland"
 ];
+
+let outfitToDo = [
+    "dress with a classic silhouette with commitment to showing women who are strong",
+    "cocktail dress",
+    "dress with a train",
+    "18th century inspired dress",
+	"bra and panties",
+	"pair of pants and a blazer",
+	"pantsuit"
+];
+function rundesc() {
+    let screen = new Scene();
+    screen.createHorizontalLine();
+    screen.createBigText("The queens create their outfits...");
+    for (let i = 0; i < currentCast.length; i++) {
+        let outfit = randomNumber(0, outfitToDo.length - 1);
+        screen.createImage(currentCast[i].image);
+        screen.createBold(`${currentCast[i].getName()} makes a ${outfitToDo[outfit]}!!`);
+    }
+}
 function Impersonation() {
     let screen = new Scene();
     screen.createHorizontalLine();
