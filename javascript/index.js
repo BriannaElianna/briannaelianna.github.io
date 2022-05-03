@@ -8747,6 +8747,10 @@ let snatchToDo = [
 	"Jennifer Tilly",
 	"Cher",
 	"Jojo Siwa",
+	"Eve 6000",
+	"Katy Perry",
+	"Mariah Carey",
+	"Jennifer Lopez",
 	"Kelly Hyland"
 ];
 function Impersonation() {
