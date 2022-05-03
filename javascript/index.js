@@ -420,6 +420,7 @@ function snatchGame() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new SnatchGame();
     challenge.generateDescription();
+	Impersonation();
     challenge.rankPerformances();
     queensPerformances();
     isDesignChallenge = false;
@@ -8734,14 +8735,28 @@ let talentsToDo = [
     "Opera Singing",
     "Standing There"
 ];
-function queenTalents() {
+
+let snatchToDo = [
+    "Kim Kardashian",
+    "Olivia Rodrigo",
+    "Sydney Sweeney",
+    "Alexa Demmie",
+	"Beyonce",
+	"Christina Aguilera",
+	"Emily Lind",
+	"Jennifer Tilly",
+	"Cher",
+	"Jojo Siwa",
+	"Kelly Hyland"
+];
+function Impersonation() {
     let screen = new Scene();
     screen.createHorizontalLine();
-    screen.createBigText("The queens will perform...");
+    screen.createBigText("The queens will being impersonating...");
     for (let i = 0; i < currentCast.length; i++) {
-        let talent = randomNumber(0, talentsToDo.length - 1);
+        let snatch = randomNumber(0, snatchToDo.length - 1);
         screen.createImage(currentCast[i].image);
-        screen.createBold(`${currentCast[i].getName()} will do a ${talentsToDo[talent]} performance!!`);
+        screen.createBold(`${currentCast[i].getName()} will do ${snatchToDo[snatch]}!!`);
     }
 }
 let reasoningQueens = [
