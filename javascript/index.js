@@ -8762,6 +8762,13 @@ let outfitToDo = [
     "18th century inspired dress",
 	"bra and panties",
 	"pair of pants and a blazer",
+	"flapper dress",
+	"halter dress",
+	"off the shoulder dress",
+	"bodycon dress",
+	"mermaid dress",
+	"mini dress",
+	"tube dress",
 	"pantsuit"
 ];
 function rundesc() {
