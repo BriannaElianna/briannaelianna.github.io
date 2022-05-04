@@ -6289,7 +6289,6 @@ let us_season12 = [aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, ja
 let allstars_5 = [alexis, blair, derrick, india, jujubee, mariah, mayhem, miz, ongina, shea];
 //SEASON 13
 let denali = new Queen("Denali", 4, 8, 14, 9, 10, 11, 13, "Denali");
-let elliott = new Queen("Elliott With 2 Ts", 5, 5, 12, 9, 3, 8, 11, "Elliott");
 let mik = new Queen("Gottmik", 8, 11, 6, 13, 12, 13, 6, "Gottmik");
 let joey = new Queen("Joey Jay", 6, 7, 6, 5, 5, 7, 7, "Joey");
 let kahmora = new Queen("Kahmora Hall", 3, 4, 3, 5, 4, 12, 4, "Kahmora");
@@ -6301,7 +6300,7 @@ let symone = new Queen("Symone", 14, 7, 7, 9, 12, 9, 13, "Symone");
 let tamisha = new Queen("Tamisha Iman", 7, 6, 7, 5, 6, 7, 7, "Tamisha");
 let tina = new Queen("Tina Burner", 6, 6, 10, 5, 6, 8, 9, "TinaB");
 let utica = new Queen("Utica Queen", 7, 4, 6, 15, 5, 12, 11, "Utica");
-let us_season13 = [denali, elliott, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica];
+let us_season13 = [denali, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica];
 //ALL STARS 6
 let allstars_6 = [akeria, eureka, ginger, jan, jiggly, pandora, rajah, scarlet, serena, silky, sonique, trinityk, yara];
 //SEASON 14:  acting, comedy, dance, design, improv, runway, lipsync
@@ -6446,10 +6445,9 @@ let cocoj = new Queen("Coco Jumbo", 6, 5, 6, 6, 5, 8, 10, "CocoJ");
 let elektra = new Queen("Elektra Shock", 10, 6, 12, 8, 4, 7, 11, "Elektra");
 let etc = new Queen("Etcetera Etcetera", 5, 8, 8, 7, 8, 8, 8, "Etc");
 let jojo = new Queen("Jojo Zaho", 5, 5, 5, 5, 5, 6, 6, "Jojo");
-let karen = new Queen("Karen From Finance", 5, 6, 5, 5, 7, 7, 5, "Karen");
 let kita = new Queen("Kita Mean", 9, 9, 7, 7, 9, 9, 8, "Kita");
 let maxi = new Queen("Maxi Shield", 6, 6, 5, 9, 7, 8, 8, "Maxi");
-let drdu = [anita, art, cocoj, elektra, etc, jojo, karen, kita, maxi];
+let drdu = [anita, art, cocoj, elektra, etc, jojo, kita, maxi];
 //DRAG RACE ESPAÑA 1
 let arantxa = new Queen("Arantxa Castilla La Mancha", 6, 8, 6, 7, 8, 9, 7, "Arantxa");
 let carmenf = new Queen("Carmen Farala", 10, 10, 10, 14, 8, 13, 10, "CarmenF");
@@ -8804,7 +8802,8 @@ let reactLine = [
 	"Oh.. ok..",
 	"YASS!!",
 	"Oh my god!",
-	"Girl atleast she tried.."
+	"Girl atleast she tried..",
+	"Ugh, not this bitch.."
 ];
 let flopLine = [
 	"gossips.",
