@@ -8797,6 +8797,11 @@ let reactLine = [
 	"Oh my god!",
 	"Girl atleast she tried.."
 ];
+let flopLine = [
+	"gossips with the queens.",
+	"sits with the queens.",
+	"stands with the queens."
+];
 function entrance() {
     let screen = new Scene();
     screen.createHorizontalLine();
@@ -8809,7 +8814,8 @@ function entrance() {
         screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
 		let shadee = randomNumber(0, currentCast.length - 1);
 		screen.createBold(`${currentCast[shadee].getName()}: "${reactLine[react]}"`);
-		screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits down.`);
+		let flop = randomNumber(0, flopLine.length - 1);
+		screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
     }
 }
 function rundesc() {
