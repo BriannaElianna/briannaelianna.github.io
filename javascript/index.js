@@ -74,9 +74,10 @@ function miniChallenge() {
     let miniChallengeScreen = new Scene();
     miniChallengeScreen.clean();
     miniChallengeScreen.createHeader("Before the week begins..");
+	Judge();
+	miniChallengeScreen.createHeader("Mini Challenge");
     miniChallengeScreen.createParagraph("", "Description");
     document.body.style.llmqgroundImage = "url('image/werkroom.webp')";
-	Judge();
     let challenge = new MiniChallenge();
     challenge.generateDescription();
     challenge.rankPerformances();
