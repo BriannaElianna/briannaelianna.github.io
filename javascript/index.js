@@ -1408,11 +1408,8 @@ function newEpisode() {
     }
     if (episodeCount == 1 || premiereCounter <= 2 && (s12Premiere || porkchopPremiere || s6Premiere || s14Premiere ) || episodeCount == 1 && (uk3Premiere || s9Premiere)) {
         queensRemainingScreen.clean();
-        queensRemainingScreen.createHeader("Full cast");
-        for (let i = 0; i < currentCast.length; i++) {
-            queensRemainingScreen.createImage(currentCast[i].image);
-            queensRemainingScreen.createBold(currentCast[i].getName());
-        }
+        queensRemainingScreen.createHeader("Entrances");
+        entrance();
     }
     else {
         contestantProgress();
@@ -8771,6 +8768,32 @@ let outfitToDo = [
 	"tube dress",
 	"pantsuit"
 ];
+let entranceLine = [
+    "Oh? This isn't America's Next Top Model?",
+	"Rupaul! Its time to crown a winner!!",
+	"Oh? Thats it?",
+	"*silence*.. Oh? Do i need a entrance?",
+	"I came here to FIGHT!",
+	"This is JUST.. the entrance line!",
+	"I'm the queen yall want to see, cmon baby crown me.. ok.. ok.. ok.. get into it!",
+	"Bonjour, Bonjour!!",
+	"Don't be bitter ladies! Second place isn't too bad..",
+	"The race has JUST.. begun!",
+	"Oohlalalala!",
+	"I auditioned for the pitcrew.. but this is gonna be much more fun!",
+	"HA!.. What's my line again?",
+	"Ugh.. It must be so hard not being me!"
+];
+function entrance() {
+    let screen = new Scene();
+    screen.createHorizontalLine();
+    screen.createBigText("The queens walk in...");
+    for (let i = 0; i < currentCast.length; i++) {
+        let line = randomNumber(0, entranceLine.length - 1);
+        screen.createImage(currentCast[i].image);
+        screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
+    }
+}
 function rundesc() {
     let screen = new Scene();
     screen.createHorizontalLine();
