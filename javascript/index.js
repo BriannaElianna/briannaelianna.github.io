@@ -8789,15 +8789,26 @@ let entranceLine = [
 	"*literally says nothing*",
 	"Ugh.. It must be so hard not being me!"
 ];
+let reactLine = [
+    "Ok sis...",
+	"Ok werk!",
+	"Oh.. ok..",
+	"YASS!!",
+	"Oh my god!",
+	"Girl atleast she tried.."
+];
 function entrance() {
     let screen = new Scene();
     screen.createHorizontalLine();
     screen.createBigText("The queens walk in...");
     for (let i = 0; i < currentCast.length; i++) {
         let line = randomNumber(0, entranceLine.length - 1);
+		let react = randomNumber(0, reactLine.length - 1);
         screen.createImage(currentCast[i].image);
 		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
         screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
+		let shadee = randomNumber(0, currentCast.length - 1);
+		screen.createBold(`${currentCast[shadee].getName()}: "${reactLine[react]}"`);
 		screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits down.`);
     }
 }
