@@ -8774,6 +8774,7 @@ let entranceLine = [
 	"Oh? Thats it?",
 	"*silence*.. Oh? Do i need a entrance?",
 	"I came here to FIGHT!",
+	"I look pretty good for a dead bitch!",
 	"This is JUST.. the entrance line!",
 	"I'm the queen yall want to see, cmon baby crown me.. ok.. ok.. ok.. get into it!",
 	"Bonjour, Bonjour!!",
@@ -8795,7 +8796,9 @@ function entrance() {
     for (let i = 0; i < currentCast.length; i++) {
         let line = randomNumber(0, entranceLine.length - 1);
         screen.createImage(currentCast[i].image);
+		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
         screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
+		screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits down.`);
     }
 }
 function rundesc() {
