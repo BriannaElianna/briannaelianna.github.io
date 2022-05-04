@@ -6131,6 +6131,7 @@ class Queen {
         this.trackRecord.push(placement);
     }
 }
+//Judges
 //QUEENS:
 //SEASON 1: 
 let akashia = new Queen("Akashia", 3, 2, 7, 3, 2, 7, 11, "Akashia");
@@ -6678,6 +6679,13 @@ tatianna,
 coco,
 vanity,
 alyssa]
+//judges
+let kellyh = new Queen("Kelly Hyland", 3, 2, 7, 3, 2, 7, 11, "Kelly");
+let jojos = new Queen("Jojo Siwa", 3, 2, 7, 3, 2, 7, 11, "Jojos");
+let kimk = new Queen("Kim Kardashian", 3, 2, 7, 3, 2, 7, 11, "KimK");
+let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 11, "Sabrina");
+let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 11, "Britney");
+let judges = [kellyh, eve, jojos, kimk, sabrina, britney]
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
@@ -8919,8 +8927,13 @@ function Impersonation() {
     screen.createHorizontalLine();
     screen.createBigText("The queens will being impersonating...");
     for (let i = 0; i < currentCast.length; i++) {
-        let snatch = randomNumber(0, snatchToDo.length - 1);
+		let snatch = randomNumber(0, snatchToDo.length - 1);
         screen.createImage(currentCast[i].image);
+		for (let i = 0; i < judges.length; i++) {
+			if(snatchToDo[snatch]==judges[i].getName()) {
+				screen.createImage(judges[i].image);
+			}
+		}
         screen.createBold(`${currentCast[i].getName()} will do ${snatchToDo[snatch]}!!`);
     }
 }
@@ -8930,6 +8943,11 @@ function Judge() {
     screen.createBigText("This week's guest judge is...");
     let snatch = randomNumber(0, snatchToDo.length - 1);
     screen.createBold(`${snatchToDo[snatch]}!!`);
+	for (let i = 0; i < judges.length; i++) {
+		if(snatchToDo[snatch]==judges[i].getName()) {
+			screen.createImage(judges[i].image);
+		}
+    }
 }
 let reasoningQueens = [
     "they put themselves in RuPaul's shoes and tried to be fair.",
