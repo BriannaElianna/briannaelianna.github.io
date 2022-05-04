@@ -8798,9 +8798,9 @@ let reactLine = [
 	"Girl atleast she tried.."
 ];
 let flopLine = [
-	"gossips with the queens.",
-	"sits with the queens.",
-	"stands with the queens."
+	"gossips.",
+	"sits.",
+	"stands."
 ];
 function entrance() {
     let screen = new Scene();
