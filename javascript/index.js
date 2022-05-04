@@ -5600,10 +5600,11 @@ function untucked() {
         screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!!"`);
 		for (let i = 0; i < bottomQueens.length; i++)
 			screen.createImage(bottomQueens[i].image, "tomato");
-			screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
+			//screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
     let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
     let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
-    screen.createButton("Proceed", "winAndBtm2()");
+	screen.createHorizontalLine();
+	screen.createButton("Proceed", "winAndBtm2()");
 }
 function teamLipSync() {
     let screen = new Scene();
