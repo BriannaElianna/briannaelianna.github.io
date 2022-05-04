@@ -8785,6 +8785,7 @@ let entranceLine = [
 	"Hey gossip girl! Look who I just spotted.. A BAD BITCH!",
 	"Oh baby.. I'm just here for the fame..",
 	"Pack your bag girls, cause the winner has arrived!",
+	"*literally says nothing*",
 	"Ugh.. It must be so hard not being me!"
 ];
 function entrance() {
