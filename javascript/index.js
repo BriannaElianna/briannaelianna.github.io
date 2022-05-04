@@ -8794,6 +8794,8 @@ let entranceLine = [
 	"Oh baby.. I'm just here for the fame..",
 	"Pack your bag girls, cause the winner has arrived!",
 	"*literally says nothing*",
+	"Munch munch, crunch crunch.. Im gonna eat yall for lunch!",
+	"Why yall looking at me like that? I know you've never seen a stunning bitch, but damn.",
 	"Ugh.. It must be so hard not being me!"
 ];
 let reactLine = [
@@ -8802,6 +8804,7 @@ let reactLine = [
 	"Oh.. ok..",
 	"YASS!!",
 	"Oh my god!",
+	"*rolls eyes*",
 	"Girl atleast she tried..",
 	"Ugh, not this bitch.."
 ];
