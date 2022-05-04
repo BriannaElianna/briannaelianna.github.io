@@ -8851,9 +8851,10 @@ let reactLine = [
 	"Ugh, not this bitch.."
 ];
 let flopLine = [
-	"gossips.",
-	"sits.",
-	"stands."
+	"tables and gossips.",
+	"tables and sits.",
+	"tables and stands.",
+	"mirrors and feels her oats."
 ];
 
 let untuckLine = [
@@ -8917,7 +8918,7 @@ function entrance() {
 		} else {
 			screen.createBold(`${reactq[shadee].getName()}: "${reactLine[react]}"`);
 			let flop = randomNumber(0, flopLine.length - 1);
-			screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
+			screen.createBold(`${currentCast[i].getName()} walks over to the ${flopLine[flop]}`);
 		}
 		//if(reactq > 2 && flopLine[flop]=="gossips.") {
 		//screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits`);
