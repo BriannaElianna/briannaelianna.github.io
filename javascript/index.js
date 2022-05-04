@@ -6685,7 +6685,10 @@ let jojos = new Queen("Jojo Siwa", 3, 2, 7, 3, 2, 7, 11, "Jojos");
 let kimk = new Queen("Kim Kardashian", 3, 2, 7, 3, 2, 7, 11, "KimK");
 let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 11, "Sabrina");
 let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 11, "Britney");
-let judges = [kellyh, eve, jojos, kimk, sabrina, britney]
+let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 11, "Melanie");
+let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 11, "Dove");
+let katy = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 11, "Katy");
+let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katy]
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
