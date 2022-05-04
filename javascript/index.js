@@ -6687,8 +6687,8 @@ let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 11, "Sabrina");
 let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 11, "Britney");
 let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 11, "Melanie");
 let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 11, "Dove");
-let katy = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 11, "Katy");
-let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katy]
+let katyp = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 11, "Katy");
+let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katyp]
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
@@ -8942,8 +8942,8 @@ function Impersonation() {
 }
 function Judge() {
     let screen = new Scene();
-    screen.createHorizontalLine();
     screen.createBigText("This week's guest judge is...");
+	screen.createHorizontalLine();
     let snatch = randomNumber(0, snatchToDo.length - 1);
     screen.createBold(`${snatchToDo[snatch]}!!`);
 	for (let i = 0; i < judges.length; i++) {
@@ -8951,6 +8951,7 @@ function Judge() {
 			screen.createImage(judges[i].image);
 		}
     }
+	screen.createHorizontalLine();
 }
 let reasoningQueens = [
     "they put themselves in RuPaul's shoes and tried to be fair.",
