@@ -73,9 +73,10 @@ let lastChallenge = '';
 function miniChallenge() {
     let miniChallengeScreen = new Scene();
     miniChallengeScreen.clean();
-    miniChallengeScreen.createHeader("Mini-challenge!");
+    miniChallengeScreen.createHeader("Before the week begins..");
     miniChallengeScreen.createParagraph("", "Description");
     document.body.style.llmqgroundImage = "url('image/werkroom.webp')";
+	Judge();
     let challenge = new MiniChallenge();
     challenge.generateDescription();
     challenge.rankPerformances();
@@ -8837,6 +8838,13 @@ function Impersonation() {
         screen.createImage(currentCast[i].image);
         screen.createBold(`${currentCast[i].getName()} will do ${snatchToDo[snatch]}!!`);
     }
+}
+function Judge() {
+    let screen = new Scene();
+    screen.createHorizontalLine();
+    screen.createBigText("This week's guest judge is...");
+    let snatch = randomNumber(0, snatchToDo.length - 1);
+    screen.createBold(`${snatchToDo[snatch]}!!`);
 }
 let reasoningQueens = [
     "they put themselves in RuPaul's shoes and tried to be fair.",
