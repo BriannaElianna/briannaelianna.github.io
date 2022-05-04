@@ -75,7 +75,6 @@ function miniChallenge() {
     miniChallengeScreen.clean();
     miniChallengeScreen.createHeader("Before the week begins..");
 	Judge();
-	miniChallengeScreen.createHeader("Mini Challenge");
     miniChallengeScreen.createParagraph("", "Description");
     document.body.style.llmqgroundImage = "url('image/werkroom.webp')";
     let challenge = new MiniChallenge();
@@ -8751,6 +8750,14 @@ let snatchToDo = [
 	"Katy Perry",
 	"Mariah Carey",
 	"Jennifer Lopez",
+	"Ariana Grande",
+	"Britney Spears",
+	"Melanie Martinez",
+	"Jennifer Lopez",
+	"Taylor Swift",
+	"Dove Cameron",
+	"Khloe Kardashian",
+	"Sabrina Carpenter",
 	"Kelly Hyland"
 ];
 
