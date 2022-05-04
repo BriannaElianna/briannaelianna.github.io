@@ -8913,13 +8913,14 @@ function entrance() {
 		} let shadee = randomNumber(0, reactq.length - 1);
 		if(reactq[shadee].getName()==currentCast[i].getName()) { 
 			let flop = randomNumber(0, flopLine.length - 1);
+			screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits.`);
 		} else {
 			screen.createBold(`${reactq[shadee].getName()}: "${reactLine[react]}"`);
 			let flop = randomNumber(0, flopLine.length - 1);
+			screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
 		}
 		//if(reactq > 2 && flopLine[flop]=="gossips.") {
 		//screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits`);
-		screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
     }
 }
 function rundesc() {
