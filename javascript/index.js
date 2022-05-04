@@ -8900,6 +8900,8 @@ function entrance() {
     for (let i = 0; i < currentCast.length; i++) {
         let line = randomNumber(0, entranceLine.length - 1);
 		let react = randomNumber(0, reactLine.length - 1);
+		let reactq = []
+		reactq = [currentCast[i], ]
         screen.createImage(currentCast[i].image);
 		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
 		if(currentCast[i].getName()=="Eve 6000") {
@@ -8908,10 +8910,15 @@ function entrance() {
 			screen.createBold(`${currentCast[i].getName()}: "Wear your seatbelt! I did. *wink*"`);
 		} else {
 			screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
-		} let shadee = randomNumber(0, currentCast.length - 1);
-		screen.createBold(`${currentCast[shadee].getName()}: "${reactLine[react]}"`);
-		let flop = randomNumber(0, flopLine.length - 1);
-		screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
+		} let shadee = randomNumber(0, reactq.length - 1);
+		if (reactq > 2) {
+			screen.createBold(`${reactq[shadee].getName()}: "${reactLine[react]}"`);
+		} let flop = randomNumber(0, flopLine.length - 1);
+		if(reactq > 2 && flopLine[flop]=="gossips.") {
+			screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits`);
+		} else {
+			screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
+		}
     }
 }
 function rundesc() {
