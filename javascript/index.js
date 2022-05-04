@@ -8822,7 +8822,7 @@ function entrance() {
 		let react = randomNumber(0, reactLine.length - 1);
         screen.createImage(currentCast[i].image);
 		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
-        screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
+		screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
 		let shadee = randomNumber(0, currentCast.length - 1);
 		screen.createBold(`${currentCast[shadee].getName()}: "${reactLine[react]}"`);
 		let flop = randomNumber(0, flopLine.length - 1);
