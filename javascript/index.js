@@ -8901,7 +8901,7 @@ function entrance() {
         let line = randomNumber(0, entranceLine.length - 1);
 		let react = randomNumber(0, reactLine.length - 1);
 		let reactq = []
-		reactq = [currentCast[i], ]
+		reactq.push(currentCast[i])
         screen.createImage(currentCast[i].image);
 		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
 		if(currentCast[i].getName()=="Eve 6000") {
