@@ -4472,7 +4472,7 @@ function judgingScreen() {
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
     else if (top3 || top4)
-        judgingScreen.createButton("Proceed", "winAndBtm2()");
+        judgingScreen.createButton("Proceed", "untucked()");
     else if (all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
     else if (lipsync_assassin)
@@ -5563,20 +5563,47 @@ function untucked() {
     bottomQueens.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
     let screen = new Scene();
     screen.clean();
+	document.body.style.backgroundImage = "url('image/untucked.webp')";
     screen.createHeader("Untucked...");
 	if (dragula == true) {
-		screen.createBold("The queens fight about possibly being up for extermation");
-		extermation();
+		screen.createBold("The queens sit down...");
 	}
 	else if (dragula == false) {
-		screen.createBold("The queens fight about possibly being up for elimination");
-		lsSong();
+		screen.createBold("The queens sit down...");
 	}
     screen.createHorizontalLine();
-    screen.createBold("One queen goes to far saying that nobody is on her level.");
+    screen.createBigText("The safe queens gossip amoungst eachother...");
+	let i = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[i].image);
+        screen.createBold(`${currentCast[i].getName()}: "So.. How do we feel about being safe.."`);
+	let a = randomNumber(0, currentCast.length - 1)
+        screen.createImage(currentCast[a].image);
+        screen.createBold(`${currentCast[a].getName()}: "It just personally is not what I thought was gonna happen. I'm so dissapointed that I didn't do better in this challenge.."`);
+	let b = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[b].image);
+        screen.createBold(`${currentCast[b].getName()}: Yeah but atleast im not in the bottom.`);
+	let e = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[e].image);
+        screen.createBold(`${currentCast[e].getName()}: I wonder who is gonna be in the bottom..`);
+	let f = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[f].image);
+		let b1 = 0; i < currentCast.length; i++
+        screen.createBold(`${currentCast[f].getName()}: I'm guessing ${currentCast[b1].getName()}.`);
+	let d = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[d].image);
+		let b2 = 0; i < currentCast.length; i++
+        screen.createBold(`${currentCast[d].getName()}: I'm thinking ${currentCast[b2].getName()}.`);
+	screen.createHorizontalLine();
+	screen.createBigText("The rest of the queens enter...");
+	let l = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[l].image);
+        screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!!"`);
+		for (let i = 0; i < bottomQueens.length; i++)
+			screen.createImage(bottomQueens[i].image, "tomato");
+			screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
     let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
     let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
-    screen.createButton("Proceed", "judging()");
+    screen.createButton("Proceed", "winAndBtm2()");
 }
 function teamLipSync() {
     let screen = new Scene();
@@ -8816,17 +8843,60 @@ let flopLine = [
 	"sits.",
 	"stands."
 ];
-function entrance() {
+
+let untuckLine = [
+	"their home life.",
+	"their performance in the challenge.",
+	"the other queens."
+];
+function untuck() {
     let screen = new Scene();
     screen.createHorizontalLine();
-    screen.createBigText("The queens walk in...");
+    screen.createBigText("The safe queens gossip amoungst eachother...");
+	let i = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[i].image);
+        screen.createBold(`${currentCast[i].getName()}: "So.. How do we feel about being safe.."`);
+	let a = randomNumber(0, currentCast.length - 1)
+        screen.createImage(currentCast[a].image);
+        screen.createBold(`${currentCast[a].getName()}: "It just personally is not what I thought was gonna happen. I'm so dissapointed that I didn't do better in this challenge.."`);
+	let b = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[b].image);
+        screen.createBold(`${currentCast[b].getName()}: Yeah but atleast im not in the bottom.`);
+	let e = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[e].image);
+        screen.createBold(`${currentCast[e].getName()}: I wonder who is gonna be in the bottom..`);
+	let f = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[f].image);
+		let b1 = 0; i < currentCast.length; i++
+        screen.createBold(`${currentCast[f].getName()}: I'm guessing ${currentCast[b1].getName()}.`);
+	let d = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[d].image);
+		let b2 = 0; i < currentCast.length; i++
+        screen.createBold(`${currentCast[d].getName()}: I'm thinking ${currentCast[b2].getName()}.`);
+	screen.createHorizontalLine();
+	screen.createBigText("The rest of the queens enter...");
+	let l = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[l].image);
+        screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!!"`);
+		for (let i = 0; i < bottomQueens.length; i++)
+			screen.createImage(bottomQueens[i].image, "tomato");
+}
+function entrance() {
+    let screen = new Scene();
+	screen.createBigText("The queens walk in...");
+    screen.createHorizontalLine();
     for (let i = 0; i < currentCast.length; i++) {
         let line = randomNumber(0, entranceLine.length - 1);
 		let react = randomNumber(0, reactLine.length - 1);
         screen.createImage(currentCast[i].image);
 		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
-		screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
-		let shadee = randomNumber(0, currentCast.length - 1);
+		if(currentCast[i].getName()=="Eve 6000") {
+			screen.createBold(`${currentCast[i].getName()}: "I've got a trick up my sleeve.. stunt that the crowd won't belive!"`);
+		} else if(currentCast[i].getName()=="Robbie Turner") {
+			screen.createBold(`${currentCast[i].getName()}: "Wear your seatbelt! I did. *wink*"`);
+		} else {
+			screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
+		} let shadee = randomNumber(0, currentCast.length - 1);
 		screen.createBold(`${currentCast[shadee].getName()}: "${reactLine[react]}"`);
 		let flop = randomNumber(0, flopLine.length - 1);
 		screen.createBold(`${currentCast[i].getName()} walks over to the tables and ${flopLine[flop]}`);
@@ -8842,6 +8912,7 @@ function rundesc() {
         screen.createBold(`${currentCast[i].getName()} makes a ${outfitToDo[outfit]}!!`);
     }
 }
+
 function Impersonation() {
     let screen = new Scene();
     screen.createHorizontalLine();
