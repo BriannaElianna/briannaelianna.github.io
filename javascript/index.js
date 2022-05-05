@@ -8969,6 +8969,7 @@ let reactLine = [
 	"Ugh, not this bitch..",
 	"I'm not gagging..",
 	"Yass, mama!",
+	"NURSE-",
 	"Ew, michelle.."
 ];
 let flopLine = [
