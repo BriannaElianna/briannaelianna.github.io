@@ -2948,9 +2948,6 @@ function generateSpace() {
 	if (totalCastSize < 3 && noLimits == false)
         window.alert("The simulator will not start without 3+ queens!");
 	else
-		if (totalCastSize > 20 && noLimits == false) {
-			window.alert("Warning: Using more than 20 queens often breaks the simulator! Don't get mad at me if it breaks mid season.");
-		}
         for (let i = 0; i < castSize; i++) {
             let select = document.createElement("select");
             select.setAttribute("class", "queenList");
@@ -2987,6 +2984,15 @@ function generateSpace() {
             castSelection.appendChild(br);
         }
     setImage();
+	if (totalCastSize > 20 && duplicateQueens(currentCast)) {
+		window.alert("Warning: There is more than 20 queens + 1 or more cloned queens!");
+	}
+	else if (totalCastSize > 20 && noLimits == false) {
+		window.alert("Warning: Using more than 20 queens often breaks the simulator! Don't get mad at me if it breaks mid season.");
+	}
+	else if (duplicateQueens(currentCast)) {
+		window.alert("Warning: There is a cloned queen on your cast! The track record of the queen will break.");
+	}
 }
 function setImage() {
     let images = document.getElementsByClassName("images");
@@ -5658,18 +5664,37 @@ function untucked() {
 				}
 			}
 			screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
-			screen.createImage(currentCast[q1].image);
-			screen.createImage(currentCast[q2].image);
-			screen.createImage(currentCast[q3].image);
-			screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
+			if(currentCast[q1].getName()==currentCast[q2].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q3].image);
+			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q2].image);
+			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q2].image);
+			} else {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q2].image);
+				screen.createImage(currentCast[q3].image);
+			} screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
 			screen.createImage(currentCast[q2].image);
 			screen.createBold(`${currentCast[q2].getName()}: Yeah of course..`);
-			screen.createImage(currentCast[q1].image);
-			screen.createBold(`${currentCast[q1].getName()}: I feel like ${currentCast[q3].getName()} has been so rude the entire competition.`);
-			screen.createImage(currentCast[q1].image);
-			screen.createImage(currentCast[q3].image);
-			screen.createBold(`${currentCast[q1].getName()}: I don't know why ${currentCast[q3].getName()} thinks she can get away with being a bitch, but im so tired of it.`);
-			screen.createImage(currentCast[q2].image);
+			if(currentCast[q3].getName()==currentCast[q1].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I feel like she has been so rude the entire competition.`);
+			} else {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q3].image);
+				screen.createBold(`${currentCast[q1].getName()}: I feel like ${currentCast[q3].getName()} has been so rude the entire competition.`);
+			} if(currentCast[q3].getName()==currentCast[q1].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I don't know why she can get away with being a bitch, but im so tired of it.`);
+			} else {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q3].image);
+				screen.createBold(`${currentCast[q1].getName()}: I don't know why ${currentCast[q3].getName()} thinks she can get away with being a bitch, but im so tired of it.`);
+			}screen.createImage(currentCast[q2].image);
 			screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
 		} else if(untuckconvo[convo]=="Bottom") {
 			screen.createHorizontalLine();
