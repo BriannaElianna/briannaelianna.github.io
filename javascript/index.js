@@ -8955,6 +8955,7 @@ let entranceLine = [
 	"Its not the edit thats gonna make me seem like a bitch.. It's the anger issues!",
 	"Oh yall wanted a twist??? Come on anxiety lets get panicking!",
 	"999.. I need to report a robbery.. these wigs have been snatched!!",
+	"Filler queen!",
 	"Ugh.. It must be so hard not being me!"
 ];
 let reactLine = [
