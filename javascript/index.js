@@ -5711,7 +5711,11 @@ function untucked() {
 				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
 			} else {
 				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+				if (randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
+					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+				} else {
+					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
+				}
 			}
 		} else if(untuckconvo[convo]=="Bottom") {
 			screen.createHorizontalLine();
