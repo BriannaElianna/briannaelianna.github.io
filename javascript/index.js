@@ -5667,20 +5667,30 @@ function untucked() {
 			if(currentCast[q1].getName()==currentCast[q2].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q3].image);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
 			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about your behavior.`);
 			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about your behavior.`);
 			} else {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q2].image);
 				screen.createImage(currentCast[q3].image);
-			} screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
-			screen.createImage(currentCast[q2].image);
-			screen.createBold(`${currentCast[q2].getName()}: Yeah of course..`);
-			if(currentCast[q3].getName()==currentCast[q1].getName()) {
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
+			} if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
+			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
+			} else {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: Yeah of course..`);
+			} if(currentCast[q3].getName()==currentCast[q1].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createBold(`${currentCast[q1].getName()}: I feel like she has been so rude the entire competition.`);
 			} else {
@@ -5694,8 +5704,15 @@ function untucked() {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q3].image);
 				screen.createBold(`${currentCast[q1].getName()}: I don't know why ${currentCast[q3].getName()} thinks she can get away with being a bitch, but im so tired of it.`);
-			}screen.createImage(currentCast[q2].image);
-			screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+			} if(currentCast[q2].getName()==currentCast[q1].getName()) {
+				
+			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
+			} else {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+			}
 		} else if(untuckconvo[convo]=="Bottom") {
 			screen.createHorizontalLine();
 			screen.createBigText(`The queens talk to eachother about being in the bottom.`);
