@@ -5629,6 +5629,12 @@ function untucked() {
 					let q2 = randomNumber(0, currentCast.length - 1);
 					if(currentCast[q2].getName()==currentCast[q1].getName()) {
 						let q2 = randomNumber(0, currentCast.length - 1);
+						if(currentCast[q2].getName()==currentCast[q1].getName()) {
+							let q2 = randomNumber(0, currentCast.length - 1);
+							if(currentCast[q2].getName()==currentCast[q1].getName()) {
+								let q2 = randomNumber(0, currentCast.length - 1);	
+							}
+						}
 					}
 				}
 			}
@@ -5639,6 +5645,15 @@ function untucked() {
 					let q3 = randomNumber(0, currentCast.length - 1);
 					if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
 						let q3 = randomNumber(0, currentCast.length - 1);
+						if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+							let q3 = randomNumber(0, currentCast.length - 1);
+							if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+								let q3 = randomNumber(0, currentCast.length - 1);
+								if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+									let q3 = randomNumber(0, currentCast.length - 1);
+								}
+							}
+						}
 					}
 				}
 			}
