@@ -3724,7 +3724,7 @@ function judging() {
             bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
         if (top3 || top4)
-            winAndBtm2();
+            untucked();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -3742,7 +3742,7 @@ function judging() {
         bottomQueens.push(currentCast[3]);
         bottomQueens.push(currentCast[4]);
         if (top3 || top4)
-            winAndBtm2();
+            untucked();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -3756,7 +3756,7 @@ function judging() {
         bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
         if (top3 || top4)
-            winAndBtm2();
+            untucked();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -5688,7 +5688,7 @@ function untucked() {
 			}
 			if(bottomQueens[b1].getName()==bottomQueens[b2].getName()) {
 				screen.createImage(bottomQueens[b1].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like my critiques were much less harsh.`);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like my critiques were much less harsh though.`);
 			} else {
 				screen.createImage(bottomQueens[b1].image);
 				screen.createImage(bottomQueens[b2].image);
