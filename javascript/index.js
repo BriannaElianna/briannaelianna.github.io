@@ -8908,6 +8908,7 @@ let outfitToDo = [
     "dress with a train",
     "18th century inspired dress",
 	"bra and panties",
+	"swimsuit",
 	"pair of pants and a blazer",
 	"flapper dress",
 	"halter dress",
@@ -9036,7 +9037,11 @@ function rundesc() {
     for (let i = 0; i < currentCast.length; i++) {
         let outfit = randomNumber(0, outfitToDo.length - 1);
         screen.createImage(currentCast[i].image);
-        screen.createBold(`${currentCast[i].getName()} makes a ${outfitToDo[outfit]}!!`);
+		if(currentCast[i].getName()=="Jorgeous") {
+			screen.createBold(`${currentCast[i].getName()} makes a cookie cutter swimsuit!!`);
+		} else {
+			screen.createBold(`${currentCast[i].getName()} makes a ${outfitToDo[outfit]}!!`);
+		}
     }
 }
 
