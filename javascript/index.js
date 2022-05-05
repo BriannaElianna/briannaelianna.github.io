@@ -8942,6 +8942,19 @@ let entranceLine = [
 	"Why yall looking at me like that? I know you've never seen a stunning bitch, but damn.",
 	"*screams*",
 	"Where am I?",
+	"They tried to make me go to rehab, I said no no no…",
+	"Hey guys! Welcome back to another video, today I am gonna slaughter some flops!",
+	"..Whores..",
+	"They needed someone to go home first..",
+	"Watch out sisters, head cheerleader is gonna be me!",
+	"Just cast a curse, thou shall get eliminated!",
+	"Cash me outside how bout that!",
+	"There's room for everybody, lets just say that!",
+	"Does anyone know where I can get some blunt?",
+	"Lets make drag great again!",
+	"Its not the edit thats gonna make me seem like a bitch.. It's the anger issues!",
+	"Oh yall wanted a twist??? Come on anxiety lets get panicking!",
+	"999.. I need to report a robbery.. these wigs have been snatched!!",
 	"Ugh.. It must be so hard not being me!"
 ];
 let reactLine = [
@@ -8953,7 +8966,10 @@ let reactLine = [
 	"Oh.",
 	"*rolls eyes*",
 	"Girl atleast she tried..",
-	"Ugh, not this bitch.."
+	"Ugh, not this bitch..",
+	"I'm not gagging..",
+	"Yass, mama!",
+	"Ew, michelle.."
 ];
 let flopLine = [
 	"tables and gossips.",
