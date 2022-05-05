@@ -9116,6 +9116,16 @@ function extermation() {
     screen.createBold(`The extermation challenge is... ${exte[song]}!`);
     lsSongs.splice(song, 1);
 }
+function queenTalents() {
+    let screen = new Scene();
+    screen.createHorizontalLine();
+    screen.createBigText("The queens will perform...");
+    for (let i = 0; i < currentCast.length; i++) {
+        let talent = randomNumber(0, talentsToDo.length - 1);
+        screen.createImage(currentCast[i].image);
+        screen.createBold(`${currentCast[i].getName()} will do a ${talentsToDo[talent]} performance!!`);
+    }
+}
 function chooseReasoning(winQueen, elimQueen) {
     let screen = new Scene();
     let reasoning = randomNumber(0, reasoningQueens.length - 1);
