@@ -5736,7 +5736,7 @@ function untucked() {
 				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
 			} else {
 				screen.createImage(currentCast[q2].getName());
-				if(currentCast[q2].getLikeability() < 1) {
+				if(currentCast[q2].getLikeability() > 1) {
 					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
 					currentCast[q3].getLikeability()==currentCast[q1].getLikeability()-1
 				} else {
