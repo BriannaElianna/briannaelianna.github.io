@@ -5573,31 +5573,12 @@ function untucked() {
 	}
     screen.createHorizontalLine();
     screen.createBigText("The safe queens gossip amoungst eachother...");
-	let i = randomNumber(0, currentCast.length - 1);
-        screen.createImage(currentCast[i].image);
-        screen.createBold(`${currentCast[i].getName()}: "So.. How do we feel about being safe.."`);
-	let a = randomNumber(0, currentCast.length - 1)
-        screen.createImage(currentCast[a].image);
-        screen.createBold(`${currentCast[a].getName()}: "It just personally is not what I thought was gonna happen. I'm so dissapointed that I didn't do better in this challenge.."`);
-	let b = randomNumber(0, currentCast.length - 1);
-        screen.createImage(currentCast[b].image);
-        screen.createBold(`${currentCast[b].getName()}: Yeah but atleast im not in the bottom.`);
-	let e = randomNumber(0, currentCast.length - 1);
-        screen.createImage(currentCast[e].image);
-        screen.createBold(`${currentCast[e].getName()}: I wonder who is gonna be in the bottom..`);
-	let f = randomNumber(0, currentCast.length - 1);
-        screen.createImage(currentCast[f].image);
-		let b1 = 0; i < currentCast.length; i++
-        screen.createBold(`${currentCast[f].getName()}: I'm guessing ${currentCast[b1].getName()}.`);
-	let d = randomNumber(0, currentCast.length - 1);
-        screen.createImage(currentCast[d].image);
-		let b2 = 0; i < currentCast.length; i++
-        screen.createBold(`${currentCast[d].getName()}: I'm thinking ${currentCast[b2].getName()}.`);
-	screen.createHorizontalLine();
-	screen.createBigText("The rest of the queens enter...");
 	let l = randomNumber(0, currentCast.length - 1);
         screen.createImage(currentCast[l].image);
         screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!!"`);
+		let bl = randomNumber(0, bottomQueens.length - 1);
+		screen.createImage(bottomQueens[bl].image);
+		screen.createBold(`${bottomQueens[bl].getName()}: Well I'm in the bottom...`);
 		for (let i = 0; i < bottomQueens.length; i++)
 			screen.createImage(bottomQueens[i].image, "tomato");
 			//screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
@@ -8891,8 +8872,9 @@ function untuck() {
 	let l = randomNumber(0, currentCast.length - 1);
         screen.createImage(currentCast[l].image);
         screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!!"`);
-		for (let i = 0; i < bottomQueens.length; i++)
-			screen.createImage(bottomQueens[i].image, "tomato");
+		let bl = randomNumber(0, bottomQueens.length - 1);
+		screen.createImage(bottomQueens[bl].image, "tomato");
+		screen.createBold(`${bottomQueens[bl].getName()}: I'm thinking ${currentCast[b2].getName()}.`);
 }
 function entrance() {
     let screen = new Scene();
