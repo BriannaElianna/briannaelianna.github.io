@@ -4471,7 +4471,7 @@ function judgingScreen() {
     }
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
-    else if (top3 || top4)
+    else if (top3 || top4 || dragula == true)
         judgingScreen.createButton("Proceed", "untucked()");
     else if (all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
