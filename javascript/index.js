@@ -6868,7 +6868,9 @@ let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 1, "true", "Britney"
 let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 1, "true", "Melanie");
 let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 1, "true", "Dove");
 let katyp = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 1, "true", "KatyP");
-let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katyp]
+let emily = new Queen("Emily Alyn Lind", 3, 2, 7, 3, 2, 7, 1, "true", "Emily");
+let oliviar = new Queen("Olivia Rodrigo", 3, 2, 7, 3, 2, 7, 1, "true", "OliviaR");
+let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katyp, emily, oliviar]
 //all possible queens:
 let allCustomQueens = [];
 if (localStorage.getItem("customQueens") != null)
@@ -8964,7 +8966,7 @@ let snatchToDo = [
     "Alexa Demmie",
 	"Beyonce",
 	"Christina Aguilera",
-	"Emily Lind",
+	"Emily Alyn Lind",
 	"Jennifer Tilly",
 	"Cher",
 	"Jojo Siwa",
