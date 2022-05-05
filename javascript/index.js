@@ -75,7 +75,9 @@ function miniChallenge() {
     miniChallengeScreen.clean();
     miniChallengeScreen.createHeader("Before the week begins..");
 	Judge();
-    miniChallengeScreen.createParagraph("", "Description");
+	if (episodeCount == 1) {
+	} else {
+    } miniChallengeScreen.createParagraph("", "Description");
     document.body.style.llmqgroundImage = "url('image/werkroom.webp')";
     let challenge = new MiniChallenge();
     challenge.generateDescription();
@@ -9156,6 +9158,15 @@ function Impersonation() {
 		}
         screen.createBold(`${currentCast[i].getName()} will do ${snatchToDo[snatch]}!!`);
     }
+}
+function PreEp() {
+    let screen = new Scene();
+    screen.createBigText("After the challenge...");
+	screen.createHorizontalLine();
+	let bl = randomNumber(0, bottomQueens.length - 1);
+	screen.createImage(bottomQueens[bl].image);
+	screen.createBold(`${bottomQueens[bl]} I'm sad I had to send a girl home, but atleast I'm still here!..`);
+	screen.createHorizontalLine();
 }
 function Judge() {
     let screen = new Scene();
