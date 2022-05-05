@@ -5663,12 +5663,22 @@ function untucked() {
 			screen.createBold(`${bottomQueens[b1].getName()}: How are we feeling about our critiques?`);
 			screen.createImage(bottomQueens[b2].image);
 			screen.createBold(`${bottomQueens[b2].getName()}: I feel like im definetely in the bottom. I feel like the judges are very dissapointed in me..`);
-			screen.createImage(bottomQueens[b1].image);
-			screen.createImage(bottomQueens[b3].image);
-			screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b3].getName()} will be safe.`);
-			screen.createImage(bottomQueens[b1].image);
-			screen.createImage(bottomQueens[b2].image);
-			screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()}'s critiques were much less harsh.`);
+			if(bottomQueens[b1].getName()==bottomQueens[b3].getName()) {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will be safe.`);
+			} else {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createImage(bottomQueens[b3].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b3].getName()} will be safe.`);
+			}
+			if(bottomQueens[b1].getName()==bottomQueens[b2].getName()) {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like my critiques were much less harsh.`);
+			} else {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createImage(bottomQueens[b2].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()}'s critiques were much less harsh.`);
+			}
 			screen.createImage(bottomQueens[b3].image);
 			screen.createBold(`${bottomQueens[b3].getName()}: I'm praying im safe..`);
 		}
