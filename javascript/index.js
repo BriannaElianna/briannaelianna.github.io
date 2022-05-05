@@ -482,7 +482,7 @@ class Ball {
             desc1[desc1["Party night, "] = 1] = "Party night, ";
             desc1[desc1["Summer, "] = 2] = "Summer, ";
             desc1[desc1["Elegant, "] = 3] = "Elegant, ";
-            desc1[desc1["Sweet 16, "] = 4] = "Sweet 16, ";
+            desc1[desc1["Sweet 16, 1, "] = 4] = "Sweet 16, 1, ";
             desc1[desc1["Black and white, "] = 5] = "Black and white, ";
             desc1[desc1["Winter, "] = 6] = "Winter, ";
         })(desc1 || (desc1 = {}));
@@ -1610,6 +1610,7 @@ function finaleLipSyncs() {
             eliminatedCast.unshift(firstLS[1]);
             screen.createImage(firstLS[1].image, "sienna");
             screen.createBold(firstLS[1].getName() + ", sashay away...");
+			 
         }
     } 
     else {
@@ -1620,6 +1621,7 @@ function finaleLipSyncs() {
         screen.createBold(firstLS[0].getName() + ", shantay you stay.");
         screen.createImage(firstLS[1].image, "sienna");
         screen.createBold(firstLS[1].getName() + ", sashay away...");
+		 
     }
     screen.createHorizontalLine();
     screen.createParagraph(secondLS[0].getName() + " and " + secondLS[1].getName() + " lip-sync...");
@@ -1665,6 +1667,7 @@ function finaleLipSyncs() {
             eliminatedCast.unshift(secondLS[1]);
             screen.createImage(secondLS[1].image, "sienna");
             screen.createBold(secondLS[1].getName() + ", sashay away...");
+			 
         }
     }  
     else {
@@ -1675,6 +1678,7 @@ function finaleLipSyncs() {
         screen.createBold(secondLS[0].getName() + ", shantay you stay.");
         screen.createImage(secondLS[1].image, "sienna");
         screen.createBold(secondLS[1].getName() + ", sashay away...");
+		 
     }
     screen.createButton("Proceed", "finalLipSync()");
 }
@@ -2178,6 +2182,7 @@ function canadaS2LipSyncs() {
             screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
             screen.createBold("It's chocolate.");
             screen.createBold(finalLS[0].getName() + ", sashay away...");
+			 
             finalLS[0].addToTrackRecord("ELIM");
             finalLS[0].unfavoritism += 5;
             eliminatedCast.unshift(finalLS[0]);
@@ -2189,6 +2194,7 @@ function canadaS2LipSyncs() {
             eliminatedCast.unshift(finalLS[0]);
             screen.createImage(finalLS[0].image, "sienna");
             screen.createBold(finalLS[0].getName() + ", sashay away...");
+			 
             finalLS[0].addToTrackRecord("ELIM");
         }
     } else {
@@ -2204,6 +2210,7 @@ function canadaS2LipSyncs() {
             eliminatedCast.unshift(finalLS[1]);
             screen.createImage(finalLS[1].image, "sienna");
             screen.createBold(finalLS[1].getName() + ", sashay away...");
+			 
             finalLS[1].addToTrackRecord("ELIM");
         } else {
         finalLS[0].addToTrackRecord("TOP 3<br><small>Win round 3</small>");
@@ -2213,6 +2220,7 @@ function canadaS2LipSyncs() {
         eliminatedCast.unshift(finalLS[1]);
         screen.createImage(finalLS[1].image, "sienna");
         screen.createBold(finalLS[1].getName() + ", sashay away...");
+		 
         finalLS[1].addToTrackRecord("ELIM");
         }
     }
@@ -3936,6 +3944,7 @@ function lipsyncs14() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(lipSync[1].getName() + ", sashay away...");
+					 
                     lipSync[1].addToTrackRecord(" ELIM ");
                     lipSync[1].unfavoritism += 2;
                     eliminatedCast.unshift(lipSync[1]);
@@ -3943,6 +3952,7 @@ function lipsyncs14() {
                 }
             } else {
                 screen.createBold(lipSync[1].getName() + ", sashay away. ");
+				 
                 lipSync[1].addToTrackRecord(" ELIM ");
                 lipSync[1].unfavoritism += 2;
                 eliminatedCast.unshift(lipSync[1]);
@@ -4172,6 +4182,7 @@ function bottom6() {
                 screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                 screen.createBold("It's chocolate.");
                 screen.createBold(bottomQueens[5].getName() + ", sashay away...");
+				 
                 bottomQueens[5].addToTrackRecord("ELIM");
                 bottomQueens[5].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[5]);
@@ -4188,6 +4199,7 @@ function bottom6() {
                 screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                 screen.createBold("It's chocolate.");
                 screen.createBold(bottomQueens[4].getName() + ", sashay away...");
+				 
                 bottomQueens[4].addToTrackRecord("ELIM");
                 bottomQueens[4].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[4]);
@@ -4204,6 +4216,7 @@ function bottom6() {
                 screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                 screen.createBold("It's chocolate.");
                 screen.createBold(bottomQueens[4].getName() + ", sashay away...");
+				 
                 bottomQueens[4].addToTrackRecord("ELIM");
                 bottomQueens[4].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[4]);
@@ -4211,6 +4224,7 @@ function bottom6() {
                 screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                 screen.createBold("It's chocolate.");
                 screen.createBold(bottomQueens[5].getName() + ", sashay away...");
+				 
                 bottomQueens[5].addToTrackRecord("ELIM");
                 bottomQueens[5].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[5]);
@@ -4252,6 +4266,7 @@ function bottom6() {
                 screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                 screen.createBold("It's chocolate.");
                 screen.createBold(bottomQueens[5].getName() + ", sashay away...");
+				 
                 bottomQueens[5].addToTrackRecord("ELIM");
                 bottomQueens[5].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[5]);
@@ -4260,6 +4275,7 @@ function bottom6() {
             }
         } else {
             screen.createBold(bottomQueens[5].getName() + ", sashay away...");
+			 
             bottomQueens[5].addToTrackRecord("ELIM");
             bottomQueens[5].unfavoritism += 5;
             eliminatedCast.unshift(bottomQueens[5]);
@@ -5315,6 +5331,7 @@ function lipSync() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(bottomQueens[2].getName() + ", sashay away...");
+					 
                     bottomQueens[2].addToTrackRecord("ELIM");
                     bottomQueens[2].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[2]);
@@ -5343,6 +5360,7 @@ function lipSync() {
                 screen.createBold(bottomQueens[0].getName() + ", shantay you stay.");
                 screen.createImage(bottomQueens[1].image, "red");
                 screen.createBold(bottomQueens[1].getName() + ", sashay away...");
+				 
                 screen.createImage(bottomQueens[1].image, "pink");
                 screen.createBold("WAIT!!, wait, " + bottomQueens[1].getName() + ", I'm not ready for you to go home... shantay you stay.");
                 bottomQueens[0].addToTrackRecord(" BTM2");
@@ -5374,6 +5392,7 @@ function lipSync() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(bottomQueens[1].getName() + ", sashay away...");
+					 
                     bottomQueens[1].addToTrackRecord("ELIM");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
@@ -5390,6 +5409,7 @@ function lipSync() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(bottomQueens[0].getName() + ", sashay away...");
+					 
                     bottomQueens[0].addToTrackRecord("ELIM");
                     bottomQueens[0].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[0]);
@@ -5406,6 +5426,7 @@ function lipSync() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(bottomQueens[0].getName() + ", sashay away...");
+					 
                     bottomQueens[0].addToTrackRecord("ELIM");
                     bottomQueens[0].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[0]);
@@ -5413,6 +5434,7 @@ function lipSync() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(bottomQueens[1].getName() + ", sashay away...");
+					 
                     bottomQueens[1].addToTrackRecord("ELIM");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
@@ -5540,6 +5562,7 @@ function lipSync() {
                     screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                     screen.createBold("It's chocolate.");
                     screen.createBold(bottomQueens[1].getName() + ", sashay away...");
+					 
                     bottomQueens[1].addToTrackRecord("ELIM");
                     bottomQueens[1].unfavoritism += 5;
                     eliminatedCast.unshift(bottomQueens[1]);
@@ -5548,6 +5571,7 @@ function lipSync() {
                 }
             } else {
                 screen.createBold(bottomQueens[1].getName() + ", sashay away...");
+				 
                 bottomQueens[1].addToTrackRecord("ELIM");
                 bottomQueens[1].unfavoritism += 5;
                 eliminatedCast.unshift(bottomQueens[1]);
@@ -5707,14 +5731,17 @@ function untucked() {
 			} if(currentCast[q2].getName()==currentCast[q1].getName()) {
 				
 			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				currentCast[q1].getLikeability()==currentCast[q1].getLikeability()-1
 				screen.createImage(currentCast[q2].image);
 				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
 			} else {
-				screen.createImage(currentCast[q2].image);
-				if (randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
+				screen.createImage(currentCast[q2].getName());
+				if(currentCast[q2].getLikeability() < 1) {
 					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+					currentCast[q3].getLikeability()==currentCast[q1].getLikeability()-1
 				} else {
 					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
+					currentCast[q1].getLikeability()==currentCast[q1].getLikeability()-1
 				}
 			}
 		} else if(untuckconvo[convo]=="Bottom") {
@@ -6191,7 +6218,7 @@ function lsaLipSync() {
         screen.createButton("Proceed", "newEpisode()");
 }
 class Queen {
-    constructor(name, acting, comedy, dance, design, improv, runway, lipsync, image = "noimage", custom = false) {
+    constructor(name, acting, comedy, dance, design, improv, runway, lipsync, liked, image = "noimage", custom = false) {
         this.trackRecord = [];
         this.runwayScore = 0;
         this.lipsyncScore = 0;
@@ -6214,6 +6241,7 @@ class Queen {
         this._improvStat = improv;
         this._runwayStat = runway;
         this._lipsyncStat = lipsync;
+		this._likeability = liked;
         if (image == "noimage")
             this.image = "image/queens/noimage.jpg";
         else if (custom == true)
@@ -6245,6 +6273,9 @@ class Queen {
     }
     getDesign() {
         this.performanceScore = this._calculateScores(15, 35, this._designStat);
+    }
+	getLikeability() {
+        this.performanceScore = this._calculateScores(15, 35, this._likeability);
     }
     getImprov() {
         this.performanceScore = this._calculateScores(15, 35, this._improvStat);
@@ -6284,496 +6315,496 @@ class Queen {
 //Judges
 //QUEENS:
 //SEASON 1: 
-let akashia = new Queen("Akashia", 3, 2, 7, 3, 2, 7, 11, "Akashia");
-let bebe = new Queen("BeBe Zahara Benet", 6, 7, 8, 12, 6, 10, 9, "BeBe");
-let jade = new Queen("Jade Sotomayor", 3, 3, 8, 7, 3, 7, 7, "Jade");
-let ninaf = new Queen("Nina Flowers", 7, 5, 5, 11, 6, 10, 6, "NinaFlowers");
-let ongina = new Queen("Ongina", 9, 8, 7, 9, 10, 9, 8, "Ongina");
-let rebecca = new Queen("Rebecca Glasscock", 3, 3, 6, 4, 2, 6, 5, "Rebecca");
-let shannel = new Queen("Shannel", 5, 5, 5, 9, 4, 11, 7, "Shannel");
-let tammie = new Queen("Tammie Brown", 6, 7, 5, 7, 6, 7, 6, "Tammie");
-let victoria = new Queen("Victoria 'Porkchop' Parker", 3, 6, 4, 3, 6, 5, 4, "Victoria");
+let akashia = new Queen("Akashia", 3, 2, 7, 3, 2, 7, 1, 1, "Akashia");
+let bebe = new Queen("BeBe Zahara Benet", 6, 7, 8, 12, 6, 10, 9, 1, "BeBe");
+let jade = new Queen("Jade Sotomayor", 3, 3, 8, 7, 3, 7, 7, 1, "Jade");
+let ninaf = new Queen("Nina Flowers", 7, 5, 5, 11, 6, 10, 6, 1, "NinaFlowers");
+let ongina = new Queen("Ongina", 9, 8, 7, 9, 10, 9, 8, 1, "Ongina");
+let rebecca = new Queen("Rebecca Glasscock", 3, 3, 6, 4, 2, 6, 5, 1, "Rebecca");
+let shannel = new Queen("Shannel", 5, 5, 5, 9, 4, 11, 7, 1, "Shannel");
+let tammie = new Queen("Tammie Brown", 6, 7, 5, 7, 6, 7, 6, 1, "Tammie");
+let victoria = new Queen("Victoria 'Porkchop' Parker", 3, 6, 4, 3, 6, 5, 4, 1, "Victoria");
 let us_season1 = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria];
 //SEASON 2:       acting, comedy, dance, design, improv, runway, lipsync
-let jessica = new Queen("Jessica Wild", 8, 6, 9, 7, 8, 8, 10, "Jessica");
-let jujubee = new Queen("Jujubee", 9, 11, 7, 8, 12, 6, 12, "Jujubee");
-let morgan = new Queen("Morgan McMichaels", 6, 6, 10, 9, 5, 10, 10, "Morgan");
-let mystique = new Queen("Mystique Summers Madison", 4, 5, 3, 3, 3, 5, 6, "Mystique");
-let nicole = new Queen("Nicole Paige Brooks", 4, 4, 4, 6, 4, 7, 6, "Nicole");
-let pandora = new Queen("Pandora Boxx", 12, 11, 6, 8, 10, 8, 7, "Pandora");
-let raven = new Queen("Raven", 5, 8, 9, 10, 5, 8, 11, "Raven");
-let sahara = new Queen("Sahara Davenport", 6, 6, 10, 4, 6, 7, 10, "Sahara");
-let shangela = new Queen("Shangela", 14, 13, 10, 3, 9, 9, 12, "Shangela");
-let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 11, "Kylie");
-let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, "Tatianna");
-let tyra = new Queen("Tyra Sanchez", 11, 7, 8, 11, 8, 9, 10, "Tyra");
+let jessica = new Queen("Jessica Wild", 8, 6, 9, 7, 8, 8, 10, 1, "Jessica");
+let jujubee = new Queen("Jujubee", 9, 11, 7, 8, 12, 6, 12, 1, "Jujubee");
+let morgan = new Queen("Morgan McMichaels", 6, 6, 10, 9, 5, 10, 10, 1, "Morgan");
+let mystique = new Queen("Mystique Summers Madison", 4, 5, 3, 3, 3, 5, 6, 1, "Mystique");
+let nicole = new Queen("Nicole Paige Brooks", 4, 4, 4, 6, 4, 7, 6, 1, "Nicole");
+let pandora = new Queen("Pandora Boxx", 12, 11, 6, 8, 10, 8, 7, 1, "Pandora");
+let raven = new Queen("Raven", 5, 8, 9, 10, 5, 8, 1, 1, "Raven");
+let sahara = new Queen("Sahara Davenport", 6, 6, 10, 4, 6, 7, 10, 1, "Sahara");
+let shangela = new Queen("Shangela", 14, 13, 10, 3, 9, 9, 12, 1, "Shangela");
+let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 1, 1, "Kylie");
+let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, 1, "Tatianna");
+let tyra = new Queen("Tyra Sanchez", 11, 7, 8, 11, 8, 9, 10, 1, "Tyra");
 let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra];
 //SEASON 3:
-let alexis = new Queen("Alexis Mateo", 14, 12, 9, 7, 10, 8, 12, "Alexis");
-let carmen = new Queen("Carmen Carrera", 3, 8, 6, 4, 3, 7, 7, "Carmen");
-let delta = new Queen("Delta Work", 4, 6, 5, 5, 5, 7, 7, "Delta");
-let india = new Queen("India Ferrah", 6, 4, 8, 6, 3, 10, 9, "India");
-let manila = new Queen("Manila Luzon", 12, 11, 7, 14, 10, 13, 11, "Manila");
-let mariah = new Queen("Mariah Paris Balenciaga", 6, 4, 7, 8, 4, 9, 8, "Mariah");
-let mimi = new Queen("Mimi Imfurst", 11, 6, 6, 10, 7, 8, 6, "Mimi");
-let phoenix = new Queen("Phoenix", 3, 3, 6, 5, 3, 5, 4, "Phoenix");
-let raja = new Queen("Raja", 9, 11, 7, 14, 10, 10, 10, "Raja");
-let stacey = new Queen("Stacy Layne Matthews", 6, 7, 5, 4, 10, 5, 6, "Stacy");
+let alexis = new Queen("Alexis Mateo", 14, 12, 9, 7, 10, 8, 12, 1, "Alexis");
+let carmen = new Queen("Carmen Carrera", 3, 8, 6, 4, 3, 7, 7, 1, "Carmen");
+let delta = new Queen("Delta Work", 4, 6, 5, 5, 5, 7, 7, 1, "Delta");
+let india = new Queen("India Ferrah", 6, 4, 8, 6, 3, 10, 9, 1, "India");
+let manila = new Queen("Manila Luzon", 12, 11, 7, 14, 10, 13, 1, 1, "Manila");
+let mariah = new Queen("Mariah Paris Balenciaga", 6, 4, 7, 8, 4, 9, 8, 1, "Mariah");
+let mimi = new Queen("Mimi Imfurst", 11, 6, 6, 10, 7, 8, 6, 1, "Mimi");
+let phoenix = new Queen("Phoenix", 3, 3, 6, 5, 3, 5, 4, 1, "Phoenix");
+let raja = new Queen("Raja", 9, 11, 7, 14, 10, 10, 10, 1, "Raja");
+let stacey = new Queen("Stacy Layne Matthews", 6, 7, 5, 4, 10, 5, 6, 1, "Stacy");
 let venus = new Queen("Venus D-Lite", 4, 5, 8, 2, 3, 5, 2, "Venus");
-let yara = new Queen("Yara Sofia", 11, 9, 9, 13, 7, 10, 8, "Yara");
+let yara = new Queen("Yara Sofia", 11, 9, 9, 13, 7, 10, 8, 1, "Yara");
 let us_season3 = [alexis, carmen, delta, india, manila, mariah, mimi, phoenix, raja, shangela, stacey, venus, yara];
 //SEASON 4:
-let alisa = new Queen("Alisa Summers", 4, 4, 5, 2, 3, 5, 4, "Alisa");
-let chad = new Queen("Chad Michaels", 11, 10, 8, 9, 12, 10, 8, "Chad");
-let dida = new Queen("Dida Ritz", 8, 7, 8, 5, 7, 7, 12, "Dida");
-let jiggly = new Queen("Jiggly Caliente", 4, 6, 9, 4, 4, 7, 10, "Jiggly");
-let kenya = new Queen("Kenya Michaels", 9, 6, 6, 6, 8, 7, 8, "Kenya");
-let leshauwn = new Queen("Lashauwn Beyond", 4, 4, 6, 11, 5, 7, 7, "Lashauwn");
-let latrice = new Queen("Latrice Royale", 11, 8, 9, 8, 7, 9, 13, "Latrice");
-let madame = new Queen("Madame LaQueer", 4, 7, 6, 5, 9, 7, 6, "Madame");
-let milan = new Queen("Milan", 4, 5, 9, 7, 5, 8, 10, "Milan");
-let phiphi = new Queen("Phi Phi O'Hara", 13, 9, 8, 10, 10, 10, 8, "PhiPhi");
-let princess = new Queen("The Princess", 4, 4, 5, 7, 4, 7, 7, "Princess");
-let willam = new Queen("Willam", 10, 8, 7, 10, 10, 9, 8, "Willam");
+let alisa = new Queen("Alisa Summers", 4, 4, 5, 2, 3, 5, 4, 1, "Alisa");
+let chad = new Queen("Chad Michaels", 11, 10, 8, 9, 12, 10, 8, 1, "Chad");
+let dida = new Queen("Dida Ritz", 8, 7, 8, 5, 7, 7, 12, 1, "Dida");
+let jiggly = new Queen("Jiggly Caliente", 4, 6, 9, 4, 4, 7, 10, 1, "Jiggly");
+let kenya = new Queen("Kenya Michaels", 9, 6, 6, 6, 8, 7, 8, 1, "Kenya");
+let leshauwn = new Queen("Lashauwn Beyond", 4, 4, 6, 11, 5, 7, 7, 1, "Lashauwn");
+let latrice = new Queen("Latrice Royale", 11, 8, 9, 8, 7, 9, 13, 1, "Latrice");
+let madame = new Queen("Madame LaQueer", 4, 7, 6, 5, 9, 7, 6, 1, "Madame");
+let milan = new Queen("Milan", 4, 5, 9, 7, 5, 8, 10, 1, "Milan");
+let phiphi = new Queen("Phi Phi O'Hara", 13, 9, 8, 10, 10, 10, 8, 1, "PhiPhi");
+let princess = new Queen("The Princess", 4, 4, 5, 7, 4, 7, 7, 1, "Princess");
+let willam = new Queen("Willam", 10, 8, 7, 10, 10, 9, 8, 1, "Willam");
 let us_season4 = [alisa, chad, dida, jiggly, kenya, leshauwn, latrice, madame, milan, phiphi, princess, willam];
 //ALL STARS 1:
 let allstars_1 = [alexis, chad, jujubee, latrice, manila, mimi, ninaf, pandora, raven, shannel, tammie, yara];
 //SEASON 5:   acting, comedy, dance, design, improv, runway, lipsync
-let alaska = new Queen("Alaska", 15, 14, 7, 8, 14, 10, 11, "Alaska");
-let alyssa = new Queen("Alyssa Edwards", 4, 6, 15, 6, 10, 9, 12, "Alyssa");
-let coco = new Queen("Coco Montrese", 10, 10, 11, 9, 7, 9, 15, "Coco");
-let detox = new Queen("Detox", 10, 9, 9, 9, 8, 12, 11, "Detox");
-let honey = new Queen("Honey Mahogany", 10, 3, 3, 6, 6, 8, 4, "Honey");
-let ivy = new Queen("Ivy Winters", 11, 4, 8, 12, 7, 10, 7, "Ivy");
-let jadejolie = new Queen("Jade Jolie", 5, 7, 8, 7, 8, 7, 8, "JadeJ");
-let jinkx = new Queen("Jinkx Monsoon", 15, 14, 9, 8, 15, 8, 8, "Jinkx");
-let lineysha = new Queen("Lineysha Sparx", 10, 4, 7, 11, 5, 9, 8, "Lineysha");
-let monica = new Queen("Monica Beverly Hillz", 4, 4, 6, 6, 3, 8, 8, "Monica");
-let penny = new Queen("Penny Tration", 4, 5, 4, 5, 5, 5, 4, "Penny");
-let roxxxy = new Queen("Roxxxy Andrews", 7, 4, 7, 11, 8, 10, 12, "Roxxxy");
-let serena = new Queen("Serena ChaCha", 3, 3, 7, 4, 5, 5, 8, "Serena");
-let vivienne = new Queen("Vivienne Pinay", 7, 3, 4, 5, 3, 6, 4, "Vivienne");
+let alaska = new Queen("Alaska", 15, 14, 7, 8, 14, 10, 1, 1, "Alaska");
+let alyssa = new Queen("Alyssa Edwards", 4, 6, 15, 6, 10, 9, 12, 1, "Alyssa");
+let coco = new Queen("Coco Montrese", 10, 10, 11, 9, 7, 9, 15, 1, "Coco");
+let detox = new Queen("Detox", 10, 9, 9, 9, 8, 12, 1, 1, "Detox");
+let honey = new Queen("Honey Mahogany", 10, 3, 3, 6, 6, 8, 4, 1, "Honey");
+let ivy = new Queen("Ivy Winters", 11, 4, 8, 12, 7, 10, 7, 1, "Ivy");
+let jadejolie = new Queen("Jade Jolie", 5, 7, 8, 7, 8, 7, 8, 1, "JadeJ");
+let jinkx = new Queen("Jinkx Monsoon", 15, 14, 9, 8, 15, 8, 8, 1, "Jinkx");
+let lineysha = new Queen("Lineysha Sparx", 10, 4, 7, 11, 5, 9, 8, 1, "Lineysha");
+let monica = new Queen("Monica Beverly Hillz", 4, 4, 6, 6, 3, 8, 8, 1, "Monica");
+let penny = new Queen("Penny Tration", 4, 5, 4, 5, 5, 5, 4, 1, "Penny");
+let roxxxy = new Queen("Roxxxy Andrews", 7, 4, 7, 11, 8, 10, 12, 1, "Roxxxy");
+let serena = new Queen("Serena ChaCha", 3, 3, 7, 4, 5, 5, 8, 1, "Serena");
+let vivienne = new Queen("Vivienne Pinay", 7, 3, 4, 5, 3, 6, 4, 1, "Vivienne");
 let us_season5 = [alaska, alyssa, coco, detox, honey, ivy, jadejolie, jinkx, lineysha, monica, penny, roxxxy, serena, vivienne];
 //SEASON 6:
-let adore = new Queen("Adore Delano", 9, 11, 9, 6, 9, 8, 11, "Adore");
-let april = new Queen("April Carrión", 5, 5, 6, 9, 5, 9, 8, "April");
-let bendelacreme = new Queen("BenDeLaCreme", 12, 12, 11, 10, 15, 10, 9, "Bendelacreme");
-let bianca = new Queen("Bianca Del Rio", 11, 15, 7, 13, 15, 10, 5, "Bianca");
-let courtney = new Queen("Courtney Act", 11, 8, 10, 10, 10, 12, 9, "Courtney");
-let darienne = new Queen("Darienne Lake", 11, 8, 7, 4, 9, 8, 13, "Darienne");
-let gia = new Queen("Gia Gunn", 10, 4, 8, 8, 4, 8, 9, "Gia");
-let joslyn = new Queen("Joslyn Fox", 6, 7, 8, 6, 8, 8, 11, "Joslyn");
-let kelly = new Queen("Kelly Mantle", 6, 6, 5, 5, 4, 7, 4, "Kellu");
-let laganja = new Queen("Laganja Estranja", 9, 5, 14, 8, 6, 10, 15, "Laganja");
-let magnolia = new Queen("Magnolia Crawford", 4, 5, 6, 4, 5, 7, 4, "Magnolia");
-let milk = new Queen("Milk", 6, 6, 7, 8, 8, 7, 7, "Milk");
-let trinityk = new Queen("Trinity K. Bonet", 9, 9, 13, 12, 4, 10, 15, "TrinityKB");
-let vivacious = new Queen("Vivacious", 4, 5, 5, 4, 4, 7, 7, "Vivacious");
+let adore = new Queen("Adore Delano", 9, 11, 9, 6, 9, 8, 11, 1, "Adore");
+let april = new Queen("April Carrión", 5, 5, 6, 9, 5, 9, 8, 1, "April");
+let bendelacreme = new Queen("BenDeLaCreme", 12, 12, 11, 10, 15, 10, 9, 1, "Bendelacreme");
+let bianca = new Queen("Bianca Del Rio", 11, 15, 7, 13, 15, 10, 5, 1, "Bianca");
+let courtney = new Queen("Courtney Act", 11, 8, 10, 10, 10, 12, 9, 1, "Courtney");
+let darienne = new Queen("Darienne Lake", 11, 8, 7, 4, 9, 8, 13, 1, "Darienne");
+let gia = new Queen("Gia Gunn", 10, 4, 8, 8, 4, 8, 9, 1, "Gia");
+let joslyn = new Queen("Joslyn Fox", 6, 7, 8, 6, 8, 8, 11, 1, "Joslyn");
+let kelly = new Queen("Kelly Mantle", 6, 6, 5, 5, 4, 7, 4, 1, "Kellu");
+let laganja = new Queen("Laganja Estranja", 9, 5, 14, 8, 6, 10, 15, 1, "Laganja");
+let magnolia = new Queen("Magnolia Crawford", 4, 5, 6, 4, 5, 7, 4, 1, "Magnolia");
+let milk = new Queen("Milk", 6, 6, 7, 8, 8, 7, 7, 1, "Milk");
+let trinityk = new Queen("Trinity K. Bonet", 9, 9, 13, 12, 4, 10, 15, 1, "TrinityKB");
+let vivacious = new Queen("Vivacious", 4, 5, 5, 4, 4, 7, 7, 1, "Vivacious");
 let us_season6 = [adore, april, bendelacreme, bianca, courtney, darienne, gia, joslyn, kelly, laganja, magnolia, milk, trinityk, vivacious];
 //SEASON 7: 
-let ginger = new Queen("Ginger Minj", 14, 12, 8, 9, 15, 7, 12, "Ginger");
-let jaidynn = new Queen("Jaidynn Diore Fierce", 9, 7, 8, 6, 6, 7, 11, "Jaidynn");
-let jasmine = new Queen("Jasmine Masters", 3, 4, 6, 5, 2, 7, 6, "Jasmine");
-let kandy = new Queen("Kandy Ho", 4, 4, 7, 5, 4, 7, 10, "KandyH");
-let katya = new Queen("Katya", 9, 12, 9, 7, 12, 10, 10, "Katya");
-let kennedy = new Queen("Kennedy Davenport", 9, 8, 10, 8, 11, 10, 14, "Kennedy");
-let max = new Queen("Max", 10, 7, 5, 8, 4, 8, 5, "Max");
-let fame = new Queen("Miss Fame", 8, 4, 5, 11, 3, 10, 5, "MissFame");
-let kasha = new Queen("Mrs. Kasha Davis", 11, 8, 9, 8, 6, 8, 7, "Kasha");
-let pearl = new Queen("Pearl", 7, 10, 8, 9, 10, 9, 5, "Pearl");
-let sashab = new Queen("Sasha Belle", 6, 6, 4, 4, 6, 6, 4, "SashaB");
-let tempest = new Queen("Tempest DuJour", 6, 6, 5, 3, 6, 7, 4, "Tempest");
-let trixie = new Queen("Trixie Mattel", 13, 10, 6, 10, 11, 10, 5, "Trixie");
-let violet = new Queen("Violet Chachki", 6, 7, 8, 15, 8, 13, 8, "Violet");
+let ginger = new Queen("Ginger Minj", 14, 12, 8, 9, 15, 7, 12, 1, "Ginger");
+let jaidynn = new Queen("Jaidynn Diore Fierce", 9, 7, 8, 6, 6, 7, 11, 1, "Jaidynn");
+let jasmine = new Queen("Jasmine Masters", 3, 4, 6, 5, 2, 7, 6, 1, "Jasmine");
+let kandy = new Queen("Kandy Ho", 4, 4, 7, 5, 4, 7, 9, 1, "KandyH");
+let katya = new Queen("Katya", 9, 12, 9, 7, 12, 10, 9, 1, "Katya");
+let kennedy = new Queen("Kennedy Davenport", 9, 8, 10, 8, 11, 10, 14, 1, "Kennedy");
+let max = new Queen("Max", 10, 7, 5, 8, 4, 8, 5, 1, "Max");
+let fame = new Queen("Miss Fame", 8, 4, 5, 11, 3, 10, 5, 1, "MissFame");
+let kasha = new Queen("Mrs. Kasha Davis", 11, 8, 9, 8, 6, 8, 7, 1, "Kasha");
+let pearl = new Queen("Pearl", 7, 10, 8, 9, 10, 9, 5, 1, "Pearl");
+let sashab = new Queen("Sasha Belle", 6, 6, 4, 4, 6, 6, 4, 1, "SashaB");
+let tempest = new Queen("Tempest DuJour", 6, 6, 5, 3, 6, 7, 4, 1, "Tempest");
+let trixie = new Queen("Trixie Mattel", 13, 10, 6, 10, 11, 10, 5, 1, "Trixie");
+let violet = new Queen("Violet Chachki", 6, 7, 8, 15, 8, 13, 8, 1, "Violet");
 let us_season7 = [ginger, jaidynn, jasmine, kandy, katya, kennedy, max, fame, kasha, pearl, sashab, tempest, trixie, violet];
 //SEASON 8:  acting, comedy, dance, design, improv, runway, lipsync
-let acid = new Queen("Acid Betty", 9, 4, 7, 10, 5, 11, 7, "Acid");
-let bob = new Queen("Bob The Drag Queen", 15, 15, 8, 9, 15, 8, 12, "Bob");
-let chichi = new Queen("Chi Chi DeVayne", 8, 4, 13, 8, 6, 8, 13, "ChiChi");
-let cynthia = new Queen("Cynthia Lee Fontaine", 4, 4, 7, 6, 4, 7, 6, "Cynthia");
-let dax = new Queen("Dax ExclamationPoint", 5, 6, 6, 5, 6, 5, 4, "Dax");
-let derrick = new Queen("Derrick Barry", 7, 7, 8, 8, 9, 7, 8, "Derrick");
-let kim = new Queen("Kim Chi", 10, 7, 4, 15, 8, 13, 4, "Kim");
-let laila = new Queen("Laila McQueen", 6, 6, 4, 7, 6, 8, 7, "Laila");
-let naomi = new Queen("Naomi Smalls", 9, 7, 10, 14, 10, 12, 11, "Naomi");
-let naysha = new Queen("Naysha Lopez", 6, 4, 4, 4, 3, 6, 7, "Naysga");
-let robbie = new Queen("Robbie Turner", 4, 5, 6, 4, 3, 6, 6, "Robbie");
-let thorgy = new Queen("Thorgy Thor", 14, 9, 6, 9, 13, 9, 8, "Thorgy");
+let acid = new Queen("Acid Betty", 9, 4, 7, 10, 5, 11, 7, 1, "Acid");
+let bob = new Queen("Bob The Drag Queen", 15, 15, 8, 9, 15, 8, 12, 1, "Bob");
+let chichi = new Queen("Chi Chi DeVayne", 8, 4, 13, 8, 6, 8, 13, 1, "ChiChi");
+let cynthia = new Queen("Cynthia Lee Fontaine", 4, 4, 7, 6, 4, 7, 6, 1, "Cynthia");
+let dax = new Queen("Dax ExclamationPoint", 5, 6, 6, 5, 6, 5, 4, 1, "Dax");
+let derrick = new Queen("Derrick Barry", 7, 7, 8, 8, 9, 7, 8, 1, "Derrick");
+let kim = new Queen("Kim Chi", 10, 7, 4, 15, 8, 13, 4, 1, "Kim");
+let laila = new Queen("Laila McQueen", 6, 6, 4, 7, 6, 8, 7, 1, "Laila");
+let naomi = new Queen("Naomi Smalls", 9, 7, 10, 14, 10, 12, 11, 1, "Naomi");
+let naysha = new Queen("Naysha Lopez", 6, 4, 4, 4, 3, 6, 7, 1, "Naysga");
+let robbie = new Queen("Robbie Turner", 4, 5, 6, 4, 3, 6, 6, 1, "Robbie");
+let thorgy = new Queen("Thorgy Thor", 14, 9, 6, 9, 13, 9, 8, 1, "Thorgy");
 let us_season8 = [acid, bob, chichi, cynthia, dax, derrick, kim, laila, naomi, naysha, robbie, thorgy];
 //ALL STARS 2:
 let allstars_2 = [adore, alaska, alyssa, coco, detox, ginger, katya, phiphi, roxxxy, tatianna];
 //SEASON 9: 
-let aja = new Queen("Aja", 4, 8, 12, 11, 9, 10, 11, "Aja");
-let alexism = new Queen("Alexis Michelle", 8, 7, 9, 7, 13, 6, 10, "AlexisM");
-let charlie = new Queen("Charlie Hides", 10, 6, 5, 7, 4, 9, 2, "Charlie");
-let eureka = new Queen("Eureka!", 9, 11, 8, 10, 13, 10, 12, "Eureka");
-let farrah = new Queen("Farrah Moan", 9, 4, 7, 3, 6, 8, 7, "Farrah");
-let jaymes = new Queen("Jaymes Mansfield", 6, 6, 3, 6, 5, 7, 6, "Jaymes");
-let kimora = new Queen("Kimora Blac", 5, 5, 4, 6, 5, 8, 7, "Kimora");
-let ninab = new Queen("Nina Bo'Nina Brown", 4, 8, 10, 9, 10, 10, 11, "NinaBB");
-let peppermint = new Queen("Peppermint", 11, 9, 10, 9, 4, 7, 13, "Peppermint");
-let sasha = new Queen("Sasha Velour", 9, 10, 8, 10, 11, 13, 11, "Sasha");
-let shea = new Queen("Shea Couleé", 12, 12, 14, 12, 13, 12, 13, "Shea");
-let trinity = new Queen("Trinity The Tuck", 13, 10, 8, 10, 8, 9, 12, "TrinityTT");
-let valentina = new Queen("Valentina", 11, 7, 10, 9, 9, 9, 10, "Valentina");
+let aja = new Queen("Aja", 4, 8, 12, 11, 9, 10, 11, 1, "Aja");
+let alexism = new Queen("Alexis Michelle", 8, 7, 9, 7, 13, 6, 9, 1, "AlexisM");
+let charlie = new Queen("Charlie Hides", 10, 6, 5, 7, 4, 9, 2, 1, "Charlie");
+let eureka = new Queen("Eureka!", 9, 11, 8, 10, 13, 10, 12, 1, "Eureka");
+let farrah = new Queen("Farrah Moan", 9, 4, 7, 3, 6, 8, 7, 1, "Farrah");
+let jaymes = new Queen("Jaymes Mansfield", 6, 6, 3, 6, 5, 7, 6, 1, "Jaymes");
+let kimora = new Queen("Kimora Blac", 5, 5, 4, 6, 5, 8, 7, 1, "Kimora");
+let ninab = new Queen("Nina Bo'Nina Brown", 4, 8, 10, 9, 10, 10, 11, 1, "NinaBB");
+let peppermint = new Queen("Peppermint", 11, 9, 10, 9, 4, 7, 13, 1, "Peppermint");
+let sasha = new Queen("Sasha Velour", 9, 10, 8, 10, 11, 13, 11, 1, "Sasha");
+let shea = new Queen("Shea Couleé", 12, 12, 14, 12, 13, 12, 13, 1, "Shea");
+let trinity = new Queen("Trinity The Tuck", 13, 10, 8, 10, 8, 9, 12, 1, "TrinityTT");
+let valentina = new Queen("Valentina", 11, 7, 10, 9, 9, 9, 9, 1, "Valentina");
 let us_season9 = [aja, alexism, charlie, cynthia, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina];
 //ALL STARS 3:
 let allstars_3 = [aja, bebe, bendelacreme, chichi, kennedy, milk, morgan, shangela, thorgy, trixie];
 //SEASON 10: 
-let aquaria = new Queen("Aquaria", 6, 11, 8, 15, 12, 14, 11, "Aquaria");
-let asia = new Queen("Asia O'Hara", 11, 9, 6, 6, 7, 9, 9, "Asia");
-let blair = new Queen("Blair St. Clair", 9, 8, 6, 10, 8, 8, 7, "Blair");
-let dusty = new Queen("Dusty Ray Bottoms", 8, 8, 6, 7, 6, 7, 6, "Dusty");
-let kalorie = new Queen("Kalorie K. Williams", 6, 6, 6, 5, 7, 7, 8, "Kalorie");
-let kameron = new Queen("Kameron Michaels", 5, 8, 14, 10, 8, 8, 15, "Kameron");
-let mayhem = new Queen("Mayhem Miller", 4, 8, 9, 13, 7, 9, 10, "Mayhem");
-let miz = new Queen("Miz Cracker", 13, 11, 5, 12, 15, 9, 8, "Miz");
-let monet = new Queen("Monét X Change", 9, 11, 13, 6, 10, 9, 14, "Monet");
-let monique = new Queen("Mo Heart", 12, 9, 8, 11, 15, 13, 10, "Monique");
-let vanessa = new Queen("Vanessa 'Vanjie' Mateo", 9, 6, 8, 6, 9, 7, 11, "Vanjie");
-let vixen = new Queen("The Vixen", 5, 4, 12, 9, 3, 8, 12, "Vixen");
-let yuhua = new Queen("Yuhua Hamasaki", 4, 4, 6, 9, 6, 7, 7, "Yuhua");
+let aquaria = new Queen("Aquaria", 6, 11, 8, 15, 12, 14, 11, 1, "Aquaria");
+let asia = new Queen("Asia O'Hara", 11, 9, 6, 6, 7, 9, 9, 1, "Asia");
+let blair = new Queen("Blair St. Clair", 9, 8, 6, 10, 8, 8, 7, 1, "Blair");
+let dusty = new Queen("Dusty Ray Bottoms", 8, 8, 6, 7, 6, 7, 6, 1, "Dusty");
+let kalorie = new Queen("Kalorie K. Williams", 6, 6, 6, 5, 7, 7, 8, 1, "Kalorie");
+let kameron = new Queen("Kameron Michaels", 5, 8, 14, 10, 8, 8, 15, 1, "Kameron");
+let mayhem = new Queen("Mayhem Miller", 4, 8, 9, 13, 7, 9, 9, 1, "Mayhem");
+let miz = new Queen("Miz Cracker", 13, 11, 5, 12, 15, 9, 8, 1, "Miz");
+let monet = new Queen("Monét X Change", 9, 11, 13, 6, 10, 9, 14, 1, "Monet");
+let monique = new Queen("Mo Heart", 12, 9, 8, 11, 15, 13, 9, 1, "Monique");
+let vanessa = new Queen("Vanessa 'Vanjie' Mateo", 9, 6, 8, 6, 9, 7, 11, 1, "Vanjie");
+let vixen = new Queen("The Vixen", 5, 4, 12, 9, 3, 8, 12, 1, "Vixen");
+let yuhua = new Queen("Yuhua Hamasaki", 4, 4, 6, 9, 6, 7, 7, 1, "Yuhua");
 let us_season10 = [aquaria, asia, blair, dusty, eureka, kalorie, kameron, mayhem, miz, monet, monique, vanessa, vixen, yuhua];
 //ALL STARS 4:
 let allstars_4 = [farrah, gia, jasmine, latrice, manila, monet, monique, naomi, trinity, valentina];
 //SEASON 11:  acting, comedy, dance, design, improv, runway, lipsync
-let akeria = new Queen("A'keria C. Davenport", 11, 9, 11, 8, 10, 13, 10, "Akeria");
-let ariel = new Queen("Ariel Versace", 8, 6, 8, 5, 8, 8, 8, "Ariel");
-let brooke = new Queen("Brooke Lynn Hytes", 8, 8, 13, 12, 8, 10, 13, "Brooke");
-let honeyd = new Queen("Honey Davenport", 4, 6, 5, 7, 4, 9, 4, "HoneyD");
-let kahanna = new Queen("Kahanna Montrese", 4, 5, 5, 4, 5, 6, 8, "Kahanna");
-let mercedes = new Queen("Mercedes Iman Diamond", 4, 6, 4, 6, 6, 8, 8, "Mercedes");
-let ninaw = new Queen("Nina West", 12, 11, 6, 8, 11, 8, 6, "NinaW");
-let plastique = new Queen("Plastique Tiara", 10, 7, 8, 11, 8, 10, 9, "Plastique");
-let rajah = new Queen("Ra'Jah O'Hara", 6, 8, 11, 13, 8, 11, 13, "Rajah");
-let scarlet = new Queen("Scarlet Envy", 13, 7, 6, 13, 8, 10, 7, "Scarlet");
-let shuga = new Queen("Shuga Cain", 10, 9, 7, 6, 7, 10, 7, "Shuga");
-let silky = new Queen("Silky Nutmeg Ganache", 10, 8, 9, 6, 10, 8, 11, "Silky");
-let yvie = new Queen("Yvie Oddly", 12, 4, 12, 11, 6, 10, 15, "Yvie");
+let akeria = new Queen("A'keria C. Davenport", 11, 9, 11, 8, 10, 13, 9, 1, "Akeria");
+let ariel = new Queen("Ariel Versace", 8, 6, 8, 5, 8, 8, 8, 1, "Ariel");
+let brooke = new Queen("Brooke Lynn Hytes", 8, 8, 13, 12, 8, 10, 13, 1, "Brooke");
+let honeyd = new Queen("Honey Davenport", 4, 6, 5, 7, 4, 9, 4, 1, "HoneyD");
+let kahanna = new Queen("Kahanna Montrese", 4, 5, 5, 4, 5, 6, 8, 1, "Kahanna");
+let mercedes = new Queen("Mercedes Iman Diamond", 4, 6, 4, 6, 6, 8, 8, 1, "Mercedes");
+let ninaw = new Queen("Nina West", 12, 11, 6, 8, 11, 8, 6, 1, "NinaW");
+let plastique = new Queen("Plastique Tiara", 10, 7, 8, 11, 8, 10, 9, 1, "Plastique");
+let rajah = new Queen("Ra'Jah O'Hara", 6, 8, 11, 13, 8, 11, 13, 1, "Rajah");
+let scarlet = new Queen("Scarlet Envy", 13, 7, 6, 13, 8, 10, 7, 1, "Scarlet");
+let shuga = new Queen("Shuga Cain", 10, 9, 7, 6, 7, 10, 7, 1, "Shuga");
+let silky = new Queen("Silky Nutmeg Ganache", 10, 8, 9, 6, 10, 8, 11, 1, "Silky");
+let yvie = new Queen("Yvie Oddly", 12, 4, 12, 11, 6, 10, 15, 1, "Yvie");
 let us_season11 = [akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, vanessa, yvie];
 //SEASON 12: 
-let aiden = new Queen("Aiden Zhane", 9, 3, 6, 4, 3, 6, 6, "Aiden");
-let brita = new Queen("Brita", 7, 8, 7, 4, 6, 8, 11, "Brita");
-let crystal = new Queen("Crystal Methyd", 6, 8, 8, 9, 8, 12, 6, "CrystalM");
-let dahlia = new Queen("Dahlia Sin", 4, 4, 6, 5, 5, 10, 4, "Dahlia");
-let gigi = new Queen("Gigi Goode", 10, 11, 11, 13, 9, 12, 8, "Gigi");
-let heidi = new Queen("Heidi N Closet", 6, 9, 11, 6, 12, 7, 13, "Heidi");
-let jackie = new Queen("Jackie Cox", 11, 12, 6, 6, 13, 9, 11, "Jackie");
-let jaida = new Queen("Jaida Essence Hall", 4, 7, 10, 13, 8, 10, 12, "Jaida");
-let jan = new Queen("Jan", 8, 4, 12, 9, 5, 10, 9, "Jan");
-let nicky = new Queen("Nicky Doll", 4, 4, 5, 12, 3, 11, 5, "Nicky");
-let rock = new Queen("Rock M. Sakura", 6, 6, 6, 4, 8, 8, 7, "Rock");
+let aiden = new Queen("Aiden Zhane", 9, 3, 6, 4, 3, 6, 6, 1, "Aiden");
+let brita = new Queen("Brita", 7, 8, 7, 4, 6, 8, 11, 1, "Brita");
+let crystal = new Queen("Crystal Methyd", 6, 8, 8, 9, 8, 12, 6, 1, "CrystalM");
+let dahlia = new Queen("Dahlia Sin", 4, 4, 6, 5, 5, 10, 4, 1, "Dahlia");
+let gigi = new Queen("Gigi Goode", 10, 11, 11, 13, 9, 12, 8, 1, "Gigi");
+let heidi = new Queen("Heidi N Closet", 6, 9, 11, 6, 12, 7, 13, 1, "Heidi");
+let jackie = new Queen("Jackie Cox", 11, 12, 6, 6, 13, 9, 11, 1, "Jackie");
+let jaida = new Queen("Jaida Essence Hall", 4, 7, 10, 13, 8, 10, 12, 1, "Jaida");
+let jan = new Queen("Jan", 8, 4, 12, 9, 5, 10, 9, 1, "Jan");
+let nicky = new Queen("Nicky Doll", 4, 4, 5, 12, 3, 11, 5, 1, "Nicky");
+let rock = new Queen("Rock M. Sakura", 6, 6, 6, 4, 8, 8, 7, 1, "Rock");
 let us_season12 = [aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock];
 //ALL STARS 5
 let allstars_5 = [alexis, blair, derrick, india, jujubee, mariah, mayhem, miz, ongina, shea];
 //SEASON 13
-let denali = new Queen("Denali", 4, 8, 14, 9, 10, 11, 13, "Denali");
-let mik = new Queen("Gottmik", 8, 11, 6, 13, 12, 13, 6, "Gottmik");
-let joey = new Queen("Joey Jay", 6, 7, 6, 5, 5, 7, 7, "Joey");
-let kahmora = new Queen("Kahmora Hall", 3, 4, 3, 5, 4, 12, 4, "Kahmora");
-let kandym = new Queen("Kandy Muse", 9, 10, 5, 6, 7, 8, 14, "KandyM");
-let lala = new Queen("LaLa Ri", 5, 7, 10, 2, 6, 9, 14, "Lala");
-let olivia = new Queen("Olivia Lux", 11, 5, 11, 10, 8, 11, 8, "Olivia");
-let rose = new Queen("Rosé", 12, 11, 13, 8, 10, 10, 6, "Rose");
-let symone = new Queen("Symone", 14, 7, 7, 9, 12, 9, 13, "Symone");
-let tamisha = new Queen("Tamisha Iman", 7, 6, 7, 5, 6, 7, 7, "Tamisha");
-let tina = new Queen("Tina Burner", 6, 6, 10, 5, 6, 8, 9, "TinaB");
-let utica = new Queen("Utica Queen", 7, 4, 6, 15, 5, 12, 11, "Utica");
+let denali = new Queen("Denali", 4, 8, 14, 9, 10, 11, 13, 1, "Denali");
+let mik = new Queen("Gottmik", 8, 11, 6, 13, 12, 13, 6, 1, "Gottmik");
+let joey = new Queen("Joey Jay", 6, 7, 6, 5, 5, 7, 7, 1, "Joey");
+let kahmora = new Queen("Kahmora Hall", 3, 4, 3, 5, 4, 12, 4, 1, "Kahmora");
+let kandym = new Queen("Kandy Muse", 9, 10, 5, 6, 7, 8, 14, 1, "KandyM");
+let lala = new Queen("LaLa Ri", 5, 7, 10, 2, 6, 9, 14, 1, "Lala");
+let olivia = new Queen("Olivia Lux", 11, 5, 11, 10, 8, 11, 8, 1, "Olivia");
+let rose = new Queen("Rosé", 12, 11, 13, 8, 10, 10, 6, 1, "Rose");
+let symone = new Queen("Symone", 14, 7, 7, 9, 12, 9, 13, 1, "Symone");
+let tamisha = new Queen("Tamisha Iman", 7, 6, 7, 5, 6, 7, 7, 1, "Tamisha");
+let tina = new Queen("Tina Burner", 6, 6, 10, 5, 6, 8, 9, 1, "TinaB");
+let utica = new Queen("Utica Queen", 7, 4, 6, 15, 5, 12, 11, 1, "Utica");
 let us_season13 = [denali, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica];
 //ALL STARS 6
 let allstars_6 = [akeria, eureka, ginger, jan, jiggly, pandora, rajah, scarlet, serena, silky, sonique, trinityk, yara];
 //SEASON 14:  acting, comedy, dance, design, improv, runway, lipsync
-let alyssaH = new Queen("Alyssa Hunter", 5, 6, 7, 10, 7, 13, 8, "AlyssaH");
-let angeria = new Queen("Angeria Paris VanMicheals", 11, 6, 9, 12, 8, 11, 8, "Angeria");
-let bosco = new Queen("Bosco", 11, 12, 6, 7, 12, 11, 6, "Bosco");
-let daya = new Queen("Daya Betty", 9, 8, 9, 9, 10, 10, 8, "DayaBetty");
-let deja = new Queen("DeJa Skye", 9, 7, 9, 8, 13, 8, 8, "DeJa");
-let jasmineK = new Queen("Jasmine Kennedie", 7, 6, 13, 7, 6, 10, 14, "JasmineK");
-let jorgeous = new Queen("Jorgeous", 5, 5, 13, 10, 5, 10, 15, "Jorgeous");
-let june = new Queen("June Jambalaya", 5, 6, 6, 4, 5, 6, 6, "June");
-let kerri = new Queen("Kerri Colby", 6, 6, 5, 5, 6, 9, 6, "Kerri");
-let kornbread = new Queen("Kornbread Jeté", 6, 7, 6, 6, 7, 8, 7, "Kornbread");
-let cadmen = new Queen("Lady Camden", 12, 11, 12, 11, 7, 10, 11, "LadyCamden");
-let maddy = new Queen("Maddy Morphosis", 8, 7, 6, 5, 6, 9, 7, "Maddy");
-let orion = new Queen("Orion Story", 4, 6, 6, 5, 6, 6, 5, "Orion");
-let willow = new Queen("Willow Pill", 11, 8, 7, 10, 10, 12, 8, "Willow");
+let alyssaH = new Queen("Alyssa Hunter", 5, 6, 7, 10, 7, 13, 8, 1, "AlyssaH");
+let angeria = new Queen("Angeria Paris VanMicheals", 11, 6, 9, 12, 8, 11, 8, 1, "Angeria");
+let bosco = new Queen("Bosco", 11, 12, 6, 7, 12, 11, 6, 1, "Bosco");
+let daya = new Queen("Daya Betty", 9, 8, 9, 9, 10, 10, 8, 1, "DayaBetty");
+let deja = new Queen("DeJa Skye", 9, 7, 9, 8, 13, 8, 8, 1, "DeJa");
+let jasmineK = new Queen("Jasmine Kennedie", 7, 6, 13, 7, 6, 10, 14, 1, "JasmineK");
+let jorgeous = new Queen("Jorgeous", 5, 5, 13, 10, 5, 10, 15, 1, "Jorgeous");
+let june = new Queen("June Jambalaya", 5, 6, 6, 4, 5, 6, 6, 1, "June");
+let kerri = new Queen("Kerri Colby", 6, 6, 5, 5, 6, 9, 6, 1, "Kerri");
+let kornbread = new Queen("Kornbread Jeté", 6, 7, 6, 6, 7, 8, 7, 1, "Kornbread");
+let cadmen = new Queen("Lady Camden", 12, 11, 12, 11, 7, 10, 11, 1, "LadyCamden");
+let maddy = new Queen("Maddy Morphosis", 8, 7, 6, 5, 6, 9, 7, 1, "Maddy");
+let orion = new Queen("Orion Story", 4, 6, 6, 5, 6, 6, 5, 1, "Orion");
+let willow = new Queen("Willow Pill", 11, 8, 7, 10, 10, 12, 8, 1, "Willow");
 let us_season14 = [alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow];
 //DRUK SEASON 1 
-let baga = new Queen("Baga Chipz", 13, 12, 5, 5, 13, 8, 7, "Baga");
-let blu = new Queen("Blu Hydrangea", 5, 9, 8, 10, 10, 12, 9, "Blu");
-let cheryl = new Queen("Cheryl Hole", 5, 5, 9, 5, 7, 7, 9, "Cheryl");
-let crystaluk = new Queen("Crystal", 6, 5, 6, 9, 4, 8, 6, "Crystal");
-let divina = new Queen("Divina De Campo", 11, 6, 9, 12, 9, 9, 9, "Divina");
-let gothy = new Queen("Gothy Kendoll", 4, 5, 4, 3, 5, 6, 4, "Gothy");
-let scaredy = new Queen("Scaredy Kat", 3, 5, 6, 4, 4, 7, 4, "Scaredy");
-let sumting = new Queen("Sum Ting Wong", 8, 6, 6, 7, 6, 9, 8, "Sum");
-let viv = new Queen("The Vivienne", 12, 12, 7, 10, 14, 11, 10, "TVivienne");
-let vinegar = new Queen("Vinegar Strokes", 7, 6, 6, 4, 4, 6, 6, "Vinegar");
+let baga = new Queen("Baga Chipz", 13, 12, 5, 5, 13, 8, 7, 1, "Baga");
+let blu = new Queen("Blu Hydrangea", 5, 9, 8, 10, 10, 12, 9, 1, "Blu");
+let cheryl = new Queen("Cheryl Hole", 5, 5, 9, 5, 7, 7, 9, 1, "Cheryl");
+let crystaluk = new Queen("Crystal", 6, 5, 6, 9, 4, 8, 6, 1, "Crystal");
+let divina = new Queen("Divina De Campo", 11, 6, 9, 12, 9, 9, 9, 1, "Divina");
+let gothy = new Queen("Gothy Kendoll", 4, 5, 4, 3, 5, 6, 4, 1, "Gothy");
+let scaredy = new Queen("Scaredy Kat", 3, 5, 6, 4, 4, 7, 4, 1, "Scaredy");
+let sumting = new Queen("Sum Ting Wong", 8, 6, 6, 7, 6, 9, 8, 1, "Sum");
+let viv = new Queen("The Vivienne", 12, 12, 7, 10, 14, 11, 9, 1, "TVivienne");
+let vinegar = new Queen("Vinegar Strokes", 7, 6, 6, 4, 4, 6, 6, 1, "Vinegar");
 let uk_season1 = [baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar];
 //DRUK SEASON 2
-let awhora = new Queen("A'Whora", 7, 5, 8, 15, 10, 10, 8, "Awhora");
-let asttina = new Queen("Asttina Mandella", 6, 6, 13, 8, 6, 10, 12, "Asttina");
-let bimini = new Queen("Bimini Bon-Boulash", 11, 14, 10, 7, 11, 11, 11, "Bimini");
-let cherry = new Queen("Cherry Valentine", 5, 6, 5, 7, 6, 11, 4, "Cherry");
-let ellie = new Queen("Ellie Diamond", 10, 6, 7, 11, 8, 9, 8, "Ellie");
-let ginny = new Queen("Ginny Lemon", 6, 6, 5, 5, 5, 8, 4, "Ginny");
-let joe = new Queen("Joe Black", 5, 5, 4, 5, 4, 8, 5, "Joe");
-let lawrence = new Queen("Lawrence Chaney", 13, 12, 5, 12, 9, 11, 10, "Lawrence");
-let sister = new Queen("Sister Sister", 6, 8, 6, 4, 7, 8, 9, "Sister");
-let tayce = new Queen("Tayce", 10, 9, 10, 5, 9, 12, 14, "Tayce");
-let tia = new Queen("Tia Kofi", 7, 9, 9, 5, 8, 5, 10, "Tia");
-let veronica = new Queen("Veronica Green", 6, 6, 10, 6, 5, 7, 8, "Veronica");
+let awhora = new Queen("A'Whora", 7, 5, 8, 15, 10, 10, 8, 1, "Awhora");
+let asttina = new Queen("Asttina Mandella", 6, 6, 13, 8, 6, 10, 12, 1, "Asttina");
+let bimini = new Queen("Bimini Bon-Boulash", 11, 14, 10, 7, 11, 11, 11, 1, "Bimini");
+let cherry = new Queen("Cherry Valentine", 5, 6, 5, 7, 6, 11, 4, 1, "Cherry");
+let ellie = new Queen("Ellie Diamond", 10, 6, 7, 11, 8, 9, 8, 1, "Ellie");
+let ginny = new Queen("Ginny Lemon", 6, 6, 5, 5, 5, 8, 4, 1, "Ginny");
+let joe = new Queen("Joe Black", 5, 5, 4, 5, 4, 8, 5, 1, "Joe");
+let lawrence = new Queen("Lawrence Chaney", 13, 12, 5, 12, 9, 11, 9, 1, "Lawrence");
+let sister = new Queen("Sister Sister", 6, 8, 6, 4, 7, 8, 9, 1, "Sister");
+let tayce = new Queen("Tayce", 10, 9, 10, 5, 9, 12, 14, 1, "Tayce");
+let tia = new Queen("Tia Kofi", 7, 9, 9, 5, 8, 5, 9, 1, "Tia");
+let veronica = new Queen("Veronica Green", 6, 6, 10, 6, 5, 7, 8, 1, "Veronica");
 let uk_season2 = [awhora, asttina, bimini, cherry, ellie, ginny, joe, lawrence, sister, tayce, tia, veronica];
 //DRUK SEASON 3    acting, comedy, dance, design, improv, runway, lipsync
-let anubis = new Queen("Anubis", 5, 5, 5, 4, 5, 4, 4, "Anubis");
-let charity = new Queen("Charity Kase", 8, 7, 4, 10, 6, 13, 8, "Charity");
-let choriza = new Queen("Choriza May", 9, 9, 6, 7, 7, 8, 7, "Choriza");
-let elektraF = new Queen("Elektra Fence", 5, 6, 11, 4, 5, 8, 13, "ElektraF");
-let ella = new Queen("Ella Vaday", 9, 14, 8, 10, 12, 9, 8, "Ella");
-let kitty = new Queen("Kitty Scott-Claus", 12, 11, 7, 8, 9, 9, 7, "Kitty");
-let krystal = new Queen("Krystal Versace", 8, 8, 11, 12, 8, 14, 12, "Krystal");
-let river = new Queen("River Medway", 8, 6, 5, 9, 5, 7, 6, "River");
-let scarlett = new Queen("Scarlett Harlett", 7, 7, 8, 8, 6, 8, 7, "ScarlettH");
+let anubis = new Queen("Anubis", 5, 5, 5, 4, 5, 4, 4, 1, "Anubis");
+let charity = new Queen("Charity Kase", 8, 7, 4, 10, 6, 13, 8, 1, "Charity");
+let choriza = new Queen("Choriza May", 9, 9, 6, 7, 7, 8, 7, 1, "Choriza");
+let elektraF = new Queen("Elektra Fence", 5, 6, 11, 4, 5, 8, 13, 1, "ElektraF");
+let ella = new Queen("Ella Vaday", 9, 14, 8, 10, 12, 9, 8, 1, "Ella");
+let kitty = new Queen("Kitty Scott-Claus", 12, 11, 7, 8, 9, 9, 7, 1, "Kitty");
+let krystal = new Queen("Krystal Versace", 8, 8, 11, 12, 8, 14, 12, 1, "Krystal");
+let river = new Queen("River Medway", 8, 6, 5, 9, 5, 7, 6, 1, "River");
+let scarlett = new Queen("Scarlett Harlett", 7, 7, 8, 8, 6, 8, 7, 1, "ScarlettH");
 let vanity = new Queen("Vanity Milan", 8, 7, 11, 5, 8, 8, 20, "Vanity");
-let victoriaS = new Queen("Victoria Scone", 8, 10, 8, 7, 9, 9, 8, "VictoriaS");
+let victoriaS = new Queen("Victoria Scone", 8, 10, 8, 7, 9, 9, 8, 1, "VictoriaS");
 let uk_season3 = [anubis, charity, choriza, elektraF, ella, kitty, krystal, river, scarlett, vanity, victoriaS, veronica];
 //CAN SEASON 1 
-let anastarzia = new Queen("Anastarzia Anaquway", 7, 6, 4, 12, 6, 8, 7, "Starzy");
-let boa = new Queen("BOA", 6, 6, 5, 5, 6, 7, 7, "BOA");
-let ilona = new Queen("Ilona Verley", 5, 8, 5, 8, 9, 10, 10, "Ilona");
-let jimbo = new Queen("Jimbo", 10, 13, 2, 13, 15, 11, 2, "Jimbo");
-let juice = new Queen("Juice Boxx", 6, 6, 6, 4, 6, 6, 7, "Juice");
-let kiara = new Queen("Kiara", 10, 6, 8, 11, 6, 9, 11, "Kiara");
-let kyne = new Queen("Kyne", 8, 6, 6, 7, 6, 6, 7, "Kyne");
-let lemon = new Queen("Lemon", 10, 11, 12, 6, 11, 13, 11, "Lemon");
-let priyanka = new Queen("Priyanka", 14, 9, 12, 8, 6, 10, 13, "Priyanka");
-let rita = new Queen("Rita Baga", 10, 11, 7, 10, 9, 10, 12, "Rita");
-let bobo = new Queen("Scarlett BoBo", 6, 8, 9, 9, 9, 10, 9, "Scarlett");
-let tynomi = new Queen("Tynomi Banks", 5, 6, 5, 7, 5, 7, 10, "Tynomi");
+let anastarzia = new Queen("Anastarzia Anaquway", 7, 6, 4, 12, 6, 8, 7, 1, "Starzy");
+let boa = new Queen("BOA", 6, 6, 5, 5, 6, 7, 7, 1, "BOA");
+let ilona = new Queen("Ilona Verley", 5, 8, 5, 8, 9, 10, 9, 1, "Ilona");
+let jimbo = new Queen("Jimbo", 10, 13, 2, 13, 15, 11, 2, 1, "Jimbo");
+let juice = new Queen("Juice Boxx", 6, 6, 6, 4, 6, 6, 7, 1, "Juice");
+let kiara = new Queen("Kiara", 10, 6, 8, 11, 6, 9, 11, 1, "Kiara");
+let kyne = new Queen("Kyne", 8, 6, 6, 7, 6, 6, 7, 1, "Kyne");
+let lemon = new Queen("Lemon", 10, 11, 12, 6, 11, 13, 11, 1, "Lemon");
+let priyanka = new Queen("Priyanka", 14, 9, 12, 8, 6, 10, 13, 1, "Priyanka");
+let rita = new Queen("Rita Baga", 10, 11, 7, 10, 9, 10, 12, 1, "Rita");
+let bobo = new Queen("Scarlett BoBo", 6, 8, 9, 9, 9, 10, 9, 1, "Scarlett");
+let tynomi = new Queen("Tynomi Banks", 5, 6, 5, 7, 5, 7, 9, 1, "Tynomi");
 let can_season1 = [anastarzia, boa, ilona, jimbo, juice, kiara, kyne, lemon, priyanka, rita, bobo, tynomi];
 //CAN SEASON 2
-let adriana = new Queen("Adriana", 9, 6, 7, 6, 6, 8, 5, "Adriana");
-let beth = new Queen("Beth", 5, 5, 6, 3, 6, 5, 4, "Beth");
-let eve = new Queen("Eve 6000", 10, 5, 5, 6, 6, 8, 8, "Eve");
-let giametric = new Queen("Gia Metric", 9, 6, 10, 6, 6, 9, 10, "Giametric");
-let icesis = new Queen("Icesis Couture", 7, 8, 8, 11, 7, 10, 10, "Icesis");
-let kendall = new Queen("Kendall Gender", 7, 9, 9, 6, 7, 8, 10, "Kendall");
-let kimoraA = new Queen("Kimora Amour", 6, 5, 5, 6, 7, 7, 5, "KimoraA");
-let oceane = new Queen("Océane Aqua-Black", 6, 7, 4, 7, 7, 7, 5, "Oceane");
-let pythia = new Queen("Pythia", 8, 7, 8, 12, 9, 12, 7, "Pythia");
-let stephanie = new Queen("Stephanie Prince", 6, 6, 7, 10, 6, 9, 6, "Stephanie");
-let suki = new Queen("Suki Doll", 8, 7, 6, 9, 5, 9, 5, "Suki");
-let synthia = new Queen("Synthia Kiss", 6, 8, 10, 7, 9, 7, 9, "Synthia");
+let adriana = new Queen("Adriana", 9, 6, 7, 6, 6, 8, 5, 1, "Adriana");
+let beth = new Queen("Beth", 5, 5, 6, 3, 6, 5, 4, 1, "Beth");
+let eve = new Queen("Eve 6000", 10, 5, 5, 6, 6, 8, 8, 1, "Eve");
+let giametric = new Queen("Gia Metric", 9, 6, 10, 6, 6, 9, 9, 1, "Giametric");
+let icesis = new Queen("Icesis Couture", 7, 8, 8, 11, 7, 10, 9, 1, "Icesis");
+let kendall = new Queen("Kendall Gender", 7, 9, 9, 6, 7, 8, 9, 1, "Kendall");
+let kimoraA = new Queen("Kimora Amour", 6, 5, 5, 6, 7, 7, 5, 1, "KimoraA");
+let oceane = new Queen("Océane Aqua-Black", 6, 7, 4, 7, 7, 7, 5, 1, "Oceane");
+let pythia = new Queen("Pythia", 8, 7, 8, 12, 9, 12, 7, 1, "Pythia");
+let stephanie = new Queen("Stephanie Prince", 6, 6, 7, 10, 6, 9, 6, 1, "Stephanie");
+let suki = new Queen("Suki Doll", 8, 7, 6, 9, 5, 9, 5, 1, "Suki");
+let synthia = new Queen("Synthia Kiss", 6, 8, 10, 7, 9, 7, 9, 1, "Synthia");
 let can_season2 = [adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia];
 //DRAG RACE HOLLAND 
-let chelsea = new Queen("Chelsea Boy", 9, 10, 7, 7, 10, 12, 6, "Chelsea");
-let envy = new Queen("Envy Peru", 11, 11, 11, 8, 11, 13, 11, "Envy");
-let janey = new Queen("Janey Jacké", 7, 6, 13, 11, 6, 11, 12, "Janey");
-let madamem = new Queen("Madame Madness", 8, 6, 5, 6, 5, 8, 7, "MadameM");
-let mama = new Queen("Ma'Ma Queen", 9, 6, 5, 6, 6, 10, 7, "Mama");
-let megan = new Queen("Megan Schoonbrood", 7, 6, 6, 5, 6, 9, 8, "Megan");
-let abby = new Queen("Miss Abby OMG", 5, 6, 11, 6, 5, 8, 10, "Abby");
-let patty = new Queen("Patty Pam-Pam", 5, 6, 6, 6, 5, 9, 7, "Patty");
-let roem = new Queen("Roem", 6, 6, 5, 5, 5, 6, 5, "Roem");
-let sederginne = new Queen("Sederginne", 7, 6, 6, 7, 5, 13, 5, "Sederginne");
+let chelsea = new Queen("Chelsea Boy", 9, 10, 7, 7, 10, 12, 6, 1, "Chelsea");
+let envy = new Queen("Envy Peru", 11, 11, 11, 8, 11, 13, 11, 1, "Envy");
+let janey = new Queen("Janey Jacké", 7, 6, 13, 11, 6, 11, 12, 1, "Janey");
+let madamem = new Queen("Madame Madness", 8, 6, 5, 6, 5, 8, 7, 1, "MadameM");
+let mama = new Queen("Ma'Ma Queen", 9, 6, 5, 6, 6, 10, 7, 1, "Mama");
+let megan = new Queen("Megan Schoonbrood", 7, 6, 6, 5, 6, 9, 8, 1, "Megan");
+let abby = new Queen("Miss Abby OMG", 5, 6, 11, 6, 5, 8, 9, 1, "Abby");
+let patty = new Queen("Patty Pam-Pam", 5, 6, 6, 6, 5, 9, 7, 1, "Patty");
+let roem = new Queen("Roem", 6, 6, 5, 5, 5, 6, 5, 1, "Roem");
+let sederginne = new Queen("Sederginne", 7, 6, 6, 7, 5, 13, 5, 1, "Sederginne");
 let hol_season1 = [chelsea, envy, janey, madamem, mama, megan, abby, patty, roem, sederginne];
 //DRAG RACE HOLLAND SEASON 2
-let ivyelise = new Queen("Ivy-Elyse", 6, 8, 5, 4, 8, 5, 10, "IvyE");
-let juicy = new Queen("Juicy Kouture", 5, 6, 5, 5, 4, 4, 5, "Juicy");
-let keta = new Queen("Keta Minaj", 9, 12, 9, 7, 12, 11, 9, "Keta");
-let love = new Queen("Love Masisi", 6, 5, 6, 8, 5, 10, 7, "Love");
-let mlp = new Queen("My Little Puny", 10, 10, 10, 7, 9, 10, 10, "MLP");
-let reggy = new Queen("Reggy B", 6, 6, 6, 5, 6, 8, 8, "Reggy");
-let tabitha = new Queen("Tabitha", 6, 7, 8, 6, 5, 7, 8, "Tabitha");
-let countess = new Queen("The Countess", 7, 5, 4, 10, 6, 12, 5, "Countess");
-let vanessaC = new Queen("Vanessa Van Cartier", 7, 5, 6, 8, 5, 12, 8, "VanessaC");
-let vivaldi = new Queen("Vivaldi", 8, 8, 8, 7, 8, 12, 8, "Vivaldi");
+let ivyelise = new Queen("Ivy-Elyse", 6, 8, 5, 4, 8, 5, 9, 1, "IvyE");
+let juicy = new Queen("Juicy Kouture", 5, 6, 5, 5, 4, 4, 5, 1, "Juicy");
+let keta = new Queen("Keta Minaj", 9, 12, 9, 7, 12, 11, 9, 1, "Keta");
+let love = new Queen("Love Masisi", 6, 5, 6, 8, 5, 10, 7, 1, "Love");
+let mlp = new Queen("My Little Puny", 10, 10, 10, 7, 9, 10, 9, 1, "MLP");
+let reggy = new Queen("Reggy B", 6, 6, 6, 5, 6, 8, 8, 1, "Reggy");
+let tabitha = new Queen("Tabitha", 6, 7, 8, 6, 5, 7, 8, 1, "Tabitha");
+let countess = new Queen("The Countess", 7, 5, 4, 10, 6, 12, 5, 1, "Countess");
+let vanessaC = new Queen("Vanessa Van Cartier", 7, 5, 6, 8, 5, 12, 8, 1, "VanessaC");
+let vivaldi = new Queen("Vivaldi", 8, 8, 8, 7, 8, 12, 8, 1, "Vivaldi");
 let hol_season2 = [ivyelise, juicy, keta, love, mlp, reggy, tabitha, countess, vanessaC, vivaldi];
 //DRT SEASON 1
-let amadiva = new Queen("Amadiva", 9, 6, 7, 9, 3, 9, 6, "Amadiva");
-let annee = new Queen("Anneé Maywong", 9, 9, 7, 10, 4, 10, 9, "Annee");
-let b = new Queen("B Ella", 7, 9, 6, 8, 9, 7, 7, "B");
-let bunny = new Queen("Bunny Be Fly", 7, 5, 5, 8, 5, 8, 6, "Bunny");
-let dearis = new Queen("Dearis Doll", 7, 7, 7, 8, 8, 8, 8, "Dearis");
-let jaja = new Queen("JAJA", 8, 6, 7, 9, 5, 9, 9, "Jaja");
-let meannie = new Queen("Meannie Minaj", 7, 5, 5, 6, 5, 5, 5, "Meannie");
-let morrigan = new Queen("Morrigan", 5, 6, 7, 5, 7, 7, 7, "Morrigan");
-let natalia = new Queen("Natalia Pliacam", 9, 9, 7, 9, 9, 10, 9, "Natalia");
-let petchra = new Queen("Petchra", 7, 7, 6, 7, 8, 7, 9, "Petchra");
+let amadiva = new Queen("Amadiva", 9, 6, 7, 9, 3, 9, 6, 1, "Amadiva");
+let annee = new Queen("Anneé Maywong", 9, 9, 7, 10, 4, 10, 9, 1, "Annee");
+let b = new Queen("B Ella", 7, 9, 6, 8, 9, 7, 7, 1, "B");
+let bunny = new Queen("Bunny Be Fly", 7, 5, 5, 8, 5, 8, 6, 1, "Bunny");
+let dearis = new Queen("Dearis Doll", 7, 7, 7, 8, 8, 8, 8, 1, "Dearis");
+let jaja = new Queen("JAJA", 8, 6, 7, 9, 5, 9, 9, 1, "Jaja");
+let meannie = new Queen("Meannie Minaj", 7, 5, 5, 6, 5, 5, 5, 1, "Meannie");
+let morrigan = new Queen("Morrigan", 5, 6, 7, 5, 7, 7, 7, 1, "Morrigan");
+let natalia = new Queen("Natalia Pliacam", 9, 9, 7, 9, 9, 10, 9, 1, "Natalia");
+let petchra = new Queen("Petchra", 7, 7, 6, 7, 8, 7, 9, 1, "Petchra");
 let drt_season1 = [amadiva, annee, b, bunny, dearis, jaja, meannie, morrigan, natalia, petchra];
 //DRT SEASON 2
-let angele = new Queen("Angele Anang", 9, 9, 9, 9, 8, 10, 10, "Angele");
-let bandit = new Queen("Bandit", 7, 7, 7, 8, 6, 8, 9, "Bandit");
-let genie = new Queen("Genie", 9, 8, 9, 9, 7, 9, 8, "Genie");
-let kana = new Queen("Kana Warrior", 8, 8, 8, 7, 7, 9, 10, "Kana");
-let kandyz = new Queen("Kandy Zyanide", 9, 9, 9, 9, 9, 9, 7, "KandyZ");
-let katy = new Queen("Katy Killer", 7, 8, 7, 8, 7, 8, 8, "Katy");
-let m = new Queen("M Stranger Fox", 5, 6, 5, 6, 6, 8, 8, "M");
-let maya = new Queen("Maya B'haro", 9, 8, 6, 9, 9, 8, 7, "Maya");
-let mocha = new Queen("Mocha Diva", 9, 9, 6, 8, 9, 7, 9, "Mocha");
-let gimhuay = new Queen("Miss Gimhuay", 8, 9, 7, 9, 8, 9, 8, "Gimhuay");
-let silver = new Queen("Silver Sonic", 5, 5, 7, 6, 7, 7, 8, "Silver");
-let srimala = new Queen("Srimala", 7, 7, 8, 7, 8, 9, 9, "Srimala");
-let tormai = new Queen("Tormai", 8, 8, 7, 7, 6, 8, 9, "Tormai");
-let vanda = new Queen("Vanda Miss Joaquim", 9, 8, 9, 7, 7, 9, 9, "Vanda");
+let angele = new Queen("Angele Anang", 9, 9, 9, 9, 8, 10, 9, 1, "Angele");
+let bandit = new Queen("Bandit", 7, 7, 7, 8, 6, 8, 9, 1, "Bandit");
+let genie = new Queen("Genie", 9, 8, 9, 9, 7, 9, 8, 1, "Genie");
+let kana = new Queen("Kana Warrior", 8, 8, 8, 7, 7, 9, 9, 1, "Kana");
+let kandyz = new Queen("Kandy Zyanide", 9, 9, 9, 9, 9, 9, 7, 1, "KandyZ");
+let katy = new Queen("Katy Killer", 7, 8, 7, 8, 7, 8, 8, 1, "Katy");
+let m = new Queen("M Stranger Fox", 5, 6, 5, 6, 6, 8, 8, 1, "M");
+let maya = new Queen("Maya B'haro", 9, 8, 6, 9, 9, 8, 7, 1, "Maya");
+let mocha = new Queen("Mocha Diva", 9, 9, 6, 8, 9, 7, 9, 1, "Mocha");
+let gimhuay = new Queen("Miss Gimhuay", 8, 9, 7, 9, 8, 9, 8, 1, "Gimhuay");
+let silver = new Queen("Silver Sonic", 5, 5, 7, 6, 7, 7, 8, 1, "Silver");
+let srimala = new Queen("Srimala", 7, 7, 8, 7, 8, 9, 9, 1, "Srimala");
+let tormai = new Queen("Tormai", 8, 8, 7, 7, 6, 8, 9, 1, "Tormai");
+let vanda = new Queen("Vanda Miss Joaquim", 9, 8, 9, 7, 7, 9, 9, 1, "Vanda");
 let drt_season2 = [angele, bandit, genie, kana, kandyz, katy, m, maya, mocha, gimhuay, silver, srimala, tormai, vanda];
 //DRAG RACE DOWN UNDER
-let anita = new Queen("Anita Wigl'it", 6, 10, 8, 6, 10, 8, 5, "Anita");
-let art = new Queen("Art Simone", 6, 4, 5, 8, 4, 10, 4, "Art");
-let cocoj = new Queen("Coco Jumbo", 6, 5, 6, 6, 5, 8, 10, "CocoJ");
-let elektra = new Queen("Elektra Shock", 10, 6, 12, 8, 4, 7, 11, "Elektra");
-let etc = new Queen("Etcetera Etcetera", 5, 8, 8, 7, 8, 8, 8, "Etc");
-let jojo = new Queen("Jojo Zaho", 5, 5, 5, 5, 5, 6, 6, "Jojo");
-let kita = new Queen("Kita Mean", 9, 9, 7, 7, 9, 9, 8, "Kita");
-let maxi = new Queen("Maxi Shield", 6, 6, 5, 9, 7, 8, 8, "Maxi");
+let anita = new Queen("Anita Wigl'it", 6, 10, 8, 6, 10, 8, 5, 1, "Anita");
+let art = new Queen("Art Simone", 6, 4, 5, 8, 4, 10, 4, 1, "Art");
+let cocoj = new Queen("Coco Jumbo", 6, 5, 6, 6, 5, 8, 9, 1, "CocoJ");
+let elektra = new Queen("Elektra Shock", 10, 6, 12, 8, 4, 7, 1, 1, "Elektra");
+let etc = new Queen("Etcetera Etcetera", 5, 8, 8, 7, 8, 8, 8, 1, "Etc");
+let jojo = new Queen("Jojo Zaho", 5, 5, 5, 5, 5, 6, 6, 1, "Jojo");
+let kita = new Queen("Kita Mean", 9, 9, 7, 7, 9, 9, 8, 1, "Kita");
+let maxi = new Queen("Maxi Shield", 6, 6, 5, 9, 7, 8, 8, 1, "Maxi");
 let drdu = [anita, art, cocoj, elektra, etc, jojo, kita, maxi];
 //DRAG RACE ESPAÑA 1
-let arantxa = new Queen("Arantxa Castilla La Mancha", 6, 8, 6, 7, 8, 9, 7, "Arantxa");
-let carmenf = new Queen("Carmen Farala", 10, 10, 10, 14, 8, 13, 10, "CarmenF");
-let dovima = new Queen("Dovima Nurmi", 8, 7, 5, 7, 8, 10, 6, "Dovima");
-let drag = new Queen("Drag Vulcano", 6, 6, 5, 7, 6, 9, 6, "Drag");
-let hugaceo = new Queen("Hugáceo Crujiente", 5, 5, 5, 12, 6, 10, 8, "Hugaceo");
-let inti = new Queen("Inti", 6, 6, 6, 7, 5, 11, 6, "Inti");
-let killer = new Queen("Killer Queen", 6, 10, 8, 9, 11, 9, 8, "Killer");
-let pupi = new Queen("Pupi Poisson", 10, 11, 7, 5, 11, 6, 7, "Puppy");
-let sagittaria = new Queen("Sagittaria", 7, 8, 8, 9, 7, 10, 8, "Sagittaria");
-let macarena = new Queen("The Macarena", 5, 5, 6, 4, 5, 5, 5, "Macarena");
+let arantxa = new Queen("Arantxa Castilla La Mancha", 6, 8, 6, 7, 8, 9, 7, 1, "Arantxa");
+let carmenf = new Queen("Carmen Farala", 10, 10, 10, 14, 8, 13, 9, 1, "CarmenF");
+let dovima = new Queen("Dovima Nurmi", 8, 7, 5, 7, 8, 10, 6, 1, "Dovima");
+let drag = new Queen("Drag Vulcano", 6, 6, 5, 7, 6, 9, 6, 1, "Drag");
+let hugaceo = new Queen("Hugáceo Crujiente", 5, 5, 5, 12, 6, 10, 8, 1, "Hugaceo");
+let inti = new Queen("Inti", 6, 6, 6, 7, 5, 11, 6, 1, "Inti");
+let killer = new Queen("Killer Queen", 6, 10, 8, 9, 11, 9, 8, 1, "Killer");
+let pupi = new Queen("Pupi Poisson", 10, 11, 7, 5, 11, 6, 7, 1, "Puppy");
+let sagittaria = new Queen("Sagittaria", 7, 8, 8, 9, 7, 10, 8, 1, "Sagittaria");
+let macarena = new Queen("The Macarena", 5, 5, 6, 4, 5, 5, 5, 1, "Macarena");
 let dres_season1 = [arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena];
 // DRAG RACE ESPAÑA 2
-let arielRec = new Queen("Ariel Rec", 7, 7, 7, 7, 7, 7, 7, "ArielRec");
-let diamante = new Queen("Diamante Merybrown", 7, 7, 7, 7, 7, 7, 7, "Diamante");
-let sethlas = new Queen("Drag Sethlas", 7, 7, 7, 7, 7, 7, 7, "DragSethlas");
-let estrella = new Queen("Estrella Xtravaganza", 7, 7, 7, 7, 7, 7, 7, "Estrella");
-let jota = new Queen("Jota Carajota", 7, 7, 7, 7, 7, 7, 7, "Jota");
-let juriji = new Queen("Juriji Der Klee", 7, 7, 7, 7, 7, 7, 7, "Juriji");
-let marina = new Queen("Marina", 7, 7, 7, 7, 7, 7, 7, "Marina");
-let marisa = new Queen("Marisa Prisa", 7, 7, 7, 7, 7, 7, 7, "Marisa");
-let onyx = new Queen("Onyx", 7, 7, 7, 7, 7, 7, 7, "Onyx");
-let samantha = new Queen("Samantha Ballentines", 7, 7, 7, 7, 7, 7, 7, "Samantha");
-let sharonne = new Queen("Sharonne", 7, 7, 7, 7, 7, 7, 7, "Sharonne");
-let venedita = new Queen("Venedita Von Däsh", 7, 7, 7, 7, 7, 7, 7, "Venedita");
+let arielRec = new Queen("Ariel Rec", 7, 7, 7, 7, 7, 7, 7, 1, "ArielRec");
+let diamante = new Queen("Diamante Merybrown", 7, 7, 7, 7, 7, 7, 7, 1, "Diamante");
+let sethlas = new Queen("Drag Sethlas", 7, 7, 7, 7, 7, 7, 7, 1, "DragSethlas");
+let estrella = new Queen("Estrella Xtravaganza", 7, 7, 7, 7, 7, 7, 7, 1, "Estrella");
+let jota = new Queen("Jota Carajota", 7, 7, 7, 7, 7, 7, 7, 1, "Jota");
+let juriji = new Queen("Juriji Der Klee", 7, 7, 7, 7, 7, 7, 7, 1, "Juriji");
+let marina = new Queen("Marina", 7, 7, 7, 7, 7, 7, 7, 1, "Marina");
+let marisa = new Queen("Marisa Prisa", 7, 7, 7, 7, 7, 7, 7, 1, "Marisa");
+let onyx = new Queen("Onyx", 7, 7, 7, 7, 7, 7, 7, 1, "Onyx");
+let samantha = new Queen("Samantha Ballentines", 7, 7, 7, 7, 7, 7, 7, 1, "Samantha");
+let sharonne = new Queen("Sharonne", 7, 7, 7, 7, 7, 7, 7, 1, "Sharonne");
+let venedita = new Queen("Venedita Von Däsh", 7, 7, 7, 7, 7, 7, 7, 1, "Venedita");
 let dres_season2 = [arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita];
 //DRAG RACE ITALIA
-let ava = new Queen("Ava Hangar", 8, 7, 5, 5, 6, 6, 6, "Ava");
-let divinity = new Queen("Divinity", 9, 6, 8, 7, 6, 8, 7, "Divinity");
-let elecktra = new Queen("Elecktra Bionic", 7, 8, 8, 8, 9, 9, 8, "Elecktra");
-let enorma = new Queen("Enorma Jean", 8, 8, 6, 6, 8, 7, 6, "Enorma");
-let farida = new Queen("Farida Kant", 7, 6, 8, 11, 5, 11, 8, "Farida");
-let ivana = new Queen("Ivana Vamp", 6, 5, 6, 6, 6, 6, 5, "Ivana");
-let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "Riche");
-let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "Luquisha");
+let ava = new Queen("Ava Hangar", 8, 7, 5, 5, 6, 6, 6, 1, "Ava");
+let divinity = new Queen("Divinity", 9, 6, 8, 7, 6, 8, 7, 1, "Divinity");
+let elecktra = new Queen("Elecktra Bionic", 7, 8, 8, 8, 9, 9, 8, 1, "Elecktra");
+let enorma = new Queen("Enorma Jean", 8, 8, 6, 6, 8, 7, 6, 1, "Enorma");
+let farida = new Queen("Farida Kant", 7, 6, 8, 11, 5, 11, 8, 1, "Farida");
+let ivana = new Queen("Ivana Vamp", 6, 5, 6, 6, 6, 6, 5, 1, "Ivana");
+let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, 1, "Riche");
+let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, 1, "Luquisha");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 //UK4
 let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa");
 //Judges
-let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina");
-let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "Michelle");
-let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 4, "Rupaull");
-let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd");
+let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, 1, "Pangina");
+let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, 1, "Michelle");
+let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 4, 1, "Rupaull");
+let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, 1, "Fredd");
 let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 1, "Priscillaa");
-let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 11, "Supremme");
-let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA");
+let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, 1, "Supremme");
+let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, 1, "ArtA");
 //DRAGULA S2
-let felony = new Queen("Felony Dodger", 6, 5, 2, 3, 7, 4, 4, "Felony");
-let monikkie = new Queen("Monikkie Shame", 6, 5, 2, 3, 7, 4, 4, "Monikkie");
-let kendra = new Queen("Kendra Onixxx", 6, 5, 2, 3, 7, 4, 4, "Kendra");
-let dahli = new Queen("Dahli", 6, 5, 2, 3, 7, 4, 4, "Dahli");
-let erika = new Queen("Erika Klash", 6, 5, 2, 3, 7, 4, 4, "Erika");
-let disasterina = new Queen("Disasterina", 6, 5, 2, 3, 7, 4, 4, "Disasterina");
-let victoriae = new Queen("Victoria Elizabeth Black", 6, 5, 2, 3, 7, 4, 4, "VictoriaD");
-let james = new Queen("James Majesty", 6, 5, 2, 3, 7, 4, 4, "James");
-let biqtch = new Queen("Biqtch Puddin", 6, 5, 2, 3, 7, 4, 4, "Biqtch");
+let felony = new Queen("Felony Dodger", 6, 5, 2, 3, 7, 4, 4, 1, "Felony");
+let monikkie = new Queen("Monikkie Shame", 6, 5, 2, 3, 7, 4, 4, 1, "Monikkie");
+let kendra = new Queen("Kendra Onixxx", 6, 5, 2, 3, 7, 4, 4, 1, "Kendra");
+let dahli = new Queen("Dahli", 6, 5, 2, 3, 7, 4, 4, 1, "Dahli");
+let erika = new Queen("Erika Klash", 6, 5, 2, 3, 7, 4, 4, 1, "Erika");
+let disasterina = new Queen("Disasterina", 6, 5, 2, 3, 7, 4, 4, 1, "Disasterina");
+let victoriae = new Queen("Victoria Elizabeth Black", 6, 5, 2, 3, 7, 4, 4, 1, "VictoriaD");
+let james = new Queen("James Majesty", 6, 5, 2, 3, 7, 4, 4, 1, "James");
+let biqtch = new Queen("Biqtch Puddin", 6, 5, 2, 3, 7, 4, 4, 1, "Biqtch");
 let dragula_2 = [felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch];
 //DRAGULA S1
-let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, "Pinche");
-let ursula = new Queen("Ursula Major", 6, 5, 2, 3, 7, 4, 4, "Ursula");
-let foxie = new Queen("Foxie Adjuia", 6, 5, 2, 3, 7, 4, 4, "Foxie");
-let xochi = new Queen("Xochi Mochi", 6, 5, 2, 3, 7, 4, 4, "Xochi");
-let loris = new Queen("Loris", 6, 5, 2, 3, 7, 4, 4, "Loris");
-let meatball = new Queen("Meatball", 6, 5, 2, 3, 7, 4, 4, "Meatball");
-let melissa = new Queen("Melissa Befierce", 6, 5, 2, 3, 7, 4, 4, "Melissa");
-let frankie = new Queen("Frankie Doom", 6, 5, 2, 3, 7, 4, 4, "Frankie");
-let vander = new Queen("Vander Von Odd", 6, 5, 2, 3, 7, 4, 4, "Vander");
+let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, 1, "Pinche");
+let ursula = new Queen("Ursula Major", 6, 5, 2, 3, 7, 4, 4, 1, "Ursula");
+let foxie = new Queen("Foxie Adjuia", 6, 5, 2, 3, 7, 4, 4, 1, "Foxie");
+let xochi = new Queen("Xochi Mochi", 6, 5, 2, 3, 7, 4, 4, 1, "Xochi");
+let loris = new Queen("Loris", 6, 5, 2, 3, 7, 4, 4, 1, "Loris");
+let meatball = new Queen("Meatball", 6, 5, 2, 3, 7, 4, 4, 1, "Meatball");
+let melissa = new Queen("Melissa Befierce", 6, 5, 2, 3, 7, 4, 4, 1, "Melissa");
+let frankie = new Queen("Frankie Doom", 6, 5, 2, 3, 7, 4, 4, 1, "Frankie");
+let vander = new Queen("Vander Von Odd", 6, 5, 2, 3, 7, 4, 4, 1, "Vander");
 let dragula_1 = [pinche, frankie, melissa, meatball, loris, xochi, vander, foxie];
 //DRAGULA S3
-let violencia = new Queen("Violencia!", 6, 5, 2, 3, 7, 4, 4, "Violencia");
-let saint = new Queen("Saint", 6, 5, 2, 3, 7, 4, 4, "Saint");
-let yovska = new Queen("Yovska", 6, 5, 2, 3, 7, 4, 4, "Yovska");
-let maxig = new Queen("Maxi Glamour", 6, 5, 2, 3, 7, 4, 4, "MaxiD");
-let hollow = new Queen("Hollow Eve", 6, 5, 2, 3, 7, 4, 4, "Hollow");
-let maddelynn = new Queen("Maddelynn Hatter", 6, 5, 2, 3, 7, 4, 4, "Madelynn");
-let evah = new Queen("Evah Destruction", 6, 5, 2, 3, 7, 4, 4, "Evah");
-let louisianna = new Queen("Louisianna Purchase", 6, 5, 2, 3, 7, 4, 4, "Louisianna");
-let priscillac = new Queen("Priscilla", 6, 5, 2, 3, 7, 4, 4, "PriscillaD");
-let dollya = new Queen("Dollya Black", 6, 5, 2, 3, 7, 4, 4, "Dollya");
-let landon = new Queen("Landon Cider", 6, 5, 2, 3, 7, 4, 4, "Landon");
+let violencia = new Queen("Violencia!", 6, 5, 2, 3, 7, 4, 4, 1, "Violencia");
+let saint = new Queen("Saint", 6, 5, 2, 3, 7, 4, 4, 1, "Saint");
+let yovska = new Queen("Yovska", 6, 5, 2, 3, 7, 4, 4, 1, "Yovska");
+let maxig = new Queen("Maxi Glamour", 6, 5, 2, 3, 7, 4, 4, 1, "MaxiD");
+let hollow = new Queen("Hollow Eve", 6, 5, 2, 3, 7, 4, 4, 1, "Hollow");
+let maddelynn = new Queen("Maddelynn Hatter", 6, 5, 2, 3, 7, 4, 4, 1, "Madelynn");
+let evah = new Queen("Evah Destruction", 6, 5, 2, 3, 7, 4, 4, 1, "Evah");
+let louisianna = new Queen("Louisianna Purchase", 6, 5, 2, 3, 7, 4, 4, 1, "Louisianna");
+let priscillac = new Queen("Priscilla", 6, 5, 2, 3, 7, 4, 4, 1, "PriscillaD");
+let dollya = new Queen("Dollya Black", 6, 5, 2, 3, 7, 4, 4, 1, "Dollya");
+let landon = new Queen("Landon Cider", 6, 5, 2, 3, 7, 4, 4, 1, "Landon");
 let dragula_3 = [violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
 //DRAGULA S4
-let formelda = new Queen("Formelda Hyde", 6, 5, 2, 3, 7, 4, 4, "Formelda");
-let astrud = new Queen("Astrud Aurelia", 6, 5, 2, 3, 7, 4, 4, "Astrud");
-let koco = new Queen("Koco Caine", 6, 5, 2, 3, 7, 4, 4, "Koco");
-let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, "Merrie");
-let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, "Bitter");
-let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, "La");
-let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, "Sigourney");
-let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, "HoSo");
+let formelda = new Queen("Formelda Hyde", 6, 5, 2, 3, 7, 4, 4, 1, "Formelda");
+let astrud = new Queen("Astrud Aurelia", 6, 5, 2, 3, 7, 4, 4, 1, "Astrud");
+let koco = new Queen("Koco Caine", 6, 5, 2, 3, 7, 4, 4, 1, "Koco");
+let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, 1, "Merrie");
+let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, 1, "Bitter");
+let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, 1, "La");
+let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, 1, "Sigourney");
+let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, 1, "HoSo");
 let dragula_4 = [formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso, dahli, saint];
 //RESSURECTION
 let ressurection = [priscillac, loris, kendra, frankie, victoriae, dahli, saint];
 //custom s1
-let lana = new Queen("Lana Ja'Rae", 6, 5, 2, 14, 7, 4, 4, "Lana");
-let acna = new Queen("Acna Attack", 6, 5, 2, 14, 7, 4, 4, "Acna");
-let betho = new Queen("Beth Oven", 6, 5, 2, 14, 7, 4, 4, "BethO");
-let mary = new Queen("Mary J. Wanna", 14, 7, 12, 6, 4, 10, 4, "Mary");
-let avenue = new Queen("Avenue", 6, 5, 2, 14, 7, 4, 4, "Avenue");
-let dahliam = new Queen("Dahlia Monroe", 6, 5, 2, 14, 7, 4, 4, "DahliaM");
-let didja = new Queen("Didja Lie", 6, 5, 2, 14, 7, 4, 4, "Didja");
-let ashleigh = new Queen("Ashleigh DeSleigh", 6, 5, 2, 14, 7, 4, 4, "Ashleigh");
+let lana = new Queen("Lana Ja'Rae", 6, 5, 2, 14, 7, 4, 4, 1, "Lana");
+let acna = new Queen("Acna Attack", 6, 5, 2, 14, 7, 4, 4, 1, "Acna");
+let betho = new Queen("Beth Oven", 6, 5, 2, 14, 7, 4, 4, 1, "BethO");
+let mary = new Queen("Mary J. Wanna", 14, 7, 12, 6, 4, 10, 4, 1, "Mary");
+let avenue = new Queen("Avenue", 6, 5, 2, 14, 7, 4, 4, 1, "Avenue");
+let dahliam = new Queen("Dahlia Monroe", 6, 5, 2, 14, 7, 4, 4, 1, "DahliaM");
+let didja = new Queen("Didja Lie", 6, 5, 2, 14, 7, 4, 4, 1, "Didja");
+let ashleigh = new Queen("Ashleigh DeSleigh", 6, 5, 2, 14, 7, 4, 4, 1, "Ashleigh");
 let custom1 = [lana, betho, mary, avenue, acna, dahliam, didja, ashleigh];
 //custom s2
-let harmony = new Queen("Harmony Falsetto", 6, 5, 2, 14, 7, 4, 4, "Harmony");
-let didi = new Queen("Didi Deathnote", 6, 5, 2, 14, 7, 4, 4, "Didi");
-let devyn = new Queen("Devyn Dynasty", 3, 3, 15, 10, 3, 12, 4, "Devyn");
-let cindy = new Queen("Cindy Wink", 11, 5, 13, 6, 4, 9, 4, "Cindy");
-let millerd = new Queen("Miller D’Lite", 6, 5, 2, 14, 7, 4, 4, "MillerD");
-let cherri = new Queen("Cherri Gravez", 6, 5, 2, 14, 7, 4, 4, "Cherri");
-let surut = new Queen("Surut", 6, 14, 4, 3, 11, 9, 4, "Surut");
-let coach = new Queen("Coach Ella", 6, 5, 2, 14, 7, 4, 4, "Coach");
-let mother = new Queen("Mother Monster", 6, 5, 2, 14, 7, 4, 4, "Mother");
-let trey = new Queen("Trey Angle", 4, 10, 2, 11, 13, 2, 4, "Trey");
-let fire = new Queen("Fire Ma'aM", 10, 4, 11, 14, 2, 8, 4, "Fire");
+let harmony = new Queen("Harmony Falsetto", 6, 5, 2, 14, 7, 4, 4, 1, "Harmony");
+let didi = new Queen("Didi Deathnote", 6, 5, 2, 14, 7, 4, 4, 1, "Didi");
+let devyn = new Queen("Devyn Dynasty", 3, 3, 15, 10, 3, 12, 4, 1, "Devyn");
+let cindy = new Queen("Cindy Wink", 11, 5, 13, 6, 4, 9, 4, 1, "Cindy");
+let millerd = new Queen("Miller D’Lite", 6, 5, 2, 14, 7, 4, 4, 1, "MillerD");
+let cherri = new Queen("Cherri Gravez", 6, 5, 2, 14, 7, 4, 4, 1, "Cherri");
+let surut = new Queen("Surut", 6, 14, 4, 3, 11, 9, 4, 1, "Surut");
+let coach = new Queen("Coach Ella", 6, 5, 2, 14, 7, 4, 4, 1, "Coach");
+let mother = new Queen("Mother Monster", 6, 5, 2, 14, 7, 4, 4, 1, "Mother");
+let trey = new Queen("Trey Angle", 4, 10, 2, 11, 13, 2, 4, 1, "Trey");
+let fire = new Queen("Fire Ma'aM", 10, 4, 11, 14, 2, 8, 4, 1, "Fire");
 let custom2 = [harmony, didi, devyn, cindy, millerd, cherri, surut, coach, mother, trey, fire, dahliam, mary];
 //custom s3
-let mike = new Queen("Mike Dragzowski", 1, 1, 1, 1, 1, 1, 4, "Mike");
-let venusd = new Queen("Venus Galore", 11, 8, 12, 4, 5, 3, 4, "VenusG");
-let terry = new Queen("Terry The Tuck", 1, 1, 1, 1, 1, 1, 4, "Terry");
-let jani = new Queen("Jan II", 3, 2, 3, 11, 12, 7, 4, "JanI");
-let heidig = new Queen("Heidi Good", 12, 10, 12, 5, 3, 2, 4, "HeidiG");
-let betha = new Queen("Beth Amphetamine", 6, 5, 2, 14, 7, 4, 4, "BethA");
-let caira = new Queen("Caira Cosplay", 6, 14, 4, 3, 11, 9, 4, "Caira");
-let ayehsa = new Queen("Ayesha Apocalypse", 7, 7, 7, 11, 7, 7, 4, "Ayesha");
-let bethl = new Queen("Beth Lahem", 1, 1, 1, 1, 1, 1, 4, "BethL");
+let mike = new Queen("Mike Dragzowski", 1, 1, 1, 1, 1, 1, 4, 1, "Mike");
+let venusd = new Queen("Venus Galore", 11, 8, 12, 4, 5, 3, 4, 1, "VenusG");
+let terry = new Queen("Terry The Tuck", 1, 1, 1, 1, 1, 1, 4, 1, "Terry");
+let jani = new Queen("Jan II", 3, 2, 3, 11, 12, 7, 4, 1, "JanI");
+let heidig = new Queen("Heidi Good", 12, 10, 12, 5, 3, 2, 4, 1, "HeidiG");
+let betha = new Queen("Beth Amphetamine", 6, 5, 2, 14, 7, 4, 4, 1, "BethA");
+let caira = new Queen("Caira Cosplay", 6, 14, 4, 3, 11, 9, 4, 1, "Caira");
+let ayehsa = new Queen("Ayesha Apocalypse", 7, 7, 7, 11, 7, 7, 4, 1, "Ayesha");
+let bethl = new Queen("Beth Lahem", 1, 1, 1, 1, 1, 1, 4, 1, "BethL");
 let custom3 = [mike, venusd, terry, jani, heidig, betha, caira, ayehsa, devyn, trey, bethl];
 //custom as1
 let customas1 = [venusd, acna, mary, betha, ashleigh, caira, ayehsa, harmony, avenue, didi, mother, cherri, trey, heidig];
 //custom s4
-let jenner = new Queen("Jenner Myles", 1, 1, 1, 1, 1, 1, 4, "Jenner");
-let gusha = new Queen("Gusha", 2, 5, 3, 12, 10, 15, 4, "Gusha");
-let evea = new Queen("Eve Angelica", 11, 3, 4, 13, 2, 15, 4, "EveA");
-let taba = new Queen("Taba Co", 15, 12, 13, 4, 3, 2, 4, "Taba");
-let amethyst = new Queen("Amethyst Rock Bottom", 13, 12, 4, 14, 2, 3, 4, "Amethyst");
-let fet = new Queen("Fet Anyal", 2, 4, 15, 13, 12, 3, 4, "Fet");
-let fairy = new Queen("Fairy Dust", 3, 4, 15, 12, 2, 13, 4, "Fairy");
-let yurin = new Queen("Yurin D. Nile", 4, 15, 10, 3, 2, 11, 4, "Yurin");
-let virgin = new Queen("Virgin Mary", 15, 13, 12, 4, 3, 2, 4, "Virgin");
-let honeym = new Queen("Honey Mustard", 11, 15, 4, 13, 2, 3, 4, "Honeym");
+let jenner = new Queen("Jenner Myles", 1, 1, 1, 1, 1, 1, 4, 1, "Jenner");
+let gusha = new Queen("Gusha", 2, 5, 3, 12, 10, 15, 4, 1, "Gusha");
+let evea = new Queen("Eve Angelica", 11, 3, 4, 13, 2, 15, 4, 1, "EveA");
+let taba = new Queen("Taba Co", 15, 12, 13, 4, 3, 2, 4, 1, "Taba");
+let amethyst = new Queen("Amethyst Rock Bottom", 13, 12, 4, 14, 2, 3, 4, 1, "Amethyst");
+let fet = new Queen("Fet Anyal", 2, 4, 15, 13, 12, 3, 4, 1, "Fet");
+let fairy = new Queen("Fairy Dust", 3, 4, 15, 12, 2, 13, 4, 1, "Fairy");
+let yurin = new Queen("Yurin D. Nile", 4, 15, 10, 3, 2, 11, 4, 1, "Yurin");
+let virgin = new Queen("Virgin Mary", 15, 13, 12, 4, 3, 2, 4, 1, "Virgin");
+let honeym = new Queen("Honey Mustard", 11, 15, 4, 13, 2, 3, 4, 1, "Honeym");
 let custom4 = [jenner, gusha, evea, taba, amethyst, fet, fairy, yurin, virgin, honeym];
 //custom s5
-let sapphire = new Queen("Sapphire Rock Bottom", 4, 12, 13, 14, 3, 2, 4, "Sapphire");
-let angel = new Queen("Angel Azul", 11, 2, 13, 12, 4, 3, 4, "Angel");
-let gem = new Queen("Gem", 2, 3, 12, 13, 4, 14, 4, "Gem");
-let zombira = new Queen("Zombira", 10, 12, 2, 3, 4, 14, 4, "Zombira");
-let canna = new Queen("Canna Biss", 1, 1, 4, 1, 2, 3, 4, "Canna");
+let sapphire = new Queen("Sapphire Rock Bottom", 4, 12, 13, 14, 3, 2, 4, 1, "Sapphire");
+let angel = new Queen("Angel Azul", 11, 2, 13, 12, 4, 3, 4, 1, "Angel");
+let gem = new Queen("Gem", 2, 3, 12, 13, 4, 14, 4, 1, "Gem");
+let zombira = new Queen("Zombira", 10, 12, 2, 3, 4, 14, 4, 1, "Zombira");
+let canna = new Queen("Canna Biss", 1, 1, 4, 1, 2, 3, 4, 1, "Canna");
 let custom5 = [canna, zombira, gem, angel, sapphire, taba, yurin, bethl, trey, dahliam];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
@@ -6830,14 +6861,14 @@ coco,
 vanity,
 alyssa]
 //judges
-let kellyh = new Queen("Kelly Hyland", 3, 2, 7, 3, 2, 7, 11, "Kelly");
-let jojos = new Queen("Jojo Siwa", 3, 2, 7, 3, 2, 7, 11, "Jojos");
-let kimk = new Queen("Kim Kardashian", 3, 2, 7, 3, 2, 7, 11, "KimK");
-let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 11, "Sabrina");
-let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 11, "Britney");
-let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 11, "Melanie");
-let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 11, "Dove");
-let katyp = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 11, "KatyP");
+let kellyh = new Queen("Kelly Hyland", 3, 2, 7, 3, 2, 7, 1, 1, "Kelly");
+let jojos = new Queen("Jojo Siwa", 3, 2, 7, 3, 2, 7, 1, 1, "Jojos");
+let kimk = new Queen("Kim Kardashian", 3, 2, 7, 3, 2, 7, 1, 1, "KimK");
+let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 1, 1, "Sabrina");
+let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 1, 1, "Britney");
+let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 1, 1, "Melanie");
+let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 1, 1, "Dove");
+let katyp = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 1, 1, "KatyP");
 let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katyp]
 //all possible queens:
 let allCustomQueens = [];
@@ -7089,6 +7120,7 @@ function lipsyncSmackdown() {
                 }
             }
             screen.createBold(lipSync[1].getName() + ", sashay away. ");
+			 
         }
         capitulo++;
         cappork++;
@@ -7189,6 +7221,7 @@ function LaLaPaRUza(){
             screen.createImage(lipSync_1[0].image, "royalblue");
             screen.createBold(lipSync_1[0].getName() + ", shantay you stay!");
             screen.createBold(lipSync_1[1].getName() + " and " + lipSync_1[2].getName() + ", sashay away...");
+			 
             if (queen1 == lipSync_1[0]) {
                 currentCast.push(lipSync_1[0]);
                 lipSync_1[0].addToTrackRecord("RTRN ");
@@ -7253,6 +7286,7 @@ function LaLaPaRUza(){
                             screen.createImage("image/ChocolateBarWithNoTicket.webp", "brown");
                             screen.createBold("It's chocolate.");
                             screen.createBold(lipSync[1].getName() + ", sashay away. ");
+							 
                             currentCast.push(lipSync[0]);
                             lipSync[0].addToTrackRecord("RTRN ");
                             eliminatedCast.splice(eliminatedCast.indexOf(lipSync[0]), 1);
@@ -7264,6 +7298,7 @@ function LaLaPaRUza(){
                         }
                     } else {
                         screen.createBold(lipSync[1].getName() + ", sashay away. ");
+						 
                         currentCast.push(lipSync[0]);
                         lipSync[0].addToTrackRecord("RTRN ");
                         eliminatedCast.splice(eliminatedCast.indexOf(lipSync[0]), 1);
@@ -7274,6 +7309,7 @@ function LaLaPaRUza(){
                     }
                 }else{
                     screen.createBold(lipSync[1].getName() + ", sashay away. ");
+					 
                     lipSync[0].addToTrackRecord("SAFE ");
                     lipSync[1].addToTrackRecord("OUT ");
                 }
