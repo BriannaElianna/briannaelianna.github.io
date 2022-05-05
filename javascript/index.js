@@ -389,7 +389,7 @@ function improvChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new ImprovChallenge();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false && lalam == false){
+    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false){
         isTeamChallenge = true;
         teamMaking();
         challenge.rankPerformances();
