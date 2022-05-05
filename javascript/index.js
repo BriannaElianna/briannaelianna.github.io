@@ -6761,7 +6761,7 @@ let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, vi
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta, formelda, astrud, koco, merrie, bitter, la, sigourney, hoso,
     pangina, felony, monikkie, kendra, erika, disasterina, victoriae, james, biqtch, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
-let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra];
+let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra, willow];
 let lipsyncers = [tayce,
 abby,
 yvie,
