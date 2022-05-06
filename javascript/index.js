@@ -5592,10 +5592,10 @@ function lipSync() {
         screen.createButton("Proceed", "newEpisode()");
 }
 function untucked() {
-	let screen = new Scene();
-    screen.clean();
-	Untuck();
-	screen.createButton("Proceed", "winAndBtm2()");
+		let screen = new Scene();
+		screen.clean();
+		Untuck();
+		screen.createButton("Proceed", "winAndBtm2()");
 }
 function teamLipSync() {
     let screen = new Scene();
@@ -9006,6 +9006,7 @@ function Untuck() {
 		screen.createBold("The queens sit down...");
 	}
     screen.createHorizontalLine();
+	screen.createButton("Skip", "winAndBtm2()");
     screen.createBigText("The safe queens gossip amoungst eachother...");
 	let bottoms = []
 	let l = randomNumber(0, currentCast.length - 1);
