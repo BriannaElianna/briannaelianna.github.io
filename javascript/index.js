@@ -5694,6 +5694,8 @@ function untucked() {
 			}
 			if(currentCast[q1].getName()==currentCast[q2].getName()) {
 				screen.createBigText(`${currentCast[q3].getName()} talks to herself about ${currentCast[q3].getName()}`);
+			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createBigText(`${currentCast[q3].getName()} talks to herself about.. herself.`);
 			} else {
 				screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
 			} if(currentCast[q1].getName()==currentCast[q2].getName()) {
@@ -5724,6 +5726,9 @@ function untucked() {
 			} if(currentCast[q3].getName()==currentCast[q1].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createBold(`${currentCast[q1].getName()}: I feel like she has been so rude the entire competition.`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I feel like I have been so rude the entire competition.`);
 			} else {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q3].image);
@@ -5731,6 +5736,9 @@ function untucked() {
 			} if(currentCast[q3].getName()==currentCast[q1].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createBold(`${currentCast[q1].getName()}: I don't know why she can get away with being a bitch, but im so tired of it.`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I don't know why I can get away with being a bitch, but im so tired of it.`);
 			} else {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q3].image);
