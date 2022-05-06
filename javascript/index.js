@@ -768,7 +768,7 @@ function runway() {
     createRunwayDesc(slay, great, good, bad);
     if (currentCast.length > 4 && speed == true)
         runwayScreen.createButton("Proceed", "untucked()");
-	else if (currentCast.length > 4 )
+	else if (currentCast.length > 4 && speed == false)
         runwayScreen.createButton("Proceed", "judging()");
 	else if (currentCast.length > 20)
         runwayScreen.createButton("Proceed", "judging()");
@@ -3778,7 +3778,7 @@ function judging() {
             bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
         if (top3 || top4 && speed == false)
-            winAndBtm2();
+            untucked();
 		else if (top3 || top4 && speed == true)
             untucked();
         else if (all_stars)
@@ -3798,7 +3798,7 @@ function judging() {
         bottomQueens.push(currentCast[3]);
         bottomQueens.push(currentCast[4]);
         if (top3 || top4 && speed == false)
-            winAndBtm2();
+            untucked();
 		else if (top3 || top4 && speed == true)
             untucked();
         else if (all_stars)
@@ -3814,7 +3814,7 @@ function judging() {
         bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
         if (top3 || top4 && speed == false)
-            winAndBtm2();
+            untucked();
 		else if (top3 || top4 && speed == true)
             untucked();
         else if (all_stars)
@@ -4539,10 +4539,10 @@ function judgingScreen() {
     }
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
-    else if (top3 || top4 || dragula == true && speed == false)
-        judgingScreen.createButton("Proceed", "winAndBtm2()");
-	else if (top3 || top4 || dragula == true && speed == true)
+    if (top3 && speed == true|| top4 && speed == true|| dragula == true && speed == true)
         judgingScreen.createButton("Proceed", "untucked()");
+	else if (top3 && speed == false|| top4 && speed == false|| dragula == true && speed == false)
+        judgingScreen.createButton("Proceed", "winAndBtm2()");
     else if (all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
     else if (lipsync_assassin)
