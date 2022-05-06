@@ -6565,7 +6565,7 @@ let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "true", "BlackPep
 //Judges
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "true", "Pangina");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "true", "Michelle");
-let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 4, "true", "Rupaull");
+let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 6, "true", "Rupaull");
 let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "true", "Fredd");
 let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 3, "true", "Priscillaa");
 let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, "true", "Supremme");
