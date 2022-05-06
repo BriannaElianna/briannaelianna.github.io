@@ -3771,7 +3771,7 @@ function judging() {
         }
         if (top3 || top4 && speed == false)
             winAndBtm2();
-		else if (top3 || top4)
+		else if (top3 || top4 && speed == true)
             untucked();
         else if (all_stars)
             top2AndBtm();
@@ -3791,7 +3791,7 @@ function judging() {
         bottomQueens.push(currentCast[4]);
         if (top3 || top4 && speed == false)
             winAndBtm2();
-		else if (top3 || top4)
+		else if (top3 || top4 && speed == true)
             untucked();
         else if (all_stars)
             top2AndBtm();
@@ -3807,7 +3807,7 @@ function judging() {
         bottomQueens.push(currentCast[3]);
         if (top3 || top4 && speed == false)
             winAndBtm2();
-		else if (top3 || top4)
+		else if (top3 || top4 && speed == true)
             untucked();
         else if (all_stars)
             top2AndBtm();
@@ -4531,9 +4531,9 @@ function judgingScreen() {
     }
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
-    else if (top3 || top4 || dragula == true && speed == true)
+    else if (top3 || top4 || dragula == true && speed == false)
         judgingScreen.createButton("Proceed", "winAndBtm2()");
-	else if (top3 || top4 || dragula == true)
+	else if (top3 || top4 || dragula == true && speed == true)
         judgingScreen.createButton("Proceed", "untucked()");
     else if (all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
