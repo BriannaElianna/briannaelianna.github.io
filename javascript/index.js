@@ -753,7 +753,7 @@ function runway() {
     let bad = currentCast.filter(function (queen) { return queen.runwayScore >= 26; });
     createRunwayDesc(slay, great, good, bad);
     if (currentCast.length > 4)
-        runwayScreen.createButton("Proceed", "judging()");
+        runwayScreen.createButton("Proceed", "untucked()");
 	else if (currentCast.length > 20)
         runwayScreen.createButton("Proceed", "judging()");
     else if (currentCast.length == 4 && porkchopPremiere && premiereCounter < 3)
@@ -2310,7 +2310,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "background-color: #e096c6;");
             }
             else if (placement.innerHTML == "HIGH") {
-                placement.setAttribute("style", "background-color: lightblue;");
+                placement.setAttribute("style", "background-color: #a4abdb");
             }
             else if (placement.innerHTML == "HIGH TEAM") {
                 placement.setAttribute("style", "background-color: #bee8e2;");
@@ -2478,7 +2478,7 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: #e096c6;");
                 }
                 else if (placement.innerHTML == "HIGH") {
-                    placement.setAttribute("style", "background-color: lightblue;");
+                    placement.setAttribute("style", "background-color: #a4abdb");
                 }
                 else if (placement.innerHTML == "HIGH TEAM") {
                     placement.setAttribute("style", "background-color: #bee8e2;");
@@ -2641,7 +2641,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "background-color: #e096c6;");
             }
             else if (placement.innerHTML == "HIGH") {
-                placement.setAttribute("style", "background-color: lightblue;");
+                placement.setAttribute("style", "background-color: #a4abdb");
             }
             else if (placement.innerHTML == "HIGH TEAM") {
                 placement.setAttribute("style", "background-color: #bee8e2;");
