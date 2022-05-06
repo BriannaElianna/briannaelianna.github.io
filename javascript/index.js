@@ -1427,37 +1427,42 @@ function newEpisode() {
         currentCast.splice(currentCast.indexOf(lateQueen), 1);
         lateQueen.addToTrackRecord('');
     }
-    if (episodeCount == 1 || premiereCounter <= 2 && (s12Premiere || porkchopPremiere || s6Premiere || s14Premiere ) || episodeCount == 1 && (uk3Premiere || s9Premiere)) {
+    if (episodeCount == 1 && speed == true || premiereCounter <= 2 && (s12Premiere || porkchopPremiere || s6Premiere || s14Premiere ) || episodeCount == 1 && (uk3Premiere || s9Premiere) && speed == true) {
         queensRemainingScreen.clean();
         queensRemainingScreen.createHeader("Entrances");
         entrance();
     }
-    else {
+    else if (episodeCount == 1 && speed == false) {
+		miniChallenge();
+	} else {
         contestantProgress();
     }
-    if (currentCast.length == totalCastSize && team == true)
-        queensRemainingScreen.createButton("Proceed", "teamsScreen()");
-    else if (currentCast.length > 4)
-        queensRemainingScreen.createButton("Proceed", "miniChallenge()");
-    else if (currentCast.length == 4 && porkchopPremiere && premiereCounter < 3)
-        queensRemainingScreen.createButton("Proceed", "miniChallenge()");
-    else if (currentCast.length == 4 && canFinale)
-        queensRemainingScreen.createButton("Proceed", "canadaS2Finale()");
-    else if (currentCast.length == 4 && (top3 || team))
-        queensRemainingScreen.createButton("Proceed", "miniChallenge()");
-    else if (currentCast.length == 4 && top4 || ukvstwFinale)
-        queensRemainingScreen.createButton("Proceed", "finaleLS()");
-    else if (currentCast.length == 4 && (all_stars || lipsync_assassin))
-        queensRemainingScreen.createButton("Proceed", "finaleAS()");
-    else if (currentCast.length == 3 && team)
-        queensRemainingScreen.createButton("Proceed", "miniChallenge()");
-    else if (currentCast.length == 2 && team)
-        queensRemainingScreen.createButton("Proceed", "finaleTeam()");
-    else
-        queensRemainingScreen.createButton("Proceed", "finale()");
-    //add an empty placement on eliminated queen's track records
-    for (let i = 0; i < eliminatedCast.length; i++)
-        eliminatedCast[i].addToTrackRecord('');
+	if (speed == false && episodeCount == 1) {
+	} else {
+		if (currentCast.length == totalCastSize && team == true)
+			queensRemainingScreen.createButton("Proceed", "teamsScreen()");
+		else if (currentCast.length > 4)
+			queensRemainingScreen.createButton("Proceed", "miniChallenge()");
+		else if (currentCast.length == 4 && porkchopPremiere && premiereCounter < 3)
+			queensRemainingScreen.createButton("Proceed", "miniChallenge()");
+		else if (currentCast.length == 4 && canFinale)
+			queensRemainingScreen.createButton("Proceed", "canadaS2Finale()");
+		else if (currentCast.length == 4 && (top3 || team))
+			queensRemainingScreen.createButton("Proceed", "miniChallenge()");
+		else if (currentCast.length == 4 && top4 || ukvstwFinale)
+			queensRemainingScreen.createButton("Proceed", "finaleLS()");
+		else if (currentCast.length == 4 && (all_stars || lipsync_assassin))
+			queensRemainingScreen.createButton("Proceed", "finaleAS()");
+		else if (currentCast.length == 3 && team)
+			queensRemainingScreen.createButton("Proceed", "miniChallenge()");
+		else if (currentCast.length == 2 && team)
+			queensRemainingScreen.createButton("Proceed", "finaleTeam()");
+		else
+			queensRemainingScreen.createButton("Proceed", "finale()");
+		//add an empty placement on eliminated queen's track records
+		for (let i = 0; i < eliminatedCast.length; i++)
+			eliminatedCast[i].addToTrackRecord('');
+	}
 }
 function reSimulate() {
     //add eliminated queens again to cast and clean it
