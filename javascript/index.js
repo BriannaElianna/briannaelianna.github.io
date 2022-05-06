@@ -5592,207 +5592,9 @@ function lipSync() {
         screen.createButton("Proceed", "newEpisode()");
 }
 function untucked() {
-	let untuckconvo = [
-	"Bottom",
-	"Queen"
-	];
-	let convo = randomNumber(0, untuckconvo.length - 1);
-    for (let i = 0; i < bottomQueens.length; i++) {
-        bottomQueens[i].getLipsync();
-    }
-    bottomQueens.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
-    let screen = new Scene();
+	let screen = new Scene();
     screen.clean();
-	document.body.style.backgroundImage = "url('image/untucked.webp')";
-    screen.createHeader("Untucked...");
-	if (dragula == true) {
-		screen.createBold("The queens sit down...");
-	}
-	else if (dragula == false) {
-		screen.createBold("The queens sit down...");
-	}
-    screen.createHorizontalLine();
-    screen.createBigText("The safe queens gossip amoungst eachother...");
-	let bottoms = []
-	let l = randomNumber(0, currentCast.length - 1);
-        screen.createImage(currentCast[l].image);
-        screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!! How are we feeling!"`);
-		let b1 = randomNumber(0, bottomQueens.length - 1);
-		screen.createImage(bottomQueens[b1].image);
-		screen.createBold(`${bottomQueens[b1].getName()}: Not good..`);
-		let b2 = randomNumber(0, bottomQueens.length - 1);
-		if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
-			let b2 = randomNumber(0, bottomQueens.length - 1);
-			if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
-				let b2 = randomNumber(0, bottomQueens.length - 1);
-				if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
-					screen.createImage(bottomQueens[b2].image);
-					screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-				} else {
-					screen.createImage(bottomQueens[b2].image);
-					screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-				}
-			} else {
-				screen.createImage(bottomQueens[b2].image);
-				screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-			}
-		} else {
-			screen.createImage(bottomQueens[b2].image);
-			screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-			//screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
-		}
-		let b3 = randomNumber(0, bottomQueens.length - 1);
-		if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-			let b3 = randomNumber(0, bottomQueens.length - 1);
-			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-				let b3 = randomNumber(0, bottomQueens.length - 1);
-				if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-					let b3 = randomNumber(0, bottomQueens.length - 1);
-					if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-						let b3 = randomNumber(0, bottomQueens.length - 1);
-					}
-				}
-			}
-		}
-		if(untuckconvo[convo]=="Queen") {
-			screen.createHorizontalLine();
-			let q1 = randomNumber(0, currentCast.length - 1);
-			let q2 = randomNumber(0, currentCast.length - 1);
-			if(currentCast[q2].getName()==currentCast[q1].getName()) {
-				let q2 = randomNumber(0, currentCast.length - 1);
-				if(currentCast[q2].getName()==currentCast[q1].getName()) {
-					let q2 = randomNumber(0, currentCast.length - 1);
-					if(currentCast[q2].getName()==currentCast[q1].getName()) {
-						let q2 = randomNumber(0, currentCast.length - 1);
-						if(currentCast[q2].getName()==currentCast[q1].getName()) {
-							let q2 = randomNumber(0, currentCast.length - 1);
-							if(currentCast[q2].getName()==currentCast[q1].getName()) {
-								let q2 = randomNumber(0, currentCast.length - 1);	
-							}
-						}
-					}
-				}
-			}
-			let q3 = randomNumber(0, currentCast.length - 1);
-			if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
-				let q3 = randomNumber(0, currentCast.length - 1);
-				if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
-					let q3 = randomNumber(0, currentCast.length - 1);
-					if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
-						let q3 = randomNumber(0, currentCast.length - 1);
-						if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
-							let q3 = randomNumber(0, currentCast.length - 1);
-							if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
-								let q3 = randomNumber(0, currentCast.length - 1);
-								if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
-									let q3 = randomNumber(0, currentCast.length - 1);
-								}
-							}
-						}
-					}
-				}
-			}
-			if(currentCast[q1].getName()==currentCast[q2].getName()==currentCast[q3].getName()) {
-				screen.createBigText(`${currentCast[q1].getName()} talks to herself about.. herself`);
-			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
-				screen.createBigText(`${currentCast[q1].getName()} talks to herself about ${currentCast[q3].getName()}`);
-			} else {
-				screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
-			} if(currentCast[q1].getName()==currentCast[q2].getName()) {
-			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about my behavior.`);
-			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about your behavior.`);
-			} else {
-				screen.createImage(currentCast[q1].image);
-				screen.createImage(currentCast[q2].image);
-				screen.createImage(currentCast[q3].image);
-				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
-			} if(currentCast[q1].getName()==currentCast[q2].getName()==currentCast[q3].getName()) {
-			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
-			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
-			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
-			} else {
-				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q2].getName()}: Yeah of course..`);
-			} if(currentCast[q1].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createBold(`${currentCast[q1].getName()}: I feel like she has been so rude the entire competition.`);
-			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createBold(`${currentCast[q1].getName()}: I feel like I have been so rude the entire competition.`);
-			} else {
-				screen.createImage(currentCast[q1].image);
-				screen.createImage(currentCast[q3].image);
-				screen.createBold(`${currentCast[q1].getName()}: I feel like ${currentCast[q3].getName()} has been so rude the entire competition.`);
-			} if(currentCast[q1].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createBold(`${currentCast[q1].getName()}: I don't know why she can get away with being a bitch, but im so tired of it.`);
-			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createBold(`${currentCast[q1].getName()}: I don't know why I can get away with being a bitch, but im so tired of it.`);
-			} else {
-				screen.createImage(currentCast[q1].image);
-				screen.createImage(currentCast[q3].image);
-				screen.createBold(`${currentCast[q1].getName()}: I don't know why ${currentCast[q3].getName()} thinks she can get away with being a bitch, but im so tired of it.`);
-			} if(currentCast[q2].getName()==currentCast[q1].getName()) {
-				
-			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
-				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
-			} else {
-				screen.createImage(currentCast[q2].image);
-				if (randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
-					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
-				} else {
-					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
-				}
-			}
-		} else if(untuckconvo[convo]=="Bottom") {
-			screen.createHorizontalLine();
-			screen.createBigText(`The queens talk to eachother about being in the bottom.`);
-			screen.createImage(bottomQueens[b1].image);
-			screen.createBold(`${bottomQueens[b1].getName()}: How are we feeling about our critiques?`);
-			screen.createImage(bottomQueens[b2].image);
-			screen.createBold(`${bottomQueens[b2].getName()}: I feel like im definetely in the bottom. I feel like the judges are very dissapointed in me..`);
-			if(bottomQueens[b1].getName()==bottomQueens[b3].getName()) {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will be safe.`);
-			} else {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createImage(bottomQueens[b3].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b3].getName()} will be safe.`);
-			}
-			if(bottomQueens[b1].getName()==bottomQueens[b2].getName()) {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like my critiques were much less harsh though.`);
-			} else {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createImage(bottomQueens[b2].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()}'s critiques were much less harsh.`);
-			}
-			screen.createImage(bottomQueens[b3].image);
-			screen.createBold(`${bottomQueens[b3].getName()}: I'm praying im safe..`);
-		}
-    let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
-    let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
-	screen.createHorizontalLine();
-	screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
-	for (let i = 0; i < bottomQueens.length; i++)
-			screen.createImage(bottomQueens[i].image, "tomato");
-	screen.createHorizontalLine();
-	screen.createBigText(`Bring back my girls!`);
-	for (let i = 0; i < currentCast.length; i++)
-			screen.createImage(currentCast[i].image, "tomato");
-	screen.createHorizontalLine();
+	Untuck();
 	screen.createButton("Proceed", "winAndBtm2()");
 }
 function teamLipSync() {
@@ -9081,7 +8883,7 @@ let untuckLine = [
 	"their performance in the challenge.",
 	"the other queens."
 ];
-function untuck() {
+function untuckkk() {
     let screen = new Scene();
     screen.createHorizontalLine();
     screen.createBigText("The safe queens gossip amoungst eachother...");
@@ -9181,6 +8983,209 @@ function PreEp() {
 	let bl = randomNumber(0, bottomQueens.length - 1);
 	screen.createImage(bottomQueens[bl].image);
 	screen.createBold(`${bottomQueens[bl]} I'm sad I had to send a girl home, but atleast I'm still here!..`);
+	screen.createHorizontalLine();
+}
+function Untuck() {
+	let screen = new Scene();
+    screen.clean();
+	let untuckconvo = [
+	"Bottom",
+	"Queen"
+	];
+	let convo = randomNumber(0, untuckconvo.length - 1);
+    for (let i = 0; i < bottomQueens.length; i++) {
+        bottomQueens[i].getLipsync();
+    }
+    bottomQueens.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
+	document.body.style.backgroundImage = "url('image/untucked.webp')";
+    screen.createHeader("Untucked...");
+	if (dragula == true) {
+		screen.createBold("The queens sit down...");
+	}
+	else if (dragula == false) {
+		screen.createBold("The queens sit down...");
+	}
+    screen.createHorizontalLine();
+    screen.createBigText("The safe queens gossip amoungst eachother...");
+	let bottoms = []
+	let l = randomNumber(0, currentCast.length - 1);
+        screen.createImage(currentCast[l].image);
+        screen.createBold(`${currentCast[l].getName()}: "Hey girlsss!! How are we feeling!"`);
+		let b1 = randomNumber(0, bottomQueens.length - 1);
+		screen.createImage(bottomQueens[b1].image);
+		screen.createBold(`${bottomQueens[b1].getName()}: Not good..`);
+		let b2 = randomNumber(0, bottomQueens.length - 1);
+		if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
+			let b2 = randomNumber(0, bottomQueens.length - 1);
+			if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
+				let b2 = randomNumber(0, bottomQueens.length - 1);
+				if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
+					screen.createImage(bottomQueens[b2].image);
+					screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
+				} else {
+					screen.createImage(bottomQueens[b2].image);
+					screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
+				}
+			} else {
+				screen.createImage(bottomQueens[b2].image);
+				screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
+			}
+		} else {
+			screen.createImage(bottomQueens[b2].image);
+			screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
+			//screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
+		}
+		let b3 = randomNumber(0, bottomQueens.length - 1);
+		if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
+			let b3 = randomNumber(0, bottomQueens.length - 1);
+			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
+				let b3 = randomNumber(0, bottomQueens.length - 1);
+				if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
+					let b3 = randomNumber(0, bottomQueens.length - 1);
+					if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
+						let b3 = randomNumber(0, bottomQueens.length - 1);
+					}
+				}
+			}
+		}
+		if(untuckconvo[convo]=="Queen") {
+			screen.createHorizontalLine();
+			let q1 = randomNumber(0, currentCast.length - 1);
+			let q2 = randomNumber(0, currentCast.length - 1);
+			if(currentCast[q2].getName()==currentCast[q1].getName()) {
+				let q2 = randomNumber(0, currentCast.length - 1);
+				if(currentCast[q2].getName()==currentCast[q1].getName()) {
+					let q2 = randomNumber(0, currentCast.length - 1);
+					if(currentCast[q2].getName()==currentCast[q1].getName()) {
+						let q2 = randomNumber(0, currentCast.length - 1);
+						if(currentCast[q2].getName()==currentCast[q1].getName()) {
+							let q2 = randomNumber(0, currentCast.length - 1);
+							if(currentCast[q2].getName()==currentCast[q1].getName()) {
+								let q2 = randomNumber(0, currentCast.length - 1);	
+							}
+						}
+					}
+				}
+			}
+			let q3 = randomNumber(0, currentCast.length - 1);
+			if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+				let q3 = randomNumber(0, currentCast.length - 1);
+				if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+					let q3 = randomNumber(0, currentCast.length - 1);
+					if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+						let q3 = randomNumber(0, currentCast.length - 1);
+						if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+							let q3 = randomNumber(0, currentCast.length - 1);
+							if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+								let q3 = randomNumber(0, currentCast.length - 1);
+								if(currentCast[q3].getName()==currentCast[q1].getName() || currentCast[q3].getName()==currentCast[q2].getName()) {
+									let q3 = randomNumber(0, currentCast.length - 1);
+								}
+							}
+						}
+					}
+				}
+			}
+			if(currentCast[q1].getName()==currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createBigText(`${currentCast[q1].getName()} talks to herself about.. herself`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
+				screen.createBigText(`${currentCast[q1].getName()} talks to herself about ${currentCast[q3].getName()}`);
+			} else {
+				screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
+			} if(currentCast[q1].getName()==currentCast[q2].getName()) {
+			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about my behavior.`);
+			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about your behavior.`);
+			} else {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q2].image);
+				screen.createImage(currentCast[q3].image);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
+			} if(currentCast[q1].getName()==currentCast[q2].getName()==currentCast[q3].getName()) {
+			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
+			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
+			} else {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: Yeah of course..`);
+			} if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I feel like she has been so rude the entire competition.`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I feel like I have been so rude the entire competition.`);
+			} else {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q3].image);
+				screen.createBold(`${currentCast[q1].getName()}: I feel like ${currentCast[q3].getName()} has been so rude the entire competition.`);
+			} if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I don't know why she can get away with being a bitch, but im so tired of it.`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
+				screen.createImage(currentCast[q1].image);
+				screen.createBold(`${currentCast[q1].getName()}: I don't know why I can get away with being a bitch, but im so tired of it.`);
+			} else {
+				screen.createImage(currentCast[q1].image);
+				screen.createImage(currentCast[q3].image);
+				screen.createBold(`${currentCast[q1].getName()}: I don't know why ${currentCast[q3].getName()} thinks she can get away with being a bitch, but im so tired of it.`);
+			} if(currentCast[q2].getName()==currentCast[q1].getName()) {
+				
+			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
+				screen.createImage(currentCast[q2].image);
+				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
+			} else {
+				screen.createImage(currentCast[q2].image);
+				if (randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
+					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+				} else {
+					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
+				}
+			}
+		} else if(untuckconvo[convo]=="Bottom") {
+			screen.createHorizontalLine();
+			screen.createBigText(`The queens talk to eachother about being in the bottom.`);
+			screen.createImage(bottomQueens[b1].image);
+			screen.createBold(`${bottomQueens[b1].getName()}: How are we feeling about our critiques?`);
+			screen.createImage(bottomQueens[b2].image);
+			screen.createBold(`${bottomQueens[b2].getName()}: I feel like im definetely in the bottom. I feel like the judges are very dissapointed in me..`);
+			if(bottomQueens[b1].getName()==bottomQueens[b3].getName()) {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will be safe.`);
+			} else {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createImage(bottomQueens[b3].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b3].getName()} will be safe.`);
+			}
+			if(bottomQueens[b1].getName()==bottomQueens[b2].getName()) {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like my critiques were much less harsh though.`);
+			} else {
+				screen.createImage(bottomQueens[b1].image);
+				screen.createImage(bottomQueens[b2].image);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()}'s critiques were much less harsh.`);
+			}
+			screen.createImage(bottomQueens[b3].image);
+			screen.createBold(`${bottomQueens[b3].getName()}: I'm praying im safe..`);
+		}
+    let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
+    let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
+	screen.createHorizontalLine();
+	screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
+	for (let i = 0; i < bottomQueens.length; i++)
+			screen.createImage(bottomQueens[i].image, "tomato");
+	screen.createHorizontalLine();
+	screen.createBigText(`Bring back my girls!`);
+	for (let i = 0; i < currentCast.length; i++)
+			screen.createImage(currentCast[i].image, "tomato");
 	screen.createHorizontalLine();
 }
 function Judge() {
