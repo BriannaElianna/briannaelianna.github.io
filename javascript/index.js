@@ -98,6 +98,18 @@ function miniChallenge() {
     if (improvChallengeCounter == 3)
         challenges.splice(challenges.indexOf("improvChallenge()"), 1);
     createChallenge(challenges, miniChallengeScreen);
+	miniChallengeScreen.createHorizontalLine();
+	if (rupaulm == true) {
+		miniChallengeScreen.createBigText("Choose the challenge:");
+		miniChallengeScreen.createHorizontalLine();
+		miniChallengeScreen.createButton("Design Challenge", "designChallenge()");
+		miniChallengeScreen.createButton("Ball", "ball()");
+		miniChallengeScreen.createButton("Rusical", "rusical()");
+		miniChallengeScreen.createButton("Girl Groups", "girlgroup()");
+		miniChallengeScreen.createButton("Talent Show", "talentshow()");
+		miniChallengeScreen.createButton("Snatch Game", "snatchGame()");
+		miniChallengeScreen.createButton("Rumix", "rumix()");
+	}
 }
 //GENERAL CHALLENGES:
 let team1 = [];
@@ -752,8 +764,10 @@ function runway() {
     let good = currentCast.filter(function (queen) { return queen.runwayScore >= 16 && queen.runwayScore < 26; });
     let bad = currentCast.filter(function (queen) { return queen.runwayScore >= 26; });
     createRunwayDesc(slay, great, good, bad);
-    if (currentCast.length > 4)
+    if (currentCast.length > 4 && speed == true)
         runwayScreen.createButton("Proceed", "untucked()");
+	else if (currentCast.length > 4 )
+        runwayScreen.createButton("Proceed", "judging()");
 	else if (currentCast.length > 20)
         runwayScreen.createButton("Proceed", "judging()");
     else if (currentCast.length == 4 && porkchopPremiere && premiereCounter < 3)
@@ -780,7 +794,9 @@ function createChallenge(challenges, miniChallengeScreen) {
         currentCast[i].episodesOn++;
     }
     //first design challenge for normal seasons
-    if (currentCast.length == totalCastSize && top3 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && top4 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && team || sweatshop || currentCast == firstCast && s6Premiere || currentCast == secondCast && s6Premiere)
+	if (rupaulm == true) {
+		
+    } else if (currentCast.length == totalCastSize && top3 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && top4 && episodeCount == 1 && s6Premiere == false || currentCast.length == totalCastSize && team || sweatshop || currentCast == firstCast && s6Premiere || currentCast == secondCast && s6Premiere)
         miniChallengeScreen.createButton("Proceed", "designChallenge()");
     //girl group challenge for s12 or porkchop premiere
     else if (premiereCounter <= 2 && (s12Premiere || porkchopPremiere))
@@ -809,7 +825,7 @@ function createChallenge(challenges, miniChallengeScreen) {
     else if (currentCast.length == 8 && !girlGroupCounter && (top3 || top4 || lipsync_assassin))
         miniChallengeScreen.createButton("Proceed", "girlgroup()");
     //rusical
-    else if (currentCast.length > 6 && randomNumber(0, 20) >= 19 && !rusicalCounter || currentCast.length > 5 && randomNumber(0, 20) >= 19 && team && !rusicalCounter)
+    else if (currentCast.length == 7 && !rusicalCounter)
         miniChallengeScreen.createButton("Proceed", "rusical()");
     //makeover
     else if (currentCast.length == 6 && (top3 || top4) && makeoverCounter == false || currentCast.length == 6 && randomNumber(0, 15) == 15 && (all_stars || lipsync_assassin) && makeoverCounter == false)
@@ -1395,6 +1411,8 @@ let lalap = false;
 let lalahell = false;
 let hellCheck = false;
 let noLimits = false;
+let rupaulm = false;
+let speed = false;
 let leaver = false;
 function newEpisode() {
     safeQueens = [];
@@ -3231,6 +3249,10 @@ function startSimulation(challenge = "") {
             noDouble = true;
         if (document.getElementById("chocolateBar").checked == true)
             chocolateBarTwist = true;
+		if (document.getElementById("rupaulm").checked == true)
+            rupaulm = true;
+		if (document.getElementById("speed").checked == true)
+            speed = true;
 		if (document.getElementById("noLimits").checked == true)
             if (noLimits == false) {
 				noLimits = true
@@ -3742,7 +3764,9 @@ function judging() {
             topQueens.push(currentCast[i]);
             bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
-        if (top3 || top4)
+        if (top3 || top4 && speed == false)
+            winAndBtm2();
+		else if (top3 || top4)
             untucked();
         else if (all_stars)
             top2AndBtm();
@@ -3760,7 +3784,9 @@ function judging() {
             bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
         bottomQueens.push(currentCast[4]);
-        if (top3 || top4)
+        if (top3 || top4 && speed == false)
+            winAndBtm2();
+		else if (top3 || top4)
             untucked();
         else if (all_stars)
             top2AndBtm();
@@ -3774,7 +3800,9 @@ function judging() {
         topQueens.push(currentCast[1]);
         bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
-        if (top3 || top4)
+        if (top3 || top4 && speed == false)
+            winAndBtm2();
+		else if (top3 || top4)
             untucked();
         else if (all_stars)
             top2AndBtm();
@@ -4498,7 +4526,9 @@ function judgingScreen() {
     }
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
-    else if (top3 || top4 || dragula == true)
+    else if (top3 || top4 || dragula == true && speed == true)
+        judgingScreen.createButton("Proceed", "winAndBtm2()");
+	else if (top3 || top4 || dragula == true)
         judgingScreen.createButton("Proceed", "untucked()");
     else if (all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
