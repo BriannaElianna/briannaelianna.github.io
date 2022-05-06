@@ -990,6 +990,7 @@ function addQueen() {
     let improv = document.getElementById("improvStat").valueAsNumber;
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
+	let likeability = document.getElementById("likeabilityStat").value.trim();
     let image = document.getElementById("url").value.trim();
     let extension = image.substring(image.lastIndexOf(".") + 1).toLowerCase();
     let noimagemaybe = false;
@@ -1060,6 +1061,7 @@ function editCustomQueen(){
     document.getElementById("improvStat").value = allCustomQueens[index]._improvStat;
     document.getElementById("runwayStat").value = allCustomQueens[index]._runwayStat;
     document.getElementById("lipsyncStat").value = allCustomQueens[index]._lipsyncStat;
+	document.getElementById("likeabilityStat").value = allCustomQueens[index].getLikeability();
     document.getElementById("url").value = allCustomQueens[index].image;
 }
 function updateCustomQueen(){
@@ -1073,6 +1075,7 @@ function updateCustomQueen(){
     let improv = document.getElementById("improvStat").valueAsNumber;
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
+	let likeability = document.getElementById("likeabilityStat").value.trim();
     let image = document.getElementById("url").value.trim();
     if ((acting || comedy || dance || design || improv || runway || lipsync) < 0 || (acting || comedy || dance || design || improv || runway || lipsync) > 15) {
         window.alert("Queens' stats must be between 0 and 15!");
@@ -3113,15 +3116,18 @@ function predefCast(cast, format, finale, premiere = '', returning = '') {
 	else if (returning == "s14lalaparuza")
         s14LaLaPaRUZa = true;
 		s14LaLaPaRUZaCheck = true;
-    if (document.getElementById("disableDouble").checked == true)
+	if (document.getElementById("rupaulm").checked == true){
+            rupaulm = true;
+	} if (document.getElementById("speed").checked == true) {
+            speed = true;
+    }if (document.getElementById("disableDouble").checked == true)
         noDouble = true;
     if (document.getElementById("chocolateBar").checked == true)
         chocolateBarTwist = true;
     else if (document.getElementById("chocolateBarChoosable").checked == true){
         chocolateBarTwist = true;
         chocolateBarTwistChoosable = true;
-    }
-    else if (chocolateBarTwist) {
+    } else if (chocolateBarTwist) {
         if (chocolateBarTwistChoosable){
             chooseGoldenBar();
         }else {
@@ -6555,13 +6561,13 @@ let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "true", "Riche");
 let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "true", "Luquisha");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 //UK4
-let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa");
+let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "true", "BlackPeppa");
 //Judges
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "true", "Pangina");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "true", "Michelle");
 let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 4, "true", "Rupaull");
 let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "true", "Fredd");
-let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, "true", "Priscillaa");
+let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 3, "true", "Priscillaa");
 let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, "true", "Supremme");
 let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "true", "ArtA");
 //DRAGULA S2
