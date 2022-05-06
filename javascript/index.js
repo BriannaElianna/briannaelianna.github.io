@@ -2330,6 +2330,9 @@ function contestantProgress() {
             else if (placement.innerHTML == "ELIM") {
                 placement.setAttribute("style", "font-weight: bold; background-color: red;");
             }
+			else if (placement.innerHTML == "EXT") {
+                placement.setAttribute("style", "font-weight: bold; background-color: red;");
+            }
             else if (placement.innerHTML == "ELIM ") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FC4545;");
             }
