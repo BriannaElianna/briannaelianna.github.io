@@ -5594,8 +5594,17 @@ function lipSync() {
 function untucked() {
 		let screen = new Scene();
 		screen.clean();
-		Untuck();
-		screen.createButton("Proceed", "winAndBtm2()");
+		document.body.style.backgroundImage = "url('image/untucked.webp')";
+		screen.createHeader("Untucked...");
+		if (dragula == true) {
+			screen.createBold("The queens sit down...");
+		}
+		else if (dragula == false) {
+			screen.createBold("The queens sit down...");
+		}
+		screen.createHorizontalLine();
+		screen.createButton("Skip", "winAndBtm2()");
+		screen.createButton("Proceed", "Untuck()");
 }
 function teamLipSync() {
     let screen = new Scene();
@@ -8987,27 +8996,16 @@ function PreEp() {
 }
 function Untuck() {
 	let screen = new Scene();
-    screen.clean();
+	screen.createBigText("The safe queens gossip amoungst eachother...");
 	let untuckconvo = [
-	"Bottom",
-	"Queen"
-	];
-	let convo = randomNumber(0, untuckconvo.length - 1);
-    for (let i = 0; i < bottomQueens.length; i++) {
-        bottomQueens[i].getLipsync();
-    }
-    bottomQueens.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
-	document.body.style.backgroundImage = "url('image/untucked.webp')";
-    screen.createHeader("Untucked...");
-	if (dragula == true) {
-		screen.createBold("The queens sit down...");
-	}
-	else if (dragula == false) {
-		screen.createBold("The queens sit down...");
-	}
-    screen.createHorizontalLine();
-	screen.createButton("Skip", "winAndBtm2()");
-    screen.createBigText("The safe queens gossip amoungst eachother...");
+		"Bottom",
+		"Queen"
+		];
+		let convo = randomNumber(0, untuckconvo.length - 1);
+		for (let i = 0; i < bottomQueens.length; i++) {
+			bottomQueens[i].getLipsync();
+		}
+		bottomQueens.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
 	let bottoms = []
 	let l = randomNumber(0, currentCast.length - 1);
         screen.createImage(currentCast[l].image);
@@ -9188,6 +9186,7 @@ function Untuck() {
 	for (let i = 0; i < currentCast.length; i++)
 			screen.createImage(currentCast[i].image, "tomato");
 	screen.createHorizontalLine();
+	screen.createButton("Proceed", "winAndBtm2()");
 }
 function Judge() {
     let screen = new Scene();
