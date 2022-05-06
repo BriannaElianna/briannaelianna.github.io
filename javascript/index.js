@@ -5710,7 +5710,8 @@ function untucked() {
 				screen.createImage(currentCast[q2].image);
 				screen.createImage(currentCast[q3].image);
 				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
-			} if(currentCast[q2].getName()==currentCast[q3].getName()) {
+			} if(currentCast[q1].getName()==currentCast[q2].getName()==currentCast[q3].getName()) {
+			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q2].image);
 				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
 			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
