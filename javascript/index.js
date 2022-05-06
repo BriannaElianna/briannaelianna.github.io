@@ -5692,11 +5692,11 @@ function untucked() {
 					}
 				}
 			}
-			screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
 			if(currentCast[q1].getName()==currentCast[q2].getName()) {
-				screen.createImage(currentCast[q1].image);
-				screen.createImage(currentCast[q3].image);
-				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about ${currentCast[q3].getName()}`);
+				screen.createBigText(`${currentCast[q3].getName()} talks to herself about ${currentCast[q3].getName()}`);
+			} else {
+				screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
+			} if(currentCast[q1].getName()==currentCast[q2].getName()) {
 			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q2].image);
@@ -5716,6 +5716,7 @@ function untucked() {
 			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q2].image);
 				screen.createBold(`${currentCast[q2].getName()}: Uhm ok?`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()) {
 			} else {
 				screen.createImage(currentCast[q2].image);
 				screen.createBold(`${currentCast[q2].getName()}: Yeah of course..`);
