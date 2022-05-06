@@ -113,7 +113,7 @@ function miniChallenge() {
 		miniChallengeScreen.createButton("Improv Challenge", "improvChallenge()");
 		miniChallengeScreen.createButton("Kitty Girl Group", "kittygirlGroup()()");
 		miniChallengeScreen.createButton("Queen's Of Comedy", "queensofComedy()()");
-		miniChallengeScreen.createButton("Conjoined Queens", "queensConjoined()");
+		miniChallengeScreen.createButton("Conjoined Makeover", "queensConjoined()");
 	}
 }
 //GENERAL CHALLENGES:
