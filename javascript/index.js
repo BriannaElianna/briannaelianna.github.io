@@ -109,6 +109,8 @@ function miniChallenge() {
 		miniChallengeScreen.createButton("Talent Show", "talentshow()");
 		miniChallengeScreen.createButton("Snatch Game", "snatchGame()");
 		miniChallengeScreen.createButton("Rumix", "rumix()");
+		miniChallengeScreen.createButton("Acting Challenge", "actingChallenge()");
+		miniChallengeScreen.createButton("Improv Challenge", "improvChallenge()");
 	}
 }
 //GENERAL CHALLENGES:
