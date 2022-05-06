@@ -5693,8 +5693,8 @@ function untucked() {
 				}
 			}
 			if(currentCast[q1].getName()==currentCast[q2].getName()) {
-				screen.createBigText(`${currentCast[q3].getName()} talks to herself about ${currentCast[q3].getName()}`);
-			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
+				screen.createBigText(`${currentCast[q1].getName()} talks to herself about ${currentCast[q3].getName()}`);
+			} else if(currentCast[q1].getName()==currentCast[q2].getName()==currentCast[q3].getName()) {
 				screen.createBigText(`${currentCast[q3].getName()} talks to herself about.. herself.`);
 			} else {
 				screen.createBigText(`The queens talk to eachother about ${currentCast[q3].getName()}`);
