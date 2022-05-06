@@ -5700,7 +5700,7 @@ function untucked() {
 			} else if(currentCast[q1].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q2].image);
-				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about your behavior.`);
+				screen.createBold(`${currentCast[q1].getName()}: Hey can we talk for a second about my behavior.`);
 			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q1].image);
 				screen.createImage(currentCast[q2].image);
