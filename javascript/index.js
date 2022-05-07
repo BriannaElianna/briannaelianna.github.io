@@ -8989,6 +8989,7 @@ function entrance() {
 			screen.createBold(`${currentCast[i].getName()}: "Wear your seatbelt! I did. *wink*"`);
 		} else {
 			screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
+			entranceLine.pop(entranceLine[line]);
 		} let shadee = randomNumber(0, reactq.length - 1);
 		if(reactq[shadee].getName()==currentCast[i].getName()) { 
 			let flop = randomNumber(0, flopLine.length - 1);
