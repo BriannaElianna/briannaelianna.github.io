@@ -45,7 +45,7 @@ h2 {
 }
 
 a {
-    color: #a81251;
+    color: #7fa3eb;
     text-decoration: none;
     transition: background-color .5s;
 }
@@ -81,16 +81,16 @@ button {
     margin-bottom: 5px;
     font-size: 20px;
     color: #fff;
-    background-color: #3D0A1F;
-    border-color: #3D0A1F;
+    background-color: #5787e6;
+    border-color: #4871c2;
     border-radius: 12px;
     cursor: pointer;
 }
 
 button:hover {
     color: #fff;
-    background-color: #FF6BA9;
-    border-color: #FF6BA9;
+    background-color: #7fa3eb;
+    border-color: #7fa3eb;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
