@@ -9079,38 +9079,16 @@ function Untuck() {
 		screen.createImage(bottomQueens[b1].image);
 		screen.createBold(`${bottomQueens[b1].getName()}: Not good..`);
 		let b2 = randomNumber(0, bottomQueens.length - 1);
-		if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
+		while(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
 			let b2 = randomNumber(0, bottomQueens.length - 1);
-			if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
-				let b2 = randomNumber(0, bottomQueens.length - 1);
-				if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
-					screen.createImage(bottomQueens[b2].image);
-					screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-				} else {
-					screen.createImage(bottomQueens[b2].image);
-					screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-				}
-			} else {
-				screen.createImage(bottomQueens[b2].image);
-				screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-			}
-		} else {
-			screen.createImage(bottomQueens[b2].image);
-			screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
-			//screen.createBold(`${bottomQueens[i].getName}: "Hey girlsss!!"`);
 		}
+		
+		screen.createImage(bottomQueens[b2].image);
+		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
+		
 		let b3 = randomNumber(0, bottomQueens.length - 1);
-		if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
+		while (bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()); {
 			let b3 = randomNumber(0, bottomQueens.length - 1);
-			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-				let b3 = randomNumber(0, bottomQueens.length - 1);
-				if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-					let b3 = randomNumber(0, bottomQueens.length - 1);
-					if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-						let b3 = randomNumber(0, bottomQueens.length - 1);
-					}
-				}
-			}
 		}
 		if(untuckconvo[convo]=="Queen") {
 			screen.createHorizontalLine();
