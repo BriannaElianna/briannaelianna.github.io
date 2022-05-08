@@ -9079,14 +9079,9 @@ function Untuck() {
 		screen.createImage(bottomQueens[b2].image);
 		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
 		
-		let b3 = randomNumber(0, bottomQueens.length - 1);
+		let b3 = randomNumber(0, safeQueens.length - 1);
 		same = false;
-		while(same == false) {
-			let b3 = randomNumber(0, bottomQueens.length - 1);
-			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
-				same = true;
-			}	
-		}
+
 		same = false;
 		if(untuckconvo[convo]=="Queen") {
 			screen.createHorizontalLine();
@@ -9194,27 +9189,24 @@ function Untuck() {
 			screen.createHorizontalLine();
 			screen.createBigText(`The queens talk to eachother about being in the bottom.`);
 			screen.createImage(bottomQueens[b1].image);
-			screen.createBold(`${bottomQueens[b1].getName()}: How are we feeling about our critiques?`);
+			screen.createBold(`${bottomQueens[b1].getName()}: How are we feeling about our placements?`);
 			screen.createImage(bottomQueens[b2].image);
-			screen.createBold(`${bottomQueens[b2].getName()}: I feel like im definetely in the bottom. I feel like the judges are very dissapointed in me..`);
-			if(bottomQueens[b1].getName()==bottomQueens[b3].getName()) {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will be safe.`);
-			} else {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createImage(bottomQueens[b3].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b3].getName()} will be safe.`);
-			}
+			screen.createBold(`${bottomQueens[b2].getName()}: I'm so dissapointed in myself.. I cannot believe I let myself end up in the bottom.`);
 			if(bottomQueens[b1].getName()==bottomQueens[b2].getName()) {
 				screen.createImage(bottomQueens[b1].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like my critiques were much less harsh though.`);
+				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
 			} else {
-				screen.createImage(bottomQueens[b1].image);
-				screen.createImage(bottomQueens[b2].image);
-				screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()}'s critiques were much less harsh.`);
+				if(bottomQueens[b1].getLipSyncStat() > bottomQueens[b2].getLipSyncStat()) {
+					screen.createImage(bottomQueens[b1].image);
+					screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
+				} else {
+					screen.createImage(bottomQueens[b1].image);
+					screen.createImage(bottomQueens[b2].image);
+					screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()} will win the lipsync.`);
+				}
 			}
-			screen.createImage(bottomQueens[b3].image);
-			screen.createBold(`${bottomQueens[b3].getName()}: I'm praying im safe..`);
+			screen.createImage(bottomQueens[b2].image);
+			screen.createBold(`${bottomQueens[b2].getName()}: I'm praying I win..`);
 		}
     let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
     let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
