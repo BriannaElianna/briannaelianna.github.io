@@ -2332,7 +2332,7 @@ function contestantProgress() {
             let placement = document.createElement("td");
             placement.innerHTML = winnerQueen.trackRecord[i];
             if (placement.innerHTML == "WIN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: #8c8c8c;");
+                placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: white;");
             }
             else if (placement.innerHTML == "TOP2") {
                 placement.setAttribute("style", "background-color: deepskyblue;");
@@ -2415,13 +2415,13 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: deepskyblue;");
             }
             else if (placement.innerHTML == "  WIN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: #8c8c8c;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: white;");
             }
             else if (placement.innerHTML == "WIN+RTRN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: #8c8c8c;");
+                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: white;");
             }
             else if (placement.innerHTML == "SAFE") {
-                placement.setAttribute("style", "background-color: #8c8c8c;");
+                placement.setAttribute("style", "background-color: white;");
             }
             else if (placement.innerHTML == "SAFE ") {
                     placement.setAttribute("style", "background-color: palegreen; color:#000;");
@@ -2430,28 +2430,28 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: #7D1935; color:#000;");
             }
             else if (placement.innerHTML == " SAFE") {
-                placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
+                placement.setAttribute("style", "background-color: magenta; color: white");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 1</small>") {
-                placement.setAttribute("style", "background-color: lightcoral; color: #8c8c8c;");
+                placement.setAttribute("style", "background-color: lightcoral; color: white;");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 2</small>") {
-                placement.setAttribute("style", "background-color: indianred; color: #8c8c8c;");
+                placement.setAttribute("style", "background-color: indianred; color: white;");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 3</small>") {
-                placement.setAttribute("style", "background-color: crimson; color: #8c8c8c;");
+                placement.setAttribute("style", "background-color: crimson; color: white;");
             }
             else if (placement.innerHTML == "RUN") {
-                    placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
+                    placement.setAttribute("style", "background-color: magenta; color: white");
             }
             else if (placement.innerHTML == "RUN ") {
                     placement.setAttribute("style", "background-color: #D3FFB5; color:#000; font-weight: bold;");
             }
             else if (placement.innerHTML == "OUT") {
-                placement.setAttribute("style", "background-color: forestgreen; color: #8c8c8c");
+                placement.setAttribute("style", "background-color: forestgreen; color: white");
             }
             else if (placement.innerHTML == "OUT ") {
-                    placement.setAttribute("style", "background-color: purple; color: #8c8c8c");
+                    placement.setAttribute("style", "background-color: purple; color: white");
             }
             else if (placement.innerHTML == " WIN") {
                 placement.setAttribute("style", "font-weight: bold; background-color: darkblue; color: white;");
@@ -2581,7 +2581,7 @@ function contestantProgress() {
                     placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: white;");
                 }
                 else if (placement.innerHTML == "WIN+RTRN") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: #8c8c8c");
+                    placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: white");
                 }
                 else if (placement.innerHTML == "SAFE") {
                     placement.setAttribute("style", "background-color: white;");
@@ -2593,7 +2593,7 @@ function contestantProgress() {
                         placement.setAttribute("style", "background-color: #7D1935; color:#000;");
                 }
                 else if (placement.innerHTML == " SAFE") {
-                    placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
+                    placement.setAttribute("style", "background-color: magenta; color: white");
                 }
                 else if (placement.innerHTML == "SAFE<br><small>Round 1</small>") {
                     placement.setAttribute("style", "background-color: lightcoral; color: white;");
@@ -2605,16 +2605,16 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: crimson; color: white;");
                 }
                 else if (placement.innerHTML == "RUN") {
-                        placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
+                        placement.setAttribute("style", "background-color: magenta; color: white");
                 }
                 else if (placement.innerHTML == "RUN ") {
                         placement.setAttribute("style", "background-color: #D3FFB5; color:#000; font-weight: bold;");
                 }
                 else if (placement.innerHTML == "OUT") {
-                    placement.setAttribute("style", "background-color: forestgreen; color: #8c8c8c");
+                    placement.setAttribute("style", "background-color: forestgreen; color: white");
                 }
                 else if (placement.innerHTML == "OUT ") {
-                        placement.setAttribute("style", "background-color: purple; color: #8c8c8c");
+                        placement.setAttribute("style", "background-color: purple; color: white");
                 }
                 else if (placement.innerHTML == " WIN") {
                     placement.setAttribute("style", "font-weight: bold; background-color: darkblue; color: white;");
@@ -2748,7 +2748,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: white;");
             }
             else if (placement.innerHTML == "WIN+RTRN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: #8c8c8c");
+                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: white");
             }
             else if (placement.innerHTML == "SAFE") {
                 placement.setAttribute("style", "background-color: white;");
@@ -2760,7 +2760,7 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: #7D1935; color:#000;");
             }
             else if (placement.innerHTML == " SAFE") {
-                placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
+                placement.setAttribute("style", "background-color: magenta; color: white");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 1</small>") {
                 placement.setAttribute("style", "background-color: lightcoral; color: #8c8c8c");
