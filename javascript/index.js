@@ -3699,63 +3699,15 @@ function judging() {
         slayers = false;
         judgingSlayersScreen();
     }
-	else if (hell == true) {
+    else if (currentCast.length >= 8 && currentCast.length < 10 && s14LaLaPaRUZa && (top3 || top4) && !s14LaLaPaRUZaCheck && !smackdown) {
         //add all the queens to the top and 0 queens to the bottom
         currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+        topQueens.push(currentCast[0]);
         for (let i = 1; i < currentCast.length ; i++) {
-            topQueens.push(currentCast[i]);
-        }
-        slayers = false;
-        judgingSlayersScreen();
-    }
-	if (flop == true) {
-        //add all the queens to the top and 0 queens to the bottom
-		currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < 3; i++) {
-            bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
-        }
-        floppers = false;
-        judgingFloppersScreen();
-    }
-	//else if (allstarss7 == true) {
-        //add all the queens to the top and 0 queens to the bottom
-        //currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        //for (let i = 1; i < currentCast.length ; i++) {
-            //topQueens.push(currentCast[i]);
-        //}
-        //slayers = false;
-        //judgingSlayersScreen();
-    //}
-	else if (lalap == true) {
-        //add all the queens to the top and 0 queens to the bottom
-        currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-        for (let i = 0; i < currentCast.length ; i++) {
-            topQueens.push(currentCast[i]);
+            bottomQueens.push(currentCast[i]);
         }
         s14LaLaPaRUZa = false;
         judgingS14LaLaPaRUZaScreen();
-    }
-	else if (lalahell == true && currentCast.length > 8) {
-		//add 3 queens to the top and 6 queens to the bottom
-		currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-		for (let i = 0; i < 3; i++) {
-			topQueens.push(currentCast[i]);
-		}
-		for (let i = 0; i < 6; i++) {
-			bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
-		}
-		bottom6WayLipsync = false;
-		judging6WayScreen();
-	}
-	else if (lalahell == true && currentCast.length < 9 || lalahell == true && currentCast.length == 9) {
-		lalahell = false;
-		bottom6WayLipsync = false;
-		currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
-		for (let i = 0; i < 3; i++) {
-			topQueens.push(currentCast[i]);
-			bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
-		}
-		judgingScreen();
     }
     else if (currentCast.length > 13) {
         //add 4 queens to the top and 4 queens to the bottom
@@ -3793,7 +3745,7 @@ function judging() {
             bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
         if (top3 || top4)
-            judging();
+            winAndBtm2();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -3811,7 +3763,7 @@ function judging() {
         bottomQueens.push(currentCast[3]);
         bottomQueens.push(currentCast[4]);
         if (top3 || top4)
-            judging();
+            winAndBtm2();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -3825,7 +3777,7 @@ function judging() {
         bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
         if (top3 || top4)
-            judging();
+            winAndBtm2();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
