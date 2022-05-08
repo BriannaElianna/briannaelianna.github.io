@@ -783,9 +783,7 @@ function runway() {
     let good = currentCast.filter(function (queen) { return queen.runwayScore >= 16 && queen.runwayScore < 26; });
     let bad = currentCast.filter(function (queen) { return queen.runwayScore >= 26; });
     createRunwayDesc(slay, great, good, bad);
-    if (currentCast.length > 4 && speed == true)
-        runwayScreen.createButton("Proceed", "untucked()");
-	else if (currentCast.length > 4 && speed == false)
+	if (currentCast.length > 4)
         runwayScreen.createButton("Proceed", "judging()");
 	else if (currentCast.length > 20)
         runwayScreen.createButton("Proceed", "judging()");
@@ -3794,10 +3792,8 @@ function judging() {
             topQueens.push(currentCast[i]);
             bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
-        if (top3 || top4 && speed == false)
-            untucked();
-		else if (top3 || top4 && speed == true)
-            untucked();
+        if (top3 || top4)
+            judging();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -3814,10 +3810,8 @@ function judging() {
             bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
         bottomQueens.push(currentCast[4]);
-        if (top3 || top4 && speed == false)
-            untucked();
-		else if (top3 || top4 && speed == true)
-            untucked();
+        if (top3 || top4)
+            judging();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -3830,10 +3824,8 @@ function judging() {
         topQueens.push(currentCast[1]);
         bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
-        if (top3 || top4 && speed == false)
-            untucked();
-		else if (top3 || top4 && speed == true)
-            untucked();
+        if (top3 || top4)
+            judging();
         else if (all_stars)
             top2AndBtm();
         else if (lipsync_assassin)
@@ -4556,9 +4548,7 @@ function judgingScreen() {
     }
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
-    if (top3 && speed == true|| top4 && speed == true|| dragula == true && speed == true)
-        judgingScreen.createButton("Proceed", "untucked()");
-	else if (top3 && speed == false|| top4 && speed == false|| dragula == true && speed == false)
+    else if (top3 || top4 || dragula)
         judgingScreen.createButton("Proceed", "winAndBtm2()");
     else if (all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
@@ -4724,7 +4714,7 @@ function winAndBtm2() {
 		btm2.innerHTML += "I'm sorry my dears but you are up for extermination.";
 	else if (dragula == false)
 		btm2.innerHTML += "I'm sorry my dears but you are up for elimination.";
-    screen.createButton("Proceed", "lipSync()");
+    screen.createButton("Proceed", "untucked()");
 }
 function teamWinAndBtm2() {
     let screen = new Scene();
@@ -5663,7 +5653,7 @@ function untucked() {
 			screen.createBold("The queens sit down...");
 		}
 		screen.createHorizontalLine();
-		screen.createButton("Skip", "winAndBtm2()");
+		screen.createButton("Skip", "lipSync()");
 		screen.createButton("Proceed", "Untuck()");
 }
 function teamLipSync() {
@@ -9080,7 +9070,7 @@ function Untuck() {
 		screen.createBold(`${bottomQueens[b1].getName()}: Not good..`);
 		let b2 = randomNumber(0, bottomQueens.length - 1);
 		let same = false;
-		while(same = false) {
+		while(same == false) {
 			let b2 = randomNumber(0, bottomQueens.length - 1);
 			if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
 				same = true;
@@ -9091,7 +9081,7 @@ function Untuck() {
 		
 		let b3 = randomNumber(0, bottomQueens.length - 1);
 		same = false;
-		while(same = false) {
+		while(same == false) {
 			let b3 = randomNumber(0, bottomQueens.length - 1);
 			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
 				same = true;
@@ -9237,7 +9227,7 @@ function Untuck() {
 	for (let i = 0; i < currentCast.length; i++)
 			screen.createImage(currentCast[i].image, "tomato");
 	screen.createHorizontalLine();
-	screen.createButton("Proceed", "winAndBtm2()");
+	screen.createButton("Proceed", "lipSync()");
 }
 function Judge() {
     let screen = new Scene();
