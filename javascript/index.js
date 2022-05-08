@@ -2321,7 +2321,7 @@ function contestantProgress() {
             let placement = document.createElement("td");
             placement.innerHTML = winnerQueen.trackRecord[i];
             if (placement.innerHTML == "WIN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: white;");
+                placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: #8c8c8c;");
             }
             else if (placement.innerHTML == "TOP2") {
                 placement.setAttribute("style", "background-color: deepskyblue;");
@@ -2404,13 +2404,13 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: deepskyblue;");
             }
             else if (placement.innerHTML == "  WIN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: white;");
+                placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: #8c8c8c;");
             }
             else if (placement.innerHTML == "WIN+RTRN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: white;");
+                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: #8c8c8c;");
             }
             else if (placement.innerHTML == "SAFE") {
-                placement.setAttribute("style", "background-color: white;");
+                placement.setAttribute("style", "background-color: #8c8c8c;");
             }
             else if (placement.innerHTML == "SAFE ") {
                     placement.setAttribute("style", "background-color: palegreen; color:#000;");
@@ -2419,28 +2419,28 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: #7D1935; color:#000;");
             }
             else if (placement.innerHTML == " SAFE") {
-                placement.setAttribute("style", "background-color: magenta; color:white;");
+                placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 1</small>") {
-                placement.setAttribute("style", "background-color: lightcoral; color: white;");
+                placement.setAttribute("style", "background-color: lightcoral; color: #8c8c8c;");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 2</small>") {
-                placement.setAttribute("style", "background-color: indianred; color: white;");
+                placement.setAttribute("style", "background-color: indianred; color: #8c8c8c;");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 3</small>") {
-                placement.setAttribute("style", "background-color: crimson; color: white;");
+                placement.setAttribute("style", "background-color: crimson; color: #8c8c8c;");
             }
             else if (placement.innerHTML == "RUN") {
-                    placement.setAttribute("style", "background-color: magenta; color:white;");
+                    placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
             }
             else if (placement.innerHTML == "RUN ") {
                     placement.setAttribute("style", "background-color: #D3FFB5; color:#000; font-weight: bold;");
             }
             else if (placement.innerHTML == "OUT") {
-                placement.setAttribute("style", "background-color: forestgreen; color:white;");
+                placement.setAttribute("style", "background-color: forestgreen; color: #8c8c8c");
             }
             else if (placement.innerHTML == "OUT ") {
-                    placement.setAttribute("style", "background-color: purple; color:white;");
+                    placement.setAttribute("style", "background-color: purple; color: #8c8c8c");
             }
             else if (placement.innerHTML == " WIN") {
                 placement.setAttribute("style", "font-weight: bold; background-color: darkblue; color: white;");
@@ -2570,7 +2570,7 @@ function contestantProgress() {
                     placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: white;");
                 }
                 else if (placement.innerHTML == "WIN+RTRN") {
-                    placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color:white;");
+                    placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: #8c8c8c");
                 }
                 else if (placement.innerHTML == "SAFE") {
                     placement.setAttribute("style", "background-color: white;");
@@ -2582,7 +2582,7 @@ function contestantProgress() {
                         placement.setAttribute("style", "background-color: #7D1935; color:#000;");
                 }
                 else if (placement.innerHTML == " SAFE") {
-                    placement.setAttribute("style", "background-color: magenta; color:white;");
+                    placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
                 }
                 else if (placement.innerHTML == "SAFE<br><small>Round 1</small>") {
                     placement.setAttribute("style", "background-color: lightcoral; color: white;");
@@ -2594,16 +2594,16 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: crimson; color: white;");
                 }
                 else if (placement.innerHTML == "RUN") {
-                        placement.setAttribute("style", "background-color: magenta; color:white;");
+                        placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
                 }
                 else if (placement.innerHTML == "RUN ") {
                         placement.setAttribute("style", "background-color: #D3FFB5; color:#000; font-weight: bold;");
                 }
                 else if (placement.innerHTML == "OUT") {
-                    placement.setAttribute("style", "background-color: forestgreen; color:white;");
+                    placement.setAttribute("style", "background-color: forestgreen; color: #8c8c8c");
                 }
                 else if (placement.innerHTML == "OUT ") {
-                        placement.setAttribute("style", "background-color: purple; color:white;");
+                        placement.setAttribute("style", "background-color: purple; color: #8c8c8c");
                 }
                 else if (placement.innerHTML == " WIN") {
                     placement.setAttribute("style", "font-weight: bold; background-color: darkblue; color: white;");
@@ -2737,7 +2737,7 @@ function contestantProgress() {
                 placement.setAttribute("style", "font-weight: bold; background-color: #2238B4; color: white;");
             }
             else if (placement.innerHTML == "WIN+RTRN") {
-                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color:white;");
+                placement.setAttribute("style", "font-weight: bold; background-color: forestgreen; color: #8c8c8c");
             }
             else if (placement.innerHTML == "SAFE") {
                 placement.setAttribute("style", "background-color: white;");
@@ -2749,19 +2749,19 @@ function contestantProgress() {
                     placement.setAttribute("style", "background-color: #7D1935; color:#000;");
             }
             else if (placement.innerHTML == " SAFE") {
-                placement.setAttribute("style", "background-color: magenta; color: white;");
+                placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 1</small>") {
-                placement.setAttribute("style", "background-color: lightcoral; color: white;");
+                placement.setAttribute("style", "background-color: lightcoral; color: #8c8c8c");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 2</small>") {
-                placement.setAttribute("style", "background-color: indianred; color: white;");
+                placement.setAttribute("style", "background-color: indianred; color: #8c8c8c");
             }
             else if (placement.innerHTML == "SAFE<br><small>Round 3</small>") {
-                placement.setAttribute("style", "background-color: crimson; color: white;");
+                placement.setAttribute("style", "background-color: crimson; color: #8c8c8c");
             }
             else if (placement.innerHTML == "RUN") {
-                    placement.setAttribute("style", "background-color: magenta; color:white;");
+                    placement.setAttribute("style", "background-color: magenta; color: #8c8c8c");
             }
             else if (placement.innerHTML == "RUN ") {
                     placement.setAttribute("style", "background-color: #D3FFB5; color:#000; font-weight: bold;");
@@ -8978,8 +8978,8 @@ function entrance() {
     screen.createHorizontalLine();
 	let reactq = []
     for (let i = 0; i < currentCast.length; i++) {
-        let line = randomNumber(0, entranceLine.length - 1);
 		let react = randomNumber(0, reactLine.length - 1);
+		let used = []
 		reactq.push(currentCast[i])
         screen.createImage(currentCast[i].image);
 		screen.createBold(`${currentCast[i].getName()} walks in and poses!`);
@@ -8988,8 +8988,9 @@ function entrance() {
 		} else if(currentCast[i].getName()=="Robbie Turner") {
 			screen.createBold(`${currentCast[i].getName()}: "Wear your seatbelt! I did. *wink*"`);
 		} else {
+			let line = randomNumber(0, entranceLine.length - 1);
 			screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
-			entranceLine.pop(entranceLine[line]);
+			entranceLine.splice(entranceLine[line], 1);
 		} let shadee = randomNumber(0, reactq.length - 1);
 		if(reactq[shadee].getName()==currentCast[i].getName()) { 
 			let flop = randomNumber(0, flopLine.length - 1);
