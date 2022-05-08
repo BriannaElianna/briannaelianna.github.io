@@ -45,7 +45,7 @@ h2 {
 }
 
 a {
-    color: #7fa3eb;
+    color: #79ab78;
     text-decoration: none;
     transition: background-color .5s;
 }
@@ -81,8 +81,8 @@ button {
     margin-bottom: 5px;
     font-size: 20px;
     color: #b1ffae;
-    background-color: #5787e6;
-    border-color: #4871c2;
+    background-color: #79ab78;
+    border-color: #79ab78;
     border-radius: 12px;
     cursor: pointer;
 }
