@@ -9086,18 +9086,18 @@ function Untuck() {
 				same = true;
 			}	
 		}
-		same == false
 		screen.createImage(bottomQueens[b2].image);
 		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
 		
 		let b3 = randomNumber(0, bottomQueens.length - 1);
+		same = false;
 		while(same == false); {
 			let b3 = randomNumber(0, bottomQueens.length - 1);
 			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
 				same = true;
 			}	
 		}
-		same == false
+		same = false;
 		if(untuckconvo[convo]=="Queen") {
 			screen.createHorizontalLine();
 			let q1 = randomNumber(0, currentCast.length - 1);
