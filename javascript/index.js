@@ -9079,7 +9079,6 @@ function Untuck() {
 		screen.createImage(bottomQueens[b2].image);
 		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
 		
-		let b3 = randomNumber(0, safeQueens.length - 1);
 		same = false;
 
 		same = false;
@@ -9196,7 +9195,7 @@ function Untuck() {
 				screen.createImage(bottomQueens[b1].image);
 				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
 			} else {
-				if(bottomQueens[b1].getLipSyncStat() > bottomQueens[b2].getLipSyncStat()) {
+				if(bottomQueens[b1].getLipSyncStat() > bottomQueens[b2].getLipSyncStat() || randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
 					screen.createImage(bottomQueens[b1].image);
 					screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
 				} else {
