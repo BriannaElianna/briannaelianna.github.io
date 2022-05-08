@@ -9079,17 +9079,25 @@ function Untuck() {
 		screen.createImage(bottomQueens[b1].image);
 		screen.createBold(`${bottomQueens[b1].getName()}: Not good..`);
 		let b2 = randomNumber(0, bottomQueens.length - 1);
-		while(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
+		let same = false;
+		while(same == false) {
 			let b2 = randomNumber(0, bottomQueens.length - 1);
+			if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
+				same = true;
+			}	
 		}
-		
+		same == false
 		screen.createImage(bottomQueens[b2].image);
 		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
 		
 		let b3 = randomNumber(0, bottomQueens.length - 1);
-		while (bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()); {
+		while(same == false); {
 			let b3 = randomNumber(0, bottomQueens.length - 1);
+			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
+				same = true;
+			}	
 		}
+		same == false
 		if(untuckconvo[convo]=="Queen") {
 			screen.createHorizontalLine();
 			let q1 = randomNumber(0, currentCast.length - 1);
