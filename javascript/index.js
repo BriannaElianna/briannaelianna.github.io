@@ -5654,7 +5654,7 @@ function untucked() {
 		}
 		screen.createHorizontalLine();
 		screen.createButton("Skip", "lipSync()");
-		screen.createButton("Proceed", "Untuck()");
+		Untuck();
 }
 function teamLipSync() {
     let screen = new Scene();
