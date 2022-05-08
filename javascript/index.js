@@ -9080,7 +9080,7 @@ function Untuck() {
 		screen.createBold(`${bottomQueens[b1].getName()}: Not good..`);
 		let b2 = randomNumber(0, bottomQueens.length - 1);
 		let same = false;
-		while(same == false) {
+		while(same = false) {
 			let b2 = randomNumber(0, bottomQueens.length - 1);
 			if(bottomQueens[b2].getName()==bottomQueens[b1].getName()) {
 				same = true;
@@ -9091,7 +9091,7 @@ function Untuck() {
 		
 		let b3 = randomNumber(0, bottomQueens.length - 1);
 		same = false;
-		while(same == false); {
+		while(same = false) {
 			let b3 = randomNumber(0, bottomQueens.length - 1);
 			if(bottomQueens[b3].getName()==bottomQueens[b1].getName() || bottomQueens[b3].getName()==bottomQueens[b2].getName()) {
 				same = true;
