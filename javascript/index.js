@@ -8974,6 +8974,7 @@ function untuckkk() {
 }
 function entrance() {
     let screen = new Scene();
+	document.body.style.backgroundImage = "url('image/entrance.webp')";
 	screen.createBigText("The queens walk in...");
     screen.createHorizontalLine();
 	let reactq = []
