@@ -154,7 +154,9 @@ class ActingChallenge {
     }
 }
 function actingChallenge() {
+	
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -207,6 +209,7 @@ class ComedyChallenge {
 }
 function comedyChallenge() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -252,6 +255,7 @@ class MarketingChallenge {
 }
 function marketingChallenge() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -293,6 +297,7 @@ class DanceChallenge {
 }
 function danceChallenge() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -341,6 +346,7 @@ class DesignChallenge {
 }
 function designChallenge() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -402,6 +408,7 @@ class ImprovChallenge {
 }
 function improvChallenge() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -437,6 +444,7 @@ class SnatchGame {
 }
 function snatchGame() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -482,6 +490,7 @@ class Rusical {
 }
 function rusical() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -536,6 +545,7 @@ class Ball {
 }
 function ball() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -579,6 +589,7 @@ class Rumix {
 }
 function rumix() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -627,6 +638,7 @@ class GirlGroup {
 }
 function girlgroup() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
@@ -661,6 +673,7 @@ class TalentShow {
 }
 function talentshow() {
     let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/werkroom.webp')";
     challengeScreen.clean();
     challengeScreen.createHeader("Maxi-challenge!");
     challengeScreen.createParagraph("", "Description");
