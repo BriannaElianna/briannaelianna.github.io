@@ -505,7 +505,7 @@ function rusical() {
 	challengeScreen.createImage(q1.image, "gold");
 	challengeScreen.createBold(`${q1.getName()} will play the lead role!`);
     rusicalqueens.splice(rusicalqueens.indexOf(q1), 1);
-	q1.favoritism += 1;
+	q1.favoritism += 3;
 	//Queen 2
 	let q2 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
 	challengeScreen.createImage(q2.image, "gold");
