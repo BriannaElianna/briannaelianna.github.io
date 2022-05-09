@@ -3743,10 +3743,10 @@ function judging() {
             topQueens.push(currentCast[i]);
             bottomQueens.push(currentCast[currentCast.length - (i + 1)]);
         }
-        if (top3 || top4)
+        if (all_stars && top3 || all_stars && top4)
+			top2AndBtm();
+        else if (top3 || top4)
             winAndBtm2();
-        else if (all_stars)
-            top2AndBtm();
         else if (lipsync_assassin)
             topAndBtm();
     }
@@ -3761,10 +3761,10 @@ function judging() {
             bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
         bottomQueens.push(currentCast[4]);
-        if (top3 || top4)
+		if (all_stars && top3 || all_stars && top4)
+			top2AndBtm();
+        else if (top3 || top4)
             winAndBtm2();
-        else if (all_stars)
-            top2AndBtm();
         else if (lipsync_assassin)
             topAndBtm();
     }
@@ -3775,10 +3775,10 @@ function judging() {
         topQueens.push(currentCast[1]);
         bottomQueens.push(currentCast[2]);
         bottomQueens.push(currentCast[3]);
-        if (top3 || top4)
+		if (all_stars && top3 || all_stars && top4)
+			top2AndBtm();
+        else if (top3 || top4)
             winAndBtm2();
-        else if (all_stars)
-            top2AndBtm();
         else if (lipsync_assassin)
             topAndBtm();
     }
@@ -4811,7 +4811,7 @@ function top2AndBtm() {
     screen.createBigText("After deliberation...");
     for (let i = 0; i < top2.length; i++) {
         if (randomNumber(0, 100) <= 45 && currentCast.length <= totalCastSize - 2)
-            top2[i].lipstick = bottomQueens.sort((a, b) => b.unfavoritism - a.unfavoritism)[0];
+            top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked - a.getLiked)[0];
         else
             top2[i].lipstick = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
         screen.createImage(top2[i].image, "cyan");
@@ -5604,7 +5604,11 @@ function untucked() {
 			screen.createBold("The queens sit down...");
 		}
 		screen.createHorizontalLine();
-		screen.createButton("Skip", "lipSync()");
+		if (all_stars) {
+			screen.createButton("Skip", "lsaLipSync()");
+		} else {
+			screen.createButton("Skip", "lipSync()");
+		}
 		Untuck();
 }
 function teamLipSync() {
@@ -9232,7 +9236,11 @@ function Untuck() {
 	for (let i = 0; i < currentCast.length; i++)
 			screen.createImage(currentCast[i].image, "tomato");
 	screen.createHorizontalLine();
-	screen.createButton("Proceed", "lipSync()");
+	if (all_stars) {
+		screen.createButton("Proceed", "lsaLipSync()");
+	} else {
+		screen.createButton("Proceed", "lipSync()");
+	}
 }
 function Judge() {
     let screen = new Scene();
