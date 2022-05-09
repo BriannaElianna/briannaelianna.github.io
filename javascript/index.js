@@ -6195,6 +6195,9 @@ class Queen {
     getRunway() {
         this.runwayScore = this._calculateScores(12, 35, this._runwayStat);
     }
+	getLiked() {
+        return this._liked;
+    }
     getLipsync() {
         this.lipsyncScore = this._calculateScores(0, this._lipsyncStat, this.unfavoritism) + this.favoritism;
     }
@@ -9174,12 +9177,15 @@ function Untuck() {
 			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q2].image);
 				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
+				currentCast[q1].liked()=currentCast[q1].liked()-1
 			} else {
 				screen.createImage(currentCast[q2].image);
-				if (randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
+				if (currentCast[q3].liked == 1 || currentCast[q3].liked > 1) {
 					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+					currentCast[q3].liked()=currentCast[q3].liked()-1
 				} else {
 					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
+					currentCast[q1].liked()=currentCast[q1].liked()-1
 				}
 			}
 		} else if(untuckconvo[convo]=="Bottom") {
