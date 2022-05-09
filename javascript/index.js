@@ -6704,6 +6704,7 @@ let canna = new Queen("Canna Biss", 1, 1, 4, 1, 2, 3, 4, "Canna",false, "IT1");
 let custom5 = [canna, zombira, gem, angel, sapphire, taba, yurin, bethl, trey, dahliam];
 //rest
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
+let CanVs = [anita, icesis, silky, stephanie, vanity, kendall, rajah, rita, victoriaS];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
 let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla, supremme, arta, nicky];
 let ultimate = [];
