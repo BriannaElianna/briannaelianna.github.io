@@ -9081,11 +9081,11 @@ function Untuck() {
 		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
 		
 		same = false;
-		let like = currentCast[q1].getLiked()
 		same = false;
 		if(untuckconvo[convo]=="Queen") {
 			screen.createHorizontalLine();
 			let q1 = randomNumber(0, currentCast.length - 1);
+			let like = currentCast[q1].getLiked()
 			let q2 = randomNumber(0, currentCast.length - 1);
 			if(currentCast[q2].getName()==currentCast[q1].getName()) {
 				let q2 = randomNumber(0, currentCast.length - 1);
