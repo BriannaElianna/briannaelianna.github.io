@@ -9148,9 +9148,11 @@ function Untuck() {
 			} else {
 				screen.createImage(currentCast[q2].image);
 				if (currentCast[q3].getLiked() > 1) {
-					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
+					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her. I'm happy somebody feels the same!`);
 					like = currentCast[q3].getLiked() 
 					like - 1
+					like = currentCast[q1].getLiked() 
+					like + 1
 				} else {
 					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
 					like = currentCast[q1].getLiked() 
@@ -9200,6 +9202,11 @@ function Untuck() {
 			screen.createImage(top2[i].image, "cyan");
 			screen.createImage(top2[i].lipstick.image, "red");
 			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
+			if (top2[i].lipstick.getLiked > 0) {
+				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they had no other choice.");
+			} else {
+				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they didn't like them.");
+			}
 		}
 	} else {
 		screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
