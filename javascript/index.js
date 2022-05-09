@@ -4499,10 +4499,10 @@ function judgingScreen() {
     }
     if (uk3Premiere && episodeCount == 1)
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
+	else if (all_stars && top3 || all_stars && top4 || all_stars)
+        judgingScreen.createButton("Proceed", "top2AndBtm()");
     else if (top3 || top4 || dragula)
         judgingScreen.createButton("Proceed", "winAndBtm2()");
-    else if (all_stars)
-        judgingScreen.createButton("Proceed", "top2AndBtm()");
     else if (lipsync_assassin)
         judgingScreen.createButton("Proceed", "topAndBtm()");
     else if (team)
