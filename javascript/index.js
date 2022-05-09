@@ -9181,7 +9181,7 @@ function Untuck() {
 				like - 1
 			} else {
 				screen.createImage(currentCast[q2].image);
-				if (currentCast[q3].getLiked() == 1 || currentCast[q3].getLiked() > 1) {
+				if (currentCast[q3].getLiked() > 1) {
 					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
 					let like = currentCast[q3].getLiked() 
 					like - 1
