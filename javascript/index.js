@@ -4809,15 +4809,6 @@ function top2AndBtm() {
     } */
     screen.createHorizontalLine();
     screen.createBigText("After deliberation...");
-    for (let i = 0; i < top2.length; i++) {
-        if (randomNumber(0, 100) <= 45 && currentCast.length <= totalCastSize - 2)
-            top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked - a.getLiked)[0];
-        else
-            top2[i].lipstick = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
-        screen.createImage(top2[i].image, "cyan");
-        screen.createImage(top2[i].lipstick.image, "red");
-        screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
-    }
     if (top2[0].lipstick == top2[1].lipstick){
         let imageVoted = document.querySelectorAll("img[src='" + top2[0].lipstick.image +"']")[1];
         imageVoted.setAttribute("hidden", "hidden");
@@ -4845,7 +4836,7 @@ function top2AndBtm() {
     let br = document.createElement("br");
     main.appendChild(br);
     screen.createButton("Show votes", "showvotes()", "showvotes");
-    screen.createButton("Proceed", "asLipSync()");
+    screen.createButton("Proceed", "untucked()");
 }
 function topAndBtm() {
     let screen = new Scene();
@@ -9228,9 +9219,23 @@ function Untuck() {
     let score1 = bottomQueens[0].lipsyncScore - bottomQueens[0].favoritism + bottomQueens[0].unfavoritism;
     let score2 = bottomQueens[1].lipsyncScore - bottomQueens[1].favoritism + bottomQueens[1].unfavoritism;
 	screen.createHorizontalLine();
-	screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
-	for (let i = 0; i < bottomQueens.length; i++)
+	if (all_stars) {
+		screen.createBigText(`The top queens listen to their lipsync song.. then choose their lipstick`);
+		for (let i = 0; i < top2.length; i++) {
+			if (randomNumber(0, 100) <= 45 && currentCast.length <= totalCastSize - 2)
+				top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked - a.getLiked)[0];
+			else
+				top2[i].lipstick = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
+			screen.createImage(top2[i].image, "cyan");
+			screen.createImage(top2[i].lipstick.image, "red");
+			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
+		}
+	} else {
+		screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
+		for (let i = 0; i < bottomQueens.length; i++) {
 			screen.createImage(bottomQueens[i].image, "tomato");
+		}
+	}
 	screen.createHorizontalLine();
 	screen.createBigText(`Bring back my girls!`);
 	for (let i = 0; i < currentCast.length; i++)
