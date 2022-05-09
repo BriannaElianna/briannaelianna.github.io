@@ -9202,11 +9202,6 @@ function Untuck() {
 			screen.createImage(top2[i].image, "cyan");
 			screen.createImage(top2[i].lipstick.image, "red");
 			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
-			if (top2[i].lipstick.getLiked() > 0) {
-				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they had no other choice.");
-			} else if (top2[i].lipstick.getLiked() < 0) {
-				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they didn't like them.");
-			}
 			chooseReasoning(top2[0].getName(), top2[0].lipstick.getName());
 		}
 	} else {
