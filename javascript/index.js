@@ -9198,7 +9198,7 @@ function Untuck() {
 			if (randomNumber(0, 100) <= 45 && currentCast.length <= totalCastSize - 2)
 				top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked() - a.getLiked())[0];
 			else
-				top2[i].lipstick = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
+				top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked() - a.getLiked())[0];
 			screen.createImage(top2[i].image, "cyan");
 			screen.createImage(top2[i].lipstick.image, "red");
 			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
