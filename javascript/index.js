@@ -9081,7 +9081,7 @@ function Untuck() {
 		screen.createBold(`${bottomQueens[b2].getName()}: Dissapointed in my performance.`);
 		
 		same = false;
-
+		let like = currentCast[q1].getLiked()
 		same = false;
 		if(untuckconvo[convo]=="Queen") {
 			screen.createHorizontalLine();
@@ -9173,21 +9173,21 @@ function Untuck() {
 				screen.createImage(currentCast[q3].image);
 				screen.createBold(`${currentCast[q1].getName()}: I don't know why ${currentCast[q3].getName()} thinks she can get away with being a bitch, but im so tired of it.`);
 			} if(currentCast[q2].getName()==currentCast[q1].getName()) {
-				
+			
 			} else if(currentCast[q2].getName()==currentCast[q3].getName()) {
 				screen.createImage(currentCast[q2].image);
 				screen.createBold(`${currentCast[q2].getName()}: I don't know who you think you are, but keep my name out of your mouth.`);
-				let like = currentCast[q1].getLiked() 
+				like = currentCast[q1].getLiked() 
 				like - 1
 			} else {
 				screen.createImage(currentCast[q2].image);
 				if (currentCast[q3].getLiked() > 1) {
 					screen.createBold(`${currentCast[q2].getName()}: I 100% agree I'm so tired of her.`);
-					let like = currentCast[q3].getLiked() 
+					like = currentCast[q3].getLiked() 
 					like - 1
 				} else {
 					screen.createBold(`${currentCast[q2].getName()}: Ok? Keep that to yourself.`);
-					let like = currentCast[q1].getLiked() 
+					like = currentCast[q1].getLiked() 
 					like - 1
 				}
 			}
@@ -9201,19 +9201,19 @@ function Untuck() {
 			if(bottomQueens[b1].getName()==bottomQueens[b2].getName()) {
 				screen.createImage(bottomQueens[b1].image);
 				screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
-				let like = currentCast[b1].getLiked() 
+				like = currentCast[b1].getLiked() 
 				like - 1
 			} else {
 				if(bottomQueens[b1].getLipSyncStat() > bottomQueens[b2].getLipSyncStat() || randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
 					screen.createImage(bottomQueens[b1].image);
 					screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
-					let like = currentCast[q1].getLiked() 
+					like = currentCast[q1].getLiked() 
 					like - 1
 				} else {
 					screen.createImage(bottomQueens[b1].image);
 					screen.createImage(bottomQueens[b2].image);
 					screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()} will win the lipsync.`);
-					let like = currentCast[q1].getLiked() 
+					like = currentCast[q1].getLiked() 
 					like + 1
 				}
 			}
