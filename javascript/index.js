@@ -9202,7 +9202,11 @@ function Untuck() {
 			screen.createImage(top2[i].image, "cyan");
 			screen.createImage(top2[i].lipstick.image, "red");
 			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
-			chooseReasoning(top2[0].getName(), top2[0].lipstick.getName());
+			if (top2[i].lipstick.getLiked() > 0 || top2[i].lipstick.getLiked() == 0) {
+				chooseReasoning2(top2[i].lipstick, top2[i])
+			} else {
+				chooseReasoning1(top2[i].lipstick, top2[i])
+			}
 		}
 	} else {
 		screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
@@ -9290,12 +9294,14 @@ function queenTalents() {
         screen.createBold(`${currentCast[i].getName()} will do a ${talentsToDo[talent]} performance!!`);
     }
 }
-function chooseReasoning(winQueen, elimQueen) {
+function chooseReasoning2(winQueen, elimQueen) {
     let screen = new Scene();
-	if (elimQueen.getLiked() > 0) {
-		let reasoning = randomNumber(0, reasoningQueens2.length - 1);
-	} else {
-		let reasoning = randomNumber(0, reasoningQueens1.length - 1);
-	}
-    screen.createBold(`${winQueen} chose ${elimQueen} because ${reasoningQueens[reasoning]}`);
+	let reasoning = randomNumber(0, reasoningQueens2.length - 1);
+    screen.createBold(`${winQueen} chose ${elimQueen} because ${reasoningQueens2[reasoning]}`);
+}
+
+function chooseReasoning1(winQueen, elimQueen) {
+    let screen = new Scene();
+	let reasoning = randomNumber(0, reasoningQueens1.length - 1);
+    screen.createBold(`${winQueen} chose ${elimQueen} because ${reasoningQueens1[reasoning]}`);
 }
