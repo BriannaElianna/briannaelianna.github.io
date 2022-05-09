@@ -6230,7 +6230,7 @@ let sahara = new Queen("Sahara Davenport", 6, 6, 10, 4, 6, 7, 10, "Sahara",false
 let shangela = new Queen("Shangela", 14, 13, 10, 3, 9, 9, 12, "Shangela",false, "S2");
 let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 11, "Kylie",false, "S2");
 let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, "Tatianna",false, "S2");
-let tyra = new Queen("Tyra Sanchez", 11, 7, 8, 11, 8, 9, 10, "Tyra",false, "S2");
+let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, "Tyra",false, "S2");
 let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra];
 //SEASON 3:
 let alexis = new Queen("Alexis Mateo", 14, 12, 9, 7, 10, 8, 12, "Alexis",false, "S3");
@@ -6256,7 +6256,7 @@ let leshauwn = new Queen("Lashauwn Beyond", 4, 4, 6, 11, 5, 7, 7, "Lashauwn",fal
 let latrice = new Queen("Latrice Royale", 11, 8, 9, 8, 7, 9, 13, "Latrice",false, "S4");
 let madame = new Queen("Madame LaQueer", 4, 7, 6, 5, 9, 7, 6, "Madame",false, "S4");
 let milan = new Queen("Milan", 4, 5, 9, 7, 5, 8, 10, "Milan",false, "S4");
-let phiphi = new Queen("Phi Phi O'Hara", 13, 9, 8, 10, 10, 10, 8, "PhiPhi",false, "S4");
+let phiphi = new Queen("Jaremi", 13, 9, 8, 10, 10, 10, 8, "PhiPhi",false, "S4");
 let princess = new Queen("The Princess", 4, 4, 5, 7, 4, 7, 7, "Princess",false, "S4");
 let willam = new Queen("Willam", 10, 8, 7, 10, 10, 9, 8, "Willam",false, "S4");
 let us_season4 = [alisa, chad, dida, jiggly, kenya, leshauwn, latrice, madame, milan, phiphi, princess, willam];
