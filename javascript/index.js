@@ -5680,8 +5680,6 @@ function asLipSync() {
         if (top2[0].lipstick == top2[1].lipstick) {
             assasinlipstick.push(top2[0].lipstick.getName());
             assasinlipstick.push(" ");
-            chooseReasoning(top2[0].getName(), top2[0].lipstick.getName());
-            chooseReasoning(top2[1].getName(), top2[1].lipstick.getName());
             screen.createImage(top2[0].lipstick.image, "red");
             if (chocolateBarTwist  && !chocolateBarTwistCheck) {
                 screen.createBold(top2[0].lipstick.getName() + ", now your fate rests in the hands of the drag gods.");
@@ -5842,7 +5840,6 @@ function asLipSync() {
         screen.createImage(top2[1].image, "cyan");
         screen.createParagraph(top2[1].getName() + ", you are safe.");
         screen.createHorizontalLine();
-        chooseReasoning(top2[0].getName(), top2[0].lipstick.getName());
         screen.createImage(top2[0].lipstick.image, "red");
         if (chocolateBarTwist  && !chocolateBarTwistCheck) {
             screen.createBold(top2[0].lipstick.getName() + ", now your fate rests in the hands of the drag gods.");
@@ -5946,10 +5943,8 @@ function lsaLipSync() {
     screen.createHorizontalLine();
     if (backToWinner && top2[0].getName() == assassin.getName()) {
         screen.createBold("As there was a tie in the voting, the power returns to the challenge winner!");
-        chooseReasoning(top2[1].getName(), top2[1].lipstick.getName());
     }
     if (top2[1].getName() == assassin.getName()) {
-        chooseReasoning(top2[0].getName(), top2[0].lipstick.getName());
     }
     screen.createImage(top2[0].lipstick.image, "red");
     if (chocolateBarTwist  && !chocolateBarTwistCheck) {
@@ -9203,9 +9198,9 @@ function Untuck() {
 			screen.createImage(top2[i].lipstick.image, "red");
 			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
 			if (top2[i].lipstick.getLiked() > 0 || top2[i].lipstick.getLiked() == 0) {
-				chooseReasoning2(top2[i].lipstick, top2[i])
+				chooseReasoning2(top2[0].getName(), top2[0].lipstick.getName())
 			} else {
-				chooseReasoning1(top2[i].lipstick, top2[i])
+				chooseReasoning1(top2[0].getName(), top2[0].lipstick.getName())
 			}
 		}
 	} else {
