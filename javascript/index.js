@@ -6043,18 +6043,23 @@ function lsaLipSync() {
         screen.createButton("Proceed", "newEpisode()");
 }
 class Queen {
-    constructor(name, acting, comedy, dance, design, improv, runway, lipsync, liked, image = "noimage", custom = false) {
+    constructor(name, acting, comedy, dance, design, improv, runway, lipsync, image = "noimage", custom = false, original) {
         this.trackRecord = [];
+        this.relationships = [];
+        this.alliances = [];
         this.runwayScore = 0;
         this.lipsyncScore = 0;
         this.performanceScore = 0;
         this.finaleScore = 0;
         this.winCount = 0;
+        this.miniwinCount = 0;
+        this.btmCount = 0;
         this.favoritism = 0;
         this.unfavoritism = 0;
         this.ppe = 0;
         this.episodesOn = 0;
         this.votes = 0;
+        this.OriginalSeason = original;
         this.QueenDisqOrDept = false;
         this.customqueen = false;
         this.chocolate = false;
@@ -6066,7 +6071,6 @@ class Queen {
         this._improvStat = improv;
         this._runwayStat = runway;
         this._lipsyncStat = lipsync;
-		this._likeabilityStat = liked;
         if (image == "noimage")
             this.image = "image/queens/noimage.jpg";
         else if (custom == true)
@@ -6081,6 +6085,73 @@ class Queen {
     getName() {
         return this._name;
     }
+
+    AddRelation(Queen) {
+        let newRel = new Relation(Queen)
+        this.relationships.push(newRel);
+    }
+
+    UpdateAllRelations(Queen, points) {
+        for(let i = 0; i<this.relationships.length; i++)
+        {
+            this.relationships[i].UpdateStatus();
+        }
+    }
+
+    ResetRelations()
+    {
+        this.relationships = [];
+    }
+
+    GetRelation(Queen)
+    {
+        for(let i = 0; i<this.relationships.length; i++)
+        {
+            if(this.relationships[i].GetQueen().getName()==Queen)
+            {
+                return(this.relationships[i].GetPoints());
+            }
+        }
+    }
+
+    ChangeRelation(Queen, points)
+    {
+        for(let i = 0; i<this.relationships.length; i++)
+        {
+            if(this.relationships[i].GetQueen().getName()==Queen)
+            {
+                this.relationships[i].ChangePoints(points);
+            }
+        }
+    }
+
+    AddAlliance(Queen)
+    {
+        this.alliances.push(Queen);
+    }
+
+    IsAlliedTo(Queen)
+    {
+        let found = false;
+        for(let a = 0; a<this.alliances.length; a++)
+        {
+            if(this.alliances[a]==Queen)
+            {
+                found = true;
+            }
+        }
+        return(found);
+    }
+
+    RemoveAlliance(Queen)
+    {
+        this.alliances.slice(this.alliances.indexOf(Queen),1);
+    }
+
+    getFirstSeason() {
+        return this.OriginalSeason;
+    }
+
     getLipSyncStat() {
         return this._lipsyncStat;
     }
@@ -6098,9 +6169,6 @@ class Queen {
     }
     getDesign() {
         this.performanceScore = this._calculateScores(15, 35, this._designStat);
-    }
-	getLikeability() {
-        this._likeabilityStat;
     }
     getImprov() {
         this.performanceScore = this._calculateScores(15, 35, this._improvStat);
@@ -6523,59 +6591,59 @@ let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "Riche",false, "IT1");
 let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "Luquisha",false, "IT1");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 //UK4
-let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "true", "BlackPeppa");
+let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "true", "BlackPeppa",false, "IT1"););
 //Judges
-let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "true", "Pangina");
-let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "true", "Michelle");
-let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 6, "true", "Rupaull");
-let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "true", "Fredd");
-let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 3, "true", "Priscillaa");
-let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, "true", "Supremme");
-let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "true", "ArtA");
+let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "true", "Pangina",false, "IT1"););
+let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "true", "Michelle",false, "IT1"););
+let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 6, "true", "Rupaull",false, "IT1"););
+let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "true", "Fredd",false, "IT1"););
+let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 3, "true", "Priscillaa",false, "IT1"););
+let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, "true", "Supremme",false, "IT1"););
+let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "true", "ArtA",false, "IT1"););
 //DRAGULA S2
-let felony = new Queen("Felony Dodger", 6, 5, 2, 3, 7, 4, 4, "true", "Felony");
-let monikkie = new Queen("Monikkie Shame", 6, 5, 2, 3, 7, 4, 4, "true", "Monikkie");
-let kendra = new Queen("Kendra Onixxx", 6, 5, 2, 3, 7, 4, 4, "true", "Kendra");
-let dahli = new Queen("Dahli", 6, 5, 2, 3, 7, 4, 4, "true", "Dahli");
-let erika = new Queen("Erika Klash", 6, 5, 2, 3, 7, 4, 4, "true", "Erika");
-let disasterina = new Queen("Disasterina", 6, 5, 2, 3, 7, 4, 4, "true", "Disasterina");
-let victoriae = new Queen("Victoria Elizabeth Black", 6, 5, 2, 3, 7, 4, 4, "true", "VictoriaD");
-let james = new Queen("James Majesty", 6, 5, 2, 3, 7, 4, 4, "true", "James");
-let biqtch = new Queen("Biqtch Puddin", 6, 5, 2, 3, 7, 4, 4, "true", "Biqtch");
+let felony = new Queen("Felony Dodger", 6, 5, 2, 3, 7, 4, 4, "true", "Felony",false, "IT1"););
+let monikkie = new Queen("Monikkie Shame", 6, 5, 2, 3, 7, 4, 4, "true", "Monikkie",false, "IT1"););
+let kendra = new Queen("Kendra Onixxx", 6, 5, 2, 3, 7, 4, 4, "true", "Kendra",false, "IT1"););
+let dahli = new Queen("Dahli", 6, 5, 2, 3, 7, 4, 4, "true", "Dahli",false, "IT1"););
+let erika = new Queen("Erika Klash", 6, 5, 2, 3, 7, 4, 4, "true", "Erika",false, "IT1"););
+let disasterina = new Queen("Disasterina", 6, 5, 2, 3, 7, 4, 4, "true", "Disasterina",false, "IT1"););
+let victoriae = new Queen("Victoria Elizabeth Black", 6, 5, 2, 3, 7, 4, 4, "true", "VictoriaD",false, "IT1"););
+let james = new Queen("James Majesty", 6, 5, 2, 3, 7, 4, 4, "true", "James",false, "IT1"););
+let biqtch = new Queen("Biqtch Puddin", 6, 5, 2, 3, 7, 4, 4, "true", "Biqtch",false, "IT1"););
 let dragula_2 = [felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch];
 //DRAGULA S1
-let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, "true", "Pinche");
-let ursula = new Queen("Ursula Major", 6, 5, 2, 3, 7, 4, 4, "true", "Ursula");
-let foxie = new Queen("Foxie Adjuia", 6, 5, 2, 3, 7, 4, 4, "true", "Foxie");
-let xochi = new Queen("Xochi Mochi", 6, 5, 2, 3, 7, 4, 4, "true", "Xochi");
-let loris = new Queen("Loris", 6, 5, 2, 3, 7, 4, 4, "true", "Loris");
-let meatball = new Queen("Meatball", 6, 5, 2, 3, 7, 4, 4, "true", "Meatball");
-let melissa = new Queen("Melissa Befierce", 6, 5, 2, 3, 7, 4, 4, "true", "Melissa");
-let frankie = new Queen("Frankie Doom", 6, 5, 2, 3, 7, 4, 4, "true", "Frankie");
-let vander = new Queen("Vander Von Odd", 6, 5, 2, 3, 7, 4, 4, "true", "Vander");
+let pinche = new Queen("Pinche Queen", 6, 5, 2, 3, 7, 4, 4, "true", "Pinche",false, "IT1"););
+let ursula = new Queen("Ursula Major", 6, 5, 2, 3, 7, 4, 4, "true", "Ursula",false, "IT1"););
+let foxie = new Queen("Foxie Adjuia", 6, 5, 2, 3, 7, 4, 4, "true", "Foxie",false, "IT1"););
+let xochi = new Queen("Xochi Mochi", 6, 5, 2, 3, 7, 4, 4, "true", "Xochi",false, "IT1"););
+let loris = new Queen("Loris", 6, 5, 2, 3, 7, 4, 4, "true", "Loris",false, "IT1"););
+let meatball = new Queen("Meatball", 6, 5, 2, 3, 7, 4, 4, "true", "Meatball",false, "IT1"););
+let melissa = new Queen("Melissa Befierce", 6, 5, 2, 3, 7, 4, 4, "true", "Melissa",false, "IT1"););
+let frankie = new Queen("Frankie Doom", 6, 5, 2, 3, 7, 4, 4, "true", "Frankie",false, "IT1"););
+let vander = new Queen("Vander Von Odd", 6, 5, 2, 3, 7, 4, 4, "true", "Vander",false, "IT1"););
 let dragula_1 = [pinche, frankie, melissa, meatball, loris, xochi, vander, foxie];
 //DRAGULA S3
-let violencia = new Queen("Violencia!", 6, 5, 2, 3, 7, 4, 4, "true", "Violencia");
-let saint = new Queen("Saint", 6, 5, 2, 3, 7, 4, 4, "true", "Saint");
-let yovska = new Queen("Yovska", 6, 5, 2, 3, 7, 4, 4, "true", "Yovska");
-let maxig = new Queen("Maxi Glamour", 6, 5, 2, 3, 7, 4, 4, "true", "MaxiD");
-let hollow = new Queen("Hollow Eve", 6, 5, 2, 3, 7, 4, 4, "true", "Hollow");
-let maddelynn = new Queen("Maddelynn Hatter", 6, 5, 2, 3, 7, 4, 4, "true", "Madelynn");
-let evah = new Queen("Evah Destruction", 6, 5, 2, 3, 7, 4, 4, "true", "Evah");
-let louisianna = new Queen("Louisianna Purchase", 6, 5, 2, 3, 7, 4, 4, "true", "Louisianna");
-let priscillac = new Queen("Priscilla", 6, 5, 2, 3, 7, 4, 4, "true", "PriscillaD");
-let dollya = new Queen("Dollya Black", 6, 5, 2, 3, 7, 4, 4, "true", "Dollya");
-let landon = new Queen("Landon Cider", 6, 5, 2, 3, 7, 4, 4, "true", "Landon");
+let violencia = new Queen("Violencia!", 6, 5, 2, 3, 7, 4, 4, "true", "Violencia",false, "IT1"););
+let saint = new Queen("Saint", 6, 5, 2, 3, 7, 4, 4, "true", "Saint",false, "IT1"););
+let yovska = new Queen("Yovska", 6, 5, 2, 3, 7, 4, 4, "true", "Yovska",false, "IT1"););
+let maxig = new Queen("Maxi Glamour", 6, 5, 2, 3, 7, 4, 4, "true", "MaxiD",false, "IT1"););
+let hollow = new Queen("Hollow Eve", 6, 5, 2, 3, 7, 4, 4, "true", "Hollow",false, "IT1"););
+let maddelynn = new Queen("Maddelynn Hatter", 6, 5, 2, 3, 7, 4, 4, "true", "Madelynn",false, "IT1"););
+let evah = new Queen("Evah Destruction", 6, 5, 2, 3, 7, 4, 4, "true", "Evah",false, "IT1"););
+let louisianna = new Queen("Louisianna Purchase", 6, 5, 2, 3, 7, 4, 4, "true", "Louisianna",false, "IT1"););
+let priscillac = new Queen("Priscilla", 6, 5, 2, 3, 7, 4, 4, "true", "PriscillaD",false, "IT1"););
+let dollya = new Queen("Dollya Black", 6, 5, 2, 3, 7, 4, 4, "true", "Dollya",false, "IT1"););
+let landon = new Queen("Landon Cider", 6, 5, 2, 3, 7, 4, 4, "true", "Landon",false, "IT1"););
 let dragula_3 = [violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
 //DRAGULA S4
-let formelda = new Queen("Formelda Hyde", 6, 5, 2, 3, 7, 4, 4, "true", "Formelda");
-let astrud = new Queen("Astrud Aurelia", 6, 5, 2, 3, 7, 4, 4, "true", "Astrud");
-let koco = new Queen("Koco Caine", 6, 5, 2, 3, 7, 4, 4, "true", "Koco");
-let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, "true", "Merrie");
-let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, "true", "Bitter");
-let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, "true", "La");
-let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, "true", "Sigourney");
-let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, "true", "HoSo");
+let formelda = new Queen("Formelda Hyde", 6, 5, 2, 3, 7, 4, 4, "true", "Formelda",false, "IT1"););
+let astrud = new Queen("Astrud Aurelia", 6, 5, 2, 3, 7, 4, 4, "true", "Astrud",false, "IT1"););
+let koco = new Queen("Koco Caine", 6, 5, 2, 3, 7, 4, 4, "true", "Koco",false, "IT1"););
+let merrie = new Queen("Merrie Cherry", 6, 5, 2, 3, 7, 4, 4, "true", "Merrie",false, "IT1"););
+let bitter = new Queen("Bitter Betty", 6, 5, 2, 3, 7, 4, 4, "true", "Bitter",false, "IT1"););
+let la = new Queen("La Zavaleta", 6, 5, 2, 3, 7, 4, 4, "true", "La",false, "IT1"););
+let sigourney = new Queen("Sigourney Beaver", 6, 5, 2, 3, 7, 4, 4, "true", "Sigourney",false, "IT1"););
+let hoso = new Queen("HoSo Terra Toma", 6, 5, 2, 14, 7, 4, 4, "true", "HoSo",false, "IT1"););
 let dragula_4 = [formelda, astrud, koco, merrie, bitter, jadejolie, la, sigourney, hoso, dahli, saint];
 //RESSURECTION
 let ressurection = [priscillac, loris, kendra, frankie, victoriae, dahli, saint];
