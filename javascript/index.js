@@ -9207,6 +9207,7 @@ function Untuck() {
 			} else if (top2[i].lipstick.getLiked() < 0) {
 				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they didn't like them.");
 			}
+			chooseReasoning(top2[0].getName(), top2[0].lipstick.getName());
 		}
 	} else {
 		screen.createBigText(`The bottom queens listen to their lipsync songs and get ready for the lipsync.`);
@@ -9238,28 +9239,31 @@ function Judge() {
     }
 	screen.createHorizontalLine();
 }
-let reasoningQueens = [
+let reasoningQueens1 = [
+    "they wanted to eliminate them.",
+    "they think that it's better for the group if they are not there.",
+    "they were annoyed by the queen.",
+    "they were competition.",
+    "they don't like them.",
+    "they feel they could send them home later.",
+    "they saw the fishnets and they were ripped.",
+    "they'll never be glamour.",
+    "they were persuaded by other contestants.",
+    "they are a liar.",
+    "no tea, no shade no pink lemonade… they done fucked up drag.",
+];
+let reasoningQueens2 = [
     "they put themselves in RuPaul's shoes and tried to be fair.",
     "they based their decision with the judges critiques.",
     "they saw that the other queen wanted to stay more.",
     "they wanted to save their friend.",
-    "they wanted to eliminate them.",
     "the other queen lend them a shirt.",
     "they couldn't send home their friend.",
-    "they think that it's better for the group if they are not there.",
-    "they were annoyed by the other queen.",
-    "they were in the bottom several times.",
     "they tried to be fair.",
-    "they were competition.",
-    "they don't like them.",
     "they wanted to shake the things up.",
-    "they feel they could send them home later.",
-    "they saw the fishnets and they were ripped.",
-    "they'll never be glamour.",
     "they were the weakest in the challenge.",
     "they were persuaded by other contestants.",
     "they are a liar.",
-    "no tea, no shade no pink lemonade… they done fucked up drag.",
     "they had given up on the competition."
 ];
 
@@ -9293,6 +9297,10 @@ function queenTalents() {
 }
 function chooseReasoning(winQueen, elimQueen) {
     let screen = new Scene();
-    let reasoning = randomNumber(0, reasoningQueens.length - 1);
+	if (elimQueen.getLiked() > 0) {
+		let reasoning = randomNumber(0, reasoningQueens2.length - 1);
+	} else {
+		let reasoning = randomNumber(0, reasoningQueens1.length - 1);
+	}
     screen.createBold(`${winQueen} chose ${elimQueen} because ${reasoningQueens[reasoning]}`);
 }
