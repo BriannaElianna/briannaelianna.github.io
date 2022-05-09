@@ -6706,34 +6706,7 @@ let custom5 = [canna, zombira, gem, angel, sapphire, taba, yurin, bethl, trey, d
 let international_as = [baga, blu, cheryl, janey, jimbo, jujubee, lemon, monique, pangina];
 let allstars_7 = [monet, viv, shea, trinity, raja, jinkx, yvie, jaida];
 let judgess = [brooke, rupaul, michelle, pangina, fred, priscilla, supremme, arta, nicky];
-let ultimate = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
-    jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra,
-    alexis, carmen, delta, india, manila, mariah, mimi, phoenix, raja, stacey, venus, yara,
-    alisa, chad, dida, jiggly, kenya, leshauwn, latrice, madame, milan, phiphi, princess, willam,
-    alaska, alyssa, coco, detox, honey, ivy, jadejolie, jinkx, lineysha, monica, penny, roxxxy, serena, vivienne,
-    adore, april, bendelacreme, bianca, courtney, darienne, gia, joslyn, kelly, laganja, magnolia, milk, trinityk, vivacious,
-    ginger, jaidynn, jasmine, kandy, katya, kennedy, max, fame, kasha, pearl, sashab, tempest, trixie, violet,
-    acid, bob, chichi, cynthia, dax, derrick, kim, laila, naomi, naysha, robbie, thorgy,
-    aja, alexism, charlie, eureka, farrah, jaymes, kimora, ninab, peppermint, sasha, shea, trinity, valentina,
-    aquaria, asia, blair, dusty, kalorie, kameron, mayhem, michelle, miz, monet, monique, vanessa, vixen, yuhua,
-    akeria, ariel, brooke, honeyd, kahanna, mercedes, ninaw, plastique, rajah, scarlet, shuga, silky, yvie,
-    aiden, brita, crystal, dahlia, gigi, heidi, jackie, jaida, jan, nicky, rock, 
-    denali, mik, joey, kahmora, kandym, lala, olivia, rose, symone, tamisha, tina, utica,
-    alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow,
-    baga, blu, cheryl, crystaluk, divina, gothy, scaredy, sumting, viv, vinegar,
-    awhora, asttina, bimini, cherry, ellie, ginny, joe, lawrence, sister, tayce, tia, veronica,
-    anubis, charity, choriza, elektraF, ella, kitty, krystal, river, scarlett, vanity, victoriaS,
-    anastarzia, boa, ilona, jimbo, juice, kiara, kyne, lemon, priyanka, rita, bobo, tynomi,
-    chelsea, envy, janey, madamem, mama, megan, abby, patty, roem, sederginne,
-    ivyelise, juicy, keta, love, mlp, reggy, tabitha, countess, vanessaC, vivaldi,
-    amadiva, annee, b, bunny, dearis, jaja, meannie, morrigan, natalia, petchra,
-    angele, bandit, genie, kana, kandyz, katy, m, maya, mocha, gimhuay, silver, srimala, tormai, vanda,
-    anita, art, cocoj, elektra, etc, jojo, kita, maxi, pinche, frankie, melissa, meatball, loris, xochi, frankie, vander, foxie,
-    arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
-    arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
-    adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
-    ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta, formelda, astrud, koco, merrie, bitter, la, sigourney, hoso,
-    pangina, felony, monikkie, kendra, erika, disasterina, victoriae, james, biqtch, violencia, saint, yovska, maxig, hollow, maddelynn, evah, louisianna, priscillac, dollya, landon];
+let ultimate = [];
 let winners = [bebe, tyra, raja, phiphi, chad, jinkx, bianca, violet, bob, alaska, sasha, natalia, aquaria, trixie, angele, yvie, monet, trinity, viv, jaida, shea, lawrence, krystal, priyanka, icesis, envy, vanessaC, kita, carmenf, blu, symone, sonique, elecktra, willow];
 let lipsyncers = [tayce,
 abby,
@@ -6781,8 +6754,8 @@ for (let i = 0; i < customLength; i++) {
 allCustomQueens.splice(0, customLength);
 let allQueens = [
     akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
-    jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra,
-    alexis, carmen, delta, india, manila, mariah, mimi, phoenix, raja, stacey, venus, yara,
+    jessica, jujubee, morgan, mystique, nicole, pandora, sahara, shangela, sonique, tatianna, tyra,
+    alexis, carmen, delta, india, manila, mariah, phoenix, raja, stacey, venus, yara,
     alisa, chad, dida, jiggly, kenya, leshauwn, latrice, madame, milan, phiphi, princess, willam,
     alaska, alyssa, coco, detox, honey, ivy, jadejolie, jinkx, lineysha, monica, penny, roxxxy, serena, vivienne,
     adore, april, bendelacreme, bianca, courtney, darienne, gia, joslyn, kelly, laganja, magnolia, milk, trinityk, vivacious,
@@ -6804,11 +6777,12 @@ let allQueens = [
     angele, bandit, genie, kana, kandyz, katy, m, maya, mocha, gimhuay, silver, srimala, tormai, vanda,
     anita, art, cocoj, elektra, etc, jojo, kita, maxi, pinche, frankie, melissa, meatball, loris, xochi, vander, foxie,
     arantxa, carmenf, dovima, drag, hugaceo, inti, killer, pupi, sagittaria, macarena,
-    arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, sharonne, venedita,
+    arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
     pangina, peppa, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch
 ].concat(allCustomQueens).sort((a, b) => a.getName().toLowerCase().localeCompare(b.getName().toLowerCase()));
+ultimate=allQueens
 let allQueensCopy = [];
 let allQueensCopy2 = [];
 let randomReturn = false;
