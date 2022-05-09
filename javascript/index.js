@@ -6730,16 +6730,16 @@ coco,
 vanity,
 alyssa]
 //judges
-let kellyh = new Queen("Kelly Hyland", 3, 2, 7, 3, 2, 7, 1, "Kelly");
-let jojos = new Queen("Jojo Siwa", 3, 2, 7, 3, 2, 7, 1, "Jojos");
-let kimk = new Queen("Kim Kardashian", 3, 2, 7, 3, 2, 7, 1, "KimK");
-let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 1, "Sabrina");
-let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 1, "Britney");
-let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 1, "Melanie");
-let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 1, "Dove");
-let katyp = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 1, "KatyP");
-let emily = new Queen("Emily Alyn Lind", 3, 2, 7, 3, 2, 7, 1, "Emily");
-let oliviar = new Queen("Olivia Rodrigo", 3, 2, 7, 3, 2, 7, 1, "OliviaR");
+let kellyh = new Queen("Kelly Hyland", 3, 2, 7, 3, 2, 7, 1, "Kelly",false, "S3");
+let jojos = new Queen("Jojo Siwa", 3, 2, 7, 3, 2, 7, 1, "Jojos",false, "S3");
+let kimk = new Queen("Kim Kardashian", 3, 2, 7, 3, 2, 7, 1, "KimK",false, "S3");
+let sabrina = new Queen("Sabrina Carpenter", 3, 2, 7, 3, 2, 7, 1, "Sabrina",false, "S3");
+let britney = new Queen("Britney Spears", 3, 2, 7, 3, 2, 7, 1, "Britney",false, "S3");
+let melanie = new Queen("Melanie Martinez", 3, 2, 7, 3, 2, 7, 1, "Melanie",false, "S3");
+let dove = new Queen("Dove Cameron", 3, 2, 7, 3, 2, 7, 1, "Dove",false, "S3");
+let katyp = new Queen("Katy Perry", 3, 2, 7, 3, 2, 7, 1, "KatyP",false, "S3");
+let emily = new Queen("Emily Alyn Lind", 3, 2, 7, 3, 2, 7, 1, "Emily",false, "S3");
+let oliviar = new Queen("Olivia Rodrigo", 3, 2, 7, 3, 2, 7, 1, "OliviaR",false, "S3");
 let judges = [kellyh, eve, jojos, kimk, sabrina, britney, melanie, dove, katyp, emily, oliviar]
 //all possible queens:
 let allCustomQueens = [];
