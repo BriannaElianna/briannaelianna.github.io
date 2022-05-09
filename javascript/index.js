@@ -4807,35 +4807,6 @@ function top2AndBtm() {
         bottomQueens[0].ppe += 2;
         bottomQueens.splice(0, 1);
     } */
-    screen.createHorizontalLine();
-    screen.createBigText("After deliberation...");
-    if (top2[0].lipstick == top2[1].lipstick){
-        let imageVoted = document.querySelectorAll("img[src='" + top2[0].lipstick.image +"']")[1];
-        imageVoted.setAttribute("hidden", "hidden");
-        let imageVotedd = document.querySelectorAll("img[src='" + top2[1].lipstick.image +"']")[2];
-        imageVotedd.setAttribute("hidden", "hidden");
-        mismovoto = true;
-    }else{
-        let imageVoted = document.querySelectorAll("img[src='" + top2[0].lipstick.image +"']")[1];
-        imageVoted.setAttribute("hidden", "hidden");
-        let imageVotedd = document.querySelectorAll("img[src='" + top2[1].lipstick.image +"']")[1];
-        imageVotedd.setAttribute("hidden", "hidden");
-        mismovoto = false;
-    }
-    let winV = document.querySelectorAll("p#winVP");
-    winV[0].setAttribute("hidden", "hidden");
-    winV[1].setAttribute("hidden", "hidden");
-    let main = document.querySelector("div#MainBlock");
-    let div = document.createElement("div");
-    div.setAttribute("id", "votes");
-    div.setAttribute("hidden", "hidden");
-    for (let i = 0; i < winV.length; i++){
-        div.appendChild(winV[i]);
-    }
-    main.appendChild(div);
-    let br = document.createElement("br");
-    main.appendChild(br);
-    screen.createButton("Show votes", "showvotes()", "showvotes");
     screen.createButton("Proceed", "untucked()");
 }
 function topAndBtm() {
