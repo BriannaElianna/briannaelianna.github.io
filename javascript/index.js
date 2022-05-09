@@ -9207,13 +9207,13 @@ function Untuck() {
 				if(bottomQueens[b1].getLipSyncStat() > bottomQueens[b2].getLipSyncStat() || randomNumber(0, 10) < 5 || randomNumber(0, 10) == 5) {
 					screen.createImage(bottomQueens[b1].image);
 					screen.createBold(`${bottomQueens[b1].getName()}: I feel like I will win the lipsync.`);
-					like = currentCast[q1].getLiked() 
+					like = currentCast[b1].getLiked() 
 					like - 1
 				} else {
 					screen.createImage(bottomQueens[b1].image);
 					screen.createImage(bottomQueens[b2].image);
 					screen.createBold(`${bottomQueens[b1].getName()}: I feel like ${bottomQueens[b2].getName()} will win the lipsync.`);
-					like = currentCast[q1].getLiked() 
+					like = currentCast[b1].getLiked() 
 					like + 1
 				}
 			}
