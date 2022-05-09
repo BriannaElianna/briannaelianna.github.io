@@ -9193,6 +9193,7 @@ function Untuck() {
 			}
 		} else if(untuckconvo[convo]=="Bottom") {
 			screen.createHorizontalLine();
+			let like = currentCast[b1].getLiked()
 			screen.createBigText(`The queens talk to eachother about being in the bottom.`);
 			screen.createImage(bottomQueens[b1].image);
 			screen.createBold(`${bottomQueens[b1].getName()}: How are we feeling about our placements?`);
