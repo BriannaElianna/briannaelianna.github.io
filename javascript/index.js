@@ -1005,6 +1005,7 @@ function addQueen() {
     let improv = document.getElementById("improvStat").valueAsNumber;
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
+	let liked = 1
     let image = document.getElementById("url").value.trim();
     let extension = image.substring(image.lastIndexOf(".") + 1).toLowerCase();
     let noimagemaybe = false;
@@ -1075,7 +1076,6 @@ function editCustomQueen(){
     document.getElementById("improvStat").value = allCustomQueens[index]._improvStat;
     document.getElementById("runwayStat").value = allCustomQueens[index]._runwayStat;
     document.getElementById("lipsyncStat").value = allCustomQueens[index]._lipsyncStat;
-	document.getElementById("likeabilityStat").value = allCustomQueens[index].getLikeability();
     document.getElementById("url").value = allCustomQueens[index].image;
 }
 function updateCustomQueen(){
@@ -1089,6 +1089,7 @@ function updateCustomQueen(){
     let improv = document.getElementById("improvStat").valueAsNumber;
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
+	let liked = 1
     let image = document.getElementById("url").value.trim();
     if ((acting || comedy || dance || design || improv || runway || lipsync) < 0 || (acting || comedy || dance || design || improv || runway || lipsync) > 15) {
         window.alert("Queens' stats must be between 0 and 15!");
@@ -6069,6 +6070,7 @@ class Queen {
         this._improvStat = improv;
         this._runwayStat = runway;
         this._lipsyncStat = lipsync;
+		this._liked = 1;
         if (image == "noimage")
             this.image = "image/queens/noimage.jpg";
         else if (custom == true)
