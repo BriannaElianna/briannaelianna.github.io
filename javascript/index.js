@@ -496,6 +496,38 @@ function rusical() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new Rusical();
     challenge.generateDescription();
+	let rusicalqueens = [];
+	for (let i = 0; i < currentCast.length; i++) {
+		rusicalqueens.push(currentCast[i]);
+    }
+	//Queen 1
+    let q1 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q1.image, "gold");
+	challengeScreen.createBold(`${q1.getName()} will play the lead role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q1), 1);
+	q1.favoritism += 1;
+	//Queen 2
+	let q2 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q2.image, "gold");
+	challengeScreen.createBold(`${q2.getName()} will play the savior role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q2), 1);
+	q2.favoritism += 1;
+	//Queen 4
+	let q4 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q4.image, "gold");
+	challengeScreen.createBold(`${q4.getName()} will play the antagonist role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q4), 1);
+	q4.favoritism += 1;
+	//Queen 3
+	let q3 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q3.image, "gold");
+	challengeScreen.createBold(`${q3.getName()} will play the special role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q3), 1);
+	q3.favoritism += 1;
+	//Rest
+	if (currentCast.length > 4) {
+		scraproles(rusicalqueens);
+	}
     challenge.rankPerformances();
     queensPerformances();
     isDesignChallenge = false;
@@ -842,7 +874,7 @@ function createChallenge(challenges, miniChallengeScreen) {
     else if (currentCast.length == 8 && !girlGroupCounter && (top3 || top4 || lipsync_assassin))
         miniChallengeScreen.createButton("Proceed", "girlgroup()");
     //rusical
-    else if (currentCast.length == 7 && !rusicalCounter)
+     else if (currentCast.length > 6 && randomNumber(0, 20) >= 19 && !rusicalCounter || currentCast.length > 5 && randomNumber(0, 20) >= 19 && team && !rusicalCounter)
         miniChallengeScreen.createButton("Proceed", "rusical()");
     //makeover
     else if (currentCast.length == 6 && (top3 || top4) && makeoverCounter == false || currentCast.length == 6 && randomNumber(0, 15) == 15 && (all_stars || lipsync_assassin) && makeoverCounter == false)
@@ -5566,8 +5598,10 @@ function untucked() {
 			screen.createBold("The queens sit down...");
 		}
 		screen.createHorizontalLine();
-		if (all_stars) {
+		if (lipsync_assassin) {
 			screen.createButton("Skip", "lsaLipSync()");
+		} else if (all_stars) {
+			screen.createButton("Skip", "asLipSync()");
 		} else {
 			screen.createButton("Skip", "lipSync()");
 		}
@@ -9002,6 +9036,14 @@ function Impersonation() {
         screen.createBold(`${currentCast[i].getName()} will do ${snatchToDo[snatch]}!!`);
     }
 }
+function scraproles(queens) {
+    let screen = new Scene();
+	for (let i = 0; i < queens.length; i++) {
+        screen.createImage(queens[i].image, "red");
+        screen.createBold(`${queens[i].getName()} will play a side role!`);
+		queens.favoritism -= 1;
+    }
+}
 function PreEp() {
     let screen = new Scene();
     screen.createBigText("After the challenge...");
@@ -9214,8 +9256,10 @@ function Untuck() {
 	for (let i = 0; i < currentCast.length; i++)
 			screen.createImage(currentCast[i].image, "tomato");
 	screen.createHorizontalLine();
-	if (all_stars) {
+	if (lipsync_assassin) {
 		screen.createButton("Proceed", "lsaLipSync()");
+	} else if (all_stars) {
+			screen.createButton("Proceed", "asLipSync()");
 	} else {
 		screen.createButton("Proceed", "lipSync()");
 	}
