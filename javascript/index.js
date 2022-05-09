@@ -9196,15 +9196,15 @@ function Untuck() {
 		screen.createBigText(`The top queens listen to their lipsync song.. then choose their lipstick`);
 		for (let i = 0; i < top2.length; i++) {
 			if (randomNumber(0, 100) <= 45 && currentCast.length <= totalCastSize - 2)
-				top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked - a.getLiked)[0];
+				top2[i].lipstick = bottomQueens.sort((a, b) => b.getLiked() - a.getLiked())[0];
 			else
 				top2[i].lipstick = bottomQueens[randomNumber(0, bottomQueens.length - 1)];
 			screen.createImage(top2[i].image, "cyan");
 			screen.createImage(top2[i].lipstick.image, "red");
 			screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick!", "winV", "winVP");
-			if (top2[i].lipstick.getLiked > 0) {
+			if (top2[i].lipstick.getLiked() > 0) {
 				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they had no other choice.");
-			} else {
+			} else if (top2[i].lipstick.getLiked() < 0) {
 				screen.createBold(top2[i].getName() + " chose " + top2[i].lipstick.getName() + "'s lipstick because they didn't like them.");
 			}
 		}
