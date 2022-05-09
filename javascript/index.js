@@ -1005,7 +1005,6 @@ function addQueen() {
     let improv = document.getElementById("improvStat").valueAsNumber;
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
-	let likeability = document.getElementById("likeabilityStat").value.trim();
     let image = document.getElementById("url").value.trim();
     let extension = image.substring(image.lastIndexOf(".") + 1).toLowerCase();
     let noimagemaybe = false;
@@ -1090,7 +1089,6 @@ function updateCustomQueen(){
     let improv = document.getElementById("improvStat").valueAsNumber;
     let runway = document.getElementById("runwayStat").valueAsNumber;
     let lipsync = document.getElementById("lipsyncStat").valueAsNumber;
-	let likeability = document.getElementById("likeabilityStat").value.trim();
     let image = document.getElementById("url").value.trim();
     if ((acting || comedy || dance || design || improv || runway || lipsync) < 0 || (acting || comedy || dance || design || improv || runway || lipsync) > 15) {
         window.alert("Queens' stats must be between 0 and 15!");
@@ -6591,15 +6589,15 @@ let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "Riche",false, "IT1");
 let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "Luquisha",false, "IT1");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 //UK4
-let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa",false, "IT1");
+let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa",false, "UK4");
 //Judges
-let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina",false, "IT1");
-let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "Michelle",false, "IT1");
-let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 6, "Rupaull",false, "IT1");
-let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd",false, "IT1");
-let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 3, "Priscillaa",false, "IT1");
-let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, "Supremme",false, "IT1");
-let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA",false, "IT1");
+let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina",false, "JUDGE");
+let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "Michelle",false, "JUDGE");
+let rupaul = new Queen("Rupaul", 6, 11, 15, 6, 9, 15, 6, "Rupaull",false, "JUDGE");
+let fred = new Queen("Fred", 4, 7, 5, 3, 6, 8, 2, "Fredd",false, "JUDGE");
+let priscilla = new Queen("Priscilla", 3, 2, 4, 6, 4, 7, 3, "Priscillaa",false, "JUDGE");
+let supremme = new Queen("Supremme de Luxe", 12, 3, 13, 4, 10, 11, 1, "Supremme",false, "JUDGE");
+let arta = new Queen("Art Arya", 10, 14, 8, 15, 12, 14, 8, "ArtA",false, "JUDGE");
 //DRAGULA S2
 let felony = new Queen("Felony Dodger", 6, 5, 2, 3, 7, 4, 4, "Felony",false, "IT1");
 let monikkie = new Queen("Monikkie Shame", 6, 5, 2, 3, 7, 4, 4, "Monikkie",false, "IT1");
