@@ -4548,7 +4548,7 @@ function judgingScreen() {
         judgingScreen.createButton("Proceed", "uk3PremiereJudging()");
 	else if (all_stars && top3 || all_stars && top4 || all_stars)
         judgingScreen.createButton("Proceed", "top2AndBtm()");
-    else if (top3 || top4 || dragula)
+    else if (top3 || top4 || dragula  || s7finale)
         judgingScreen.createButton("Proceed", "winAndBtm2()");
     else if (lipsync_assassin)
         judgingScreen.createButton("Proceed", "topAndBtm()");
