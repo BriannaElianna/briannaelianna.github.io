@@ -1,5 +1,6 @@
 "use strict";
 //mini-challenge stuff:
+let congen = []
 class MiniChallenge {
     generateDescription() {
         let description = document.querySelector("p#Description");
@@ -1480,8 +1481,21 @@ function newEpisode() {
 			queensRemainingScreen.createButton("Proceed", "finale()");
 		//add an empty placement on eliminated queen's track records
 		if (currentCast.length == 3) {
+			let queenl = []
 			for (let i = 0; i < eliminatedCast.length; i++) {
-				eliminatedCast[i].addToTrackRecord("GUEST");
+				queenl.push(eliminatedCast[i])
+			}
+			//
+			let missc = queenl.sort((a, b) => b.getLiked() - a.getLiked())[1];
+			missc.addToTrackRecord("MISS CONGENIALITY");
+			queenl.splice(queenl.indexOf(missc), 1);
+			//
+			let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway())[1];
+			goldenb.addToTrackRecord("GOLDEN BOOT");
+			queenl.splice(queenl.indexOf(goldenb), 1);
+			//
+			for (let i = 0; i < queenl.length; i++) {
+				queenl[i].addToTrackRecord("GUEST");
 			}
 		} else {
 			for (let i = 0; i < eliminatedCast.length; i++) {
@@ -2288,8 +2302,19 @@ function canadaS2LipSyncs() {
     }
     episodeCount++;
     if (currentCast.length == 3) {
-		for (let i = 0; i < eliminatedCast.length; i++) {
-			eliminatedCast[i].addToTrackRecord("GUEST");
+		let queenl = []
+		queenl = eliminatedCast
+		//
+		let missc = queenl.sort((a, b) => b.getLiked() - a.getLiked())[1];
+		missc.addToTrackRecord("MISS CONGENIALITY");
+		queenl.splice(queenl.indexOf(missc), 1);
+		//
+		let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway())[1];
+		goldenb.addToTrackRecord("GOLDEN BOOT");
+		queenl.splice(queenl.indexOf(goldenb), 1);
+		//
+		for (let i = 0; i < queenl.length; i++) {
+			queenl[i].addToTrackRecord("GUEST");
 		}
 	} else {
 		for (let i = 0; i < eliminatedCast.length; i++) {
@@ -2676,6 +2701,9 @@ function contestantProgress() {
 				else if (placement.innerHTML == "MISS CONGENIALITY") {
                     placement.setAttribute("style", "background-color: lightskyblue;");
                 }
+				else if (placement.innerHTML == "GOLDEN BOOT") {
+                    placement.setAttribute("style", "background-color: gold;");
+                }
                 else if (placement.innerHTML == "undefined") {
                     placement.setAttribute("style", "font-weight: bold; background-color: light#badee8;");
                     placement.innerHTML = (currentCast[i].ppe / (currentCast[i].episodesOn)).toFixed(2);
@@ -2703,6 +2731,9 @@ function contestantProgress() {
             }
 			if (placement.innerHTML == "MISS CONGENIALITY") {
                 placement.setAttribute("style", "background-color: lightskyblue;");
+            }
+			if (placement.innerHTML == "GOLDEN BOOT") {
+                placement.setAttribute("style", "background-color: gold;");
             }
             if (placement.innerHTML == "WIN") {
                 placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: white;");
