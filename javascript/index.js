@@ -2774,7 +2774,7 @@ function contestantProgress() {
             else if (placement.innerHTML == "LOST 3RD ROUND") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #FFD100;");
             }
-            else if (placement.innerHTML == "") {
+            else if (placement.innerHTML == "" || placement.innerHTML == "GUEST") {
                 placement.setAttribute("style", "background-color: #badee8;");
             }
             else if (placement.innerHTML == "WIN ") {
