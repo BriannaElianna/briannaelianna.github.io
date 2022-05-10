@@ -162,13 +162,7 @@ function actingChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new ActingChallenge();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false){
-        isTeamChallenge = true;
-        teamMaking();
-        challenge.rankPerformances();
-    } else {
-        challenge.rankPerformances();
-    }
+	challenge.rankPerformances();
     queensPerformances();
     actingChallengeCounter++;
     isDesignChallenge = false;
@@ -261,13 +255,7 @@ function marketingChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new MarketingChallenge();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 60 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false){
-        isTeamChallenge = true;
-        teamMaking();
-        challenge.rankPerformances();
-    } else {
-        challenge.rankPerformances();
-    }
+    challenge.rankPerformances();
     queensPerformances();
     marketingChallengeCounter++;
     isDesignChallenge = false;
@@ -303,13 +291,7 @@ function danceChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new DanceChallenge();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 70 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false){
-        isTeamChallenge = true;
-        teamMaking();
-        challenge.rankPerformances();
-    } else {
-        challenge.rankPerformances();
-    }
+    challenge.rankPerformances();
     queensPerformances();
     danceChallengeCounter++;
     isDesignChallenge = false;
@@ -414,13 +396,7 @@ function improvChallenge() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new ImprovChallenge();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && dragula == false && lalahell == false && hell == false && flop == false && lalap == false){
-        isTeamChallenge = true;
-        teamMaking();
-        challenge.rankPerformances();
-    } else {
-        challenge.rankPerformances();
-    }
+    challenge.rankPerformances();
     queensPerformances();
     improvChallengeCounter++;
     isDesignChallenge = false;
@@ -676,13 +652,7 @@ function girlgroup() {
     challengeScreen.createParagraph("", "Description");
     let challenge = new GirlGroup();
     challenge.generateDescription();
-    if (randomNumber(0, 100) >= 50 && currentCast.length > 6 && currentCast.length <= 15 && !isTeamChallenge && (top3 || top4) && episodeCount > 3 && dragula == false && lalahell == false && hell == false && flop == false && lalap == false) {
-        isTeamChallenge = true;
-        teamMaking();
-        challenge.rankPerformances();
-    } else {
-        challenge.rankPerformances();
-    }
+	challenge.rankPerformances();
     queensPerformances();
     isDesignChallenge = false;
     episodeChallenges.push("Girl Group");
