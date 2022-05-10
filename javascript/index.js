@@ -731,7 +731,8 @@ function queensPerformances() {
     let bad = currentCast.filter(function (queen) { return queen.performanceScore >= 26 && queen.performanceScore < 31; });
     let flop = currentCast.filter(function (queen) { return queen.performanceScore >= 31 && queen.performanceScore < 50; });
     createPerformanceDesc(slay, great, good, bad, flop);
-    if (isDesignChallenge == true || episodeChallenges[episodeChallenges.length - 1] == "Design")
+	if (currentCast == 3 && s7finale == true) {
+    } if (isDesignChallenge == true && currentCast > 3 || episodeChallenges[episodeChallenges.length - 1] == "Design" && currentCast > 3) 
         performanceScreen.createButton("Proceed", "judging()");
     else
         performanceScreen.createButton("Proceed", "runway()", "button2");
@@ -1453,6 +1454,7 @@ let secondPremiere = false;
 let uk3Premiere = false;
 let s9Premiere = false;
 let dragula = false;
+let s7finale = false;
 //challenge seasons
 let sweatshop = false;
 let chaos = false;
@@ -1889,12 +1891,21 @@ function finale() {
     for (let i = 0; i < currentCast.length; i++)
         screen.createImage(currentCast[i].image);
     currentCast.sort((a, b) => (b.finaleScore - a.finaleScore));
+	if (s7finale == true) {
+		screen.createParagraph("Our Top 3 will participate in lipsync performances to their songs!");
+		//screen.createImage(currentCast.image, "gold")
+		finalesong();
+		let challenge = new TalentShow();
+		challenge.rankPerformances();
+		queensPerformances();
+	}
 	if (dragula == true) {
 		screen.createParagraph("Our Top 3 will participate in a ball!");
-	}else{
+		screen.createButton("Proceed", "runway()", "button2");
+	}else if (s7finale == false){
 		screen.createParagraph("Our Top 3 will participate in a music video for RuPaul's newest single!");
+		screen.createButton("Proceed", "runway()", "button2");
 	}
-    screen.createButton("Proceed", "runway()", "button2");
 }
 function finaleTeam() {
     //sort queens by finale score:
@@ -3100,6 +3111,8 @@ let team = false;
 function predefCast(cast, format, finale, premiere = '', returning = '') {
     currentCast = cast;
     totalCastSize = cast.length;
+	if (finale == "s7")
+        s7finale = true;
 	if (finale == "dragula")
         dragula = true;
     if (finale == "top3")
@@ -3209,6 +3222,8 @@ function startSimulation(challenge = "") {
 		let select5 = document.getElementById("format");
         if (select.options[select.selectedIndex].value == "top3")
             top3 = true;
+		else if (select.options[select.selectedIndex].value == "s7finale")
+            s7finale = true;
         else if (select.options[select.selectedIndex].value == "top4")
             top4 = true;
         else if (select.options[select.selectedIndex].value == "canS2"){
@@ -9343,4 +9358,25 @@ function chooseReasoning1(winQueen, elimQueen) {
     let screen = new Scene();
 	let reasoning = randomNumber(0, reasoningQueens1.length - 1);
     screen.createBold(`${winQueen} chose ${elimQueen} because ${reasoningQueens1[reasoning]}`);
+}
+
+let finalesongs = [
+    "Devil",
+    "Legs",
+    "Check My Track Record",
+	"I Hate People",
+	"Fighter",
+	"I Fell Down (I Got Up)",
+	"I Don't Like To Showoff",
+	"Winner, Winner",
+];
+
+function finalesong() {
+	let screen = new Scene();
+	for (let i = 0; i < currentCast.length; i++) {
+        let song = randomNumber(0, finalesongs.length - 1);
+        screen.createImage(currentCast[i].image, "gold");
+        screen.createBold(`${currentCast[i].getName()} performs her original song: ${finalesongs[song]}!`);
+		finalesongs.splice(finalesongs.indexOf(song), 1);
+    }
 }
