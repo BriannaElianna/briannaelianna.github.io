@@ -339,7 +339,7 @@ function designChallenge() {
     isDesignChallenge = true;
     queensPerformances();
     designChallengeCounter++;
-    else if (currentCast.length == totalCastSize && (uk3Premiere || s9Premiere) && !s9PremiereCheck && !uk3PremiereCheck){
+    if (currentCast.length == totalCastSize && (uk3Premiere || s9Premiere) && !s9PremiereCheck && !uk3PremiereCheck){
         episodeChallenges.push("Runway");
     }
     else if (currentCast.length == totalCastSize - 1 && s9Premiere && !s9PremiereCheck)
@@ -1479,8 +1479,15 @@ function newEpisode() {
 		else
 			queensRemainingScreen.createButton("Proceed", "finale()");
 		//add an empty placement on eliminated queen's track records
-		for (let i = 0; i < eliminatedCast.length; i++)
-			eliminatedCast[i].addToTrackRecord('');
+		if (currentCast.length == 3) {
+			for (let i = 0; i < eliminatedCast.length; i++) {
+				eliminatedCast[i].addToTrackRecord("GUEST");
+			}
+		} else {
+			for (let i = 0; i < eliminatedCast.length; i++) {
+				eliminatedCast[i].addToTrackRecord('');
+			}
+		}
 	}
 }
 function reSimulate() {
@@ -1891,6 +1898,7 @@ function finaleTeam() {
 }
 let isThisA3Way = false;
 function finaleJudging() {
+	let eliminated = eliminatedCast
     let screen = new Scene();
     screen.clean();
     screen.createHeader("The final minutes...");
@@ -1933,6 +1941,7 @@ function finaleJudging() {
     screen.createButton("Proceed", "finaleFinale()");
 }
 function finaleTeamJudging() {
+	let eliminated = eliminatedCast
     let screen = new Scene();
     screen.clean();
     screen.createHeader("The final minutes...");
@@ -2278,8 +2287,15 @@ function canadaS2LipSyncs() {
         }
     }
     episodeCount++;
-    for (let i = 0; i < eliminatedCast.length; i++)
-        eliminatedCast[i].addToTrackRecord('');
+    if (currentCast.length == 3) {
+		for (let i = 0; i < eliminatedCast.length; i++) {
+			eliminatedCast[i].addToTrackRecord("GUEST");
+		}
+	} else {
+		for (let i = 0; i < eliminatedCast.length; i++) {
+			eliminatedCast[i].addToTrackRecord('');
+		}
+	}
     screen.createButton("Proceed", "finale()");
 }
 function contestantProgress() {
@@ -2654,6 +2670,12 @@ function contestantProgress() {
                 else if (placement.innerHTML == "LOSS ") {
                     placement.setAttribute("style", "background-color: orange;");
                 }
+				else if (placement.innerHTML == "GUEST") {
+                    placement.setAttribute("style", "background-color: light#badee8;");
+                }
+				else if (placement.innerHTML == "MISS CONGENIALITY") {
+                    placement.setAttribute("style", "background-color: lightskyblue;");
+                }
                 else if (placement.innerHTML == "undefined") {
                     placement.setAttribute("style", "font-weight: bold; background-color: light#badee8;");
                     placement.innerHTML = (currentCast[i].ppe / (currentCast[i].episodesOn)).toFixed(2);
@@ -2676,6 +2698,12 @@ function contestantProgress() {
         for (let k = 0; k < eliminatedCast[i].trackRecord.length + 1; k++) {
             let placement = document.createElement("td");
             placement.innerHTML = eliminatedCast[i].trackRecord[k];
+			if (placement.innerHTML == "GUEST") {
+                placement.setAttribute("style", "background-color: light#badee8;");
+            }
+			if (placement.innerHTML == "MISS CONGENIALITY") {
+                placement.setAttribute("style", "background-color: lightskyblue;");
+            }
             if (placement.innerHTML == "WIN") {
                 placement.setAttribute("style", "font-weight: bold; background-color: royalblue; color: white;");
             }
