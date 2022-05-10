@@ -339,10 +339,6 @@ function designChallenge() {
     isDesignChallenge = true;
     queensPerformances();
     designChallengeCounter++;
-    if (currentCast.length == 6 && makeoverCounter == false && team == false && currentCast != firstCast && currentCast != secondCast && !uk3Premiere && !s9Premiere && !conjoinedQueens) {
-        episodeChallenges.push("Makeover");
-        makeoverCounter = true;
-    }
     else if (currentCast.length == totalCastSize && (uk3Premiere || s9Premiere) && !s9PremiereCheck && !uk3PremiereCheck){
         episodeChallenges.push("Runway");
     }
