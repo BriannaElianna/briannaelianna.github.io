@@ -1480,7 +1480,7 @@ function newEpisode() {
         currentCast.splice(currentCast.indexOf(lateQueen), 1);
         lateQueen.addToTrackRecord('');
     }
-    if (episodeCount == 1 && speed == true || premiereCounter <= 2 && (s12Premiere || porkchopPremiere || s6Premiere || s14Premiere ) || episodeCount == 1 && (uk3Premiere || s9Premiere) && speed == true) {
+    if (episodeCount == 1 && speed == true || premiereCounter <= 2 && (s12Premiere && speed == true || porkchopPremiere && speed == true || s6Premiere && speed == true || s14Premiere && speed == true ) || episodeCount == 1 && (uk3Premiere && speed == true || s9Premiere) && speed == true) {
         queensRemainingScreen.clean();
         queensRemainingScreen.createHeader("Entrances");
         entrance();
@@ -1492,10 +1492,10 @@ function newEpisode() {
     }
 	if (speed == false && episodeCount == 1) {
 	} else {
-		if (currentCast.length == totalCastSize && team == true)
-			queensRemainingScreen.createButton("Proceed", "teamsScreen()");
-		else if (currentCast.length > 4)
+		if (currentCast.length > 4)
 			queensRemainingScreen.createButton("Proceed", "miniChallenge()");
+		else if (currentCast.length == totalCastSize && team == true)
+			queensRemainingScreen.createButton("Proceed", "teamsScreen()");
 		else if (currentCast.length == 4 && porkchopPremiere && premiereCounter < 3)
 			queensRemainingScreen.createButton("Proceed", "miniChallenge()");
 		else if (currentCast.length == 4 && canFinale)
