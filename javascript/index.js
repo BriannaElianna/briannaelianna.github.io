@@ -2556,7 +2556,7 @@ function contestantProgress() {
                 else if (placement.innerHTML == "BTM2 ") {
                     placement.setAttribute("style", "background-color: #FA8072;");
                 }
-                else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM") {
+                else if (placement.innerHTML == "BTM2" || placement.innerHTML == "BTM3" || placement.innerHTML == "BTM4" || placement.innerHTML == "BTM5" || placement.innerHTML == "BTM6" || placement.innerHTML == "BTM" || placement.innerHTML == "EXT") {
                     placement.setAttribute("style", "background-color: #fc827c;");
                 }
                 else if (placement.innerHTML == " BTM2") {
@@ -2740,7 +2740,7 @@ function contestantProgress() {
             else if (placement.innerHTML == "CHOC") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #fcea7c;");
             }
-            else if (placement.innerHTML == "ELIM") {
+            else if (placement.innerHTML == "ELIM" || placement.innerHTML == "EXT") {
                 placement.setAttribute("style", "font-weight: bold; background-color: #e66060;");
             }
             else if (placement.innerHTML == "ELIM ") {
