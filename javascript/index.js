@@ -164,6 +164,38 @@ function actingChallenge() {
     let challenge = new ActingChallenge();
     challenge.generateDescription();
 	challenge.rankPerformances();
+	let rusicalqueens = [];
+	for (let i = 0; i < currentCast.length; i++) {
+		rusicalqueens.push(currentCast[i]);
+    }
+	//Queen 1
+    let q1 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q1.image, "gold");
+	challengeScreen.createBold(`${q1.getName()} will play the lead role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q1), 1);
+	q1.favoritism += 3;
+	//Queen 2
+	let q2 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q2.image, "gold");
+	challengeScreen.createBold(`${q2.getName()} will play the savior role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q2), 1);
+	q2.favoritism += 1;
+	//Queen 4
+	let q4 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q4.image, "gold");
+	challengeScreen.createBold(`${q4.getName()} will play the antagonist role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q4), 1);
+	q4.favoritism += 1;
+	//Queen 3
+	let q3 = rusicalqueens[randomNumber(0, rusicalqueens.length - 1)];
+	challengeScreen.createImage(q3.image, "gold");
+	challengeScreen.createBold(`${q3.getName()} will play the special role!`);
+    rusicalqueens.splice(rusicalqueens.indexOf(q3), 1);
+	q3.favoritism += 1;
+	//Rest
+	if (currentCast.length > 4) {
+		scraproles(rusicalqueens);
+	}
     queensPerformances();
     actingChallengeCounter++;
     isDesignChallenge = false;
