@@ -1518,13 +1518,20 @@ function newEpisode() {
 				queenl.push(eliminatedCast[i])
 			}
 			//
-			let missc = queenl.sort((a, b) => b.getLiked() - a.getLiked())[1];
+			let missc = eliminatedCast[randomNumber(0, eliminatedCast.length - 1)];
+			//let missc = queenl.sort((a, b) => b.getLiked() - a.getLiked()[1]);
 			missc.addToTrackRecord("MISS CONGENIALITY");
 			queenl.splice(queenl.indexOf(missc), 1);
 			//
-			let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway())[1];
-			goldenb.addToTrackRecord("GOLDEN BOOT");
-			queenl.splice(queenl.indexOf(goldenb), 1);
+			queenl.sort(function (a, b) {
+				return a.getRunway() - b.getRunway()
+			})
+
+			var min = queenl[0],
+				max = queenl[queenl.length - 1]
+			let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway());
+			min.addToTrackRecord("GOLDEN BOOT");
+			queenl.splice(queenl.indexOf(min), 1);
 			//
 			for (let i = 0; i < queenl.length; i++) {
 				queenl[i].addToTrackRecord("GUEST");
@@ -2335,15 +2342,24 @@ function canadaS2LipSyncs() {
     episodeCount++;
     if (currentCast.length == 3) {
 		let queenl = []
-		queenl = eliminatedCast
+		for (let i = 0; i < eliminatedCast.length; i++) {
+			queenl.push(eliminatedCast[i])
+		}
 		//
-		let missc = queenl.sort((a, b) => b.getLiked() - a.getLiked())[1];
+		let missc = eliminatedCast[randomNumber(0, eliminatedCast.length - 1)];
+		//let missc = queenl.sort((a, b) => b.getLiked() - a.getLiked()[1]);
 		missc.addToTrackRecord("MISS CONGENIALITY");
 		queenl.splice(queenl.indexOf(missc), 1);
 		//
-		let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway())[1];
-		goldenb.addToTrackRecord("GOLDEN BOOT");
-		queenl.splice(queenl.indexOf(goldenb), 1);
+		queenl.sort(function (a, b) {
+			return a.getRunway() - b.getRunway()
+		})
+		
+		var min = queenl[0],
+			max = queenl[queenl.length - 1]
+		let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway());
+		min.addToTrackRecord("GOLDEN BOOT");
+		queenl.splice(queenl.indexOf(min), 1);
 		//
 		for (let i = 0; i < queenl.length; i++) {
 			queenl[i].addToTrackRecord("GUEST");
