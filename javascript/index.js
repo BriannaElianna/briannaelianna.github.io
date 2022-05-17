@@ -3170,7 +3170,7 @@ function generateSpace() {
                 }
                 select.selectedIndex = randomNumber(0, customy.length - 1);
             }
-			if (document.getElementById("onlyDU).checked == true){
+			if (document.getElementById("onlyDU").checked == true){
 				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "DU";});
                 for (let k = 0; k < customy.length; k++) {
                     let option = document.createElement("option");
