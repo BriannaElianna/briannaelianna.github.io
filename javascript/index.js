@@ -3140,95 +3140,95 @@ function generateSpace() {
                 }
                 select.selectedIndex = randomNumber(0, customy.length - 1);
             }
-			if (document.getElementById("onlyUS").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "S";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyUS").checked == true){
+				let usy = allQueens.filter(function (queen) { return queen.getSeason() == "S";});
+                for (let k = 0; k < usy.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = usy[k].getName();
+                    option.value = usy[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, usy.length - 1);
             }
-			if (document.getElementById("onlyCAN").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "CAN";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyCAN").checked == true){
+				let cany = allQueens.filter(function (queen) { return queen.getSeason() == "CAN";});
+                for (let k = 0; k < cany.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = cany[k].getName();
+                    option.value = cany[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, cany.length - 1);
             }
-			if (document.getElementById("onlyTH").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "TH";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyTH").checked == true){
+				let thaiy = allQueens.filter(function (queen) { return queen.getSeason() == "TH";});
+                for (let k = 0; k < thaiy.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = thaiy[k].getName();
+                    option.value = thaiy[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, thaiy.length - 1);
             }
-			if (document.getElementById("onlyDU").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "DU";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyDU").checked == true){
+				let duy = allQueens.filter(function (queen) { return queen.getSeason() == "DU";});
+                for (let k = 0; k < duy.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = duy[k].getName();
+                    option.value = duy[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, duy.length - 1);
             }
-			if (document.getElementById("onlyES").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "ES";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyES").checked == true){
+				let esy = allQueens.filter(function (queen) { return queen.getSeason() == "ES";});
+                for (let k = 0; k < esy.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = esy[k].getName();
+                    option.value = esy[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, esy.length - 1);
             }
-			if (document.getElementById("onlyIT").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "IT";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyIT").checked == true){
+				let ity = allQueens.filter(function (queen) { return queen.getSeason() == "IT";});
+                for (let k = 0; k < ity.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = ity[k].getName();
+                    option.value = ity[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, ity.length - 1);
             }
-			if (document.getElementById("onlyJUDGE").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "JUDGE";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyJUDGE").checked == true){
+				let juy = allQueens.filter(function (queen) { return queen.getSeason() == "JUDGE";});
+                for (let k = 0; k < juy.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = juy[k].getName();
+                    option.value = juy[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, juy.length - 1);
             }
-			if (document.getElementById("onlyDRAGULA").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "DRAGULA";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyDRAGULA").checked == true){
+				let dray = allQueens.filter(function (queen) { return queen.getSeason() == "DRAGULA";});
+                for (let k = 0; k < dray.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = dray[k].getName();
+                    option.value = dray[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, dray.length - 1);
             }
-			if (document.getElementById("onlyHO").checked == true){
-				let customy = allQueens.filter(function (queen) { return queen.getSeason() == "HO";});
-                for (let k = 0; k < customy.length; k++) {
+			else if (document.getElementById("onlyHO").checked == true){
+				let hoy = allQueens.filter(function (queen) { return queen.getSeason() == "HO";});
+                for (let k = 0; k < hoy.length; k++) {
                     let option = document.createElement("option");
-                    option.innerHTML = customy[k].getName();
-                    option.value = customy[k].image;
+                    option.innerHTML = hoy[k].getName();
+                    option.value = hoy[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, customy.length - 1);
+                select.selectedIndex = randomNumber(0, hoy.length - 1);
             }
             else{
                 for (let k = 0; k < allQueens.length; k++) {
@@ -3237,7 +3237,9 @@ function generateSpace() {
                     option.value = allQueens[k].image;
                     select.add(option);
                 }
-                select.selectedIndex = randomNumber(0, allQueens.length - 1);
+				let selectqueen = randomNumber(0, allQueens.length - 1);
+				allQueens.slice(selectqueen);
+                select.selectedIndex = 	selectqueen
             }
             let br = document.createElement("br");
             castSelection.appendChild(p);
