@@ -6510,6 +6510,22 @@ let maddy = new Queen("Maddy Morphosis", 8, 7, 6, 5, 6, 9, 7, "Maddy",false, "S1
 let orion = new Queen("Orion Story", 4, 6, 6, 5, 6, 6, 9, "Orion",false, "S14");
 let willow = new Queen("Willow Pill", 11, 8, 7, 10, 10, 12, 8, "Willow",false, "S14");
 let us_season14 = [alyssaH, angeria, bosco, daya, deja, jasmineK, jorgeous, june, kerri, kornbread, cadmen, maddy, orion, willow];
+//SEASON 15
+let amethystt = new Queen("Amethyst", 5, 6, 7, 10, 7, 13, 8, "Amethystt",false, "S14");
+let anetra = new Queen("Anetra", 11, 6, 9, 12, 8, 11, 8, "Anetra",false,"S14");
+let aura = new Queen("Aura Mayari", 11, 12, 6, 7, 12, 11, 6, "Aura",false, "S14");
+let irene = new Queen("Irene Dubois", 9, 8, 9, 9, 10, 10, 8, "Irene",false, "S14");
+let jax = new Queen("Jax", 9, 7, 9, 8, 13, 8, 8, "Jax",false, "S14");
+let luxx = new Queen("Luxx Noir London", 7, 6, 13, 7, 6, 10, 14, "Luxx",false, "S14");
+let marcia = new Queen("Marcia Marcia Marcia", 5, 5, 13, 10, 5, 10, 15, "Marcia",false, "S14");
+let mistress = new Queen("Mistress Isabelle Brooks", 5, 6, 6, 4, 5, 6, 6, "Mistress",false, "S14");
+let poppy = new Queen("Princess Poppy", 6, 6, 5, 5, 6, 9, 6, "Poppy",false, "S14");
+let robin = new Queen("Robin Fierce", 12, 10, 6, 7, 10, 9, 8, "Robin",false, "S14");
+let salina = new Queen("Salina Estitties", 12, 11, 12, 11, 7, 10, 11, "Salina",false, "S14");
+let sashac = new Queen("Sasha Colby", 8, 7, 6, 5, 6, 9, 7, "Sasha",false, "S14");
+let sugar = new Queen("Sugar", 4, 6, 6, 5, 6, 6, 9, "Sugar",false, "S14");
+let spice = new Queen("Spice", 11, 8, 7, 10, 10, 12, 8, "Spice",false, "S14");
+let us_season15 = [amethystt, anetra, aura, irene, jax, luxx, marcia, mistress, poppy, robin, salina, sashac, sugar, spice];
 //DRUK SEASON 1 
 let baga = new Queen("Baga Chipz", 13, 12, 5, 5, 13, 8, 7, "Baga",false, "UK1");
 let blu = new Queen("Blu Hydrangea", 5, 9, 8, 10, 10, 12, 9, "Blu",false, "UK1");
