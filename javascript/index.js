@@ -6693,7 +6693,18 @@ let riche = new Queen("Le Riche", 6, 8, 6, 8, 9, 8, 7, "Riche",false, "IT1");
 let luquisha = new Queen("Luquisha Lubamba", 7, 6, 6, 5, 7, 6, 7, "Luquisha",false, "IT1");
 let italia = [ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha];
 //UK4
+let baby = new Queen("Baby", 5, 5, 5, 4, 5, 4, 4, "Baby",false, "UK3");
 let peppa = new Queen("Black Peppa", 6, 11, 15, 6, 9, 15, 200, "BlackPeppa",false, "UK4");
+let cheddar = new Queen("Cheddar", 8, 7, 4, 10, 6, 13, 8, "Cheddar",false, "UK3");
+let copper = new Queen("Copper Top", 9, 9, 6, 7, 7, 8, 7, "Copper",false, "UK3");
+let dakota = new Queen("Dakota Schiffer", 5, 6, 11, 4, 5, 8, 13, "Dakota",false, "UK3");
+let jombers = new Queen("Jombers Blonde", 9, 14, 8, 10, 12, 9, 8, "Jombers",false, "UK3");
+let may = new Queen("Just May", 8, 8, 11, 12, 8, 14, 12, "May",false, "UK3");
+let lefil = new Queen("Le Fil", 8, 6, 5, 9, 5, 7, 6, "Lefil",false, "UK3");
+let pixie = new Queen("Pixie Polite", 7, 7, 8, 8, 6, 8, 7, "Pixie",false, "UK3");
+let sminty = new Queen("Sminty Drop", 8, 7, 11, 5, 8, 8, 12, "Sminty",false, "UK3");
+let starlet = new Queen("Starlet", 8, 10, 8, 7, 9, 9, 8, "Starlet",false, "UK3");
+let uk_season4 = [baby, peppa, cheddar, copper, dakota, jombers, may, lefil, pixie, sminty, starlet];
 //Judges
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina",false, "JUDGE");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "Michelle",false, "JUDGE");
@@ -6883,7 +6894,7 @@ let allQueens = [
     arielRec, diamante, sethlas, estrella, jota, juriji, marina, marisa, onyx, samantha, venedita,
     adriana, beth, eve, giametric, icesis, kendall, kimoraA, oceane, pythia, stephanie, suki, synthia,
     ava, divinity, elecktra, enorma, farida, ivana, riche, luquisha, rupaul, fred, priscilla, supremme, arta,
-    pangina, peppa, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch
+    pangina, peppa, felony, monikkie, kendra, dahli, erika, disasterina, victoriae, james, biqtch, amethystt, anetra, aura, irene, jax, luxx, marcia, mistress, poppy, robin, salina, sashac, sugar, spice,
 ].concat(allCustomQueens).sort((a, b) => a.getName().toLowerCase().localeCompare(b.getName().toLowerCase()));
 ultimate=allQueens
 let allQueensCopy = [];
