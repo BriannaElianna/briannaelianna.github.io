@@ -1,5 +1,26 @@
 "use strict";
 //mini-challenge stuff:
+let startsave = false;
+function savestart() {
+	for (let i = 0; i < document.getElementsByClassName("queenList").length; i++) {
+        let select = document.getElementById(i.toString());
+        let value = select.options[select.selectedIndex].text;
+        for (let k = 0; k < allQueens.length; k++) {
+            if (value == allQueens[k].getName()) {
+                currentCast.push(allQueens[k]);
+				let cassssst = currentCast
+				startsave = true;
+                break;
+            }
+        }
+    }
+	top3 = true;
+}
+
+if (startsave == true) {
+	let savedsave = cassssst
+}
+
 let congen = []
 class MiniChallenge {
     generateDescription() {
@@ -1073,6 +1094,14 @@ function addQueen() {
         }, 1500);
     }
 }
+
+function addSave() {
+	savestart();
+    setTimeout(() => {
+        document.location.reload();
+    }, 1500);
+}
+
 function customQueenSelectList() {
     let select = document.getElementById("custom-remove");
     for (let i = 0; i < allCustomQueens.length; i++) {
@@ -3267,6 +3296,52 @@ function generateSpace() {
 		window.alert("Warning: There is a cloned queen on your cast! The track record of the queen will break.");
 	}
 }
+
+function generateSpacee() {
+    let castSize = document.querySelector("input#castSize").valueAsNumber;
+    totalCastSize = castSize;
+    let castSelection = document.querySelector("p#castSelection");
+    castSelection.innerHTML = '';
+	if (totalCastSize < 3 && noLimits == false)
+        window.alert("The simulator will not start without 3+ queens!");
+	else
+        for (let i = 0; i < castSize; i++) {
+            let select = document.createElement("select");
+            select.setAttribute("class", "queenList");
+            select.setAttribute("id", i.toString());
+            select.setAttribute("onchange", "setImage()");
+            let img = document.createElement("img");
+            img.setAttribute("class", "images");
+            img.setAttribute("id", "image" + i.toString());
+            img.setAttribute("style", "width: 105px; height: 105px;")
+            let p = document.createElement("p");
+            p.appendChild(img);
+            for (let k = 0; k < allQueens.length; k++) {
+				let option = document.createElement("option");
+                option.innerHTML = allQueens[k].getName();
+                option.value = allQueens[k].image;
+                select.add(option);
+            }
+			let selectqueen = randomNumber(0, allQueens.length - 1);
+			allQueens.slice(selectqueen);
+            select.selectedIndex = 	selectqueen
+            let br = document.createElement("br");
+            castSelection.appendChild(p);
+            castSelection.appendChild(select);
+            castSelection.appendChild(br);
+        }
+    setImage();
+	if (totalCastSize > 20 && duplicateQueens(currentCast)) {
+		window.alert("Warning: There is more than 20 queens + 1 or more cloned queens!");
+	}
+	else if (totalCastSize > 20 && noLimits == false) {
+		window.alert("Warning: Using more than 20 queens often breaks the simulator! Don't get mad at me if it breaks mid season.");
+	}
+	else if (duplicateQueens(currentCast)) {
+		window.alert("Warning: There is a cloned queen on your cast! The track record of the queen will break.");
+	}
+}
+
 function setImage() {
     let images = document.getElementsByClassName("images");
     for (let i = 0; i < images.length; i++) {

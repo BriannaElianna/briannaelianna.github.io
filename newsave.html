@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+	<meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = yes">
+    <link id="style" rel="stylesheet" href="css/style.light.css"> 
+    <link rel="icon" href="image/favicon .ico"> 
+    <title>Drag Race Simulator</title> 
+</head> 
+<body> 
+    <h1 id="MainTitle">New Save</h1>
+    <div id="MainBlock"> 
+        <p>Create a custom save!</p> 
+        <div> 
+            <p>How many queens do you want on your cast?</p> 
+            <input type="number" min="2" max="200" id="castSize"> 
+            <button onclick="generateSpacee()">Select</button> 
+        </div> 
+        <p id="castSelection"></p> 
+		<hr> 
+		
+        <button id="add" onclick="addSave()">Add save</button>
+        <div>
+            <p>
+                <big><a href="index.html" id="inblock">Save changes and back to main page</a></big>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascript/index.js">
+</script>
+</html>
