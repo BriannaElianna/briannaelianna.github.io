@@ -3150,6 +3150,16 @@ function generateSpace() {
                 }
                 select.selectedIndex = randomNumber(0, usy.length - 1);
             }
+			else if (document.getElementById("onlyUK").checked == true){
+				let usy = allQueens.filter(function (queen) { return queen.getSeason() == "UK";});
+                for (let k = 0; k < usy.length; k++) {
+                    let option = document.createElement("option");
+                    option.innerHTML = usy[k].getName();
+                    option.value = usy[k].image;
+                    select.add(option);
+                }
+                select.selectedIndex = randomNumber(0, usy.length - 1);
+            }
 			else if (document.getElementById("onlyCAN").checked == true){
 				let cany = allQueens.filter(function (queen) { return queen.getSeason() == "CAN";});
                 for (let k = 0; k < cany.length; k++) {
