@@ -9210,6 +9210,10 @@ function entrance() {
 			screen.createBold(`${currentCast[i].getName()}: "I've got a trick up my sleeve.. stunt that the crowd won't belive!"`);
 		} else if(currentCast[i].getName()=="Robbie Turner") {
 			screen.createBold(`${currentCast[i].getName()}: "Wear your seatbelt! I did. *wink*"`);
+		} else if(currentCast[i].getName()=="Sugar") {
+			screen.createBold(`${currentCast[i].getName()}: "Add a little sugar..."`);
+		} else if(currentCast[i].getName()=="Spice") {
+			screen.createBold(`${currentCast[i].getName()}: "And a little bit of spice..."`);
 		} else {
 			let line = randomNumber(0, entranceLine.length - 1);
 			screen.createBold(`${currentCast[i].getName()}: "${entranceLine[line]}"`);
@@ -9220,6 +9224,10 @@ function entrance() {
 			screen.createBold(`${currentCast[i].getName()} walks over to the tables and sits.`);
 		} else if(currentCast[i].getName()=="Michelle Visage") { 
 			screen.createBold(`${reactq[shadee].getName()}: Ew, Michelle..`);
+			let flop = randomNumber(0, flopLine.length - 1);
+			screen.createBold(`${currentCast[i].getName()} walks over to the ${flopLine[flop]}`);
+		} else if(currentCast[i].getName()=="Spice") { 
+			screen.createBold(`Sugar: And that'll make everything nice!`);
 			let flop = randomNumber(0, flopLine.length - 1);
 			screen.createBold(`${currentCast[i].getName()} walks over to the ${flopLine[flop]}`);
 		} else {
