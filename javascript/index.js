@@ -227,7 +227,6 @@ class ComedyChallenge {
     generateDescription() {
         let description = document.querySelector("p#Description");
         let desc1;
-        let whatChallengeIs = randomNumber(0, 1);
         (function (desc1) {
             desc1[desc1["a comedy routine about "] = 0] = "a comedy routine about ";
             desc1[desc1["a roast about "] = 1] = "a roast about ";
