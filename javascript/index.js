@@ -127,6 +127,7 @@ function miniChallenge() {
 		miniChallengeScreen.createButton("Design Challenge", "designChallenge()");
 		miniChallengeScreen.createButton("Ball", "ball()");
 		miniChallengeScreen.createButton("Rusical", "rusical()");
+		miniChallengeScreen.createButton("Comedy Challenge", "comedyChallenge()");
 		miniChallengeScreen.createButton("Girl Groups", "girlgroup()");
 		miniChallengeScreen.createButton("Talent Show", "talentshow()");
 		miniChallengeScreen.createButton("Snatch Game", "snatchGame()");
