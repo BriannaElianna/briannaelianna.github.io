@@ -328,6 +328,7 @@ class DanceChallenge {
     generateDescription() {
         let description = document.querySelector("p#Description");
         let desc1;
+		let whatChallengeIs = randomNumber(0, 3);
         (function (desc1) {
             desc1[desc1["the history of disco."] = 0] = "the history of disco.";
             desc1[desc1["RuPaul's biography."] = 1] = "RuPaul's biography.";
