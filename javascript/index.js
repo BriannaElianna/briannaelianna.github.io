@@ -135,6 +135,7 @@ function miniChallenge() {
 		miniChallengeScreen.createButton("Rumix", "rumix()");
 		miniChallengeScreen.createButton("Acting Challenge", "actingChallenge()");
 		miniChallengeScreen.createButton("Improv Challenge", "improvChallenge()");
+		miniChallengeScreen.createButton("Drag Con Pannels", "Pannels()");
 		miniChallengeScreen.createButton("Kitty Girl Group", "kittygirlGroup()()");
 		miniChallengeScreen.createButton("Queen's Of Comedy", "queensofComedy()()");
 		miniChallengeScreen.createButton("Conjoined Makeover", "queensConjoined()");
