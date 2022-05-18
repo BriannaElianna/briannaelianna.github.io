@@ -233,20 +233,29 @@ class ComedyChallenge {
         })(desc1 || (desc1 = {}));
         let desc2;
         (function (desc2) {
-            desc2[desc2["love."] = 0] = "love.";
-            desc2[desc2["sex."] = 1] = "sex.";
-            desc2[desc2["crime."] = 2] = "crime.";
-            desc2[desc2["school."] = 3] = "school.";
-            desc2[desc2["a popular TV series."] = 4] = "a popular TV series.";
+            desc2[desc2["Ross"] = 0] = "Ross";
+            desc2[desc2["Carson"] = 1] = "Carson";
+            desc2[desc2["Rupaul"] = 2] = "Rupaul";
+            desc2[desc2["Michelle"] = 3] = "Michelle";
+            desc2[desc2["Past Winners"] = 4] = "Past Winners";
             desc2[desc2["Drag Race."] = 5] = "Drag Race.";
-            desc2[desc2["Past Drag Race Contestants."] = 6] = "Past Drag Race Contestants.";
-            desc2[desc2["comedy."] = 7] = "comedy.";
+            desc2[desc2["Miss Congenialities"] = 6] = "Miss Congenialities";
         })(desc2 || (desc2 = {}));
-        description.innerHTML = "The queens will participate in " + desc1[whatChallengeIs] + desc2[randomNumber(0, 7)];
+        description.innerHTML = "The queens will participate in a roast about" + desc2[randomNumber(0, 7)];
         if (whatChallengeIs == 0) {
-            episodeChallenges.push("Stand Up");
-        } else {
-            episodeChallenges.push("Roast");
+           episodeChallenges.push("Ross Roast");
+		} else if (whatChallengeIs == 1) {
+           episodeChallenges.push("Carson Roast");
+		} else if (whatChallengeIs == 2) {
+           episodeChallenges.push("Rupaul Roast");
+		} else if (whatChallengeIs == 3) {
+           episodeChallenges.push("Michelle Roast");
+		} else if (whatChallengeIs == 4) {
+           episodeChallenges.push("Past Winner Roast");
+		} else if (whatChallengeIs == 5) {
+           episodeChallenges.push("Drag Race Roast");
+		} else if (whatChallengeIs == 6) {
+           episodeChallenges.push("Miss Congeniality Roast");
         }
     }
     rankPerformances() {
@@ -325,10 +334,14 @@ class DanceChallenge {
             desc1[desc1["Drag Race."] = 3] = "Drag Race.";
         })(desc1 || (desc1 = {}));
         description.innerHTML = "The queens will participate in a dance number about " + desc1[randomNumber(0, 3)];
-        if (randomNumber(0, 100) >= 50) {
-            episodeChallenges.push("Dance");
-        } else {
-            episodeChallenges.push("Choreo");
+		if (whatChallengeIs == 0) {
+           episodeChallenges.push("Discomentary");
+		} else if (whatChallengeIs == 1) {
+           episodeChallenges.push("Rupaul's Biography");
+		} else if (whatChallengeIs == 2) {
+           episodeChallenges.push("Rival Dance Clubs");
+		} else if (whatChallengeIs == 3) {
+           episodeChallenges.push("Drag Race Dance");
         }
     }
     rankPerformances() {
@@ -401,6 +414,7 @@ function designChallenge() {
     else
         episodeChallenges.push("Design");
 }
+
 class ImprovChallenge {
     generateDescription() {
         let description = document.querySelector("p#Description");
@@ -408,34 +422,48 @@ class ImprovChallenge {
         let whatChallengeIs = randomNumber(0, 12);
         (function (desc1) {
             desc1[desc1["political debate."] = 0] = "political debate."; {
-				 episodeChallenges.push("Political Debate");
             } desc1[desc1["celebrity interview."] = 1] = "celebrity interview."; { 
-				episodeChallenges.push("Celebrity Interview");
             } desc1[desc1["modern morning TV show."] = 2] = "modern morning TV show."; {
-				episodeChallenges.push("Morning TV Show");
 			} desc1[desc1["late-night TV show."] = 3] = "late-night TV show."; {
-				episodeChallenges.push("Late-night TV Show");
 			} desc1[desc1["new Bossy Rossy episode."] = 4] = "new Bossy Rossy episode."; {
-				episodeChallenges.push("Bossy Rossy");
 			} desc1[desc1["suggestive kids TV show."] = 5] = "suggestive kids TV show."; {
-				episodeChallenges.push("Suggestive TV Show");
             } desc1[desc1["Bitchelor show."] = 6] = "Bitchelor show."; {
-				episodeChallenges.push("Celebrity Interview");
             } desc1[desc1["Jersey Justice show."] = 7] = "Jersey Justice show."; {
-				episodeChallenges.push("Jersey Justice");
             } desc1[desc1["diva worship talk show."] = 8] = "diva worship talk show."; {
-				episodeChallenges.push("Diva Worship");
             } desc1[desc1["talent show for people with little talent."] = 9] = "talent show for people with little talent."; {
-				episodeChallenges.push("Talent Show");
             } desc1[desc1["drag queen spoof of the celebrity gossip and drama television show."] = 10] = "drag queen spoof of the celebrity gossip and drama television show."; {
-				episodeChallenges.push("Gossip Show");
             } desc1[desc1["pageant, the Miss Loose Jaw Pageant."] = 11] = "pageant, the Miss Loose Jaw Pageant."; {
-				episodeChallenges.push("Pageant");
             } desc1[desc1["intimate chat show called Pink Table Talk."] = 12] = "intimate chat show called Pink Table Talk."; {
-				episodeChallenges.push("Pink Table Talk");
 			}
         })(desc1 || (desc1 = {}));
         description.innerHTML = "The queens will improvise in a " + desc1[whatChallengeIs];
+        if (whatChallengeIs == 0) {
+           episodeChallenges.push("Political Debate");
+		} else if (whatChallengeIs == 1) {
+           episodeChallenges.push("Celebrity Interview");
+		} else if (whatChallengeIs == 2) {
+           episodeChallenges.push("Morning TV Show");
+		} else if (whatChallengeIs == 3) {
+           episodeChallenges.push("Late-night TV Show");
+        } else if (whatChallengeIs == 4) {
+            episodeChallenges.push("Bossy Rossy");
+		} else if (whatChallengeIs == 5) {
+            episodeChallenges.push("Suggestive TV Show");
+		} else if (whatChallengeIs == 6) {
+            episodeChallenges.push("Bitchelor");
+		} else if (whatChallengeIs == 7) {
+			episodeChallenges.push("Jersey Justice");
+		} else if (whatChallengeIs == 8) {
+			episodeChallenges.push("Diva Worship");
+		} else if (whatChallengeIs == 9) {
+			episodeChallenges.push("Talent Show");
+		} else if (whatChallengeIs == 10) {
+			episodeChallenges.push("Gossip Show");
+		} else if (whatChallengeIs == 11) {
+			episodeChallenges.push("Pageant");
+		} else if (whatChallengeIs == 12) {
+			episodeChallenges.push("Pink Table Talk");
+		}
     }
     rankPerformances() {
         for (let i = 0; i < currentCast.length; i++)
