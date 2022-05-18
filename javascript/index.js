@@ -407,30 +407,35 @@ class ImprovChallenge {
         let desc1;
         let whatChallengeIs = randomNumber(0, 12);
         (function (desc1) {
-            desc1[desc1["political debate."] = 0] = "political debate.";
-            desc1[desc1["celebrity interview."] = 1] = "celebrity interview.";
-            desc1[desc1["modern morning TV show."] = 2] = "modern morning TV show.";
-            desc1[desc1["late-night TV show."] = 3] = "late-night TV show.";
-            desc1[desc1["new Bossy Rossy episode."] = 4] = "new Bossy Rossy episode.";
-            desc1[desc1["suggestive kids TV show."] = 5] = "suggestive kids TV show.";
-            desc1[desc1["Bitchelor show."] = 6] = "Bitchelor show.";
-            desc1[desc1["Jersey Justice show."] = 7] = "Jersey Justice show.";
-            desc1[desc1["diva worship talk show."] = 8] = "diva worship talk show.";
-            desc1[desc1["talent show for people with little talent."] = 9] = "talent show for people with little talent.";
-            desc1[desc1["drag queen spoof of the celebrity gossip and drama television show."] = 10] = "drag queen spoof of the celebrity gossip and drama television show.";
-            desc1[desc1["pageant, the Miss Loose Jaw Pageant."] = 11] = "pageant, the Miss Loose Jaw Pageant.";
-            desc1[desc1["intimate chat show called Pink Table Talk."] = 12] = "intimate chat show called Pink Table Talk.";
+            desc1[desc1["political debate."] = 0] = "political debate."; {
+				 episodeChallenges.push("Political Debate");
+            } desc1[desc1["celebrity interview."] = 1] = "celebrity interview."; { 
+				episodeChallenges.push("Celebrity Interview");
+            } desc1[desc1["modern morning TV show."] = 2] = "modern morning TV show."; {
+				episodeChallenges.push("Morning TV Show");
+			} desc1[desc1["late-night TV show."] = 3] = "late-night TV show."; {
+				episodeChallenges.push("Late-night TV Show");
+			} desc1[desc1["new Bossy Rossy episode."] = 4] = "new Bossy Rossy episode."; {
+				episodeChallenges.push("Bossy Rossy");
+			} desc1[desc1["suggestive kids TV show."] = 5] = "suggestive kids TV show."; {
+				episodeChallenges.push("Suggestive TV Show");
+            } desc1[desc1["Bitchelor show."] = 6] = "Bitchelor show."; {
+				episodeChallenges.push("Celebrity Interview");
+            } desc1[desc1["Jersey Justice show."] = 7] = "Jersey Justice show."; {
+				episodeChallenges.push("Jersey Justice");
+            } desc1[desc1["diva worship talk show."] = 8] = "diva worship talk show."; {
+				episodeChallenges.push("Diva Worship");
+            } desc1[desc1["talent show for people with little talent."] = 9] = "talent show for people with little talent."; {
+				episodeChallenges.push("Talent Show");
+            } desc1[desc1["drag queen spoof of the celebrity gossip and drama television show."] = 10] = "drag queen spoof of the celebrity gossip and drama television show."; {
+				episodeChallenges.push("Gossip Show");
+            } desc1[desc1["pageant, the Miss Loose Jaw Pageant."] = 11] = "pageant, the Miss Loose Jaw Pageant."; {
+				episodeChallenges.push("Pageant");
+            } desc1[desc1["intimate chat show called Pink Table Talk."] = 12] = "intimate chat show called Pink Table Talk."; {
+				episodeChallenges.push("Pink Table Talk");
+			}
         })(desc1 || (desc1 = {}));
         description.innerHTML = "The queens will improvise in a " + desc1[whatChallengeIs];
-        if (whatChallengeIs == 0) {
-            episodeChallenges.push("Political Debate");
-        } else if (whatChallengeIs == 4) {
-            episodeChallenges.push("The Bossy Rossy Show");
-        } else if (whatChallengeIs == 6) {
-            episodeChallenges.push("The Bitchelor");
-        } else {
-            episodeChallenges.push("Improv");
-        }
     }
     rankPerformances() {
         for (let i = 0; i < currentCast.length; i++)
@@ -481,6 +486,32 @@ function snatchGame() {
     queensPerformances();
     isDesignChallenge = false;
     snatchCounter = true;
+}
+class ConPannels {
+    generateDescription() {
+        let description = document.querySelector("p#Description");
+        description.innerHTML = "Today's challenge is... Drag Con Pannels";
+        episodeChallenges.push("Drag Con Pannels");
+    }
+    rankPerformances() {
+        for (let i = 0; i < currentCast.length; i++)
+            currentCast[i].getComedy();
+        sortPerformances(currentCast);
+    }
+}
+function Pannels() {
+    let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('image/mainstage.webp')";
+    challengeScreen.clean();
+    challengeScreen.createHeader("Maxi-challenge!");
+    challengeScreen.createParagraph("", "Description");
+    let challenge = new ConPannels();
+    challenge.generateDescription();
+	challenge.rankPerformances();
+    queensPerformances();
+    DragConCounter++;
+    isDesignChallenge = false;
+    episodeChallenges.push("Drag Con Pannels");
 }
 class Rusical {
     generateDescription() {
