@@ -1619,11 +1619,10 @@ function newEpisode() {
 				return a.getRunway() - b.getRunway()
 			})
 
-			var min = queenl[0],
-				max = queenl[queenl.length - 1]
-			let goldenb = queenl.sort((a, b) => b.getRunway() - a.getRunway());
-			min.addToTrackRecord("GOLDEN BOOT");
-			queenl.splice(queenl.indexOf(min), 1);
+			queenl.sort((a, b) => (b.queenl - a.queenl));
+			let boot = queenl[0];
+			boot.addToTrackRecord("GOLDEN BOOT");
+			queenl.splice(queenl.indexOf(boot), 1);
 			//
 			for (let i = 0; i < queenl.length; i++) {
 				queenl[i].addToTrackRecord("GUEST");
