@@ -241,7 +241,7 @@ class ComedyChallenge {
             desc2[desc2["Drag Race."] = 5] = "Drag Race.";
             desc2[desc2["Miss Congenialities"] = 6] = "Miss Congenialities";
         })(desc2 || (desc2 = {}));
-		let whatChallengeIs = desc1[randomNumber(0, 3)];
+		let whatChallengeIs = desc2[randomNumber(0, 6)];
         description.innerHTML = "The queens will participate in a roast about " + whatChallengeIs;
         if (whatChallengeIs == "Ross") {
            episodeChallenges.push("Ross Roast");
