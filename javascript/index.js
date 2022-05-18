@@ -242,20 +242,21 @@ class ComedyChallenge {
             desc2[desc2["Drag Race."] = 5] = "Drag Race.";
             desc2[desc2["Miss Congenialities"] = 6] = "Miss Congenialities";
         })(desc2 || (desc2 = {}));
-        description.innerHTML = "The queens will participate in a roast about " + desc2[randomNumber(0, 7)];
-        if (whatChallengeIs == 0) {
+		let whatChallengeIs = desc1[randomNumber(0, 3)];
+        description.innerHTML = "The queens will participate in a roast about " + whatChallengeIs;
+        if (whatChallengeIs == "Ross") {
            episodeChallenges.push("Ross Roast");
-		} else if (whatChallengeIs == 1) {
+		} else if (whatChallengeIs == "Carson") {
            episodeChallenges.push("Carson Roast");
-		} else if (whatChallengeIs == 2) {
+		} else if (whatChallengeIs == "Rupaul") {
            episodeChallenges.push("Rupaul Roast");
-		} else if (whatChallengeIs == 3) {
+		} else if (whatChallengeIs == "Michelle") {
            episodeChallenges.push("Michelle Roast");
-		} else if (whatChallengeIs == 4) {
+		} else if (whatChallengeIs == "Past Winners") {
            episodeChallenges.push("Past Winner Roast");
-		} else if (whatChallengeIs == 5) {
+		} else if (whatChallengeIs == "Drag Race.") {
            episodeChallenges.push("Drag Race Roast");
-		} else if (whatChallengeIs == 6) {
+		} else if (whatChallengeIs == "Miss Congenialities") {
            episodeChallenges.push("Miss Congeniality Roast");
         }
     }
@@ -328,21 +329,21 @@ class DanceChallenge {
     generateDescription() {
         let description = document.querySelector("p#Description");
         let desc1;
-		let whatChallengeIs = randomNumber(0, 3);
         (function (desc1) {
             desc1[desc1["the history of disco."] = 0] = "the history of disco.";
             desc1[desc1["RuPaul's biography."] = 1] = "RuPaul's biography.";
             desc1[desc1["rival dance clubs."] = 2] = "rival dance clubs.";
             desc1[desc1["Drag Race."] = 3] = "Drag Race.";
         })(desc1 || (desc1 = {}));
-        description.innerHTML = "The queens will participate in a dance number about " + desc1[randomNumber(0, 3)];
-		if (whatChallengeIs == 0) {
+		let whatChallengeIs = desc1[randomNumber(0, 3)];
+        description.innerHTML = "The queens will participate in a dance number about " + whatChallengeIs;
+		if (whatChallengeIs == "the history of disco.") {
            episodeChallenges.push("Discomentary");
-		} else if (whatChallengeIs == 1) {
+		} else if (whatChallengeIs == "RuPaul's biography.") {
            episodeChallenges.push("Rupaul's Biography");
-		} else if (whatChallengeIs == 2) {
+		} else if (whatChallengeIs == "rival dance clubs.") {
            episodeChallenges.push("Rival Dance Clubs");
-		} else if (whatChallengeIs == 3) {
+		} else if (whatChallengeIs == "Drag Race.") {
            episodeChallenges.push("Drag Race Dance");
         }
     }
