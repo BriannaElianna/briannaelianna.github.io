@@ -6947,7 +6947,8 @@ let lefil = new Queen("Le Fil", 8, 6, 5, 9, 5, 7, 6, "Lefil",false, "UK");
 let pixie = new Queen("Pixie Polite", 7, 7, 8, 8, 6, 8, 7, "Pixie",false, "UK");
 let sminty = new Queen("Sminty Drop", 8, 7, 11, 5, 8, 8, 12, "Sminty",false, "UK");
 let starlet = new Queen("Starlet", 8, 10, 8, 7, 9, 9, 8, "Starlet",false, "UK");
-let uk_season4 = [baby, peppa, cheddar, copper, dakota, jombers, may, lefil, pixie, sminty, starlet];
+let danny = new Queen("Danny Beard", 0, 0, 0, 0, 0, 0, 0, "Danny",false, "UK");
+let uk_season4 = [baby, peppa, cheddar, copper, dakota, jombers, may, lefil, pixie, sminty, starlet, danny];
 //Judges
 let pangina = new Queen("Pangina Heals", 9, 7, 14, 11, 8, 13, 14, "Pangina",false, "JUDGE");
 let michelle = new Queen("Michelle Visage", 6, 11, 15, 6, 9, 15, 13, "Michelle",false, "JUDGE");
