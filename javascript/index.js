@@ -1043,6 +1043,7 @@ let slayersCheck = false;
 let bottom6WayLipsync = false;
 let bottom6WayLipsyncCheck = false;
 let s14LaLaPaRUZa = false;
+let currentsong = [];
 let s14LaLaPaRUZaCheck = false;
 let shantay = false;
 let sashay = false;
@@ -2498,6 +2499,8 @@ function contestantProgress() {
     let winner = document.createElement("tr");
     let name = document.createElement("td");
     name.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px;");
+	//
+	//
     if (onFinale) {
         let winnerQueen;
         if (!top4) {
@@ -3027,10 +3030,36 @@ function contestantProgress() {
         }
         trackRecords.appendChild(contestant);
     }
+	let lssong = document.createElement("tr");
+    trackRecords.appendChild(lssong);
+	//
+	let ls = document.createElement("td");
+	ls.innerHTML = "Lipsync Song"
+	ls.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 10px;");
+	lssong.appendChild(ls);
+	let lss = document.createElement("td");
+	lss.innerHTML = " "
+	lss.setAttribute("style", "background-color: #badee8; font-weight: bold; width: 10px;");
+	lssong.appendChild(lss);
+	//
+	//for (let i = 0; i < episodeChallenges.length; i++) {
+	for (let i = 0; i < eliminatedCast.length; i++) {
+		let song = document.createElement("td");
+		song.innerHTML = `${currentsong}`;
+		song.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 10px;");
+		lssong.appendChild(song);
+    }
+	//
+	let space = document.createElement("td");
+	space.innerHTML = " "
+	space.setAttribute("style", "background-color: #badee8; font-weight: bold; height: 50px;");
+	lssong.appendChild(space);
+	//
     centering.appendChild(trackRecords);
     let br = document.createElement("br");
     centering.appendChild(br);
 
+	
     if (chocolateBarTwist) {
         let titlec = document.createElement("big");
         titlec.innerHTML = "Chocolate Bar Twist";
@@ -8724,6 +8753,8 @@ function lsSong() {
     let screen = new Scene();
     let song = randomNumber(0, lsSongs.length - 1);
     screen.createBold(`The lip-sync song is... ${lsSongs[song]}!`);
+	currentsong = []
+	currentsong = lsSongs[song]
     lsSongs.splice(song, 1);
 }
 let allLsSongs = [
