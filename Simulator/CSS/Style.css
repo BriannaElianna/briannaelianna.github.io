@@ -35,7 +35,7 @@ div.MainArea {
 }
 
 div.rpdr {
-    background-image: url("../Images/Backgrounds/rpdr.gif");
+    background-image: url("../Images/Backgrounds/bg.png");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@ div.rpdr {
 }
 
 div.Antm {
-    background-image: url("../Images/Backgrounds/antm.gif");
+    background-image: url("../Images/Backgrounds/bbg.png");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -232,6 +232,31 @@ a:active {
   color: black;
   font: helvetica;
 }
+
+h2 {
+    text-decoration: dotted;
+    color: black;
+}
+
+
+#MainTitle {
+    background-color: rgba(245, 222, 179, 0.450);
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 30px;
+    color: #b1ffae;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.322);
+}
+
+#MainBlock {
+    background-color: rgba(245, 222, 179, 0.450);
+    margin-left: 8%;
+    margin-right: 8%;
+    border-radius: 30px;
+    border: 3px solid white;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.322);
+}
+
 
 
 
