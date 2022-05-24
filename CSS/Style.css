@@ -5,7 +5,7 @@ body {
     font-family: rubik,helvetica,arial,sans-serif;
     padding: 20px;
     font-size: 13px;
-    background-image: url("../Images/Backgrounds/bg.png");
+    background-image: url("../Images/Backgrounds/oldbg.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ div.MainArea {
 }
 
 div.rpdr {
-    background-image: url("../Images/Backgrounds/rpdr.gif");
+    background-image: url("../Images/Backgrounds/bg.png");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@ div.rpdr {
 }
 
 div.Antm {
-    background-image: url("../Images/Backgrounds/antm.gif");
+    background-image: url("../Images/Backgrounds/bbg.png");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
