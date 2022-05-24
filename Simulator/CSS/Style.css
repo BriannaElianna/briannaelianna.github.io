@@ -239,22 +239,21 @@ h2 {
 }
 
 
-#MainTitle {
-    background-color: rgba(245, 222, 179, 0.450);
-    margin-left: 30%;
-    margin-right: 30%;
-    border-radius: 30px;
-    color: #b1ffae;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.322);
-}
 
 #MainBlock {
-    background-color: rgba(245, 222, 179, 0.450);
+	background-color: rgba(245, 222, 179, 0.450);
+    padding: 30px;
     margin-left: 8%;
     margin-right: 8%;
+    text-align: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
     border-radius: 30px;
-    border: 3px solid white;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.322);
+	color: black; 
+    /* box-shadow */
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
 }
 
 
