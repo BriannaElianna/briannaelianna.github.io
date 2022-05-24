@@ -35,7 +35,7 @@ div.MainArea {
 }
 
 div.rpdr {
-    background-image: url("../Images/Backgrounds/bg.png");
+    background-image: url("../Images/Backgrounds/rpdr.gif");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@ div.rpdr {
 }
 
 div.Antm {
-    background-image: url("../Images/Backgrounds/bbg.png");
+    background-image: url("../Images/Backgrounds/antm.gif");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
