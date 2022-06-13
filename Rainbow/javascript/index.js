@@ -3445,6 +3445,7 @@ let top3 = false;
 let top4 = false;
 let canFinale = false;
 let all_stars = false;
+let all_winners = false;
 let allstars3Finale = false;
 let ukvstwFinale = false;
 let lipsync_assassin = false;
@@ -3466,6 +3467,8 @@ function predefCast(cast, format, finale, premiere = '', returning = '') {
     }
     else if (format == "all-stars")
         all_stars = true;
+	else if (format == "all-winners")
+        all_winners = true;
     if (format == "jury-allstars"){ 
         all_stars = true;
         allstars3Finale = true;
@@ -4761,6 +4764,84 @@ function judgingSlayersScreen() {
     else
         screen.createButton("Proceed", "newEpisode()");
 }
+function judgingWinnersScreen() {
+    slayersCheck = true;
+    let screen = new Scene();
+    screen.clean();
+    screen.createHeader("Judging!");
+    screen.createBold("Based on tonight's performances...");
+    document.body.style.backgroundImage = "url('image/stage.webp')";
+    for (let i = 0; i < topQueens.length; i++) {
+        screen.createImage(topQueens[i].image, "black");
+    }
+    screen.createHorizontalLine();
+    if (currentCast.length > 8){
+        screen.createBold("", "safeQueens");
+        let safeQueens = document.querySelector("b#safeQueens");
+        for (let i = 0; i < 3; i++) {
+            safeQueens.innerHTML += topQueens[topQueens.length - (i + 1)].getName() + ", ";
+            topQueens[topQueens.length - (i + 1)].addToTrackRecord("SAFE");
+            topQueens[topQueens.length - (i + 1)].ppe += 3;
+        }
+        topQueens.splice(topQueens.length - 3, 3);
+        safeQueens.innerHTML += "you are safe..";
+        screen.createHorizontalLine();
+    }
+    for (let i = 0; i < topQueens.length; i++) {
+        screen.createImage(topQueens[i].image, "cyan");
+    }
+    screen.createBold("", "judged");
+    let judged = document.getElementById("judged");
+    for (let i = 0; i < topQueens.length; i++) {
+        judged.innerHTML += `${topQueens[i].getName()}, `;
+    }
+    judged.innerHTML += "you represent the tops of the week.";
+    screen.createParagraph("Nobody is going home tonight!");
+    screen.createHorizontalLine();
+
+    for (let i = 0; i < topQueens.length; i++)
+        topQueens[i].performanceScore -= (topQueens[i].runwayScore - topQueens[i].favoritism);
+    topQueens.sort((a, b) => (a.performanceScore - b.performanceScore));
+    top2.push(topQueens[0]);
+    top2.push(topQueens[1]);
+    topQueens.splice(0, 2);
+    screen.createImage(top2[0].image, "cyan");
+    screen.createImage(top2[1].image, "cyan");
+    screen.createBold(top2[0].getName() + ", " + top2[1].getName() + ", condragulations, you're the Top 2 of the week!");
+    if (topQueens.length > 0) {
+        for (let i = 0; i < topQueens.length; i++) {
+            screen.createImage(topQueens[i].image, "lightblue");
+            topQueens[i].addToTrackRecord("HIGH");
+            topQueens[i].favoritism += 1;
+            topQueens[i].ppe += 4;
+        }
+    }
+    screen.createParagraph("", "highs");
+    let highs = document.getElementById("highs");
+    for (let i = 0; i < topQueens.length; i++) {
+        highs.innerHTML += `${topQueens[i].getName()}, `;
+    }
+    highs.innerHTML += "good job this week, you're all safe.";
+    screen.createHorizontalLine();
+    screen.createBold("The Top 2 will now lip-sync... for the win!");
+    lsSong();
+    for (let i = 0; i < top2.length; i++) {
+        top2[i].getASLipsync();
+    }
+    top2.sort((a, b) => (b.lipsyncScore - a.lipsyncScore));
+    screen.createImage(top2[0].image, "royalblue");
+    screen.createBold(`${top2[0].getName()}, you're a winner baby!`);
+    top2[0].addToTrackRecord("WIN");
+    top2[0].favoritism += 5;
+    top2[0].ppe += 5;
+    top2[1].addToTrackRecord("TOP2");
+    top2[1].favoritism += 2;
+    top2[1].ppe += 4.5;
+    if (CheckForReturning() == true)
+        screen.createButton("Proceed", "returningQueenScreen()");
+    else
+        screen.createButton("Proceed", "newEpisode()");
+}
 function judgingFloppersScreen() {
     floppersCheck = true;
     let screen = new Scene();
@@ -4804,6 +4885,7 @@ function judgingFloppersScreen() {
     btm2.innerHTML += "I'm sorry my dears but you are up for elimination.";
     screen.createButton("Proceed", "lipSync()");
 }
+
 function judgingScreen() {
     let judgingScreen = new Scene();
     judgingScreen.clean();
