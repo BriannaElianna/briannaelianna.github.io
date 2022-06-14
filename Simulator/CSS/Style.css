@@ -1,19 +1,23 @@
-@charset "UTF-8";
-
-
-:root{
-  --maple: "m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z";
+* {
+    box-sizing: border-box;
 }
+
+html {
+    height: 100%;
+}
+
 body {
-    font-family: rubik,helvetica,arial,sans-serif;
-    padding: 20px;
-    font-size: 13px;
+    font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    text-align: center;
     background-image: url("../Images/Backgrounds/bg.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-	background-size: cover;
-  }
+    background-size: cover;
+    max-height: 100vh;
+    max-width: 100vw;
+    margin: 0 0 0 0;
+}
   
 div.MainArea {
     background-color: rgba(245, 222, 179, 0.450);

@@ -183,9 +183,7 @@ class Queen {
         this.trackRecord.push(placement);
     }
 }
-//Judges
-//QUEENS:
-//SEASON 1: 
+//US Season 1: 
 let akashia = new Queen("Akashia", 3, 2, 7, 3, 2, 7, 11, "Akashia",false,"S");
 let bebe = new Queen("BeBe Zahara Benet", 6, 7, 8, 12, 6, 10, 9, "BeBe",false, "S");
 let jade = new Queen("Jade Sotomayor", 3, 3, 8, 7, 3, 7, 7, "Jade",false, "S");
@@ -196,6 +194,20 @@ let shannel = new Queen("Shannel", 5, 5, 5, 9, 4, 11, 7, "Shannel",false, "S");
 let tammie = new Queen("Tammie Brown", 6, 7, 5, 7, 6, 7, 6, "Tammie",false, "S");
 let victoria = new Queen("Victoria 'Porkchop' Parker", 3, 6, 4, 3, 6, 5, 4, "Victoria",false, "S");
 let us_season1 = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria];
+//US Season 2
+let jessica = new Queen("Jessica Wild", 8, 6, 9, 7, 8, 8, 10, "Jessica",false, "S");
+let jujubee = new Queen("Jujubee", 9, 11, 7, 8, 12, 6, 12, "Jujubee",false, "S");
+let morgan = new Queen("Morgan McMichaels", 6, 6, 10, 9, 5, 10, 10, "Morgan",false, "S");
+let mystique = new Queen("Mystique Summers Madison", 4, 5, 3, 3, 3, 5, 6, "Mystique",false, "S");
+let nicole = new Queen("Nicole Paige Brooks", 4, 4, 4, 6, 4, 7, 6, "Nicole",false, "S");
+let pandora = new Queen("Pandora Boxx", 12, 11, 6, 8, 10, 8, 7, "Pandora",false, "S");
+let raven = new Queen("Raven", 5, 8, 9, 10, 5, 8, 11, "Raven",false, "S");
+let sahara = new Queen("Sahara Davenport", 6, 6, 10, 4, 6, 7, 10, "Sahara",false, "S");
+let shangela = new Queen("Shangela", 14, 13, 10, 3, 9, 9, 12, "Shangela",false, "S");
+let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 11, "Kylie",false, "S");
+let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, "Tatianna",false, "S");
+let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, "Tyra",false, "S");
+let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra];
 
 function predefCast(cast, format, finale, premiere = '', returning = '') {
     currentCast = cast;
