@@ -231,10 +231,9 @@ function newEpisode() {
 	if (episodeCount == 1) {
 		queensRemainingScreen.createBigText("Its time to meet the cast..");
 		queensRemainingScreen.createHorizontalLine();
-		//for (let i = 0; i < currentCast.length; i++) {
-			//entranceQueens.push(currentCast[i]);
-		//}
-		entranceQueens = currentCast;
+		for (let i = 0; i < currentCast.length; i++) {
+			entranceQueens.push(currentCast[i]);
+		}
 		entrance();
 	} else {
 		miniChallenge();
