@@ -34,77 +34,21 @@ div.MainArea {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
-	color: black; 
+    color: black; 
+    border: 3px solid white;
     /* box-shadow */
     -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
     -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
     box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
 }
 
-div.rpdr {
-    background-image: url("../Images/Backgrounds/rpdr.gif");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-	background-size: cover;
-	background-color: rgba(245, 222, 179, 0.450);
-    padding: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    /* border-radius */
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
+#MainBlock {
+    background-color: rgba(245, 222, 179, 0.450);
+    margin-left: 8%;
+    margin-right: 8%;
     border-radius: 30px;
-	color: black; 
-    /* box-shadow */
-    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-    -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-    box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-}
-
-div.Antm {
-    background-image: url("../Images/Backgrounds/antm.gif");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-	background-size: cover;
-	background-color: rgba(245, 222, 179, 0.450);
-    padding: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    /* border-radius */
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-	color: black; 
-    /* box-shadow */
-    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-    -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-    box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-}
-
-div.total {
-    background-image: url("../Images/Backgrounds/td.png");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-	background-size: cover;
-	background-color: rgba(245, 222, 179, 0.450);
-    padding: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    /* border-radius */
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-	color: black; 
-    /* box-shadow */
-    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-    -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-    box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+    border: 3px solid white;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.322);
 }
 
 div.MainTitle {
