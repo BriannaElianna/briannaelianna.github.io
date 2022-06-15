@@ -575,6 +575,9 @@ function reads() {
 	screen.createImage(readQueens[0].image);
 	screen.createBold(`${readQueens[0].getName()} you are up.`);
 	let i = randomNumber(0, currentCast.length - 1);
+	while (currentCast[i].getName() == readQueens[0].getName()) {
+		i = randomNumber(0, currentCast.length - 1);
+	}
 	screen.createBold(`${currentCast[i].getName()}.. ${readLine[read]}`);
 	readLine.splice(readLine.indexOf(readLine[read]),1);
 	readQueens.splice(readQueens.indexOf(readQueens[0]),1);
