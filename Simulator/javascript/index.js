@@ -7,6 +7,7 @@ let entranceQueens = [];
 let readQueens = [];
 let reactq = [];
 let used = [];
+let currentCast = [];
 
 function randomNumber(min, max) {
     let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -214,10 +215,81 @@ let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, 14, "Tatianna",fals
 let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, 14, "Tyra",false, "S");
 let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra];
 
+let allQueens = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
+jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra]
+
+let allQueensC = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
+jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra]
+
 function predefCast(cast, format, finale, premiere = '', returning = '') {
     currentCast = cast;
     totalCastSize = cast.length;
     newEpisode();
+}
+
+function generateSpace() {
+    let castSize = document.querySelector("input#castSize").valueAsNumber;
+    totalCastSize = castSize;
+    let castSelection = document.querySelector("p#castSelection");
+    castSelection.innerHTML = '';
+	if (totalCastSize < 3 && noLimits == false)
+        window.alert("The simulator will not start without 3+ queens!");
+	else
+        for (let i = 0; i < castSize; i++) {
+            let select = document.createElement("select");
+            select.setAttribute("class", "queenList");
+            select.setAttribute("id", i.toString());
+            select.setAttribute("onchange", "setImage()");
+            let img = document.createElement("img");
+            img.setAttribute("class", "images");
+            img.setAttribute("id", "image" + i.toString());
+            img.setAttribute("style", "width: 105px; height: 105px;")
+            let p = document.createElement("p");
+            p.appendChild(img);
+            for (let k = 0; k < allQueensC.length; k++) {
+                let option = document.createElement("option");
+                option.innerHTML = allQueensC[k].getName();
+                option.value = allQueensC[k].image;
+				allQueensC.splice(allQueensC.indexOf(allQueensC[k]),1);
+                select.add(option);
+            }
+			let selectqueen = randomNumber(0, allQueensC.length - 1);
+            select.selectedIndex = 	selectqueen
+            let br = document.createElement("br");
+            castSelection.appendChild(p);
+            castSelection.appendChild(select);
+            castSelection.appendChild(br);
+        }
+    setImage();
+	
+}
+
+function setImage() {
+    let images = document.getElementsByClassName("images");
+    for (let i = 0; i < images.length; i++) {
+        let img = document.getElementById("image" + i.toString());
+        let select = document.getElementById(i.toString());
+        img.src = select.options[select.selectedIndex].value;
+    }
+}
+
+function startSimulation(challenge = "") {
+    //get selected names and compare them to the all queens list:
+    for (let i = 0; i < document.getElementsByClassName("queenList").length; i++) {
+        let select = document.getElementById(i.toString());
+        let value = select.options[select.selectedIndex].text;
+        for (let k = 0; k < allQueens.length; k++) {
+            if (value == allQueens[k].getName()) {
+                currentCast.push(allQueens[k]);
+                break;
+            }
+        }
+    }
+    if (currentCast.length == 0) {
+        window.alert("You can't have a season without queens lmao..");
+	} else {
+        newEpisode();
+    }
 }
 
 function newEpisode() {
@@ -519,6 +591,18 @@ function queensPerformances() {
     let bad = currentCast.filter(function (queen) { return queen.performanceScore >= 26 && queen.performanceScore < 31; });
     let flop = currentCast.filter(function (queen) { return queen.performanceScore >= 31 && queen.performanceScore < 50; });
     createPerformanceDesc(slay, great, good, bad, flop);
+}
+
+function challengeScreen() {
+	let screen = new Scene();
+	screen.clean();
+	document.body.style.backgroundImage = "url('Images/Backgrounds/Ru-Talk.webp')";
+	screen.createBigText("The winner of the mini challenge is..");
+	currentCast.sort((a, b) => (a.shadeScore - b.shadeScore));
+    topQueens.push(currentCast[0]);
+	screen.createImage(topQueens[0].image);
+	screen.createBold(`${topQueens[0].getName()}.. Condragulations you are the winna bitch!`);
+	screen.createButton("Continue", "challengeScreen()");
 }
 
 function miniJudging() {
