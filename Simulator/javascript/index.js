@@ -406,6 +406,8 @@ function entrance() {
 		}
 		//screen.createHorizontalLine();
 		screen.createButton("Reveal Queen", "entrance2()");
+		screen.createBigText(" ");
+		screen.createButton("Skip", "miniChallenge()");
 		screen.createHorizontalLine();
 	} else if (entranceQueens.length == 1) {
 		screen.createBigText("A queen walks in...");
@@ -428,6 +430,8 @@ function entrance() {
 		}
 		//screen.createHorizontalLine();
 		screen.createButton("Reveal Queen", "entrance2()");
+		screen.createBigText(" ");
+		screen.createButton("Skip", "miniChallenge()");
 		screen.createHorizontalLine();
 	} else {
 		miniChallenge();
@@ -445,6 +449,8 @@ function entrance2() {
 	screen.createBold(`${entranceQueens[0].getName()} has walked in.`);
 	entranceQueens.splice(entranceQueens.indexOf(entranceQueens[0]),1);
 	screen.createButton("Next Queen", "entrance()");
+	screen.createBigText(" ");
+	screen.createButton("Skip", "miniChallenge()");
 	screen.createHorizontalLine();
 }
 
