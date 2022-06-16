@@ -146,6 +146,44 @@ td.trq{
   text-align: center;
 }
 
+k {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+}
+
+k:link {
+  color: black;
+  font: helvetica;
+}
+
+k:visited {
+  color: black;
+  font: helvetica;
+}
+
+k:focus {
+  border-bottom: 1px solid;
+  background: black;
+}
+
+k:hover {
+  border-bottom: 1px solid;
+  background: rgba(245, 222, 179, 0.450);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+k:active {
+  background: #350153;
+  color: black;
+  font: helvetica;
+}
+
 a {
   outline: none;
   text-decoration: none;

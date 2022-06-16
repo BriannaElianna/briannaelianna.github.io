@@ -1,13 +1,17 @@
 let safeQueens = [];
-topQueens = [];
-bottomQueens = [];
-top2 = [];
+let topQueens = [];
+let bottomQueens = [];
+let highQueens = [];
+let lowQueens = [];
+let top2 = [];
 let episodeCount = 0;
 let entranceQueens = [];
 let readQueens = [];
 let reactq = [];
 let used = [];
 let currentCast = [];
+let judgingQueens = [];
+let highstart = false;
 
 function randomNumber(min, max) {
     let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -35,6 +39,7 @@ class Queen {
         this.QueenDisqOrDept = false;
         this.customqueen = false;
         this.chocolate = false;
+		this.notsafe = false;
         this._name = name;
         this._actingStat = acting;
         this._comedyStat = comedy;
@@ -201,18 +206,18 @@ let tammie = new Queen("Tammie Brown", 6, 7, 5, 7, 6, 7, 6, 7, "Tammie",false, "
 let victoria = new Queen("Victoria 'Porkchop' Parker", 3, 6, 4, 3, 6, 5, 4, 5, "Victoria",false, "S");
 let us_season1 = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria];
 //US Season 2
-let jessica = new Queen("Jessica Wild", 8, 6, 9, 7, 8, 8, 10, 9, "Jessica",false, "S");
-let jujubee = new Queen("Jujubee", 9, 11, 7, 8, 12, 6, 12, 13, "Jujubee",false, "S");
+let jessica = new Queen("Jessica Wild", 8, 6, 9, 7, 8, 8, 10, 4, "Jessica",false, "S");
+let jujubee = new Queen("Jujubee", 9, 11, 7, 8, 12, 6, 12, 14, "Jujubee",false, "S");
 let morgan = new Queen("Morgan McMichaels", 6, 6, 10, 9, 5, 10, 10, 12, "Morgan",false, "S");
 let mystique = new Queen("Mystique Summers Madison", 4, 5, 3, 3, 3, 5, 6, 13, "Mystique",false, "S");
 let nicole = new Queen("Nicole Paige Brooks", 4, 4, 4, 6, 4, 7, 6, 11, "Nicole",false, "S");
-let pandora = new Queen("Pandora Boxx", 12, 11, 6, 8, 10, 8, 7, 3, "Pandora",false, "S");
-let raven = new Queen("Raven", 5, 8, 9, 10, 5, 8, 11, 13, "Raven",false, "S");
+let pandora = new Queen("Pandora Boxx", 12, 11, 6, 8, 10, 8, 7, 12, "Pandora",false, "S");
+let raven = new Queen("Raven", 5, 8, 9, 10, 5, 8, 11, 8, "Raven",false, "S");
 let sahara = new Queen("Sahara Davenport", 6, 6, 10, 4, 6, 7, 10, 7, "Sahara",false, "S");
 let shangela = new Queen("Shangela", 14, 13, 10, 3, 9, 9, 12, 12, "Shangela",false, "S");
 let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 11, 8, "Kylie",false, "S");
-let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, 14, "Tatianna",false, "S");
-let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, 14, "Tyra",false, "S");
+let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, 12, "Tatianna",false, "S");
+let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, 10, "Tyra",false, "S");
 let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra];
 
 let allQueens = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
@@ -250,7 +255,7 @@ function generateSpace() {
                 let option = document.createElement("option");
                 option.innerHTML = allQueensC[k].getName();
                 option.value = allQueensC[k].image;
-				allQueensC.splice(allQueensC.indexOf(allQueensC[k]),1);
+				//allQueensC.splice(allQueensC.indexOf(allQueensC[k]),1);
                 select.add(option);
             }
 			let selectqueen = randomNumber(0, allQueensC.length - 1);
@@ -532,6 +537,36 @@ class Reading {
     }
 }
 
+class ImprovChallenge {
+    generateDescription() {
+        let description = document.querySelector("p#Description");
+        let desc1;
+        let whatChallengeIs = randomNumber(0, 12);
+        (function (desc1) {
+            desc1[desc1["political debate."] = 0] = "political debate."; {
+            } desc1[desc1["celebrity interview."] = 1] = "celebrity interview."; { 
+            } desc1[desc1["modern morning TV show."] = 2] = "modern morning TV show."; {
+			} desc1[desc1["late-night TV show."] = 3] = "late-night TV show."; {
+			} desc1[desc1["new Bossy Rossy episode."] = 4] = "new Bossy Rossy episode."; {
+			} desc1[desc1["suggestive kids TV show."] = 5] = "suggestive kids TV show."; {
+            } desc1[desc1["Bitchelor show."] = 6] = "Bitchelor show."; {
+            } desc1[desc1["Jersey Justice show."] = 7] = "Jersey Justice show."; {
+            } desc1[desc1["diva worship talk show."] = 8] = "diva worship talk show."; {
+            } desc1[desc1["talent show for people with little talent."] = 9] = "talent show for people with little talent."; {
+            } desc1[desc1["drag queen spoof of the celebrity gossip and drama television show."] = 10] = "drag queen spoof of the celebrity gossip and drama television show."; {
+            } desc1[desc1["pageant, the Miss Loose Jaw Pageant."] = 11] = "pageant, the Miss Loose Jaw Pageant."; {
+            } desc1[desc1["intimate chat show called Pink Table Talk."] = 12] = "intimate chat show called Pink Table Talk."; {
+			}
+        })(desc1 || (desc1 = {}));
+        description.innerHTML = "The queens will improvise in a " + desc1[whatChallengeIs];
+    }
+    rankPerformances() {
+        for (let i = 0; i < currentCast.length; i++)
+            currentCast[i].getImprov();
+        sortPerformances(currentCast);
+    }
+}
+
 function reading() {
     let challengeScreen = new Scene();
 	document.body.style.backgroundImage = "url('Images/Backgrounds/TV.webp')";
@@ -633,12 +668,10 @@ function challengeScreen() {
 	let screen = new Scene();
 	screen.clean();
 	document.body.style.backgroundImage = "url('Images/Backgrounds/Ru-Talk.webp')";
-	screen.createBigText("The winner of the mini challenge is..");
-	currentCast.sort((a, b) => (a.shadeScore - b.shadeScore));
-    topQueens.push(currentCast[0]);
-	screen.createImage(topQueens[0].image);
-	screen.createBold(`${topQueens[0].getName()}.. Condragulations you are the winna bitch!`);
-	screen.createButton("Continue", "challengeScreen()");
+	screen.createBigText("HA! I'm acting.");
+	screen.createImage("Images/Queens/RuOut.webp", 'gold');
+	screen.createBold(`You better put your crazy to a max because you are gonna need it!`);
+	screen.createButton("Continue", "improvChallenge()");
 }
 
 function miniJudging() {
@@ -650,6 +683,72 @@ function miniJudging() {
 	screen.createImage(topQueens[0].image);
 	screen.createBold(`${topQueens[0].getName()}.. Condragulations you are the winner!`);
 	screen.createButton("Continue", "challengeScreen()");
+}
+
+function improvChallenge() {
+    let challengeScreen = new Scene();
+	document.body.style.backgroundImage = "url('Images/Backgrounds/Workroom.png')";
+    challengeScreen.clean();
+    challengeScreen.createParagraph("", "Description");
+    let challenge = new ImprovChallenge();
+    challenge.generateDescription();
+    challenge.rankPerformances();
+    queensPerformances();
+	currentCast.sort((a, b) => (a.performanceScore - b.performanceScore));
+    topQueens.push(currentCast[0]);
+    highQueens.push(currentCast[1]);
+	bottomQueens.push(currentCast[currentCast.length - 1]);
+    bottomQueens.push(currentCast[currentCast.length - 2]);
+	lowQueens.push(currentCast[currentCast.length - 3]);
+	for (let i = 0; i < topQueens.length; i++) {
+		judgingQueens.push(topQueens[i])
+		topQueens[i].notsafe = true;
+	}
+	for (let i = 0; i < highQueens.length; i++) {
+		judgingQueens.push(highQueens[i])
+		highQueens[i].notsafe = true;
+	}
+	for (let i = 0; i < lowQueens.length; i++) {
+		judgingQueens.push(lowQueens[i])
+		lowQueens[i].notsafe = true;
+	}
+	for (let i = 0; i < bottomQueens.length; i++) {
+		judgingQueens.push(bottomQueens[i])
+		bottomQueens[i].notsafe = true;
+	}
+	challengeScreen.createButton("Continue", "judging()");
+}
+
+function judging() {
+    let screen = new Scene();
+	document.body.style.backgroundImage = "url('Images/Backgrounds/MS.png')";
+    screen.clean();
+	if (judgingQueens.length > 1) {
+		screen.createImage("Images/Queens/Rupaul.webp", 'gold');
+		screen.createBigText("If I call your name, please step forward.");
+		screen.createButton("Continue", "judging2()");
+	} else {
+		screen.createImage("Images/Queens/Rupaul.webp", 'gold');
+		screen.createBigText("The rest of you are safe. You may step to the back.");
+		for (let i = 0; i < currentCast.length; i++) {
+			if (currentCast[i].notsafe == false) {
+				safeQueens.push(currentCast[i])
+			}
+		}
+		//screen.createButton("Continue", "judging2()");
+	}
+}
+
+function judging2() {
+    let screen = new Scene();
+	screen.clean();
+	screen.createImage("Images/Queens/Rupaul.webp", 'gold');
+	screen.createBigText("...");
+	screen.createImage(judgingQueens[0].image);
+	screen.createBold(`${judgingQueens[0].getName()}..`);
+	judgingQueens.splice(judgingQueens.indexOf(judgingQueens[0]),1);
+	screen.createButton("Continue", "judging()");
+	screen.createHorizontalLine();
 }
 
 class Scene {
