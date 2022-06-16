@@ -538,48 +538,81 @@ function reading() {
     challengeScreen.clean();
     //challengeScreen.createHeader("Mini-challenge!");
     challengeScreen.createParagraph("", "Description");
-	//reads
-	challengeScreen.createHorizontalLine();
-	while (readQueens.length > 1 || readQueens.length == 1) {
-		reads();
-	}
 	//performances
     let challenge = new Reading();
     challenge.generateDescription();
     //queenTalents();
     challenge.rankPerformances();
-    //queensPerformances();
+    //reads
+	challengeScreen.createHorizontalLine();
+	while (readQueens.length > 1 || readQueens.length == 1) {
+		reads();
+	}
 	challengeScreen.createButton("Continue", "miniJudging()");
     //episodeChallenges.push("Talent Show");
 }
 
-let readLine = [
+let readLineGreat = [
     "Is the bus still runnin? Cause you'll need to leave real soon.",
-	"Is your grill fucked? Because those ones sure are.",
 	"LOOK OVER THERE! It's the exit.",
+	"Your beauty is listed right on the side of the carton.. under missing.",
+	"If you are America’s sweetheart then America needs a heart transplant."
+];
+
+let readLineGood = [
+	"Is your grill fucked? Because those ones sure are.",
+	"Next time you death drop, reverse that and drop dead.",
+	"You should just really make like you hairline.. and recede.",
+	"My darling dear.. I can't stand it when you're near.",
+	"Have you ever tried eating your makeup? So you'll be pretty on the inside, too.",
+	"It's good to see a filler bitch this season, and I'm not talking about that ass."
+];
+
+let readLineFine = [
 	"You know people say you aren't talented and your mug is fucked. That is so wrong.. your mug isn't fucked.",
 	"There are two types of peanut butter.. creamy and crunchy.",
-	"Next time you death drop, reverse that and drop dead.",
-	"Your beauty is listed right on the side of the carton.. under missing.",
-	"You should just really make like you hairline.. and recede.",
 	"Haute couture? More like haute glue.",
-	"Your wardrobe sure does look expensive, but money can't buy talent.",
 	"I once told you, you're so beautiful inside and out... I lied.",
+	"Your wardrobe sure does look expensive, but money can't buy talent.",
+	"I don't have a read for you.. please just fuck me.",
 	"Here's a cape.. Go and fly your ass home girl!"
+];
+
+let readLineBad = [
+	"Here's a cape.. Go be supergirl and fly your ass home girl!",
+	"If I was as untalented and unoriginal as you, I also would spend all my time trying to be somebody more talented than I.",
+	"I'm sure everyone can see you from their backyard.",
+	"I- I'm sorry i can't do this..",
+	"I don't have a read for you.. please just fuck me.",
+	"Did you see her? Her dress is so tacky... Who wears cheetah."
 ];
 
 function reads() {
 	let screen = new Scene();
 	//screen.createBigText("A queen walks in...");
-	let read = randomNumber(0, readLine.length - 1);
 	screen.createImage(readQueens[0].image);
 	screen.createBold(`${readQueens[0].getName()} you are up.`);
 	let i = randomNumber(0, currentCast.length - 1);
 	while (currentCast[i].getName() == readQueens[0].getName()) {
 		i = randomNumber(0, currentCast.length - 1);
 	}
-	screen.createBold(`${currentCast[i].getName()}.. ${readLine[read]}`);
-	readLine.splice(readLine.indexOf(readLine[read]),1);
+	if (currentCast[i].shadeScore > 5 || currentCast[i].shadeScore == 5) {
+		let read = randomNumber(0, readLineBad.length - 1);
+		screen.createBold(`${currentCast[i].getName()}.. ${readLineBad[read]}`);
+		readLineBad.splice(readLineBad.indexOf(readLineBad[read]),1);
+	} else if (currentCast[i].shadeScore > 5 && currentCast[i].shadeScore < 9 || currentCast[i].shadeScore > 5 && currentCast[i].shadeScore == 9) {
+		let read = randomNumber(0, readLineFine.length - 1);
+		screen.createBold(`${currentCast[i].getName()}.. ${readLineFine[read]}`);
+		readLineFine.splice(readLineFine.indexOf(readLineFine[read]),1);
+	} else if (currentCast[i].shadeScore > 9 && currentCast[i].shadeScore < 12 || currentCast[i].shadeScore > 9 && currentCast[i].shadeScore == 12) {
+		let read = randomNumber(0, readLineGood.length - 1);
+		screen.createBold(`${currentCast[i].getName()}.. ${readLineGood[read]}`);
+		readLineGood.splice(readLineGood.indexOf(readLineGood[read]),1);
+	} else {
+		let read = randomNumber(0, readLineGreat.length - 1);
+		screen.createBold(`${currentCast[i].getName()}.. ${readLineGreat[read]}`);
+		readLineGreat.splice(readLineGreat.indexOf(readLineGreat[read]),1);
+	}
 	readQueens.splice(readQueens.indexOf(readQueens[0]),1);
 	screen.createHorizontalLine();
 }
