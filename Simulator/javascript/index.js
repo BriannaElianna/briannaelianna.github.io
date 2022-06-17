@@ -218,7 +218,7 @@ let shangela = new Queen("Shangela", 14, 13, 10, 3, 9, 9, 12, 12, "Shangela",fal
 let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 11, 8, "Kylie",false, "S");
 let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, 12, "Tatianna",false, "S");
 let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, 10, "Tyra",false, "S");
-let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra];
+let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, sahara, shangela, sonique, tatianna, tyra];
 
 let allQueens = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
 jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra]
@@ -482,7 +482,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
     let screen = new Scene();
     if (slay.length !== 0) {
         for (let i = 0; i < slay.length; i++)
-            screen.createImage(slay[i].image, "darkblue");
+            screen.createImage(slay[i].image, "gold");
         screen.createBold("", "slay");
         let slayText = document.getElementById("slay");
         for (let i = 0; i < slay.length; i++)
@@ -491,7 +491,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
     }
     if (great.length !== 0) {
         for (let i = 0; i < great.length; i++)
-            screen.createImage(great[i].image, "royalblue");
+            screen.createImage(great[i].image, "white");
         screen.createBold("", "great");
         let greatText = document.getElementById("great");
         for (let i = 0; i < great.length; i++)
@@ -500,7 +500,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
     }
     if (good.length !== 0) {
         for (let i = 0; i < good.length; i++)
-            screen.createImage(good[i].image);
+            screen.createImage(good[i].image, "black");
         screen.createBold("", "good");
         let goodText = document.getElementById("good");
         for (let i = 0; i < good.length; i++)
@@ -509,7 +509,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
     }
     if (bad.length !== 0) {
         for (let i = 0; i < bad.length; i++)
-            screen.createImage(bad[i].image, "pink");
+            screen.createImage(bad[i].image, "red");
         screen.createBold("", "bad");
         let badText = document.getElementById("bad");
         for (let i = 0; i < bad.length; i++)
@@ -519,6 +519,7 @@ function createPerformanceDesc(slay, great, good, bad, flop) {
     if (flop.length !== 0) {
         for (let i = 0; i < flop.length; i++)
             screen.createImage(flop[i].image, "tomato");
+			//screen.createImage(slay[i].image, #faea6e);
         screen.createBold("", "flop");
         let flopText = document.getElementById("flop");
         for (let i = 0; i < flop.length; i++)
