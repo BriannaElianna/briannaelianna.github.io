@@ -40,6 +40,10 @@ class Queen {
         this.customqueen = false;
         this.chocolate = false;
 		this.notsafe = false;
+		this.win = false;
+		this.high = false;
+		this.low = false;
+		this.bottom = false;
         this._name = name;
         this._actingStat = acting;
         this._comedyStat = comedy;
@@ -219,9 +223,24 @@ let sonique = new Queen("Kylie Sonique Love", 11, 9, 10, 9, 8, 11, 11, 8, "Kylie
 let tatianna = new Queen("Tatianna", 8, 11, 8, 8, 10, 8, 10, 12, "Tatianna",false, "S");
 let tyra = new Queen("James", 11, 7, 8, 11, 8, 9, 10, 10, "Tyra",false, "S");
 let us_season2 = [jessica, jujubee, morgan, mystique, nicole, pandora, sahara, shangela, sonique, tatianna, tyra];
-
+//CAN Season 3
+let bom = new Queen("Bombae", 8, 6, 9, 7, 8, 8, 10, 4, "Bombae",false, "S");
+let chelazon = new Queen("Chelazon Leroux", 9, 11, 7, 8, 12, 6, 12, 14, "Chelazon",false, "S");
+let gisele = new Queen("Gisèle Lullaby", 6, 6, 10, 9, 5, 10, 10, 12, "Gisele",false, "S");
+let halal = new Queen("Halal Bae", 4, 5, 3, 3, 3, 5, 6, 13, "Halal",false, "S");
+let irma = new Queen("Irma Gerd", 4, 4, 4, 6, 4, 7, 6, 11, "Irma",false, "S");
+let jada = new Queen("Jada Shada Hudson", 12, 11, 6, 8, 10, 8, 7, 12, "Jada",false, "S");
+let kaos = new Queen("Kaos", 5, 8, 9, 10, 5, 8, 11, 8, "Kaos",false, "S");
+let kimmy = new Queen("Kimmy Couture", 6, 6, 10, 4, 6, 7, 10, 7, "Kimmy",false, "S");
+let lady = new Queen("Lady Boom Boom", 14, 13, 10, 3, 9, 9, 12, 12, "Lady",false, "S");
+let fier = new Queen("Miss Fiercalicious", 11, 9, 10, 9, 8, 11, 11, 14, "Fier",false, "S");
+let moco = new Queen("Miss Moço", 8, 11, 8, 8, 10, 8, 10, 12, "Moco",false, "S");
+let vivian = new Queen("Vivian Vanderpuss", 11, 7, 8, 11, 8, 9, 10, 10, "Vivian",false, "S");
+let can_season3 = [bom, chelazon, gisele, halal, irma, jada, kaos, kimmy, lady, fier, moco, vivian];
+//All Queens
 let allQueens = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
-jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra]
+jessica, jujubee, morgan, mystique, nicole, pandora, sahara, shangela, sonique, tatianna, tyra,
+bom, chelazon, gisele, halal, irma, jada, kaos, kimmy, lady, fier, moco, vivian]
 
 let allQueensC = [akashia, bebe, jade, ninaf, ongina, rebecca, shannel, tammie, victoria,
 jessica, jujubee, morgan, mystique, nicole, pandora, raven, sahara, shangela, sonique, tatianna, tyra]
@@ -384,6 +403,7 @@ let flopLine = [
 function entrance() {
     let screen = new Scene();
 	screen.clean();
+	//document.body.style.backgroundImage = "url('Images/Backgrounds/Entrance.jpg')";
 	//document.body.style.backgroundImage = "url('image/entrance.webp')";
 	if (entranceQueens.length > 1) {
 		screen.createBigText("A queen walks in...");
@@ -710,18 +730,22 @@ function improvChallenge() {
 	for (let i = 0; i < topQueens.length; i++) {
 		judgingQueens.push(topQueens[i])
 		topQueens[i].notsafe = true;
+		topQueens[i].win = true;
 	}
 	for (let i = 0; i < highQueens.length; i++) {
 		judgingQueens.push(highQueens[i])
 		highQueens[i].notsafe = true;
+		highQueens[i].high = true;
 	}
 	for (let i = 0; i < lowQueens.length; i++) {
 		judgingQueens.push(lowQueens[i])
 		lowQueens[i].notsafe = true;
+		lowQueens[i].low = true;
 	}
 	for (let i = 0; i < bottomQueens.length; i++) {
 		judgingQueens.push(bottomQueens[i])
 		bottomQueens[i].notsafe = true;
+		bottomQueens[i].bottom = true;
 	}
 	challengeScreen.createButton("Continue", "judging()");
 }
@@ -742,7 +766,9 @@ function judging() {
 				safeQueens.push(currentCast[i])
 			}
 		}
-		//screen.createButton("Continue", "judging2()");
+		screen.createHorizontalLine();
+		screen.createBold(`While the judges and I deliberate, you may go untuck.`);
+		screen.createButton("Continue", "untucked()");
 	}
 }
 
@@ -755,7 +781,74 @@ function judging2() {
 	screen.createBold(`${judgingQueens[0].getName()}..`);
 	judgingQueens.splice(judgingQueens.indexOf(judgingQueens[0]),1);
 	screen.createButton("Continue", "judging()");
+}
+
+//randomNumber(0, 100)
+function untucked() {
+    let screen = new Scene();
+	screen.clean();
+	document.body.style.backgroundImage = "url('Images/Backgrounds/Untucked.png')";
+	screen.createBigText("The queens talk to eachother while the judges make their decisions.");
 	screen.createHorizontalLine();
+	//convos
+	//bottom convo
+	//if (randomNumber(0, 10) > 3) {
+		if (randomNumber(0, 10) > 2) {
+			for (let i = 0; i < bottomQueens.length; i++) {
+				screen.createImage(bottomQueens[i].image, "tomato");
+			}
+			for (let i = 0; i < lowQueens.length; i++) {
+				screen.createImage(lowQueens[i].image, "tomato");
+			}
+			screen.createBold("", "bottom");
+			let bottomText = document.getElementById("bottom");
+			for (let i = 0; i < bottomQueens.length; i++) {
+				bottomText.innerHTML += `${bottomQueens[i].getName()}, `;
+			} for (let i = 0; i < lowQueens.length; i++) {
+				bottomText.innerHTML += `and ${lowQueens[i].getName()} `;
+			} bottomText.innerHTML += "talk about possibly being in the bottom.";
+			if (randomNumber(0, 10) > 8) {
+				let i = randomNumber(0, bottomQueens.length - 1)
+				screen.createImage(bottomQueens[i].image, "tomato");
+				screen.createBold(`${bottomQueens[i].getName()} gets outraged that they would even think they would be in the bottom.`);
+			}
+			if (randomNumber(0, 10) > 6) {
+				let i = randomNumber(0, lowQueens.length - 1)
+				screen.createImage(lowQueens[i].image, "tomato");
+				screen.createBold(`${lowQueens[i].getName()} says that they think they won't be in the bottom.`);
+			}
+			if (randomNumber(0, 10) > 7) {
+				let i = randomNumber(0, bottomQueens.length - 1)
+				screen.createImage(bottomQueens[i].image, "tomato");
+				screen.createBold(`${bottomQueens[i].getName()} says that they don't care cause they will be winning no matter what.`);
+			}
+		} else {
+			for (let i = 0; i < bottomQueens.length; i++) {
+				screen.createImage(bottomQueens[i].image, "tomato");
+			}
+			for (let i = 0; i < highQueens.length; i++) {
+				screen.createImage(highQueens[i].image, "tomato");
+			}
+			screen.createBold("", "bottom");
+			let bottomText = document.getElementById("bottom");
+			for (let i = 0; i < bottomQueens.length; i++) {
+				bottomText.innerHTML += `${bottomQueens[i].getName()}, `;
+			} for (let i = 0; i < highQueens.length; i++) {
+				bottomText.innerHTML += `and ${highQueens[i].getName()} `;
+			} bottomText.innerHTML += "talk about possibly being in the bottom.";
+		}
+	//}
+	//Win convo
+	screen.createButton("Continue", "untuckedJudges()");
+}
+
+function untuckedJudges() {
+    let screen = new Scene();
+	screen.clean();
+	document.body.style.backgroundImage = "url('Images/Backgrounds/Untucked.png')";
+	screen.createBigText("The judges talk to eachother about the queens.");
+	screen.createHorizontalLine();
+	screen.createButton("Continue", "untuckedJudges()");
 }
 
 class Scene {
